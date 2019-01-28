@@ -18,7 +18,7 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cam-portal' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cam-portal' ), 'WordPress' );
+				printf( esc_html__( 'ដំណើរការដោយ %s', 'cam-portal' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>

@@ -74,8 +74,8 @@ if ( ! function_exists( 'cam_portal_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 140,
+			'width'       => 140,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -121,7 +121,11 @@ add_action( 'widgets_init', 'cam_portal_widgets_init' );
  */
 function cam_portal_scripts() {
 	wp_enqueue_style( 'cam-portal-style', get_stylesheet_uri() );
-
+	wp_enqueue_style( 'cam-portal-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' );
+	wp_enqueue_style( 'cam-portal-slick', get_template_directory_uri() . '/asset/slick/slick.css' );
+	wp_enqueue_style( 'cam-portal-iconic', get_template_directory_uri() . '/asset/open-iconic/font/css/open-iconic-bootstrap.css' );
+	wp_enqueue_style( 'cam-portal-custom', get_template_directory_uri() . '/asset/css/custom.css' );
+	wp_enqueue_style( 'cam-portal-non-responsive', get_template_directory_uri() . '/asset/css/non-responsive.css' );
 	wp_enqueue_script( 'cam-portal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'cam-portal-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -158,4 +162,26 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+function wpdev_filter_login_head() {
+ 
+    if ( has_custom_logo() ) :
+ 
+        $image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+        ?>
+        <style type="text/css">
+            .login h1 a {
+                background-image: url(<?php echo esc_url( $image[0] ); ?>);
+                -webkit-background-size: <?php echo absint( $image[1] )?>px;
+                background-size: <?php echo absint( $image[1] ) ?>px;
+                height: <?php echo absint( $image[2] ) ?>px;
+                width: <?php echo absint( $image[1] ) ?>px;
+            }
+        </style>
+        <?php
+    endif;
+}
+ 
+add_action( 'login_head', 'wpdev_filter_login_head', 100 );
 

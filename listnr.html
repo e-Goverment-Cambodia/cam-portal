@@ -1,0 +1,613 @@
+<!doctype html>
+<html class="non-responsive" lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=yes">
+		
+		<link rel="icon" type="image/png" href="asset/img/logo-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="asset/img/logo-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="asset/img/logo-96x96.png" sizes="96x96" />
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+		
+		<!-- slick slideshow -->
+		<link rel="stylesheet" type="text/css" href="asset/slick/slick.css" />
+		
+		<!-- iconic -->
+		<link href="asset/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="asset/css/custom.css" />
+
+		<title>រដ្ឋបាលខេត្តកំពត</title>
+		
+		<!-- options -->
+		<style>
+			.primary-color, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
+			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span { background-color: #2082c3; }
+			.fill { fill: #2082c3; }
+			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
+		</style>
+		
+		<!-- non responsive CSS this must load after options above -->
+		<link rel="stylesheet" type="text/css" href="asset/css/non-responsive.css" />
+	</head>
+	<body>
+		<!-- wrap all content container instead of body -->
+		<div class="wrapper">
+		
+			<!-- display for mobile menu in left sidebar -->
+			<div class="nav-sidebar d-md-block d-lg-none primary-background-color">
+				<div class="nav-sidebar-header">
+					
+					<!-- Cambodia sign -->
+					<img class="khmer-logo" src="asset/img/khmer-logo.png" />
+					<h1 class="font-moul khmer-title primary-color">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិសាសនាព្រះមហាក្សត្រ</h1>
+					
+					<!-- search form -->
+					<form class="form-inline">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend primary-background-color">
+								<button class="btn btn-outline" type="submit" id="button-addon1"><span class="oi oi-magnifying-glass"></span></button>
+							</div>
+							<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
+						</div>
+					</form>	
+					
+					<!-- top menu bar -->
+					<ul class="short-link">
+						<li><a class="primary-color" href="#">ជជែកផ្ទាល់ -</a></li>
+						<li><a class="primary-color" href="#">ទំនាក់ទំនង -</a></li>
+						<li><a class="primary-color" href="#">ផ្តល់មតិយោបល់</a></li>
+						<li><a class="primary-color" href="#">សំនួរ ចម្លើយ </a></li>
+					</ul>
+				</div>
+				
+				<!-- main navigation -->
+				<nav class="sm-navbar-wrap animated bounceInDown">
+					<ul class="sm-navbar primary-background-color">
+						<li><a href="#">ទំព័រដើម</a></li>
+						<li class="sub-menu current-menu-ancestor "><a href="#">អំពីខេត្តកំពត</a>
+							<ul>
+								<li class="sub-menu current-menu-ancestor"><a href="#">ចក្ខុវិស័យ</a><span class="oi oi-chevron-bottom right"></span>
+									<ul>
+										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
+										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
+										<li class="current-menu-item"><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+									</ul>
+								</li>
+								<li class="sub-menu"><a href="#">រចនាសម្ព័ន្ធ</a><span class="oi oi-chevron-bottom right"></span>
+									<ul>
+										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
+										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
+										<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+									</ul>
+								</li>
+								<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
+								<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+								<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+								<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+							</ul>
+						</li>
+						<li class="sub-menu"><a href="#">អំពីសេវា</a>
+							<ul>
+								<li><a href="#">សេវាសាធារណៈ</a></li>
+								<li><a href="#">សេវារដ្ឋបាល</a></li>
+							</ul>
+						</li>
+						<li class="sub-menu"><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a>
+							<ul>
+								<li><a href="#">ព័ត៌មានថ្មីៗ</a></li>
+								<li><a href="#">បទដ្ឋានគតិយុត្តិ</a></li>
+							</ul>
+						</li>
+						<li class="sub-menu"><a href="#">តំបន់ទេសចរណ៍</a>
+							<ul>
+								<li><a href="#">រមណីដ្ឋានប្រវត្តសាស្រ្ត</a></li>
+								<li><a href="#">រមណីដ្ឋានធម្មជាតិ</a></li>
+							</ul>
+						</li>
+						<li><a href="#">ព្រឹត្តិការណ៍</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+			<!-- this content contain all container -->
+			<div class="content">
+			
+				<!-- small screen header in responsive mode -->
+				<div class="sm-header d-md-block d-lg-none">
+					<div class="nav-button inline-block vertical-align-middle">
+						<span class="oi oi-menu nav-icon primary-color"></span>
+					</div>
+					<a href="#" class="sm-logo inline-block vertical-align-middle">
+						<img src="asset/img/logo.png" />
+					</a>
+					<div class="sm-title text-center inline-block vertical-align-middle primary-color">
+						<h1 class="font-moul">រដ្ឋបាលខេត្តកំពត</h1>
+						<span>Kampot Administraion</span>
+					</div>
+				</div>
+				
+				<!-- desktop header -->
+				<div class="lg-header d-none d-lg-block">
+					
+					<!-- contain Cambodia sign and logo site title -->
+					<div class="container">
+						<div class="row">
+							
+							<!-- logo and site title -->
+							<div class="col-6 logo-wrap">
+								<a href="#" class="lg-logo inline-block vertical-align-middle">
+									<img src="asset/img/logo.png" />
+								</a>
+								<div class="lg-title text-center inline-block vertical-align-middle primary-color">
+									<h1 class="font-moul">រដ្ឋបាលខេត្តកំពត</h1>
+									<span>Kampot Administraion</span>
+								</div>
+							</div>
+							
+							<!-- Cambodia sign -->
+							<div class="col-6 logo-wrap text-right">
+								
+								<!-- logo and title -->
+								<h1 class="font-moul khmer-title primary-color inline-block">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិសាសនាព្រះមហាក្សត្រ</h1>
+								<img class="khmer-logo inline-block" src="asset/img/khmer-logo.png" />
+								<br/>
+								
+								<!-- search form -->
+								<form class="form-inline inline-block">
+									<div class="input-group input-group-sm mb-3">
+										<div class="input-group-prepend primary-background-color">
+											<button class="btn btn-outline" type="submit" id="button-addon1"><span class="oi oi-magnifying-glass"></span></button>
+										</div>
+										<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
+									</div>
+								</form>
+								
+								<!-- top menu -->
+								<ul class="short-link">
+									<li><a class="primary-color" href="#">ជជែកផ្ទាល់ |</a></li>
+									<li><a class="primary-color" href="#">ទំនាក់ទំនង |</a></li>
+									<li><a class="primary-color" href="#">ផ្តល់មតិយោបល់ |</a></li>
+									<li><a class="primary-color" href="#">សំនួរ ចម្លើយ </a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<!-- main navigation -->
+					<div class="primary-background-color lg-nav">	
+						<div class="container">	
+							<div class="row">	
+								<ul class="nav">
+									<li><a href="#">ទំព័រដើម</a></li>
+									<li class="dropdown current-menu-ancestor">
+										<a href="#">អំពីខេត្តកំពត</a>
+										<ul class="dropdown-menu dropdown-menu-left multi-level">
+											<li><a href="#">ចក្ខុវិស័យ</a></li>
+											<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
+											<li class="dropdown-submenu current-menu-ancestor">
+												<a href="#">ថ្នាក់ដឹកនាំខេត្ត</a>
+												<ul class="dropdown-menu">
+													<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+													<li class="dropdown-submenu current-menu-ancestor">
+														<a href="#">រដ្ឋបាលក្រុង-ស្រុក</a>
+														<ul class="dropdown-menu">
+															<li class="current-menu-item"><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+														</ul>
+													</li>
+													<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+													<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">អំពីសេវា</a></li>
+									<li><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a></li>
+									<li><a href="#">តំបន់ទេសចរណ៍</a></li>
+									<li><a href="#">ព្រឹត្តិការណ៍</a></li>	
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<!-- breadcrum -->
+				<div class="container">
+					<div class="breadcrum">
+						<ul>
+							<li><a href="#">ទំព័រដើម</a></li>
+							<li><a href="#">អំពីខេត្តកំពត</a></li>
+							<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
+							<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- section list -->
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="block-title primary-color">
+								<span class="primary-color font-moul">ព័ត៌មានថ្មីៗ</span>
+							</div>
+							<div class="b-2">
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">ឯកឧត្តម ជាវ តាយ អភិបាលនៃគណ:អភិបាលខេត្តកំពត ទទួលបដិសណ្ឋារកិច្ចជាមួយ ក្រុមសមាជិកគណៈប្រតិភូព្រឹទ្ធសភាប្រចាំភូមិភាគទី៥</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 26 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-02.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">រដ្ឋបាលខេត្តកំពតប្រារព្វទិវាអន្តរជាតិរំលឹកដល់ជនរងគ្រោះដោយគ្រោះថ្នាក់​ចរាចរណ៍​ផ្លូវគោកលើកទី១៣</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 25 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-03.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">ពិធីបុណ្យខួបអនុស្សាវរីយ៍លើកទី៦៥ នៃទិវាបុណ្យឯករាជ្យជាតិ ៩ វិច្ឆិកា និងកំណើតកងយោពលខេមរភូមិន្ទ ឆ្នាំ២០១៨</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 24 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-04.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">កិច្ចប្រជុំសាមញ្ញលើកទី៥៤ របស់ក្រុមប្រឹក្សាខេត្តកំពត អាណត្តិទី២</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 23 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">សិក្ខាសាលាស្តីពីការពង្រឹងគុណភាព និងប្រសិទ្ធភាពនៃការផ្តល់សេវាសាធារណៈ តាមយន្តការច្រកចេញ-ចូលតែមួយ</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 22 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">ឯកឧត្តម ជាវ តាយ អភិបាលនៃគណ:អភិបាលខេត្តកំពត ទទួលបដិសណ្ឋារកិច្ចជាមួយ ក្រុមសមាជិកគណៈប្រតិភូព្រឹទ្ធសភាប្រចាំភូមិភាគទី៥</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 26 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-02.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">រដ្ឋបាលខេត្តកំពតប្រារព្វទិវាអន្តរជាតិរំលឹកដល់ជនរងគ្រោះដោយគ្រោះថ្នាក់​ចរាចរណ៍​ផ្លូវគោកលើកទី១៣</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 25 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-03.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">ពិធីបុណ្យខួបអនុស្សាវរីយ៍លើកទី៦៥ នៃទិវាបុណ្យឯករាជ្យជាតិ ៩ វិច្ឆិកា និងកំណើតកងយោពលខេមរភូមិន្ទ ឆ្នាំ២០១៨</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 24 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-04.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">កិច្ចប្រជុំសាមញ្ញលើកទី៥៤ របស់ក្រុមប្រឹក្សាខេត្តកំពត អាណត្តិទី២</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 23 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+								<div class="b-item-wrap">
+									<div class="b-item row">
+										<div class="b-thumnail-wrap col-5">
+											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
+										</div>
+										<div class="b-title-wrap col-7">
+											<div class="b-title"><a href="#">សិក្ខាសាលាស្តីពីការពង្រឹងគុណភាព និងប្រសិទ្ធភាពនៃការផ្តល់សេវាសាធារណៈ តាមយន្តការច្រកចេញ-ចូលតែមួយ</a></div>
+											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 22 មករា, 2019</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="pagination text-center">
+								<ul>
+									<li><a href="#" title="Jump to first"><span class="oi oi-media-step-backward"></span></a></li>
+									<li><a href="#" title="Go previous"><span class="oi oi-media-skip-backward"></span></a></li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li class="active"><span>3</span></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#" title="Go next"><span class="oi oi-media-skip-forward"></span></a></li>
+									<li><a href="#" title="Jump to the last"><span class="oi oi-media-step-forward"></span></a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+						<div class="col-lg-4">
+							<div class="block-title primary-color">
+								<span class="primary-color font-moul">បណ្តាញសង្គម</span>
+							</div>
+							<div class="social sidebar">
+								<ul>
+									<li><a href="#"><svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>
+									<li><a href="#"><svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg></a></li>
+								</ul>
+							</div>
+							<div class="block-title primary-color">
+								<span class="primary-color font-moul">លេខអាសន្ន</span>
+							</div>
+							<table class="table table-bordered block-30">
+								<tbody>
+									<tr>
+										<th>
+											ប៉ូលីស
+										</th>
+										<th>
+											<a href="tel:117"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>117</span>
+										</th>
+									</tr>
+									<tr>
+										<th>
+											សង្គ្រោះបន្ទាន់
+										</th>
+										<th>
+											<a href="tel:119"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>119</span>
+										</th>
+									</tr>
+									<tr>
+										<th>
+											អគ្គីភ័យ
+										</th>
+										<th>
+											<a href="tel:666"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>666</span>
+										</th>
+									</tr>
+									<tr>
+										<th rowspan="2">
+											H1N1 Hotline
+										</th>
+										<th>
+											<a href="tel:012488981"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span> 012 488 981</span>
+										</th>
+									</tr>
+									<tr>
+										<th>
+											<a href="tel:012836868"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>012 836 868</span>
+										</th>
+									</tr>
+								</tbody>
+							</table>
+					
+							<div class="block-title primary-color">
+								<a class="primary-color font-moul" href="#">អត្រាប្តូរប្រាក់</a>
+							</div>
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<th>
+											ដុល្លារអាមេរិច
+										</th>
+										<th>
+											<span>១ USD = ៤០៥៥ KHR</span>
+										</th>
+									</tr>
+									<tr>
+										<th>
+											អ៊ឺរ៉ូ
+										</th>
+										<th>
+											<span>១ EUR = ៤៦៨៤ KHR</span>
+										</th>
+									</tr>
+									<tr>
+										<th>
+											ផោនអង់គ្លេស
+										</th>
+										<th>
+											<span>១ GBP = ៥៣៦៩ KHR</span>
+										</th>
+									</tr>
+									<tr>
+										<th>
+											ដុល្លារហុងកុង
+										</th>
+										<th>
+											<span>១ HKD = ៥២៣ KHR</span>
+										</th>
+									</tr>
+									<tr>
+										<th>
+											បាតថៃ
+										</th>
+										<th>
+											<span>១ THB = ១២៤ KHR</span>
+										</th>
+									</tr>
+								</tbody>
+							</table>
+							<caption class="text-right">ប្រភពពី <a href="https://www.nbc.org.kh/english/index.php">nbc.org.kh</a></caption>
+							<div class="block-30"></div>
+							
+							<div class="block-title primary-color">
+								<span class="primary-color font-moul" >តារាងទីផ្សារ</span>
+							</div>
+							<table class="table table-bordered block-30">
+								<tbody>
+									<tr>
+										<th>ប្រេងសាំង (រៀល/លីត្រ)</th>
+										<th>= ៤,១០០៛</th>
+									</tr>
+									<tr>
+										<th>ប្រេងរំអិលម៉ាស៊ូត (៥ល/ធុង)</th>
+										<th>= ១១២,០០០៛</th>
+									</tr>
+									<tr>
+										<th>អង្ករម្លិះ (គីឡូក្រាម)</th>
+										<th>= ៣.៥៤០៛</th>
+									</tr>
+									<tr>
+										<th>ម្សៅមី (គីឡូក្រាម)</th>
+										<th>= ៤.៧៥០៛</th>
+									</tr>
+									<tr>
+										<th>ស្រូវចំរុះ (គីឡូក្រាម)</th>
+										<th>= ១.៦០០៛</th>
+									</tr>
+									<tr>
+										<th>ពោតក្រហម គ្រាប់ (គីឡូក្រាម)</th>
+										<th>= ២.៥២៥៛</th>
+									</tr>
+									<tr>
+										<th>ពោតស គ្រាប់ (គីឡូក្រាម)</th>
+										<th>= ៣.៨៣៣៛</th>
+									</tr>
+								</tbody>
+							</table>
+							 
+							 
+							
+							<div class="block-title primary-color">
+								<span class="primary-color font-moul" >អាកាសធាតុ</span>
+							</div>
+							<a class="weatherwidget-io" href="https://forecast7.com/en/11d54104d89/phnom-penh/" data-label_1="PHNOM PENH" data-label_2="WEATHER" data-theme="original" >PHNOM PENH WEATHER</a>
+							<script>
+							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+							</script>
+							<div class="block-30"></div>
+						</div>
+					</div>
+				</div>
+				
+			
+				<footer class="footer primary-background-color">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<h4 class="font-moul footer-brand">រដ្ឋបាលខេត្តកំពត</h4>
+								<p>លេខ៧៣៥ ភូមិ១ ឧសភា សង្កាត់កំពង់កណ្តាល ក្រុងកំពត ខេត្តកំពត</p>
+								<p>info@kampot.gov.kh</p>
+								<p>លេខទូរស័ព្ទ: 033932894</p>
+								<div class="footer-social">
+									<!--object type="image/svg+xml" data="asset/fontawesome/svgs/brands/youtube-square.svg" width="32" height="32"></object-->
+									<a href="#">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill:#fff;width:32px;height:32px;"><path d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"/></svg>
+									</a>
+									<a href="#">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill:#fff;width:32px;height:32px;"><path d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"/></svg>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3921.702628822027!2d104.17930532300105!3d10.60240691484887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3108368f7ac05dbb%3A0xf0ed8bba3d08023b!2sKampot+Provincial+Hall!5e0!3m2!1sen!2skh!4v1548235984030" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="copy-right">© 2018 រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ៖ រដ្ឋបាលខេត្តកំពត</div>
+				</footer>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="asset/slick/slick.min.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				jQuery('.nav-button').on('click', function() {
+					jQuery('.content').toggleClass('isOpen');
+					jQuery(this).find(".nav-icon").toggleClass("oi-menu oi-x");
+				});
+				
+				// sm nav menu
+				jQuery(".sm-navbar .sub-menu ul ul").hide();
+				jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find("ul").show();
+				jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+				jQuery(".sm-navbar .sub-menu span").click(function () {
+					jQuery(this).parent(".sub-menu").children("ul").slideToggle("slow");
+					jQuery(this).parent(".sub-menu").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+				});
+				
+				// slick slideshow
+				$(".slick-slideshow").slick({
+					//dots: true,
+					speed: 500,
+					autoplay: true,
+					adaptiveHeight: true,
+					mobileFirst: true,
+					nextArrow: '<div class="primary-background-color slick-arrow slick-next"><span class="oi oi-chevron-right"></span></div>',
+					prevArrow: '<div class="primary-background-color slick-arrow slick-prev"><span class="oi oi-chevron-left"></span></div>'
+				});
+				
+				// tab collapse
+				jQuery(".tab-collapse > li > ul").hide();
+				jQuery(".tab-collapse > li.active > ul").show(); 
+				jQuery(".tab-collapse > li > a").click(function () {
+					if ( jQuery(this).parent("li").hasClass("active") ){
+						return false;
+					}
+					
+					// if your want to maintain the height
+					//height = jQuery(this).closest(".tab-collapse").height();
+					//$('.tab-collapse').css('min-height', height);
+					
+					
+					jQuery(this).closest(".tab-collapse").children("li").children("ul").slideUp("slow"); 
+					jQuery(this).closest(".tab-collapse").children("li").removeClass("active");
+					
+					jQuery(this).parent("li").addClass("active");
+					jQuery(this).parent("li").children("ul").slideToggle("slow");
+					return false;
+				});
+				
+				
+				
+			});
+		</script>
+	</body>
+</html>

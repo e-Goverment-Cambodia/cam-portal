@@ -3,7 +3,7 @@
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+		<meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=yes">
 		
 		<link rel="icon" type="image/png" href="asset/img/logo-16x16.png" sizes="16x16" />
 		<link rel="icon" type="image/png" href="asset/img/logo-32x32.png" sizes="32x32" />
@@ -23,17 +23,30 @@
 
 		<title>រដ្ឋបាលខេត្តកំពត</title>
 		
+		<!-- options -->
 		<style>
-			.primary-color, .tab-collapse > li.active > a::before { color: #2082c3; }
-			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a { background-color: #2082c3; }
+			.primary-color, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
+			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span { background-color: #2082c3; }
+			.fill { fill: #2082c3; }
+			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 		</style>
+		
+		<!-- non responsive CSS this must load after options above -->
+		<link rel="stylesheet" type="text/css" href="asset/css/non-responsive.css" />
 	</head>
 	<body>
+		<!-- wrap all content container instead of body -->
 		<div class="wrapper">
+		
+			<!-- display for mobile menu in left sidebar -->
 			<div class="nav-sidebar d-md-block d-lg-none primary-background-color">
 				<div class="nav-sidebar-header">
+					
+					<!-- Cambodia sign -->
 					<img class="khmer-logo" src="asset/img/khmer-logo.png" />
 					<h1 class="font-moul khmer-title primary-color">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិសាសនាព្រះមហាក្សត្រ</h1>
+					
+					<!-- search form -->
 					<form class="form-inline">
 						<div class="input-group mb-3">
 							<div class="input-group-prepend primary-background-color">
@@ -43,6 +56,7 @@
 						</div>
 					</form>	
 					
+					<!-- top menu bar -->
 					<ul class="short-link">
 						<li><a class="primary-color" href="#">ជជែកផ្ទាល់ -</a></li>
 						<li><a class="primary-color" href="#">ទំនាក់ទំនង -</a></li>
@@ -51,6 +65,7 @@
 					</ul>
 				</div>
 				
+				<!-- main navigation -->
 				<nav class="sm-navbar-wrap animated bounceInDown">
 					<ul class="sm-navbar primary-background-color">
 						<li><a href="#">ទំព័រដើម</a></li>
@@ -101,11 +116,12 @@
 						<li><a href="#">ព្រឹត្តិការណ៍</a></li>
 					</ul>
 				</nav>
-				
-				
 			</div>
 			
+			<!-- this content contain all container -->
 			<div class="content">
+			
+				<!-- small screen header in responsive mode -->
 				<div class="sm-header d-md-block d-lg-none">
 					<div class="nav-button inline-block vertical-align-middle">
 						<span class="oi oi-menu nav-icon primary-color"></span>
@@ -119,10 +135,14 @@
 					</div>
 				</div>
 				
+				<!-- desktop header -->
 				<div class="lg-header d-none d-lg-block">
 					
+					<!-- contain Cambodia sign and logo site title -->
 					<div class="container">
 						<div class="row">
+							
+							<!-- logo and site title -->
 							<div class="col-6 logo-wrap">
 								<a href="#" class="lg-logo inline-block vertical-align-middle">
 									<img src="asset/img/logo.png" />
@@ -132,14 +152,16 @@
 									<span>Kampot Administraion</span>
 								</div>
 							</div>
-								
-								
-								
-								
+							
+							<!-- Cambodia sign -->
 							<div class="col-6 logo-wrap text-right">
+								
+								<!-- logo and title -->
 								<h1 class="font-moul khmer-title primary-color inline-block">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិសាសនាព្រះមហាក្សត្រ</h1>
 								<img class="khmer-logo inline-block" src="asset/img/khmer-logo.png" />
 								<br/>
+								
+								<!-- search form -->
 								<form class="form-inline inline-block">
 									<div class="input-group input-group-sm mb-3">
 										<div class="input-group-prepend primary-background-color">
@@ -147,9 +169,9 @@
 										</div>
 										<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 									</div>
+								</form>
 								
-								</form>	
-								
+								<!-- top menu -->
 								<ul class="short-link">
 									<li><a class="primary-color" href="#">ជជែកផ្ទាល់ |</a></li>
 									<li><a class="primary-color" href="#">ទំនាក់ទំនង |</a></li>
@@ -157,14 +179,10 @@
 									<li><a class="primary-color" href="#">សំនួរ ចម្លើយ </a></li>
 								</ul>
 							</div>
-							
-							
-							
-							
-							
-						
 						</div>
 					</div>
+					
+					<!-- main navigation -->
 					<div class="primary-background-color lg-nav">	
 						<div class="container">	
 							<div class="row">	
@@ -194,13 +212,13 @@
 									<li><a href="#">អំពីសេវា</a></li>
 									<li><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a></li>
 									<li><a href="#">តំបន់ទេសចរណ៍</a></li>
-									<li><a href="#">ព្រឹត្តិការណ៍</a></li>
-										
+									<li><a href="#">ព្រឹត្តិការណ៍</a></li>	
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
+			
 				
 				<!-- slideshow container -->
 				<div class="container">
@@ -668,9 +686,7 @@
 					</div>
 				</div>
 				
-				<div class="container2">
-					
-				</div>
+				
 				<footer class="footer primary-background-color">
 					<div class="container">
 						<div class="row">
