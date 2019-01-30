@@ -188,8 +188,18 @@
 					<!-- main navigation -->
 					<div class="primary-background-color lg-nav">	
 						<div class="container">	
-							<div class="row">	
-								<ul class="nav">
+							<!-- <div class="row"> -->
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+									'container_class' => 'row',
+									'menu_class' 	 => 'nav'
+								) );
+							?>
+
+
+								<!-- <ul class="nav">
 									<li><a href="#">ទំព័រដើម</a></li>
 									<li class="dropdown current-menu-ancestor">
 										<a href="#">អំពីខេត្តកំពត</a>
@@ -216,8 +226,8 @@
 									<li><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a></li>
 									<li><a href="#">តំបន់ទេសចរណ៍</a></li>
 									<li><a href="#">ព្រឹត្តិការណ៍</a></li>	
-								</ul>
-							</div>
+								</ul> -->
+							<!-- </div> -->
 						</div>
 					</div>
 				</div>
@@ -247,7 +257,7 @@
 		</div> -->
 		<!-- .site-branding -->
 
-		<!-- <nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cam-portal' ); ?></button>
 			<?php
 			wp_nav_menu( array(
@@ -255,7 +265,7 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav> -->
+		</nav>
 		<!-- #site-navigation -->
 	<!-- </header>#masthead -->
 

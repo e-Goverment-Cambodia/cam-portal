@@ -45,6 +45,7 @@ if ( ! function_exists( 'cam_portal_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'cam-portal' ),
+			'menu-2' => esc_html__( 'Top Menu', 'cam-portal' )
 		) );
 
 		/*
@@ -155,6 +156,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Menu additions.
+ */
+require get_template_directory() . '/inc/menu-walker.php';
 
 /**
  * Load Jetpack compatibility file.
