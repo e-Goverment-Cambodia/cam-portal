@@ -259,13 +259,13 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .cpt-detail li { list-style: none; word-break: break-all; }
 .cpt-detail li span { font-size: 16px; }
 .cpt-detail li h5 { font-size: 18px; font-weight: bold; line-height: 30px; margin-bottom: 15px; display: inline-block; margin-left: 10px; }
-.cpt-detail li ul {}
+.cpt-detail li ul {     padding-left: 25px; }
 .cpt-detail li ul li { font-size: 16px;  margin-bottom: 15px; line-height: 25px; }
 .cpt-detail li a {}
 .cpt-address { font-weight: bold; }
 .cpt-address li { font-weight: normal; }
 .cpt-address span { margin-right: 10px; }
-.cpt-address ul { padding: 15px 0; }
+.cpt-address ul { padding-top: 15px; padding-bottom: 15px; padding-left: 0px!important; }
 
 /* footer */
 .footer { padding-top: 30px; }
@@ -294,6 +294,7 @@ html.non-responsive { overflow-x: auto; }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
+.responsive .detail-wrap .head .title h4 { font-size: 16px; line-height: 27px; }
 .responsive .container{ min-width: 100%; width: 0px; }
 .responsive .slick-slideshow .slick-item .slick-content h1{ font-size: 16px; padding: 5px 15px; line-height: 25px; }
 .responsive .slick-slideshow .slick-arrow { display: none!important; }
