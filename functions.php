@@ -128,6 +128,9 @@ function cam_portal_scripts() {
 	wp_enqueue_style( 'cam-portal-custom', get_template_directory_uri() . '/asset/css/custom.css' );
 	wp_enqueue_style( 'cam-portal-non-responsive', get_template_directory_uri() . '/asset/css/non-responsive.css' );
 	wp_enqueue_script( 'cam-portal-navigation', get_template_directory_uri() . '/asset/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'cam-portal-poperjs', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'cam-portal-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'cam-portal-slickjs', get_template_directory_uri() . '/asset/slick/slick.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'cam-portal-main', get_template_directory_uri() . '/asset/js/main.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'cam-portal-skip-link-focus-fix', get_template_directory_uri() . '/asset/js/skip-link-focus-fix.js', array(), '20151215', true );
