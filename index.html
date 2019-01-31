@@ -20,19 +20,19 @@
 		
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="asset/css/custom.css" />
+		
+		<!-- non responsive CSS this must load after options above -->
+		<link rel="stylesheet" type="text/css" href="asset/css/non-responsive.css" />
 
 		<title>រដ្ឋបាលខេត្តកំពត</title>
 		
 		<!-- options -->
 		<style>
 			.primary-color, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
-			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span { background-color: #2082c3; }
+			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .languages ul li.active { background-color: #2082c3; }
 			.fill { fill: #2082c3; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 		</style>
-		
-		<!-- non responsive CSS this must load after options above -->
-		<link rel="stylesheet" type="text/css" href="asset/css/non-responsive.css" />
 	</head>
 	<body>
 		<!-- wrap all content container instead of body -->
@@ -55,6 +55,12 @@
 							<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 						</div>
 					</form>	
+					<div class="languages d-block text-center">
+						<ul>
+							<li class="active"><a href="#">ខ្មែរ</a></li>
+							<li><a href="#">Eng</a></li>
+						</ul>
+					</div>
 					
 					<!-- top menu bar -->
 					<ul class="short-link">
@@ -66,54 +72,44 @@
 				</div>
 				
 				<!-- main navigation -->
-				<nav class="sm-navbar-wrap animated bounceInDown">
-					<ul class="sm-navbar primary-background-color">
-						<li><a href="#">ទំព័រដើម</a></li>
-						<li class="sub-menu current-menu-ancestor "><a href="#">អំពីខេត្តកំពត</a>
+				<nav class="sm-navbar">
+					<ul>
+						<li><a href="index.html">ទំព័រដើម</a></li>
+						<li class="sub-menu"><a href="#">អំពីខេត្តកំពត</a><span class="oi oi-chevron-bottom right"></span>
 							<ul>
-								<li class="sub-menu current-menu-ancestor"><a href="#">ចក្ខុវិស័យ</a><span class="oi oi-chevron-bottom right"></span>
-									<ul>
-										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-										<li class="current-menu-item"><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-									</ul>
-								</li>
-								<li class="sub-menu"><a href="#">រចនាសម្ព័ន្ធ</a><span class="oi oi-chevron-bottom right"></span>
-									<ul>
-										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-										<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-									</ul>
-								</li>
+								<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
 								<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-								<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+								<li><a href="#">មន្ទីរ-អង្គភាពជុំវិញខេត្ត</a></li>
 								<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
 								<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+								<li><a href="#">ប្រវត្តិខេត្តកំពត</a></li>
+								<li><a href="#">ស្ថានភាពទូទៅ</a></li>
 							</ul>
 						</li>
-						<li class="sub-menu"><a href="#">អំពីសេវា</a>
+						<li class="sub-menu current-menu-ancestor"><a href="#">សេវារដ្ឋបាល</a><span class="oi oi-chevron-bottom right"></span>
 							<ul>
-								<li><a href="#">សេវាសាធារណៈ</a></li>
-								<li><a href="#">សេវារដ្ឋបាល</a></li>
+								<li><a href="#">សេវាតាមវិស័យ</a></li>
+								<li class="current-menu-item"><a href="#">សេវាតាមក្រុម</a></li>
 							</ul>
 						</li>
-						<li class="sub-menu"><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a>
+						<li class="sub-menu"><a href="#">ព័ត៌មានថ្នាក់ខេត្ត</a><span class="oi oi-chevron-bottom right"></span>
 							<ul>
-								<li><a href="#">ព័ត៌មានថ្មីៗ</a></li>
-								<li><a href="#">បទដ្ឋានគតិយុត្តិ</a></li>
-							</ul>
-						</li>
-						<li class="sub-menu"><a href="#">តំបន់ទេសចរណ៍</a>
-							<ul>
-								<li><a href="#">រមណីដ្ឋានប្រវត្តសាស្រ្ត</a></li>
-								<li><a href="#">រមណីដ្ឋានធម្មជាតិ</a></li>
+								<li><a href="#">ព័ត៌មានថ្នាក់ក្រុង-ស្រុក</a></li>
+								<li><a href="#">សេចក្តីជូនដំណឹង</a></li>
 							</ul>
 						</li>
 						<li><a href="#">ព្រឹត្តិការណ៍</a></li>
+						<li><a href="#">លិខិតបទដ្ឋានគតិយុត្តិ</a></li>
+						<li class="sub-menu"><a href="#">តំបន់ទេសចរណ៍</a><span class="oi oi-chevron-bottom right"></span>
+							<ul>
+								<li><a href="#">រមណីយដ្ឋានប្រវត្តិសាស្រ្ត</a></li>
+								<li><a href="#">រមណីយដ្ឋានវប្បធម៌</a></li>
+								<li><a href="#">រមណីយដ្នានធម្មជាតិ</a></li>
+								<li><a href="#">រមណីយដ្ឋានធម្មជាតិកែច្នៃ</a></li>
+								<li><a href="#">គោលដៅទេសចរណ៍</a></li>
+							</ul>
+						</li>
+						<li><a href="#">​សក្តានុពលវិនិយោគ</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -126,7 +122,7 @@
 					<div class="nav-button inline-block vertical-align-middle">
 						<span class="oi oi-menu nav-icon primary-color"></span>
 					</div>
-					<a href="#" class="sm-logo inline-block vertical-align-middle">
+					<a href="index.html" class="sm-logo inline-block vertical-align-middle">
 						<img src="asset/img/logo.png" />
 					</a>
 					<div class="sm-title text-center inline-block vertical-align-middle primary-color">
@@ -144,7 +140,7 @@
 							
 							<!-- logo and site title -->
 							<div class="col-6 logo-wrap">
-								<a href="#" class="lg-logo inline-block vertical-align-middle">
+								<a href="index.html" class="lg-logo inline-block vertical-align-middle">
 									<img src="asset/img/logo.png" />
 								</a>
 								<div class="lg-title text-center inline-block vertical-align-middle primary-color">
@@ -163,13 +159,19 @@
 								
 								<!-- search form -->
 								<form class="form-inline inline-block">
-									<div class="input-group input-group-sm mb-3">
+									<div class="input-group input-group-sm mb-2">
 										<div class="input-group-prepend primary-background-color">
 											<button class="btn btn-outline" type="submit" id="button-addon1"><span class="oi oi-magnifying-glass"></span></button>
 										</div>
 										<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 									</div>
 								</form>
+								<div class="languages d-inline-block">
+									<ul>
+										<li class="active"><a href="#">ខ្មែរ</a></li>
+										<li><a href="#">Eng</a></li>
+									</ul>
+								</div>
 								
 								<!-- top menu -->
 								<ul class="short-link">
@@ -183,42 +185,65 @@
 					</div>
 					
 					<!-- main navigation -->
-					<div class="primary-background-color lg-nav">	
+					<div class="primary-background-color">	
 						<div class="container">	
 							<div class="row">	
-								<ul class="nav">
-									<li><a href="#">ទំព័រដើម</a></li>
-									<li class="dropdown current-menu-ancestor">
-										<a href="#">អំពីខេត្តកំពត</a>
-										<ul class="dropdown-menu dropdown-menu-left multi-level">
-											<li><a href="#">ចក្ខុវិស័យ</a></li>
-											<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-											<li class="dropdown-submenu current-menu-ancestor">
-												<a href="#">ថ្នាក់ដឹកនាំខេត្ត</a>
-												<ul class="dropdown-menu">
-													<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-													<li class="dropdown-submenu current-menu-ancestor">
-														<a href="#">រដ្ឋបាលក្រុង-ស្រុក</a>
-														<ul class="dropdown-menu">
-															<li class="current-menu-item"><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-														</ul>
-													</li>
-													<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-													<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">អំពីសេវា</a></li>
-									<li><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a></li>
-									<li><a href="#">តំបន់ទេសចរណ៍</a></li>
-									<li><a href="#">ព្រឹត្តិការណ៍</a></li>	
-								</ul>
+								<div class="lg-nav">	
+									<ul>
+										<li><a href="index.html">ទំព័រដើម</a></li>
+										<li class="dropdown"><a href="#">អំពីខេត្តកំពត</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
+												<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
+												<li><a href="#">មន្ទីរ-អង្គភាពជុំវិញខេត្ត</a></li>
+												<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+												<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+												<li><a href="#">ប្រវត្តិខេត្តកំពត</a></li>
+												<li><a href="#">ស្ថានភាពទូទៅ</a></li>
+												<li class="dropdown"><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+														<li class="dropdown"><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a>
+															<ul class="dropdown-menu">
+																<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+															</ul>
+														</li>
+														<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+														<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown current-menu-ancestor"><a href="#">សេវារដ្ឋបាល</a>
+											<ul class="dropdown-menu dropdown-menu-left multi-level">
+												<li><a href="#">សេវាតាមវិស័យ</a></li>
+												<li class="current-menu-item"><a href="#">សេវាតាមក្រុម</a></li>
+											</ul>
+										</li>
+										<li class="dropdown"><a href="#">ព័ត៌មានថ្នាក់ខេត្ត</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">ព័ត៌មានថ្នាក់ក្រុង-ស្រុក</a></li>
+												<li><a href="#">សេចក្តីជូនដំណឹង</a></li>
+											</ul>
+										</li>
+										<li><a href="#">ព្រឹត្តិការណ៍</a></li>
+										<li><a href="#">លិខិតបទដ្ឋានគតិយុត្តិ</a></li>
+										<li class="dropdown"><a href="#">តំបន់ទេសចរណ៍</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">រមណីយដ្ឋានប្រវត្តិសាស្រ្ត</a></li>
+												<li><a href="#">រមណីយដ្ឋានវប្បធម៌</a></li>
+												<li><a href="#">រមណីយដ្នានធម្មជាតិ</a></li>
+												<li><a href="#">រមណីយដ្ឋានធម្មជាតិកែច្នៃ</a></li>
+												<li><a href="#">គោលដៅទេសចរណ៍</a></li>
+											</ul>
+										</li>
+										<li><a href="#">​សក្តានុពលវិនិយោគ</a></li>	
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			
 				
 				<!-- slideshow container -->
 				<div class="container">
@@ -287,13 +312,13 @@
 							
 							
 							<ul class="tab-collapse tab3">
-								<li class="one active"><a class="primary-color" href="#">ថ្នាក់រាជធានី-ខេត្ត</a>
+								<li class="one active"><a class="primary-color" href="#">សេវាតាមវិស័យ</a>
 									<ul class="primary-color">
 										<li><a href="#">ការងារនីត្យានុកូលកម្ម (ការបញ្ជាក់លើឯកសារថតចម្លង)</a></li>
 										<li><a href="#">ការងាររដ្ឋបាល</a></li>
 									</ul>
 								</li>
-								<li class="two"><a class="primary-color" href="#">ថ្នាក់ក្រុង-ស្រុក-ខណ្ឌ</a>
+								<li class="two"><a class="primary-color" href="#">សេវាតាមក្រុម</a>
 									<ul class="primary-color">
 										<li><a href="#">ការងារនីត្យានុកូលកម្ម (ការបញ្ជាក់លើឯកសារថតចម្លង)</a></li>
 										<li><a href="#">ការងាររដ្ឋបាល</a></li>
@@ -309,7 +334,7 @@
 										<li><a href="#">វិស័យសាធារណការ និងដឹកជញ្ជូន</a></li>
 									</ul>
 								</li>
-								<li class="three"><a class="primary-color" href="#">ថ្នាក់ឃុំ-សង្កាត់</a>
+								<li class="three"><a class="primary-color" href="#">សេវាទាំងអស់</a>
 									<ul class="primary-color">
 										<li><a href="#">ការងារអត្រានុកូលដ្ឋាន</a></li>
 										<li><a href="#">ការចេញលិខិតបញ្ជាក់</a></li>
