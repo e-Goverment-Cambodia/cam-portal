@@ -52,7 +52,12 @@
 							<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 						</div>
 					</form>	
-					
+					<div class="languages d-block text-center">
+						<ul>
+							<li class="active"><a href="#">ខ្មែរ</a></li>
+							<li><a href="#">Eng</a></li>
+						</ul>
+					</div>
 					<!-- top menu bar -->
 					<ul class="short-link">
 						<li><a class="primary-color" href="#">ជជែកផ្ទាល់ -</a></li>
@@ -63,56 +68,15 @@
 				</div>
 				
 				<!-- main navigation -->
-				<nav class="sm-navbar-wrap animated bounceInDown">
-					<ul class="sm-navbar primary-background-color">
-						<li><a href="#">ទំព័រដើម</a></li>
-						<li class="sub-menu current-menu-ancestor "><a href="#">អំពីខេត្តកំពត</a>
-							<ul>
-								<li class="sub-menu current-menu-ancestor"><a href="#">ចក្ខុវិស័យ</a><span class="oi oi-chevron-bottom right"></span>
-									<ul>
-										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-										<li class="current-menu-item"><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-									</ul>
-								</li>
-								<li class="sub-menu"><a href="#">រចនាសម្ព័ន្ធ</a><span class="oi oi-chevron-bottom right"></span>
-									<ul>
-										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-										<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-									</ul>
-								</li>
-								<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-								<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-								<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-								<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-							</ul>
-						</li>
-						<li class="sub-menu"><a href="#">អំពីសេវា</a>
-							<ul>
-								<li><a href="#">សេវាសាធារណៈ</a></li>
-								<li><a href="#">សេវារដ្ឋបាល</a></li>
-							</ul>
-						</li>
-						<li class="sub-menu"><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a>
-							<ul>
-								<li><a href="#">ព័ត៌មានថ្មីៗ</a></li>
-								<li><a href="#">បទដ្ឋានគតិយុត្តិ</a></li>
-							</ul>
-						</li>
-						<li class="sub-menu"><a href="#">តំបន់ទេសចរណ៍</a>
-							<ul>
-								<li><a href="#">រមណីដ្ឋានប្រវត្តសាស្រ្ត</a></li>
-								<li><a href="#">រមណីដ្ឋានធម្មជាតិ</a></li>
-							</ul>
-						</li>
-						<li><a href="#">ព្រឹត្តិការណ៍</a></li>
-					</ul>
-				</nav>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'container' => 'nav',
+						'container_class' => 'row',
+						'menu_class' 	 => 'nav'
+					) );
+				?>
 			</div>
 			
 			<!-- this content contain all container -->
@@ -197,37 +161,6 @@
 									'menu_class' 	 => 'nav'
 								) );
 							?>
-
-
-								<!-- <ul class="nav">
-									<li><a href="#">ទំព័រដើម</a></li>
-									<li class="dropdown current-menu-ancestor">
-										<a href="#">អំពីខេត្តកំពត</a>
-										<ul class="dropdown-menu dropdown-menu-left multi-level">
-											<li><a href="#">ចក្ខុវិស័យ</a></li>
-											<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-											<li class="dropdown-submenu current-menu-ancestor">
-												<a href="#">ថ្នាក់ដឹកនាំខេត្ត</a>
-												<ul class="dropdown-menu">
-													<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-													<li class="dropdown-submenu current-menu-ancestor">
-														<a href="#">រដ្ឋបាលក្រុង-ស្រុក</a>
-														<ul class="dropdown-menu">
-															<li class="current-menu-item"><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-														</ul>
-													</li>
-													<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-													<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">អំពីសេវា</a></li>
-									<li><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a></li>
-									<li><a href="#">តំបន់ទេសចរណ៍</a></li>
-									<li><a href="#">ព្រឹត្តិការណ៍</a></li>	
-								</ul> -->
-							<!-- </div> -->
 						</div>
 					</div>
 				</div>
