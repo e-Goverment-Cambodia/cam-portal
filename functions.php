@@ -127,9 +127,10 @@ function cam_portal_scripts() {
 	wp_enqueue_style( 'cam-portal-iconic', get_template_directory_uri() . '/asset/open-iconic/font/css/open-iconic-bootstrap.css' );
 	wp_enqueue_style( 'cam-portal-custom', get_template_directory_uri() . '/asset/css/custom.css' );
 	wp_enqueue_style( 'cam-portal-non-responsive', get_template_directory_uri() . '/asset/css/non-responsive.css' );
-	wp_enqueue_script( 'cam-portal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'cam-portal-navigation', get_template_directory_uri() . '/asset/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'cam-portal-main', get_template_directory_uri() . '/asset/js/main.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'cam-portal-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'cam-portal-skip-link-focus-fix', get_template_directory_uri() . '/asset/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -160,7 +161,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Menu additions.
  */
-require get_template_directory() . '/inc/menu-walker.php';
+// require get_template_directory() . '/inc/menu-walker.php';
 
 /**
  * Load Jetpack compatibility file.
