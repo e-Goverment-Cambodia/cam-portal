@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="non-responsive" lang="en">
+<html class="responsive" lang="en">
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
@@ -20,19 +20,19 @@
 		
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="asset/css/custom.css" />
+		
+		<!-- non responsive CSS this must load after options above -->
+		<link rel="stylesheet" type="text/css" href="asset/css/non-responsive.css" />
 
 		<title>រដ្ឋបាលខេត្តកំពត</title>
 		
 		<!-- options -->
 		<style>
 			.primary-color, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
-			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span { background-color: #2082c3; }
+			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
 			.fill { fill: #2082c3; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 		</style>
-		
-		<!-- non responsive CSS this must load after options above -->
-		<link rel="stylesheet" type="text/css" href="asset/css/non-responsive.css" />
 	</head>
 	<body>
 		<!-- wrap all content container instead of body -->
@@ -55,6 +55,12 @@
 							<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 						</div>
 					</form>	
+					<div class="languages d-block text-center">
+						<ul>
+							<li class="active"><a href="#">ខ្មែរ</a></li>
+							<li><a href="#">Eng</a></li>
+						</ul>
+					</div>
 					
 					<!-- top menu bar -->
 					<ul class="short-link">
@@ -66,54 +72,44 @@
 				</div>
 				
 				<!-- main navigation -->
-				<nav class="sm-navbar-wrap animated bounceInDown">
-					<ul class="sm-navbar primary-background-color">
-						<li><a href="#">ទំព័រដើម</a></li>
-						<li class="sub-menu current-menu-ancestor "><a href="#">អំពីខេត្តកំពត</a>
+				<nav class="sm-navbar">
+					<ul>
+						<li><a href="index.html">ទំព័រដើម</a></li>
+						<li class="sub-menu"><a href="#">អំពីខេត្តកំពត</a><span class="oi oi-chevron-bottom right"></span>
 							<ul>
-								<li class="sub-menu current-menu-ancestor"><a href="#">ចក្ខុវិស័យ</a><span class="oi oi-chevron-bottom right"></span>
-									<ul>
-										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-										<li class="current-menu-item"><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-									</ul>
-								</li>
-								<li class="sub-menu"><a href="#">រចនាសម្ព័ន្ធ</a><span class="oi oi-chevron-bottom right"></span>
-									<ul>
-										<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-										<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-										<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-										<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-										<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-									</ul>
-								</li>
+								<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
 								<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-								<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+								<li><a href="#">មន្ទីរ-អង្គភាពជុំវិញខេត្ត</a></li>
 								<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
 								<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+								<li><a href="#">ប្រវត្តិខេត្តកំពត</a></li>
+								<li><a href="#">ស្ថានភាពទូទៅ</a></li>
 							</ul>
 						</li>
-						<li class="sub-menu"><a href="#">អំពីសេវា</a>
+						<li class="sub-menu current-menu-ancestor"><a href="#">សេវារដ្ឋបាល</a><span class="oi oi-chevron-bottom right"></span>
 							<ul>
-								<li><a href="#">សេវាសាធារណៈ</a></li>
-								<li><a href="#">សេវារដ្ឋបាល</a></li>
+								<li><a href="#">សេវាតាមវិស័យ</a></li>
+								<li class="current-menu-item"><a href="#">សេវាតាមក្រុម</a></li>
 							</ul>
 						</li>
-						<li class="sub-menu"><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a>
+						<li class="sub-menu"><a href="#">ព័ត៌មានថ្នាក់ខេត្ត</a><span class="oi oi-chevron-bottom right"></span>
 							<ul>
-								<li><a href="#">ព័ត៌មានថ្មីៗ</a></li>
-								<li><a href="#">បទដ្ឋានគតិយុត្តិ</a></li>
-							</ul>
-						</li>
-						<li class="sub-menu"><a href="#">តំបន់ទេសចរណ៍</a>
-							<ul>
-								<li><a href="#">រមណីដ្ឋានប្រវត្តសាស្រ្ត</a></li>
-								<li><a href="#">រមណីដ្ឋានធម្មជាតិ</a></li>
+								<li><a href="#">ព័ត៌មានថ្នាក់ក្រុង-ស្រុក</a></li>
+								<li><a href="#">សេចក្តីជូនដំណឹង</a></li>
 							</ul>
 						</li>
 						<li><a href="#">ព្រឹត្តិការណ៍</a></li>
+						<li><a href="#">លិខិតបទដ្ឋានគតិយុត្តិ</a></li>
+						<li class="sub-menu"><a href="#">តំបន់ទេសចរណ៍</a><span class="oi oi-chevron-bottom right"></span>
+							<ul>
+								<li><a href="#">រមណីយដ្ឋានប្រវត្តិសាស្រ្ត</a></li>
+								<li><a href="#">រមណីយដ្ឋានវប្បធម៌</a></li>
+								<li><a href="#">រមណីយដ្នានធម្មជាតិ</a></li>
+								<li><a href="#">រមណីយដ្ឋានធម្មជាតិកែច្នៃ</a></li>
+								<li><a href="#">គោលដៅទេសចរណ៍</a></li>
+							</ul>
+						</li>
+						<li><a href="#">​សក្តានុពលវិនិយោគ</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -126,7 +122,7 @@
 					<div class="nav-button inline-block vertical-align-middle">
 						<span class="oi oi-menu nav-icon primary-color"></span>
 					</div>
-					<a href="#" class="sm-logo inline-block vertical-align-middle">
+					<a href="index.html" class="sm-logo inline-block vertical-align-middle">
 						<img src="asset/img/logo.png" />
 					</a>
 					<div class="sm-title text-center inline-block vertical-align-middle primary-color">
@@ -144,7 +140,7 @@
 							
 							<!-- logo and site title -->
 							<div class="col-6 logo-wrap">
-								<a href="#" class="lg-logo inline-block vertical-align-middle">
+								<a href="index.html" class="lg-logo inline-block vertical-align-middle">
 									<img src="asset/img/logo.png" />
 								</a>
 								<div class="lg-title text-center inline-block vertical-align-middle primary-color">
@@ -163,13 +159,19 @@
 								
 								<!-- search form -->
 								<form class="form-inline inline-block">
-									<div class="input-group input-group-sm mb-3">
+									<div class="input-group input-group-sm mb-2">
 										<div class="input-group-prepend primary-background-color">
 											<button class="btn btn-outline" type="submit" id="button-addon1"><span class="oi oi-magnifying-glass"></span></button>
 										</div>
 										<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 									</div>
 								</form>
+								<div class="languages d-inline-block">
+									<ul>
+										<li class="active"><a href="#">ខ្មែរ</a></li>
+										<li><a href="#">Eng</a></li>
+									</ul>
+								</div>
 								
 								<!-- top menu -->
 								<ul class="short-link">
@@ -183,37 +185,61 @@
 					</div>
 					
 					<!-- main navigation -->
-					<div class="primary-background-color lg-nav">	
+					<div class="primary-background-color">	
 						<div class="container">	
 							<div class="row">	
-								<ul class="nav">
-									<li><a href="#">ទំព័រដើម</a></li>
-									<li class="dropdown current-menu-ancestor">
-										<a href="#">អំពីខេត្តកំពត</a>
-										<ul class="dropdown-menu dropdown-menu-left multi-level">
-											<li><a href="#">ចក្ខុវិស័យ</a></li>
-											<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-											<li class="dropdown-submenu current-menu-ancestor">
-												<a href="#">ថ្នាក់ដឹកនាំខេត្ត</a>
-												<ul class="dropdown-menu">
-													<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-													<li class="dropdown-submenu current-menu-ancestor">
-														<a href="#">រដ្ឋបាលក្រុង-ស្រុក</a>
-														<ul class="dropdown-menu">
-															<li class="current-menu-item"><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-														</ul>
-													</li>
-													<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-													<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">អំពីសេវា</a></li>
-									<li><a href="#">ព័ត៌មាន និងសេចក្តីប្រកាស</a></li>
-									<li><a href="#">តំបន់ទេសចរណ៍</a></li>
-									<li><a href="#">ព្រឹត្តិការណ៍</a></li>	
-								</ul>
+								<div class="lg-nav">	
+									<ul>
+										<li><a href="index.html">ទំព័រដើម</a></li>
+										<li class="dropdown"><a href="#">អំពីខេត្តកំពត</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
+												<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
+												<li><a href="#">មន្ទីរ-អង្គភាពជុំវិញខេត្ត</a></li>
+												<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+												<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+												<li><a href="#">ប្រវត្តិខេត្តកំពត</a></li>
+												<li><a href="#">ស្ថានភាពទូទៅ</a></li>
+												<li class="dropdown"><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
+														<li class="dropdown"><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a>
+															<ul class="dropdown-menu">
+																<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+															</ul>
+														</li>
+														<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+														<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown current-menu-ancestor"><a href="#">សេវារដ្ឋបាល</a>
+											<ul class="dropdown-menu dropdown-menu-left multi-level">
+												<li><a href="#">សេវាតាមវិស័យ</a></li>
+												<li class="current-menu-item"><a href="#">សេវាតាមក្រុម</a></li>
+											</ul>
+										</li>
+										<li class="dropdown"><a href="#">ព័ត៌មានថ្នាក់ខេត្ត</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">ព័ត៌មានថ្នាក់ក្រុង-ស្រុក</a></li>
+												<li><a href="#">សេចក្តីជូនដំណឹង</a></li>
+											</ul>
+										</li>
+										<li><a href="#">ព្រឹត្តិការណ៍</a></li>
+										<li><a href="#">លិខិតបទដ្ឋានគតិយុត្តិ</a></li>
+										<li class="dropdown"><a href="#">តំបន់ទេសចរណ៍</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">រមណីយដ្ឋានប្រវត្តិសាស្រ្ត</a></li>
+												<li><a href="#">រមណីយដ្ឋានវប្បធម៌</a></li>
+												<li><a href="#">រមណីយដ្នានធម្មជាតិ</a></li>
+												<li><a href="#">រមណីយដ្ឋានធម្មជាតិកែច្នៃ</a></li>
+												<li><a href="#">គោលដៅទេសចរណ៍</a></li>
+											</ul>
+										</li>
+										<li><a href="#">​សក្តានុពលវិនិយោគ</a></li>	
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -224,10 +250,8 @@
 				<div class="container">
 					<div class="breadcrum">
 						<ul>
-							<li><a href="#">ទំព័រដើម</a></li>
-							<li><a href="#">អំពីខេត្តកំពត</a></li>
-							<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-							<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
+							<li><a href="#">សេវារដ្ឋបាល</a></li>
+							<li><a href="#">សេវាតាមវិស័យ</a></li>
 						</ul>
 					</div>
 				</div>
@@ -235,121 +259,89 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8">
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul">ព័ត៌មានថ្មីៗ</span>
-							</div>
 							<div class="b-2">
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">ឯកឧត្តម ជាវ តាយ អភិបាលនៃគណ:អភិបាលខេត្តកំពត ទទួលបដិសណ្ឋារកិច្ចជាមួយ ក្រុមសមាជិកគណៈប្រតិភូព្រឹទ្ធសភាប្រចាំភូមិភាគទី៥</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 26 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការងាររដ្ឋបាលសម្រាប់ការចេញលិខិតអនុញ្ញាតបំពេញអាចម៍ដីកម្មសិទ្ធិឯកជនមិនលើសពី១០០០ម៉ែត្រការ៉េ ១. ដីក្នុងរាជធានីភ្នំពេញ ឬក្នុងក្រុងនៃខេត្តកណ្តាល ខេត្តព្រះសីហុន និងខេត្តសៀមរាបដែលមានទំហំដីក្រោម ១០០ម៉ែត្រការ៉េ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-02.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">រដ្ឋបាលខេត្តកំពតប្រារព្វទិវាអន្តរជាតិរំលឹកដល់ជនរងគ្រោះដោយគ្រោះថ្នាក់​ចរាចរណ៍​ផ្លូវគោកលើកទី១៣</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 25 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការងាររដ្ឋបាលសម្រាប់ការចេញលិខិតអនុញ្ញាតបំពេញអាចម៍ដីកម្មសិទ្ធិឯកជនមិនលើសពី១០០០ម៉ែត្រការ៉េ ២. ដីក្នុងរាជធានីភ្នំពេញ ឬក្នុងក្រុងនៃខេត្តកណ្តាល ខេត្តព្រះសីហុន និងខេត្តសៀមរាបដែលមានទំហំចាប់ពី ១០០ម៉ែត្រការ៉េ ដល់ក្រោម ៥០០ម៉ែត្រការ៉េ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-03.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">ពិធីបុណ្យខួបអនុស្សាវរីយ៍លើកទី៦៥ នៃទិវាបុណ្យឯករាជ្យជាតិ ៩ វិច្ឆិកា និងកំណើតកងយោពលខេមរភូមិន្ទ ឆ្នាំ២០១៨</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 24 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការងាររដ្ឋបាលសម្រាប់ការចេញលិខិតអនុញ្ញាតបំពេញអាចម៍ដីកម្មសិទ្ធិឯកជនមិនលើសពី១០០០ម៉ែត្រការ៉េ ៣. ដីក្នុងរាជធានីភ្នំពេញ ឬក្នុងក្រុងនៃខេត្តកណ្តាល ខេត្តព្រះសីហុន និងខេត្តសៀមរាបដែលមានទំហំចាប់ពី ៥០០ម៉ែត្រការ៉េ ដល់ក្រោម ១០០០ម៉ែត្រការ៉េ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-04.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">កិច្ចប្រជុំសាមញ្ញលើកទី៥៤ របស់ក្រុមប្រឹក្សាខេត្តកំពត អាណត្តិទី២</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 23 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការងាររដ្ឋបាលសម្រាប់ការចេញលិខិតអនុញ្ញាតបំពេញអាចម៍ដីកម្មសិទ្ធិឯកជនមិនលើសពី១០០០ម៉ែត្រការ៉េ ៤. ដីក្នុងក្រុងគ្រប់ខេត្ត ក្រៅពីខេត្តកណ្តាល ខេត្តព្រះសីហនុ និងខេត្តសៀមរាបដែលមានទំហំក្រោម ១០០ម៉ែត្រការ៉េ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">សិក្ខាសាលាស្តីពីការពង្រឹងគុណភាព និងប្រសិទ្ធភាពនៃការផ្តល់សេវាសាធារណៈ តាមយន្តការច្រកចេញ-ចូលតែមួយ</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 22 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការងាររដ្ឋបាលសម្រាប់ការចេញលិខិតអនុញ្ញាតបំពេញអាចម៍ដីកម្មសិទ្ធិឯកជនមិនលើសពី១០០០ម៉ែត្រការ៉េ ៥. ដីក្នុងក្រុងគ្រប់ខេត្ត ក្រៅពីខេត្តកណ្តាល ខេត្តព្រះសីហនុ និងខេត្តសៀមរាបសម្រាប់ដីដែលមានទំហំដីចាប់ពី ១០០ម៉ែត្រការ៉េ ដល់ក្រោម ៥០០ម៉ែត្រការ៉េ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">ឯកឧត្តម ជាវ តាយ អភិបាលនៃគណ:អភិបាលខេត្តកំពត ទទួលបដិសណ្ឋារកិច្ចជាមួយ ក្រុមសមាជិកគណៈប្រតិភូព្រឹទ្ធសភាប្រចាំភូមិភាគទី៥</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 26 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការងាររដ្ឋបាលសម្រាប់ការចេញលិខិតអនុញ្ញាតបំពេញអាចម៍ដីកម្មសិទ្ធិឯកជនមិនលើសពី១០០០ម៉ែត្រការ៉េ ៦. ដីក្នុងក្រុងគ្រប់ខេត្ត ក្រៅពីខេត្តកណ្តាល ខេត្តព្រះសីហនុ និងខេត្តសៀមរាបសម្រាប់ដីដែលមានទំហំចាប់ពី ៥០០ម៉ែត្រការ៉េ ដល់ក្រោម ១០០០ម៉ែត្រការ៉េ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-02.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">រដ្ឋបាលខេត្តកំពតប្រារព្វទិវាអន្តរជាតិរំលឹកដល់ជនរងគ្រោះដោយគ្រោះថ្នាក់​ចរាចរណ៍​ផ្លូវគោកលើកទី១៣</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 25 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការចុះបញ្ជីសិប្បកម្មកែច្នៃក្រណាត់ ស្បែក កៅស៊ូ ប្លាស្ទិក</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-03.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">ពិធីបុណ្យខួបអនុស្សាវរីយ៍លើកទី៦៥ នៃទិវាបុណ្យឯករាជ្យជាតិ ៩ វិច្ឆិកា និងកំណើតកងយោពលខេមរភូមិន្ទ ឆ្នាំ២០១៨</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 24 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការចុះបញ្ជីសិប្បកម្មកែច្នៃរតនវត្ថុ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-04.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">កិច្ចប្រជុំសាមញ្ញលើកទី៥៤ របស់ក្រុមប្រឹក្សាខេត្តកំពត អាណត្តិទី២</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 23 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការចុះបញ្ជីសិប្បកម្មកែច្នៃស័ង្កសី អាលុយមីញ៉ូម ដែក កញ្ចក់</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="b-item-wrap">
-									<div class="b-item row">
-										<div class="b-thumnail-wrap col-5">
-											<div class="b-thumnail"><img src="asset/img/block/photo-01.jpg" /></div>
-										</div>
-										<div class="b-title-wrap col-7">
-											<div class="b-title"><a href="#">សិក្ខាសាលាស្តីពីការពង្រឹងគុណភាព និងប្រសិទ្ធភាពនៃការផ្តល់សេវាសាធារណៈ តាមយន្តការច្រកចេញ-ចូលតែមួយ</a></div>
-											<div class="b-date">ថ្ងៃ ព្រហស្បតិ៍, 22 មករា, 2019</div>
+									<div class="b-item">
+										<div class="b-title-wrap">
+											<div class="b-title margin-bottom-15"><a href="#">ការចុះបញ្ជីសិប្បកម្មធ្វើទៀន ធូប</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
 							</div>
+								
 							
 							<div class="pagination text-center">
 								<ul>
@@ -368,6 +360,42 @@
 						</div>
 						
 						<div class="col-lg-4">
+							<div class="block-title primary-color">
+								<span class="primary-color font-moul">សេវាតាមក្រុម</span>
+							</div>
+							<div class="nav-sidebar-3">
+								<ul class="row">
+									<li class="active col-6"><a href="#">ការចុះបញ្ជី</a></li>
+									<li class="col-6"><a href="#">ការផ្ដល់សេវា</a></li>
+									<li class="col-6"><a href="#">ការផ្តល់សិទ្ធិ</a></li>
+									<li class="col-6"><a href="#">ការផ្ទេរ</a></li>
+									<li class="col-6"><a href="#">ការផ្ទេរសិទ្ធិ</a></li>
+									<li class="col-6"><a href="#">ការវិនិយោគ</a></li>
+									<li class="col-6"><a href="#">ការអនុញ្ញាត</a></li>
+									<li class="col-6"><a href="#">ទិដ្ឋការ</a></li>
+									<li class="col-6"><a href="#">នីត្យានុកូលកម្ម</a></li>
+									<li class="col-6"><a href="#">បណ្ណបើកបរ</a></li>
+									<li class="col-6"><a href="#">ផ្លាកលេខ</a></li>
+									<li class="col-6"><a href="#">ពាណិជ្ជកម្ម</a></li>
+									<li class="col-6"><a href="#">ភាពយន្ត</a></li>
+									<li class="col-6"><a href="#">យុត្តិធម៌</a></li>
+									<li class="col-6"><a href="#">លិខិតបញ្ជាក់</a></li>
+									<li class="col-6"><a href="#">វប្បធម៌</a></li>
+									<li class="col-6"><a href="#">វិញ្ញាបនបត្រ</a></li>
+									<li class="col-6"><a href="#">សាធារណការ</a></li>
+									<li class="col-6"><a href="#">សិប្បកម្ម</a></li>
+									<li class="col-6"><a href="#">សេវាកម្ម</a></li>
+									<li class="col-6"><a href="#">សេវាថែទាំ</a></li>
+									<li class="col-6"><a href="#">សំណង់</a></li>
+									<li class="col-6"><a href="#">អត្រានុកូលដ្ឋាន</a></li>
+									<li class="col-6"><a href="#">អប់រំ</a></li>
+									<li class="col-6"><a href="#">អាជីវកម្ម</a></li>
+									<li class="col-6"><a href="#">អាជ្ញាប័ណ្ណ</a></li>
+								</ul>
+							</div>
+						
+						
+						
 							<div class="block-title primary-color">
 								<span class="primary-color font-moul">បណ្តាញសង្គម</span>
 							</div>
@@ -565,9 +593,9 @@
 				});
 				
 				// sm nav menu
-				jQuery(".sm-navbar .sub-menu ul ul").hide();
-				jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find("ul").show();
-				jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+				jQuery(".sm-navbar .sub-menu ul").hide();
+				jQuery(".sm-navbar .sub-menu ul").parent(".current-menu-ancestor").find("ul").show();
+				jQuery(".sm-navbar .sub-menu ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
 				jQuery(".sm-navbar .sub-menu span").click(function () {
 					jQuery(this).parent(".sub-menu").children("ul").slideToggle("slow");
 					jQuery(this).parent(".sub-menu").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");

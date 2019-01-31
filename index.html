@@ -29,7 +29,7 @@
 		<!-- options -->
 		<style>
 			.primary-color, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
-			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .languages ul li.active { background-color: #2082c3; }
+			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
 			.fill { fill: #2082c3; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 		</style>
@@ -754,9 +754,9 @@
 				});
 				
 				// sm nav menu
-				jQuery(".sm-navbar .sub-menu ul ul").hide();
-				jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find("ul").show();
-				jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+				jQuery(".sm-navbar .sub-menu ul").hide();
+				jQuery(".sm-navbar .sub-menu ul").parent(".current-menu-ancestor").find("ul").show();
+				jQuery(".sm-navbar .sub-menu ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
 				jQuery(".sm-navbar .sub-menu span").click(function () {
 					jQuery(this).parent(".sub-menu").children("ul").slideToggle("slow");
 					jQuery(this).parent(".sub-menu").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");

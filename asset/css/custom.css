@@ -254,6 +254,19 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .detail-wrap .content img { margin-bottom: 15px; width: 100%; }
 .detail-wrap .content p > img { margin: 0px; }
 
+
+.cpt-detail { padding: 0px; margin-bottom: 30px; }
+.cpt-detail li { list-style: none; word-break: break-all; }
+.cpt-detail li span { font-size: 16px; }
+.cpt-detail li h5 { font-size: 18px; font-weight: bold; line-height: 30px; margin-bottom: 15px; display: inline-block; margin-left: 10px; }
+.cpt-detail li ul {}
+.cpt-detail li ul li { font-size: 16px;  margin-bottom: 15px; line-height: 25px; }
+.cpt-detail li a {}
+.cpt-address { font-weight: bold; }
+.cpt-address li { font-weight: normal; }
+.cpt-address span { margin-right: 10px; }
+.cpt-address ul { padding: 15px 0; }
+
 /* footer */
 .footer { padding-top: 30px; }
 .footer h4, .footer p { color: #fff; margin-bottom: 10px; }
