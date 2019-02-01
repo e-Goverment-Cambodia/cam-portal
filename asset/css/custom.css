@@ -120,8 +120,8 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .sm-navbar .current-menu-item > a { border-left: 5px solid #fff; }
 .sm-navbar > li > a { font-weight: bold; font-size: 16px; }
 .sm-navbar ul > li > ul { background-color: #444444; }
-.sm-navbar .sub-menu { position: relative; }
-.sm-navbar .sub-menu .right { position: absolute; right: 0; padding: 15px; color: #fff; font-size: 12px; background-color: rgba(0, 0, 0, .1); line-height: 14px; cursor: pointer; }
+.sm-navbar .menu-item-has-children { position: relative; }
+.sm-navbar .menu-item-has-children .right { position: absolute; right: 0; padding: 15px; color: #fff; font-size: 12px; background-color: rgba(0, 0, 0, .1); line-height: 14px; cursor: pointer; }
 
 /*lg header & navigation menu*/
 .lg-header { margin-bottom: 30px; }
@@ -135,7 +135,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 .lg-header .khmer-title { font-size: 14px; line-height: 30px; text-align: center; vertical-align: middle; padding-right: 15px; margin: 0px; }
 .lg-header .khmer-logo { display: inline-block; height: 70px; vertical-align: middle; margin-bottom: 5px; }
-.lg-header .input-group { width: 265px; }
+.lg-header .input-group { width: 250px; }
 .lg-header .input-group span { color: #fff; border-radius: 0px; border: none; }
 .lg-header .form-control { border-radius: 0px; line-height: 30px; }
 .lg-header .short-link { margin: 0px; padding: 0px; text-align: right; }
@@ -148,18 +148,22 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .lg-header .languages ul li.active a { color: #fff; }
 .lg-header .languages ul li a { display: block; font-size: 14px; color: #333; line-height: 15px; padding: 8px; text-decoration: none; }
 
-.lg-nav > ul { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-left: 0; margin-bottom: 0; list-style: none; }
-.lg-nav a { display: inline-block; text-decoration: none; transition: 0.5s; }
-.lg-nav ul > li > a { padding: 20px 15px; color: #fff; font-size: 16px; font-weight: bold; line-height: 25px; }
-.lg-nav ul > li > a span { padding-left: 5px; font-size: 9px; color: #fff; }
-.lg-nav ul > li ul { border-radius: 0px; min-width: 200px; margin: 0; border: none; padding: 0; }
-.lg-nav ul > li > ul a { padding: 10px 20px 10px 15px; color: #fff; font-size: 16px; font-weight: bold; line-height: 20px; display: block; }
-.lg-nav ul > li > ul a:hover, .lg-nav ul > li > a:hover, .lg-nav ul li.current-menu-ancestor > a, .lg-nav ul li.current-menu-item > a { background-color: rgba(0, 0, 0, 0.1); }
-.lg-nav .dropdown:hover > .dropdown-menu { display: block; }
-.lg-nav .dropdown { position: relative; }
-.lg-nav .dropdown .dropdown > .dropdown-menu { top: 0; left: 100%; }
-.lg-nav .dropdown .dropdown > a:after { display: block; content: " "; float: right; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; margin-top: 5px; margin-right: -10px; }
-.lg-nav .dropdown > a:after { display: inline-block; content: " "; width: 0; height: 0; margin-left: 10px; border: 5px solid transparent; border-top: 5px solid #ccc; border-bottom: 2.5px solid transparent;	margin-left: 10px; }
+
+/* lg main navigation */
+.lg-main-nav { }
+.lg-main-nav ul { margin: 0px; padding: 0px; }
+.lg-main-nav li { list-style: none; position: relative; }
+.lg-main-nav a { color: #fff; padding: 10px 20px; display: block; font-size: 16px; line-height: 25px; text-decoration: none; }
+.lg-main-nav .current-menu-ancestor > a, .lg-main-nav .current-menu-item > a, .lg-main-nav a:hover { background-color: rgba(0, 0, 0, 0.1); }
+.lg-main-nav ul ul > li.menu-item-has-children > a::after { content: " "; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; position: absolute; right: 10px; top: calc(50% - 5px); }
+.lg-main-nav > ul > li.menu-item-has-children > a::after { display: inline-block; content: " "; width: 0; height: 0; border: 5px solid transparent; border-top: 5px solid #ccc; border-bottom: 2.5px solid transparent; margin-left: 10px; }
+.lg-main-nav > ul > li { display: inline-block; }
+.lg-main-nav > ul > li > a { font-weight: bold; padding: 20px; }
+.lg-main-nav > ul > li ul { position: absolute; left: 100%; top: 0px; z-index: 1; min-width: 220px; }
+.lg-main-nav > ul > li > ul { left: initial; top: initial; }
+.lg-main-nav .menu-item-has-children > ul { display: none; }
+.lg-main-nav .menu-item-has-children:hover > ul { display: block; }
+
 
 /* breadcrum */
 .breadcrum { margin-bottom: 30px; border-bottom: 1px solid #ccc; }
