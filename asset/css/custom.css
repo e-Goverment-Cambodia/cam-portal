@@ -135,7 +135,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 .lg-header .khmer-title { font-size: 14px; line-height: 30px; text-align: center; vertical-align: middle; padding-right: 15px; margin: 0px; }
 .lg-header .khmer-logo { display: inline-block; height: 70px; vertical-align: middle; margin-bottom: 5px; }
-.lg-header .input-group { width: 265px; }
+.lg-header .input-group { width: 250px; }
 .lg-header .input-group span { color: #fff; border-radius: 0px; border: none; }
 .lg-header .form-control { border-radius: 0px; line-height: 30px; }
 .lg-header .short-link { margin: 0px; padding: 0px; text-align: right; }
