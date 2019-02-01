@@ -19,7 +19,7 @@
 								<h4 class="font-moul footer-brand">រដ្ឋបាលខេត្តកំពត</h4>
 								<p>លេខ៧៣៥ ភូមិ១ ឧសភា សង្កាត់កំពង់កណ្តាល ក្រុងកំពត ខេត្តកំពត</p>
 								<p>info@kampot.gov.kh</p>
-								<p>លេខទូរស័ព្ទ: 033932894</p>
+								<p>Tell: 033932894</p>
 								<div class="footer-social">
 									<!--object type="image/svg+xml" data="asset/fontawesome/svgs/brands/youtube-square.svg" width="32" height="32"></object-->
 									<a href="#">
