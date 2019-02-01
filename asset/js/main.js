@@ -5,12 +5,13 @@ jQuery(document).ready(function() {
     });
     
     // sm nav menu
-    jQuery(".sm-navbar .sub-menu ul ul").hide();
-    jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find("ul").show();
-    jQuery(".sm-navbar .sub-menu ul ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
-    jQuery(".sm-navbar .sub-menu span").click(function () {
-        jQuery(this).parent(".sub-menu").children("ul").slideToggle("slow");
-        jQuery(this).parent(".sub-menu").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+    jQuery(".sm-navbar .menu-item-has-children").append("<span class='oi oi-chevron-bottom right'></span>");
+    jQuery(".sm-navbar .menu-item-has-children ul").hide();
+    jQuery(".sm-navbar .menu-item-has-children ul").parent(".current-menu-ancestor").find("ul").show();
+    jQuery(".sm-navbar .menu-item-has-children ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+    jQuery(".sm-navbar .menu-item-has-children span").click(function () {
+        jQuery(this).parent(".menu-item-has-children").children("ul").slideToggle("slow");
+        jQuery(this).parent(".menu-item-has-children").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
     });
     
     // slick slideshow
