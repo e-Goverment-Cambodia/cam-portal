@@ -75,9 +75,10 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .nav-sidebar .input-group { width: 100%; padding: 0px 20px; }
 .nav-sidebar .input-group span { color: #fff; border-radius: 0px; border: none; }
 .nav-sidebar .form-control { border-radius: 0px; line-height: 30px; border: none; }
-.nav-sidebar .short-link { margin: 0px; padding: 0px; text-align: center; padding: 20px; }
-.nav-sidebar .short-link li {  display: inline-block; }
-.nav-sidebar .short-link li a {  display: block; font-size: 14px; text-decoration: none; font-weight: bold; }
+.nav-sidebar .short-link ul { margin: 0px; padding: 0px; text-align: center; padding: 20px; }
+.nav-sidebar .short-link ul li {  display: inline-block; }
+.nav-sidebar .short-link li a {  display: block; font-size: 14px; text-decoration: none; font-weight: bold; border-right: 1px solid; padding: 0px 5px 0px 0px; margin-right: 3px; }
+.nav-sidebar .short-link > ul > li:last-child a { border: none; }
 
 .nav-sidebar .languages ul { padding: 0px; margin: 0px; }
 .nav-sidebar .languages ul li { list-style: none; display: inline-block; background-color: #e2e2e2; }
@@ -138,9 +139,9 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .lg-header .input-group { width: 250px; }
 .lg-header .input-group span { color: #fff; border-radius: 0px; border: none; }
 .lg-header .form-control { border-radius: 0px; line-height: 30px; }
-.lg-header .short-link { margin: 0px; padding: 0px; text-align: right; }
-.lg-header .short-link li {  display: inline-block; }
-.lg-header .short-link li a {  display: block; font-size: 14px; text-decoration: none; font-weight: bold; }
+.lg-header .short-link ul { margin: 0px; padding: 0px; text-align: right; }
+.lg-header .short-link ul li {  display: inline-block; }
+.lg-header .short-link ul li a {  display: block; font-size: 14px; text-decoration: none; font-weight: bold; border-right: 1px solid; padding-right: 5px; }
 
 .lg-header .languages ul { padding: 0px; margin: 0px; }
 .lg-header .languages ul li { list-style: none; display: inline-block; background-color: #eee; }
