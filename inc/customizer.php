@@ -25,6 +25,7 @@ function cam_portal_customize_register( $wp_customize ) {
 			'render_callback' => 'cam_portal_customize_partial_blogdescription',
 		) );
 	}
+	$wp_customize->remove_setting( 'header_textcolor' );
 }
 add_action( 'customize_register', 'cam_portal_customize_register' );
 
