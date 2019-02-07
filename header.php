@@ -125,7 +125,17 @@
 							<div class="col-6 logo-wrap text-right">
 								
 								<!-- logo and title -->
-								<h1 class="font-moul khmer-title primary-color inline-block">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិសាសនាព្រះមហាក្សត្រ</h1>
+								<?php
+									if ( function_exists( 'pll_register_string' ) ) :
+										echo '<h1 class="font-moul khmer-title primary-color inline-block">';
+										echo pll__(get_theme_mod('header_text'));
+										echo '</h1>';
+									else:
+										echo '<h1 class="font-moul khmer-title primary-color inline-block">';
+										echo __(get_theme_mod('header_text'));
+										echo '</h1>';	
+									endif;
+								?>
 								<img class="khmer-logo inline-block" src="<?php header_image(); ?>" />
 								<br/>
 								
@@ -140,8 +150,14 @@
 								</form>
 								<div class="languages d-inline-block">
 									<ul>
-										<li class="active"><a href="#">ខ្មែរ</a></li>
-										<li><a href="#">Eng</a></li>
+									<?php if (function_exists('pll_the_languages')){
+										pll_the_languages();
+									}else{
+										
+										echo '<li class="active"><a href="#">ខ្មែរ</a></li>
+										<li><a href="#">Eng</a></li>';
+									}
+									?>
 									</ul>
 								</div>
 								
