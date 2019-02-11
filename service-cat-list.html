@@ -4,32 +4,23 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=yes">
-		
+		<!-- icon -->
 		<link rel="icon" type="image/png" href="asset/img/logo-16x16.png" sizes="16x16" />
 		<link rel="icon" type="image/png" href="asset/img/logo-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="asset/img/logo-96x96.png" sizes="96x96" />
-
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
-		
 		<!-- slick slideshow -->
 		<link rel="stylesheet" type="text/css" href="asset/slick/slick.css" />
-		
 		<!-- iconic -->
 		<link href="asset/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet" type="text/css" />
-		
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="asset/css/custom.css" />
-		
-		<!-- non responsive CSS this must load after options above -->
-		<link rel="stylesheet" type="text/css" href="asset/css/non-responsive.css" />
-
 		<title>រដ្ឋបាលខេត្តកំពត</title>
-		
 		<!-- options -->
 		<style>
-			.primary-color, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
-			.primary-background-color, .lg-nav .dropdown-menu, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
+			a, a:hover, .primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
+			.primary-background-color, .lg-main-nav ul ul, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
 			.fill { fill: #2082c3; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 		</style>
@@ -37,16 +28,13 @@
 	<body>
 		<!-- wrap all content container instead of body -->
 		<div class="wrapper">
-		
 			<!-- display for mobile menu in left sidebar -->
 			<div class="nav-sidebar d-md-block d-lg-none primary-background-color">
 				<div class="nav-sidebar-header">
-					
-					<!-- Cambodia sign -->
-					<img class="khmer-logo" src="asset/img/khmer-logo.png" />
-					<h1 class="font-moul khmer-title primary-color">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិសាសនាព្រះមហាក្សត្រ</h1>
-					
-					<!-- search form -->
+					<!-- mobile Cambodia logo -->
+					<object class="khmer-logo" class="d-inline-block" type="image/svg+xml" data="asset/img/Royal_Cambodia.svg" width="" height=""></object>
+					<h1 class="font-moul khmer-title primary-color">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិ សាសនា ព្រះមហាក្សត្រ</h1>
+					<!-- mobile search form -->
 					<form class="form-inline">
 						<div class="input-group mb-3">
 							<div class="input-group-prepend primary-background-color">
@@ -55,28 +43,29 @@
 							<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 						</div>
 					</form>	
+					<!-- mobile polylang -->
 					<div class="languages d-block text-center">
 						<ul>
 							<li class="active"><a href="#">ខ្មែរ</a></li>
 							<li><a href="#">Eng</a></li>
 						</ul>
 					</div>
-					
-					<!-- top menu bar -->
-					<ul class="short-link">
-						<li><a class="primary-color" href="#">ជជែកផ្ទាល់ -</a></li>
-						<li><a class="primary-color" href="#">ទំនាក់ទំនង -</a></li>
-						<li><a class="primary-color" href="#">ផ្តល់មតិយោបល់</a></li>
-						<li><a class="primary-color" href="#">សំនួរ ចម្លើយ </a></li>
-					</ul>
+					<!-- mobile top menu bar -->
+					<nav class="short-link">
+						<ul>
+							<li><a href="#">ជជែកផ្ទាល់</a></li>
+							<li><a href="#">ទំនាក់ទំនង</a></li>
+							<li><a href="#">ផ្តល់មតិយោបល់</a></li>
+							<li><a href="#">សំនួរ ចម្លើយ</a></li>
+						</ul>
+					</nav>
 				</div>
-				
-				<!-- main navigation -->
+				<!-- mobile main navigation -->
 				<nav class="sm-navbar">
 					<ul>
 						<li><a href="index.html">ទំព័រដើម</a></li>
-						<li class="sub-menu"><a href="#">អំពីខេត្តកំពត</a><span class="oi oi-chevron-bottom right"></span>
-							<ul>
+						<li class="menu-item-has-children"><a href="#">អំពីខេត្តកំពត</a>
+							<ul class="sub-menu">
 								<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
 								<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
 								<li><a href="#">មន្ទីរ-អង្គភាពជុំវិញខេត្ត</a></li>
@@ -86,22 +75,22 @@
 								<li><a href="#">ស្ថានភាពទូទៅ</a></li>
 							</ul>
 						</li>
-						<li class="sub-menu current-menu-ancestor"><a href="#">សេវារដ្ឋបាល</a><span class="oi oi-chevron-bottom right"></span>
-							<ul>
+						<li class="menu-item-has-children current-menu-ancestor"><a href="#">សេវារដ្ឋបាល</a>
+							<ul class="sub-menu">
 								<li><a href="#">សេវាតាមវិស័យ</a></li>
 								<li class="current-menu-item"><a href="#">សេវាតាមក្រុម</a></li>
 							</ul>
 						</li>
-						<li class="sub-menu"><a href="#">ព័ត៌មានថ្នាក់ខេត្ត</a><span class="oi oi-chevron-bottom right"></span>
-							<ul>
+						<li class="menu-item-has-children"><a href="#">ព័ត៌មានថ្នាក់ខេត្ត</a>
+							<ul class="sub-menu">
 								<li><a href="#">ព័ត៌មានថ្នាក់ក្រុង-ស្រុក</a></li>
 								<li><a href="#">សេចក្តីជូនដំណឹង</a></li>
 							</ul>
 						</li>
 						<li><a href="#">ព្រឹត្តិការណ៍</a></li>
 						<li><a href="#">លិខិតបទដ្ឋានគតិយុត្តិ</a></li>
-						<li class="sub-menu"><a href="#">តំបន់ទេសចរណ៍</a><span class="oi oi-chevron-bottom right"></span>
-							<ul>
+						<li class="menu-item-has-children"><a href="#">តំបន់ទេសចរណ៍</a>
+							<ul class="sub-menu">
 								<li><a href="#">រមណីយដ្ឋានប្រវត្តិសាស្រ្ត</a></li>
 								<li><a href="#">រមណីយដ្ឋានវប្បធម៌</a></li>
 								<li><a href="#">រមណីយដ្នានធម្មជាតិ</a></li>
@@ -116,7 +105,6 @@
 			
 			<!-- this content contain all container -->
 			<div class="content">
-			
 				<!-- small screen header in responsive mode -->
 				<div class="sm-header d-md-block d-lg-none">
 					<div class="nav-button inline-block vertical-align-middle">
@@ -130,15 +118,11 @@
 						<span>Kampot Administraion</span>
 					</div>
 				</div>
-				
 				<!-- desktop header -->
 				<div class="lg-header d-none d-lg-block">
-					
-					<!-- contain Cambodia sign and logo site title -->
 					<div class="container">
 						<div class="row">
-							
-							<!-- logo and site title -->
+							<!-- desktop logo and site title -->
 							<div class="col-6 logo-wrap">
 								<a href="index.html" class="lg-logo inline-block vertical-align-middle">
 									<img src="asset/img/logo.png" />
@@ -148,16 +132,13 @@
 									<span>Kampot Administraion</span>
 								</div>
 							</div>
-							
-							<!-- Cambodia sign -->
+							<!-- desktop Cambodia logo -->
 							<div class="col-6 logo-wrap text-right">
-								
-								<!-- logo and title -->
-								<h1 class="font-moul khmer-title primary-color inline-block">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិសាសនាព្រះមហាក្សត្រ</h1>
-								<img class="khmer-logo inline-block" src="asset/img/khmer-logo.png" />
+								<!-- desktop logo and title -->
+								<h1 class="font-moul khmer-title primary-color inline-block">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិ សាសនា ព្រះមហាក្សត្រ</h1>
+								<object class="khmer-logo" class="d-inline-block" type="image/svg+xml" data="asset/img/Royal_Cambodia.svg" width="" height=""></object>
 								<br/>
-								
-								<!-- search form -->
+								<!-- desktop search form -->
 								<form class="form-inline inline-block">
 									<div class="input-group input-group-sm mb-2">
 										<div class="input-group-prepend primary-background-color">
@@ -166,86 +147,64 @@
 										<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
 									</div>
 								</form>
+								<!-- desktop polylang -->
 								<div class="languages d-inline-block">
 									<ul>
 										<li class="active"><a href="#">ខ្មែរ</a></li>
 										<li><a href="#">Eng</a></li>
 									</ul>
 								</div>
-								
-								<!-- top menu -->
-								<ul class="short-link">
-									<li><a class="primary-color" href="#">ជជែកផ្ទាល់ |</a></li>
-									<li><a class="primary-color" href="#">ទំនាក់ទំនង |</a></li>
-									<li><a class="primary-color" href="#">ផ្តល់មតិយោបល់ |</a></li>
-									<li><a class="primary-color" href="#">សំនួរ ចម្លើយ </a></li>
+								<!-- mobile top menu -->
+								<nav class="short-link">
+								<ul>
+									<li><a href="#">ជជែកផ្ទាល់</a></li>
+									<li><a href="#">ទំនាក់ទំនង</a></li>
+									<li><a href="#">ផ្តល់មតិយោបល់</a></li>
+									<li><a href="#">សំនួរ ចម្លើយ</a></li>
 								</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
-					
-					<!-- main navigation -->
+					<!-- desktop main navigation -->
 					<div class="primary-background-color">	
-						<div class="container">	
-							<div class="row">	
-								<div class="lg-nav">	
+						<div class="container">
+							<div class="row">
+								<nav class="lg-main-nav">
 									<ul>
-										<li><a href="index.html">ទំព័រដើម</a></li>
-										<li class="dropdown"><a href="#">អំពីខេត្តកំពត</a>
-											<ul class="dropdown-menu">
-												<li><a href="#">រចនាសម្ព័ន្ធ</a></li>
-												<li><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a></li>
-												<li><a href="#">មន្ទីរ-អង្គភាពជុំវិញខេត្ត</a></li>
-												<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-												<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
-												<li><a href="#">ប្រវត្តិខេត្តកំពត</a></li>
-												<li><a href="#">ស្ថានភាពទូទៅ</a></li>
-												<li class="dropdown"><a href="#">ថ្នាក់ដឹកនាំខេត្ត</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">មន្ទី-អង្គភាពជុំវិញខេត្ត</a></li>
-														<li class="dropdown"><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a>
-															<ul class="dropdown-menu">
-																<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
+										<li><a href="#">ទំព័រដើម</a></li>
+										<li class="menu-item-has-children current-menu-ancestor"><a href="#">អំពីក្រសួង</a>
+											<ul class="sub-menu">
+												<li><a href="#">រដ្ឋមន្រ្តី</a></li>
+												<li><a href="#">ព័ត៌មានសង្ខេបស្តីពីក្រសួង</a></li>
+												<li><a href="#">រចនាសម្ព័ន្ធក្រសួង</a></li>
+												<li><a href="#">ថ្នាក់ដឹកនាំក្រសួង</a></li>
+												<li><a href="#">សកម្មភាពក្រសួង</a></li>
+												<li><a href="#">សហប្រត្តិ​បត្តិការ​អន្តរជាតិ</a></li>
+												<li class="menu-item-has-children current-menu-ancestor"><a href="#">មន្ទីរតាមបណ្តាខេត្ត</a>
+													<ul class="sub-menu">
+														<li class="current-menu-item"><a href="#">រដ្ឋមន្រ្តី</a></li>
+														<li class="menu-item-has-children"><a href="#">ព័ត៌មានសង្ខេបស្តីពីក្រសួង</a>
+															<ul class="sub-menu">
+																<li><a href="#">រដ្ឋមន្រ្តី</a></li>
+																<li><a href="#">ព័ត៌មានសង្ខេបស្តីពីក្រសួង</a></li>
 															</ul>
 														</li>
-														<li><a href="#">រដ្ឋបាលក្រុង-ស្រុក</a></li>
-														<li><a href="#">ក្របខ័ណ្ឌអភិវឌ្ឍន៍ខេត្ត</a></li>
 													</ul>
 												</li>
 											</ul>
 										</li>
-										<li class="dropdown current-menu-ancestor"><a href="#">សេវារដ្ឋបាល</a>
-											<ul class="dropdown-menu dropdown-menu-left multi-level">
-												<li><a href="#">សេវាតាមវិស័យ</a></li>
-												<li class="current-menu-item"><a href="#">សេវាតាមក្រុម</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">ព័ត៌មានថ្នាក់ខេត្ត</a>
-											<ul class="dropdown-menu">
-												<li><a href="#">ព័ត៌មានថ្នាក់ក្រុង-ស្រុក</a></li>
-												<li><a href="#">សេចក្តីជូនដំណឹង</a></li>
-											</ul>
-										</li>
-										<li><a href="#">ព្រឹត្តិការណ៍</a></li>
-										<li><a href="#">លិខិតបទដ្ឋានគតិយុត្តិ</a></li>
-										<li class="dropdown"><a href="#">តំបន់ទេសចរណ៍</a>
-											<ul class="dropdown-menu">
-												<li><a href="#">រមណីយដ្ឋានប្រវត្តិសាស្រ្ត</a></li>
-												<li><a href="#">រមណីយដ្ឋានវប្បធម៌</a></li>
-												<li><a href="#">រមណីយដ្នានធម្មជាតិ</a></li>
-												<li><a href="#">រមណីយដ្ឋានធម្មជាតិកែច្នៃ</a></li>
-												<li><a href="#">គោលដៅទេសចរណ៍</a></li>
-											</ul>
-										</li>
-										<li><a href="#">​សក្តានុពលវិនិយោគ</a></li>	
+										<li><a href="#">ច្បាប់និងបទបញ្ញត្តិ</a></li>
+										<li><a href="#">បណ្តុំឯកសារ</a></li>
+										<li><a href="#">ព័ត៌មាន</a></li>
+										<li><a href="#">ទិន្នន័យមូលដ្ឋាន</a></li>
 									</ul>
-								</div>
+								</nav>
 							</div>
 						</div>
 					</div>
 				</div>
 				
-
 				<!-- breadcrum -->
 				<div class="container">
 					<div class="breadcrum">
@@ -264,7 +223,7 @@
 									<div class="b-item">
 										<div class="b-title-wrap">
 											<div class="b-title margin-bottom-15"><a href="#">ការងាររដ្ឋបាលសម្រាប់ការចេញលិខិតអនុញ្ញាតបំពេញអាចម៍ដីកម្មសិទ្ធិឯកជនមិនលើសពី១០០០ម៉ែត្រការ៉េ ១. ដីក្នុងរាជធានីភ្នំពេញ ឬក្នុងក្រុងនៃខេត្តកណ្តាល ខេត្តព្រះសីហុន និងខេត្តសៀមរាបដែលមានទំហំដីក្រោម ១០០ម៉ែត្រការ៉េ</a></div>
-											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-document"></span>ទម្រង់បែបបទ</a></div>
+											<div class="b-cat"><span>ការិយាល័យច្រកចេញចូលតែមួយ</span><a href="#"><span class="oi oi-cloud-download"></span>ទម្រង់បែបបទ</a></div>
 										</div>
 									</div>
 								</div>
@@ -361,191 +320,20 @@
 						
 						<div class="col-lg-4">
 							<div class="block-title primary-color">
-								<span class="primary-color font-moul">សេវាតាមក្រុម</span>
+								<span class="primary-color font-moul">សេវាតាមវិស័យ</span>
 							</div>
-							<div class="nav-sidebar-3">
-								<ul class="row">
-									<li class="active col-6"><a href="#">ការចុះបញ្ជី</a></li>
-									<li class="col-6"><a href="#">ការផ្ដល់សេវា</a></li>
-									<li class="col-6"><a href="#">ការផ្តល់សិទ្ធិ</a></li>
-									<li class="col-6"><a href="#">ការផ្ទេរ</a></li>
-									<li class="col-6"><a href="#">ការផ្ទេរសិទ្ធិ</a></li>
-									<li class="col-6"><a href="#">ការវិនិយោគ</a></li>
-									<li class="col-6"><a href="#">ការអនុញ្ញាត</a></li>
-									<li class="col-6"><a href="#">ទិដ្ឋការ</a></li>
-									<li class="col-6"><a href="#">នីត្យានុកូលកម្ម</a></li>
-									<li class="col-6"><a href="#">បណ្ណបើកបរ</a></li>
-									<li class="col-6"><a href="#">ផ្លាកលេខ</a></li>
-									<li class="col-6"><a href="#">ពាណិជ្ជកម្ម</a></li>
-									<li class="col-6"><a href="#">ភាពយន្ត</a></li>
-									<li class="col-6"><a href="#">យុត្តិធម៌</a></li>
-									<li class="col-6"><a href="#">លិខិតបញ្ជាក់</a></li>
-									<li class="col-6"><a href="#">វប្បធម៌</a></li>
-									<li class="col-6"><a href="#">វិញ្ញាបនបត្រ</a></li>
-									<li class="col-6"><a href="#">សាធារណការ</a></li>
-									<li class="col-6"><a href="#">សិប្បកម្ម</a></li>
-									<li class="col-6"><a href="#">សេវាកម្ម</a></li>
-									<li class="col-6"><a href="#">សេវាថែទាំ</a></li>
-									<li class="col-6"><a href="#">សំណង់</a></li>
-									<li class="col-6"><a href="#">អត្រានុកូលដ្ឋាន</a></li>
-									<li class="col-6"><a href="#">អប់រំ</a></li>
-									<li class="col-6"><a href="#">អាជីវកម្ម</a></li>
-									<li class="col-6"><a href="#">អាជ្ញាប័ណ្ណ</a></li>
-								</ul>
-							</div>
-						
-						
-						
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul">បណ្តាញសង្គម</span>
-							</div>
-							<div class="social sidebar">
+							<div class="nav-sidebar-2">
 								<ul>
-									<li><a href="#"><svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>
-									<li><a href="#"><svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg></a></li>
+									<li class="active"><a href="#"><img src="asset/img/icon-ministry/01.png" /> ការិយាល័យច្រកចេញចូលតែមួយ </a><span>(232)</span></li>
+									<li><a href="#"><img src="asset/img/icon-ministry/08.png" /> ក្រសួង ពាណិជ្ជកម្ម </a><span>(42)</span></li>
+									<li><a href="#"><img src="asset/img/icon-ministry/07.png" /> ក្រសួង យុត្តិធម៌ </a><span>(4)</span></li>
+									<li><a href="#"><img src="asset/img/icon-ministry/06.png" /> ក្រសួង វប្បធម៌ និងវិចិត្រសិល្បៈ </a><span>(77)</span></li>
+									<li><a href="#"><img src="asset/img/icon-ministry/05.png" /> ក្រសួង សាធារណការ និងដឹកជញ្ជូន</a><span>(22)</span></li>
+									<li><a href="#"><img src="asset/img/icon-ministry/04.png" /> ក្រសួង អប់រំ យុវជន និងកីឡា </a><span>(32)</span></li>
+									<li><a href="#"><img src="asset/img/icon-ministry/03.png" /> ក្រុមប្រឹក្សាអភិវឌ្ឍន៍កម្ពុជា </a><span>(35)</span></li>
+									<li><a href="#"><img src="asset/img/icon-ministry/02.png" /> រដ្ឋាករទឹកស្វយ័ត ក្រុងភ្នំពេញ </a><span>(10)</span></li>
 								</ul>
 							</div>
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul">លេខអាសន្ន</span>
-							</div>
-							<table class="table table-bordered block-30">
-								<tbody>
-									<tr>
-										<th>
-											ប៉ូលីស
-										</th>
-										<th>
-											<a href="tel:117"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>117</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											សង្គ្រោះបន្ទាន់
-										</th>
-										<th>
-											<a href="tel:119"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>119</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											អគ្គីភ័យ
-										</th>
-										<th>
-											<a href="tel:666"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>666</span>
-										</th>
-									</tr>
-									<tr>
-										<th rowspan="2">
-											H1N1 Hotline
-										</th>
-										<th>
-											<a href="tel:012488981"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span> 012 488 981</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											<a href="tel:012836868"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>012 836 868</span>
-										</th>
-									</tr>
-								</tbody>
-							</table>
-					
-							<div class="block-title primary-color">
-								<a class="primary-color font-moul" href="#">អត្រាប្តូរប្រាក់</a>
-							</div>
-							<table class="table table-bordered">
-								<tbody>
-									<tr>
-										<th>
-											ដុល្លារអាមេរិច
-										</th>
-										<th>
-											<span>១ USD = ៤០៥៥ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											អ៊ឺរ៉ូ
-										</th>
-										<th>
-											<span>១ EUR = ៤៦៨៤ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											ផោនអង់គ្លេស
-										</th>
-										<th>
-											<span>១ GBP = ៥៣៦៩ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											ដុល្លារហុងកុង
-										</th>
-										<th>
-											<span>១ HKD = ៥២៣ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											បាតថៃ
-										</th>
-										<th>
-											<span>១ THB = ១២៤ KHR</span>
-										</th>
-									</tr>
-								</tbody>
-							</table>
-							<caption class="text-right">ប្រភពពី <a href="https://www.nbc.org.kh/english/index.php">nbc.org.kh</a></caption>
-							<div class="block-30"></div>
-							
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul" >តារាងទីផ្សារ</span>
-							</div>
-							<table class="table table-bordered block-30">
-								<tbody>
-									<tr>
-										<th>ប្រេងសាំង (រៀល/លីត្រ)</th>
-										<th>= ៤,១០០៛</th>
-									</tr>
-									<tr>
-										<th>ប្រេងរំអិលម៉ាស៊ូត (៥ល/ធុង)</th>
-										<th>= ១១២,០០០៛</th>
-									</tr>
-									<tr>
-										<th>អង្ករម្លិះ (គីឡូក្រាម)</th>
-										<th>= ៣.៥៤០៛</th>
-									</tr>
-									<tr>
-										<th>ម្សៅមី (គីឡូក្រាម)</th>
-										<th>= ៤.៧៥០៛</th>
-									</tr>
-									<tr>
-										<th>ស្រូវចំរុះ (គីឡូក្រាម)</th>
-										<th>= ១.៦០០៛</th>
-									</tr>
-									<tr>
-										<th>ពោតក្រហម គ្រាប់ (គីឡូក្រាម)</th>
-										<th>= ២.៥២៥៛</th>
-									</tr>
-									<tr>
-										<th>ពោតស គ្រាប់ (គីឡូក្រាម)</th>
-										<th>= ៣.៨៣៣៛</th>
-									</tr>
-								</tbody>
-							</table>
-							 
-							 
-							
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul" >អាកាសធាតុ</span>
-							</div>
-							<a class="weatherwidget-io" href="https://forecast7.com/en/11d54104d89/phnom-penh/" data-label_1="PHNOM PENH" data-label_2="WEATHER" data-theme="original" >PHNOM PENH WEATHER</a>
-							<script>
-							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-							</script>
-							<div class="block-30"></div>
 						</div>
 					</div>
 				</div>
@@ -562,10 +350,10 @@
 								<div class="footer-social">
 									<!--object type="image/svg+xml" data="asset/fontawesome/svgs/brands/youtube-square.svg" width="32" height="32"></object-->
 									<a href="#">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill:#fff;width:32px;height:32px;"><path d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"/></svg>
+										<img src="asset/img/facebook-icon.jpg" />
 									</a>
 									<a href="#">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill:#fff;width:32px;height:32px;"><path d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"/></svg>
+										<img src="asset/img/youtube-icon.jpg" />
 									</a>
 								</div>
 							</div>
@@ -576,6 +364,18 @@
 					</div>
 					<div class="copy-right">© 2018 រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ៖ រដ្ឋបាលខេត្តកំពត</div>
 				</footer>
+				<!-- responsive switcher -->
+				<div class="container text-center switch">
+					<div class="btn-group btn-group-toggle" data-toggle="buttons">
+						<!-- if set default mode from option to mobile -->
+						<label class="btn btn-secondary active" id="mobile-mode">
+							<input type="radio" name="options" autocomplete="off"><span class="oi oi-phone"></span> Mobile Mode
+						</label>
+						<label class="btn btn-secondary" id="desktop-mode">
+							<input type="radio" name="options" autocomplete="off"><span class="oi oi-monitor"></span> Desktop Mode
+						</label>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -587,18 +387,49 @@
 		<script type="text/javascript" src="asset/slick/slick.min.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
+				// switching display mode responsive and non-responsive
+				var key = 'display_mode';
+				var current = localStorage.getItem(key);
+				if(current == 'responsive'){
+					jQuery('html').removeClass('non-responsive');
+					jQuery('html').addClass('responsive');
+					jQuery('#desktop-mode').removeClass('active');
+					jQuery('#mobile-mode').addClass('active');
+				}
+				if(current == 'non-responsive'){
+					jQuery('html').removeClass('responsive');
+					jQuery('html').addClass('non-responsive');
+					jQuery('#mobile-mode').removeClass('active');
+					jQuery('#desktop-mode').addClass('active');
+				}
+				var current_mode = localStorage.getItem(key);
+				
+				jQuery('#mobile-mode').on('click', function(){
+					jQuery('html').removeClass('non-responsive');
+					jQuery('html').addClass('responsive');
+					localStorage.setItem(key, 'responsive');
+				});
+				
+				jQuery('#desktop-mode').on('click', function(){
+					jQuery('html').removeClass('responsive');
+					jQuery('html').addClass('non-responsive');
+					localStorage.setItem(key, 'non-responsive');
+				});
+				
+				// action on responsive and mobile mode
 				jQuery('.nav-button').on('click', function() {
 					jQuery('.content').toggleClass('isOpen');
 					jQuery(this).find(".nav-icon").toggleClass("oi-menu oi-x");
 				});
 				
 				// sm nav menu
-				jQuery(".sm-navbar .sub-menu ul").hide();
-				jQuery(".sm-navbar .sub-menu ul").parent(".current-menu-ancestor").find("ul").show();
-				jQuery(".sm-navbar .sub-menu ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
-				jQuery(".sm-navbar .sub-menu span").click(function () {
-					jQuery(this).parent(".sub-menu").children("ul").slideToggle("slow");
-					jQuery(this).parent(".sub-menu").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+				jQuery(".sm-navbar .menu-item-has-children").append("<span class='oi oi-chevron-bottom right'></span>");
+				jQuery(".sm-navbar .menu-item-has-children ul").hide();
+				jQuery(".sm-navbar .menu-item-has-children ul").parent(".current-menu-ancestor").find("ul").show();
+				jQuery(".sm-navbar .menu-item-has-children ul").parent(".current-menu-ancestor").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
+				jQuery(".sm-navbar .menu-item-has-children span").click(function () {
+					jQuery(this).parent(".menu-item-has-children").children("ul").slideToggle("slow");
+					jQuery(this).parent(".menu-item-has-children").find(".right").toggleClass("oi-chevron-top oi-chevron-bottom");
 				});
 				
 				// slick slideshow
