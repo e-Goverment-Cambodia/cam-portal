@@ -25,13 +25,36 @@ function cam_portal_customize_register( $wp_customize ) {
 			'render_callback' => 'cam_portal_customize_partial_blogdescription',
 		) );
 	}
+
 /************************ Removing Default option **************************/
 	$wp_customize->remove_section('static_front_page');
 	$wp_customize->remove_section('colors');
 	$wp_customize->remove_section('custom_css');
 
+/****************************** Theme Options ******************************/
+	$wp_customize->add_section( 'custom_theme_option', array(
+		'title' => __( 'Theme Options', 'cam-portal' ),
+		'priority' => 30,
+	) );
+	$wp_customize->add_setting( 'theme_color_setting', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'theme_options',
+		'default' => '#4bc598',
+		'transport' => 'postMessage', // or postMessage
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+	$wp_customize->add_control( 
+		new WP_Customize_Color_Control( 
+		$wp_customize, 
+		'color_control', 
+		array(
+			'label'      => __( 'Theme Color', 'cam-portal' ),
+			'section'    => 'custom_theme_option',
+			'settings'   => 'theme_color_setting',
+		) ) 
+	);
+
 /**************************** Theme Header Text ****************************/
-		
 	$wp_customize->add_setting( 'header_text', array(
 		'type' => 'theme_mod', // or 'option'
 		'capability' => 'theme_options',
@@ -87,9 +110,3 @@ if ( function_exists( 'pll_register_string' ) ) :
 	}
 	add_action( 'after_setup_theme', 'cam_portal_pll_register_string' );
 endif;
-
-// add_action('customize_register', 'cambodia_theme_options');
-// function cambodia_theme_options($wp_customize){
-// /**************************** Theme Options ****************************/
-
-// }

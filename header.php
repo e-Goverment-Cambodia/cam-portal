@@ -21,9 +21,9 @@
 	<link rel="icon" type="image/png" href="asset/img/logo-96x96.png" sizes="96x96" />
 	<?php wp_head(); ?>
 	<style>
-			.primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
-			.primary-background-color, .lg-main-nav ul ul, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
-			.fill { fill: #2082c3; }
+			.primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: <?php echo get_theme_mod( 'theme_color_setting' ); ?>; }
+			.primary-background-color, .lg-main-nav ul ul, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: <?php echo get_theme_mod( 'theme_color_setting' ); ?>; }
+			.fill { fill: <?php echo get_theme_mod( 'theme_color_setting' ); ?>; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 	</style>
 </head>
@@ -184,7 +184,6 @@
 									'menu_id'        => 'primary-menu',
 									'container'		 => 'nav',
 									'container_class' => 'lg-main-nav'
-									// 'menu_class' 	 => 'lg-main-nav'
 								) );
 							?>
 							</div>
