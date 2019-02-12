@@ -11,6 +11,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function cam_portal_customize_register( $wp_customize ) {
+	require_once get_template_directory() . '/inc/custom-control.php';
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -54,7 +55,8 @@ function cam_portal_customize_register( $wp_customize ) {
 		) ) 
 	);
 	$wp_customize->add_section( 'homepage', array(
-		'title' => esc_html_x( 'Homepage Options', 'customizer section title', 'olsen-light-child' ),
+		'title' => __( 'Homepage Options', 'cam-portal'),
+		'priority' => 35,
 	) );
 
 	$wp_customize->add_setting( 'home_slider_category', array(
@@ -64,22 +66,22 @@ function cam_portal_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new My_Dropdown_Category_Control( $wp_customize, 'home_slider_category', array(
 		'section'       => 'homepage',
-		'label'         => esc_html__( 'Slider posts category', 'olsen-light-child' ),
-		'description'   => esc_html__( 'Select the category that the slider will show posts from. If no category is selected, the slider will be disabled.', 'olsen-light-child' ),
+		'label'         => esc_html__( 'Slider Category', 'cam-portal'),
+		'description'   => esc_html__( 'Select the category that the slider will show posts from. If no category is selected, the slider will be disabled.', 'cam-portal'),
 	) ) );
 /**************************** Theme Header Text ****************************/
-	$wp_customize->add_setting( 'header_text', array(
-		'type' => 'theme_mod', // or 'option'
-		'capability' => 'theme_options',
-		'default' => 'ព្រះរាជាណាចក្រកម្ពុជា <br/> ជាតិ សាសនា ព្រះមហាក្សត្រ',
-		'transport' => 'postMessage', // or postMessage
-		'sanitize_callback' => 'sanitize_textarea_header_text',
-	  ) );
-	$wp_customize->add_control( 'header_text', array(
-		'label'      => 'Theme Header Text: ',
-		'section'    => 'header_image',
-		'type'       => 'textarea',
-	 ) );
+	// $wp_customize->add_setting( 'header_text', array(
+	// 	'type' => 'theme_mod', // or 'option'
+	// 	'capability' => 'theme_options',
+	// 	'default' => 'ព្រះរាជាណាចក្រកម្ពុជា <br/> ជាតិ សាសនា ព្រះមហាក្សត្រ',
+	// 	'transport' => 'postMessage', // or postMessage
+	// 	'sanitize_callback' => 'sanitize_textarea_header_text',
+	//   ) );
+	// $wp_customize->add_control( 'header_text', array(
+	// 	'label'      => 'Theme Header Text: ',
+	// 	'section'    => 'header_image',
+	// 	'type'       => 'textarea',
+	//  ) );
 }
 add_action( 'customize_register', 'cam_portal_customize_register' );
 

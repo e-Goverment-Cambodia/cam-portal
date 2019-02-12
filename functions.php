@@ -121,7 +121,6 @@ require get_template_directory() . '/inc/script.php';
  */
 require get_template_directory() . '/inc/custom-header.php';
 
-require get_template_directory() . '/inc/custom-control.php';
 /**
  * Custom template tags for this theme.
  */
