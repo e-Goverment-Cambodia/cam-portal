@@ -40,7 +40,7 @@ function cam_portal_customize_register( $wp_customize ) {
 		'type' => 'theme_mod', // or 'option'
 		'capability' => 'theme_options',
 		'default' => '#4bc598',
-		'transport' => 'postMessage', // or postMessage
+		'transport' => 'refresh', // or postMessage
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control( 
@@ -53,12 +53,25 @@ function cam_portal_customize_register( $wp_customize ) {
 			'settings'   => 'theme_color_setting',
 		) ) 
 	);
+	$wp_customize->add_section( 'homepage', array(
+		'title' => esc_html_x( 'Homepage Options', 'customizer section title', 'olsen-light-child' ),
+	) );
 
+	$wp_customize->add_setting( 'home_slider_category', array(
+		'default'           => 0,
+		'sanitize_callback' => 'absint',
+	) );
+
+	$wp_customize->add_control( new My_Dropdown_Category_Control( $wp_customize, 'home_slider_category', array(
+		'section'       => 'homepage',
+		'label'         => esc_html__( 'Slider posts category', 'olsen-light-child' ),
+		'description'   => esc_html__( 'Select the category that the slider will show posts from. If no category is selected, the slider will be disabled.', 'olsen-light-child' ),
+	) ) );
 /**************************** Theme Header Text ****************************/
 	$wp_customize->add_setting( 'header_text', array(
 		'type' => 'theme_mod', // or 'option'
 		'capability' => 'theme_options',
-		'default' => 'ព្រះរាជាណាចក្រកម្ពុជា /n ជាតិ សាសនា ព្រះមហាក្សត្រ',
+		'default' => 'ព្រះរាជាណាចក្រកម្ពុជា <br/> ជាតិ សាសនា ព្រះមហាក្សត្រ',
 		'transport' => 'postMessage', // or postMessage
 		'sanitize_callback' => 'sanitize_textarea_header_text',
 	  ) );

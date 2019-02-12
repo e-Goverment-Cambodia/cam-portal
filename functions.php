@@ -121,6 +121,7 @@ require get_template_directory() . '/inc/script.php';
  */
 require get_template_directory() . '/inc/custom-header.php';
 
+require get_template_directory() . '/inc/custom-control.php';
 /**
  * Custom template tags for this theme.
  */
@@ -135,11 +136,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Menu additions.
- */
-// require get_template_directory() . '/inc/menu-walker.php';
 
 /**
  * Load Jetpack compatibility file.
