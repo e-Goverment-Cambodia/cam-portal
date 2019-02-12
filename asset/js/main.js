@@ -45,7 +45,7 @@ jQuery(document).ready(function() {
     });
     
     // slick slideshow
-    jQuery(".slick-slideshow").slick({
+    $(".slick-slideshow").slick({
         //dots: true,
         speed: 500,
         autoplay: true,
