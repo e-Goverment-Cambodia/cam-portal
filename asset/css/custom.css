@@ -200,7 +200,10 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .slick-slideshow ul.slick-dots li.slick-active button { background-color: #c3c3c3; }
 .slick-slideshow .slick-item { position: relative; }
 .slick-slideshow .slick-item .slick-photo {}
-.slick-slideshow .slick-item .slick-photo img { width: 100%; }
+.slick-slideshow .slick-item .slick-photo .aspect-ratio { position: relative; }
+.slick-slideshow .slick-item .slick-photo .aspect-ratio::before { display: block; content: ""; padding-top: 36%; position: relative; }
+.slick-slideshow .slick-item .slick-photo .img { left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; }
+.slick-slideshow .slick-item .slick-photo img { width: 100%; position: absolute; }
 .slick-slideshow .slick-item .slick-content { display: block; background-color: #2082c3;}
 .slick-slideshow .slick-item .slick-content a { text-decoration: none; }
 .slick-slideshow .slick-item .slick-content a:hover h1 { border-left: 5px solid #fff; }
@@ -372,6 +375,7 @@ html.non-responsive { overflow-x: auto; }
 /* mobile header */
 .non-responsive .sm-header { display: none!important; }
 .non-responsive .lg-header { display: block!important; }
+.responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 60%; }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
@@ -387,6 +391,7 @@ html.non-responsive { overflow-x: auto; }
 .non-responsive .lg-header { display: block!important; }
 .plr-xs-0 { padding-left: 0px; padding-right: 0px; }
 .plr-xs-30 { padding-left: 30px; padding-right: 30px; }
+.responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 60%; }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -403,12 +408,14 @@ html.non-responsive { overflow-x: auto; }
 .non-responsive .lg-header { display: block!important; }
 .plr-sm-0 { padding-left: 0px; padding-right: 0px; }
 .plr-sm-30 { padding-left: 30px; padding-right: 30px; }
+.responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 56%; }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
 .plr-md-0 { padding-left: 0px; padding-right: 0px; }
 .plr-md-30 { padding-left: 30px; padding-right: 30px; }
+.responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 45%; }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
