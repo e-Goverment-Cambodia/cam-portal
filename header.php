@@ -71,14 +71,7 @@
 				</div>
 				
 				<!-- main navigation -->
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'container'		 => 'nav',
-						'container_class' => 'sm-navbar'
-					) );
-				?>
+				<nav class="sm-navbar"></nav>
 			</div>
 			
 			<!-- this content contain all container -->
@@ -184,4 +177,3 @@
 					</div>
 				</div>
 
-	<div id="content" class="site-content">

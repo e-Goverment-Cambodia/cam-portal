@@ -11,7 +11,6 @@ function cam_portal_scripts() {
 	wp_enqueue_style( 'cam-portal-slick', get_template_directory_uri() . '/asset/slick/slick.css' );
 	wp_enqueue_style( 'cam-portal-iconic', get_template_directory_uri() . '/asset/open-iconic/font/css/open-iconic-bootstrap.css' );
 	wp_enqueue_style( 'cam-portal-custom', get_template_directory_uri() . '/asset/css/custom.css' );
-	// wp_enqueue_style( 'cam-portal-non-responsive', get_template_directory_uri() . '/asset/css/non-responsive.css' );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'cam-portal-navigation', get_template_directory_uri() . '/asset/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'cam-portal-poperjs', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', array(), '20151215', true );
