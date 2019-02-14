@@ -58,20 +58,17 @@
 							<li><a href="#">Eng</a></li>
 						</ul>
 					</div>
-					
-					<!-- top menu bar -->
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-2',
-							'menu_id'        => 'primary-menu',
-							'container'		 => 'nav',
-							'container_class' => 'short-link'
-						) );
-					?>
+					<!-- mobile top menu bar -->
+					<nav class="short-link mobile-top-menu">
+						<ul>
+						</ul>
+					</nav>
 				</div>
 				
 				<!-- main navigation -->
-				<nav class="sm-navbar"></nav>
+				<nav class="sm-navbar">
+					<ul></ul>
+				</nav>
 			</div>
 			
 			<!-- this content contain all container -->
@@ -79,8 +76,7 @@
 			
 				<!-- small screen header in responsive mode -->
 				<div class="sm-header d-md-block d-lg-none">
-					<div class="nav-button inline-block vertical-align-middle">
-						<span class="oi oi-menu nav-icon primary-color"></span>
+					<div class="nav-button inline-block vertical-align-middle hamberger">
 					</div>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sm-logo inline-block vertical-align-middle">
 						<img src="<?php echo $image[0]; ?>" />
@@ -153,7 +149,7 @@
 										'theme_location' => 'menu-2',
 										'menu_id'        => 'primary-menu',
 										'container'		 => 'nav',
-										'container_class' => 'short-link'
+										'container_class' => 'short-link desktop-top-menu'
 									) );
 								?>
 							</div>
@@ -163,7 +159,6 @@
 					<!-- main navigation -->
 					<div class="primary-background-color">	
 						<div class="container">
-							<div class="row">
 							<?php
 								wp_nav_menu( array(
 									'theme_location' => 'menu-1',
@@ -172,7 +167,6 @@
 									'container_class' => 'lg-main-nav'
 								) );
 							?>
-							</div>
 						</div>
 					</div>
 				</div>

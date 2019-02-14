@@ -30,7 +30,7 @@ if ( ! function_exists( 'cam_portal_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<div class="date"><span>' . $posted_on . '</span></div>'; // WPCS: XSS OK.
 
 	}
 endif;

@@ -8,26 +8,25 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<div class="detail-wrap" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="head">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<div class="title primary-color"><h4>', '</h4></div>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<div class="title primary-color"><h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4></div>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="meta">
 				<?php
 				cam_portal_posted_on();
 				cam_portal_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+		</div><!-- .entry-header -->
 
 	<?php cam_portal_post_thumbnail(); ?>
 
@@ -56,4 +55,4 @@
 	<footer class="entry-footer">
 		<?php cam_portal_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</div>

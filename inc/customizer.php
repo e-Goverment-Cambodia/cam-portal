@@ -31,6 +31,7 @@ function cam_portal_customize_register( $wp_customize ) {
 	$wp_customize->remove_section('static_front_page');
 	$wp_customize->remove_section('colors');
 	$wp_customize->remove_section('custom_css');
+	$wp_customize->remove_section( 'header_image' );
 
 /****************************** Theme Options ******************************/
 	$wp_customize->add_section( 'custom_theme_option', array(
