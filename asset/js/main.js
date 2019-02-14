@@ -1,34 +1,4 @@
 jQuery(document).ready(function() {
-    // switching display mode responsive and non-responsive
-    var key = 'display_mode';
-    var current = localStorage.getItem(key);
-    if(current == 'responsive'){
-        jQuery('html').removeClass('non-responsive');
-        jQuery('html').addClass('responsive');
-        jQuery('#desktop-mode').removeClass('active');
-        jQuery('#mobile-mode').addClass('active');
-    }
-    if(current == 'non-responsive'){
-        jQuery('html').removeClass('responsive');
-        jQuery('html').addClass('non-responsive');
-        jQuery('#mobile-mode').removeClass('active');
-        jQuery('#desktop-mode').addClass('active');
-    }
-    var current_mode = localStorage.getItem(key);
-    
-    jQuery('#mobile-mode').on('click', function(){
-        jQuery('html').removeClass('non-responsive');
-        jQuery('html').addClass('responsive');
-        localStorage.setItem(key, 'responsive');
-    });
-    
-    jQuery('#desktop-mode').on('click', function(){
-        jQuery('html').removeClass('responsive');
-        jQuery('html').addClass('non-responsive');
-        localStorage.setItem(key, 'non-responsive');
-    });
-    
-    // action on responsive and mobile mode
     jQuery('.nav-button').on('click', function() {
         jQuery('.content').toggleClass('isOpen');
         jQuery(this).find(".nav-icon").toggleClass("oi-menu oi-x");
@@ -45,9 +15,10 @@ jQuery(document).ready(function() {
     });
     
     // slick slideshow
-    jQuery(".slick-slideshow").slick({
+    $(".slick-slideshow").slick({
+        //dots: true,
         speed: 500,
-        autoplay: false,
+        autoplay: true,
         adaptiveHeight: true,
         mobileFirst: true,
         nextArrow: '<div class="primary-background-color slick-arrow slick-next"><span class="oi oi-chevron-right"></span></div>',
