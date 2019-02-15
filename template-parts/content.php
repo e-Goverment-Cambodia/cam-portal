@@ -30,7 +30,7 @@
 
 	<?php cam_portal_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
