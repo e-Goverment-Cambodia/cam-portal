@@ -21,7 +21,7 @@
 		<!-- options -->
 		<style>
 			a, a:hover, .primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
-			.primary-background-color, .lg-main-nav ul ul, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
+			.primary-background-color, .lg-main-nav ul ul, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
 			.fill { fill: #2082c3; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 		</style>
@@ -78,9 +78,9 @@
 				<!-- desktop header -->
 				<div class="lg-header d-none d-lg-block">
 					<div class="container">
-						<div class="row">
+						<div class="d-flex justify-content-between">
 							<!-- desktop logo and site title -->
-							<div class="col-6 logo-wrap">
+							<div class="logo-wrap">
 								<a href="index.html" class="lg-logo inline-block vertical-align-middle">
 									<img src="asset/img/logo.png" />
 								</a>
@@ -90,7 +90,7 @@
 								</div>
 							</div>
 							<!-- desktop Cambodia logo -->
-							<div class="col-6 logo-wrap text-right">
+							<div class="cam-logo-wrap text-right">
 								<!-- desktop logo and title -->
 								<h1 class="font-moul khmer-title primary-color inline-block">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិ សាសនា ព្រះមហាក្សត្រ</h1>
 								<object class="khmer-logo" class="d-inline-block" type="image/svg+xml" data="asset/img/Royal_Cambodia.svg" width="" height=""></object>
@@ -222,7 +222,7 @@
 					
 					<ul class="tab-collapse tab3">
 						<li class="one active"><a class="primary-color" href="#">សេវាតាមវិស័យ</a>
-							<ul class="row wrap primary-color">
+							<ul class="row wrap primary-color tab-s-1">
 								<li class="col-md-6 col-lg-4"><a href="#"><img src="asset/img/icon-ministry/01.png" />ការិយាល័យច្រកចេញចូលតែមួយ </a><span class="count">(232)</span></li>
 								<li class="col-md-6 col-lg-4"><a href="#"><img src="asset/img/icon-ministry/08.png" />វិស័យ ពាណិជ្ជកម្ម </a><span class="count">(42)</span></li>
 								<li class="col-md-6 col-lg-4"><a href="#"><img src="asset/img/icon-ministry/07.png" />វិស័យ យុត្តិធម៌ </a><span class="count">(4)</span></li>
@@ -234,37 +234,37 @@
 							</ul>
 						</li>
 						<li class="two"><a class="primary-color" href="#">សេវាតាមក្រុម</a>
-							<ul class="row wrap primary-color">
-								<li class="col-md-4 col-lg-2"><a href="#">ការចុះបញ្ជី</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ការផ្ដល់សេវា</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ការផ្តល់សិទ្ធិ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ការផ្ទេរ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ការផ្ទេរសិទ្ធិ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ការវិនិយោគ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ការអនុញ្ញាត</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ទិដ្ឋការ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">នីត្យានុកូលកម្ម</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">បណ្ណបើកបរ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ផ្លាកលេខ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ពាណិជ្ជកម្ម</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">ភាពយន្ត</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">យុត្តិធម៌</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">លិខិតបញ្ជាក់</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">វប្បធម៌</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">វិញ្ញាបនបត្រ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">សាធារណការ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">សិប្បកម្ម</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">សេវាកម្ម</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">សេវាថែទាំ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">សំណង់</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">អត្រានុកូលដ្ឋាន</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">អប់រំ</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">អាជីវកម្ម</a></li>
-								<li class="col-md-4 col-lg-2"><a href="#">អាជ្ញាប័ណ្ណ</a></li>
+							<ul class="row wrap primary-color tab-s-2">
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ការចុះបញ្ជី</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ការផ្ដល់សេវា</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ការផ្តល់សិទ្ធិ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ការផ្ទេរ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ការផ្ទេរសិទ្ធិ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ការវិនិយោគ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ការអនុញ្ញាត</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ទិដ្ឋការ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">នីត្យានុកូលកម្ម</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">បណ្ណបើកបរ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ផ្លាកលេខ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ពាណិជ្ជកម្ម</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">ភាពយន្ត</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">យុត្តិធម៌</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">លិខិតបញ្ជាក់</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">វប្បធម៌</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">វិញ្ញាបនបត្រ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">សាធារណការ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">សិប្បកម្ម</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">សេវាកម្ម</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">សេវាថែទាំ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">សំណង់</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">អត្រានុកូលដ្ឋាន</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">អប់រំ</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">អាជីវកម្ម</a></li>
+								<li class="col-md-4 col-lg-2"><a href="#" class="btn btn-light btn-block">អាជ្ញាប័ណ្ណ</a></li>
 							</ul>
 						</li>
 						<li class="three"><a class="primary-color" href="#">សេវាថ្មីៗបំផុត</a>
-							<ul class="row wrap pb-0 b-2 primary-color">
+							<ul class="row wrap pb-0 b-2 primary-color tab-s-3">
 								<li class="b-item-wrap col-12">
 									<div class="b-item">
 										<div class="b-title-wrap">
@@ -680,7 +680,6 @@
 				var current = localStorage.getItem(key);
 				if(current == 'responsive'){
 					jQuery('#viewport').attr('content','width=device-width, initial-scale=1, shrink-to-fit=yes');
-					
 					jQuery('html').removeClass('non-responsive');
 					jQuery('html').addClass('responsive');
 					jQuery('#desktop-mode').removeClass('active');
@@ -688,26 +687,17 @@
 				}
 				if(current == 'non-responsive'){
 					jQuery('#viewport').attr('content','width=device-width, initial-scale=0, shrink-to-fit=yes');
-					
 					jQuery('html').removeClass('responsive');
 					jQuery('html').addClass('non-responsive');
 					jQuery('#mobile-mode').removeClass('active');
 					jQuery('#desktop-mode').addClass('active');
 				}
 				var current_mode = localStorage.getItem(key);
-				
 				jQuery('#mobile-mode').on('click', function(){
-					jQuery('#viewport').attr('content','width=device-width, initial-scale=1, shrink-to-fit=yes');
-					jQuery('html').removeClass('non-responsive');
-					jQuery('html').addClass('responsive');
 					localStorage.setItem(key, 'responsive');
 					location.reload();
 				});
-				
 				jQuery('#desktop-mode').on('click', function(){
-					jQuery('#viewport').attr('content','width=device-width, initial-scale=0, shrink-to-fit=yes');
-					jQuery('html').removeClass('responsive');
-					jQuery('html').addClass('non-responsive');
 					localStorage.setItem(key, 'non-responsive');
 					location.reload();
 				});
@@ -784,11 +774,8 @@
 							slidesToScroll: 1
 							}
 						}
-						// You can unslick at a given breakpoint now by adding:
-						// settings: "unslick"
-						// instead of a settings object
-						]
-					});
+					]
+				});
 				
 				// tab collapse
 				jQuery(".tab-collapse > li > ul").hide();

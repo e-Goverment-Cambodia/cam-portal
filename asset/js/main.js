@@ -1,50 +1,8 @@
 jQuery(document).ready(function() {
-    // switching display mode responsive and non-responsive
-    var key = 'display_mode';
-    var current = localStorage.getItem(key);
-    if(current == 'responsive'){
-        jQuery('#viewport').attr('content','width=device-width, initial-scale=1, shrink-to-fit=yes');
-        
-        jQuery('html').removeClass('non-responsive');
-        jQuery('html').addClass('responsive');
-        jQuery('#desktop-mode').removeClass('active');
-        jQuery('#mobile-mode').addClass('active');
-    }
-    if(current == 'non-responsive'){
-        jQuery('#viewport').attr('content','width=device-width, initial-scale=0, shrink-to-fit=yes');
-        
-        jQuery('html').removeClass('responsive');
-        jQuery('html').addClass('non-responsive');
-        jQuery('#mobile-mode').removeClass('active');
-        jQuery('#desktop-mode').addClass('active');
-    }
-    var current_mode = localStorage.getItem(key);
-    
-    jQuery('#mobile-mode').on('click', function(){
-        jQuery('#viewport').attr('content','width=device-width, initial-scale=1, shrink-to-fit=yes');
-        jQuery('html').removeClass('non-responsive');
-        jQuery('html').addClass('responsive');
-        localStorage.setItem(key, 'responsive');
-        location.reload();
-    });
-    
-    jQuery('#desktop-mode').on('click', function(){
-        jQuery('#viewport').attr('content','width=device-width, initial-scale=0, shrink-to-fit=yes');
-        jQuery('html').removeClass('responsive');
-        jQuery('html').addClass('non-responsive');
-        localStorage.setItem(key, 'non-responsive');
-        location.reload();
-    });
-    
-    // action on responsive and mobile mode
     jQuery('.nav-button').on('click', function() {
         jQuery('.content').toggleClass('isOpen');
-        jQuery(this).toggleClass("hamberger x");
+        jQuery(this).find(".nav-icon").toggleClass("oi-menu oi-x");
     });
-    
-    // adding html from desktop menu to sm menu
-    jQuery('.sm-navbar ul').html(jQuery('.lg-main-nav ul').html());
-    jQuery('.mobile-top-menu ul').html(jQuery('.desktop-top-menu ul').html());
     
     // sm nav menu
     jQuery(".sm-navbar .menu-item-has-children").append("<span class='oi oi-chevron-bottom right'></span>");
@@ -57,62 +15,15 @@ jQuery(document).ready(function() {
     });
     
     // slick slideshow
-    jQuery(".slick-slideshow").slick({
+    $(".slick-slideshow").slick({
+        //dots: true,
         speed: 500,
         autoplay: true,
         adaptiveHeight: true,
         mobileFirst: true,
-        nextArrow: '<div class="slick-arrow slick-next"><span class="oi oi-chevron-right"></span></div>',
-        prevArrow: '<div class="slick-arrow slick-prev"><span class="oi oi-chevron-left"></span></div>'
+        nextArrow: '<div class="primary-background-color slick-arrow slick-next"><span class="oi oi-chevron-right"></span></div>',
+        prevArrow: '<div class="primary-background-color slick-arrow slick-prev"><span class="oi oi-chevron-left"></span></div>'
     });
-    jQuery('.non-responsive .slick-slideshow-responsive').slick({
-        dots: true,
-        arrows: false,
-        autoplay: true,
-        infinite: true,
-        adaptiveHeight: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4
-    });
-    jQuery('.responsive .slick-slideshow-responsive').slick({
-        dots: true,
-        arrows: false,
-        autoplay: true,
-        infinite: true,
-        adaptiveHeight: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-            ]
-        });
     
     // tab collapse
     jQuery(".tab-collapse > li > ul").hide();
@@ -125,6 +36,7 @@ jQuery(document).ready(function() {
         // if your want to maintain the height
         //height = jQuery(this).closest(".tab-collapse").height();
         //$('.tab-collapse').css('min-height', height);
+        
         
         jQuery(this).closest(".tab-collapse").children("li").children("ul").slideUp("slow"); 
         jQuery(this).closest(".tab-collapse").children("li").removeClass("active");

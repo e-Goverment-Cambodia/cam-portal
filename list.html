@@ -3,7 +3,8 @@
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=yes">
+		<!-- initial-scale=1 : responsive default -->
+		<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 		<!-- icon -->
 		<link rel="icon" type="image/png" href="asset/img/logo-16x16.png" sizes="16x16" />
 		<link rel="icon" type="image/png" href="asset/img/logo-32x32.png" sizes="32x32" />
@@ -20,7 +21,7 @@
 		<!-- options -->
 		<style>
 			a, a:hover, .primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: #2082c3; }
-			.primary-background-color, .lg-main-nav ul ul, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
+			.primary-background-color, .lg-main-nav ul ul, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: #2082c3; }
 			.fill { fill: #2082c3; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 		</style>
@@ -77,9 +78,9 @@
 				<!-- desktop header -->
 				<div class="lg-header d-none d-lg-block">
 					<div class="container">
-						<div class="row">
+						<div class="d-flex justify-content-between">
 							<!-- desktop logo and site title -->
-							<div class="col-6 logo-wrap">
+							<div class="logo-wrap">
 								<a href="index.html" class="lg-logo inline-block vertical-align-middle">
 									<img src="asset/img/logo.png" />
 								</a>
@@ -89,7 +90,7 @@
 								</div>
 							</div>
 							<!-- desktop Cambodia logo -->
-							<div class="col-6 logo-wrap text-right">
+							<div class="cam-logo-wrap text-right">
 								<!-- desktop logo and title -->
 								<h1 class="font-moul khmer-title primary-color inline-block">ព្រះរាជាណាចក្រកម្ពុជា <br/>ជាតិ សាសនា ព្រះមហាក្សត្រ</h1>
 								<object class="khmer-logo" class="d-inline-block" type="image/svg+xml" data="asset/img/Royal_Cambodia.svg" width="" height=""></object>
@@ -291,157 +292,182 @@
 							
 						</div>
 						
-						<div class="col-lg-4">
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul">បណ្តាញសង្គម</span>
-							</div>
-							<div class="social sidebar">
-								<ul>
-									<li><a href="#"><svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>
-									<li><a href="#"><svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg></a></li>
-								</ul>
-							</div>
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul">លេខអាសន្ន</span>
-							</div>
-							<table class="table table-bordered block-30">
-								<tbody>
-									<tr>
-										<th>
-											ប៉ូលីស
-										</th>
-										<th>
-											<a href="tel:117"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>117</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											សង្គ្រោះបន្ទាន់
-										</th>
-										<th>
-											<a href="tel:119"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>119</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											អគ្គីភ័យ
-										</th>
-										<th>
-											<a href="tel:666"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>666</span>
-										</th>
-									</tr>
-									<tr>
-										<th rowspan="2">
-											H1N1 Hotline
-										</th>
-										<th>
-											<a href="tel:012488981"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span> 012 488 981</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											<a href="tel:012836868"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>012 836 868</span>
-										</th>
-									</tr>
-								</tbody>
-							</table>
-					
-							<div class="block-title primary-color">
-								<a class="primary-color font-moul" href="#">អត្រាប្តូរប្រាក់</a>
-							</div>
-							<table class="table table-bordered">
-								<tbody>
-									<tr>
-										<th>
-											ដុល្លារអាមេរិច
-										</th>
-										<th>
-											<span>១ USD = ៤០៥៥ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											អ៊ឺរ៉ូ
-										</th>
-										<th>
-											<span>១ EUR = ៤៦៨៤ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											ផោនអង់គ្លេស
-										</th>
-										<th>
-											<span>១ GBP = ៥៣៦៩ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											ដុល្លារហុងកុង
-										</th>
-										<th>
-											<span>១ HKD = ៥២៣ KHR</span>
-										</th>
-									</tr>
-									<tr>
-										<th>
-											បាតថៃ
-										</th>
-										<th>
-											<span>១ THB = ១២៤ KHR</span>
-										</th>
-									</tr>
-								</tbody>
-							</table>
-							<caption class="text-right">ប្រភពពី <a href="https://www.nbc.org.kh/english/index.php">nbc.org.kh</a></caption>
-							<div class="block-30"></div>
-							
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul" >តារាងទីផ្សារ</span>
-							</div>
-							<table class="table table-bordered block-30">
-								<tbody>
-									<tr>
-										<th>ប្រេងសាំង (រៀល/លីត្រ)</th>
-										<th>= ៤,១០០៛</th>
-									</tr>
-									<tr>
-										<th>ប្រេងរំអិលម៉ាស៊ូត (៥ល/ធុង)</th>
-										<th>= ១១២,០០០៛</th>
-									</tr>
-									<tr>
-										<th>អង្ករម្លិះ (គីឡូក្រាម)</th>
-										<th>= ៣.៥៤០៛</th>
-									</tr>
-									<tr>
-										<th>ម្សៅមី (គីឡូក្រាម)</th>
-										<th>= ៤.៧៥០៛</th>
-									</tr>
-									<tr>
-										<th>ស្រូវចំរុះ (គីឡូក្រាម)</th>
-										<th>= ១.៦០០៛</th>
-									</tr>
-									<tr>
-										<th>ពោតក្រហម គ្រាប់ (គីឡូក្រាម)</th>
-										<th>= ២.៥២៥៛</th>
-									</tr>
-									<tr>
-										<th>ពោតស គ្រាប់ (គីឡូក្រាម)</th>
-										<th>= ៣.៨៣៣៛</th>
-									</tr>
-								</tbody>
-							</table>
-							 
-							 
-							
-							<div class="block-title primary-color">
-								<span class="primary-color font-moul" >អាកាសធាតុ</span>
-							</div>
-							<a class="weatherwidget-io" href="https://forecast7.com/en/11d54104d89/phnom-penh/" data-label_1="PHNOM PENH" data-label_2="WEATHER" data-theme="original" >PHNOM PENH WEATHER</a>
-							<script>
-							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-							</script>
-							<div class="block-30"></div>
+						<div class="col-lg-4 widget-area">
+							<section class="widget">
+								<div class="widget-title">
+									<div class="block-title primary-color">
+										<span class="primary-color font-moul">បណ្តាញសង្គម</span>
+									</div>
+								</div>
+								<div class="widget-body">
+									<div class="social sidebar">
+										<ul>
+											<li><a href="#"><img src="asset/img/facebook-icon.jpg" /></a></li>
+											<li><a href="#"><img src="asset/img/youtube-icon.jpg" /></a></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+							<section class="widget">
+								<div class="widget-title">
+									<div class="block-title primary-color">
+										<span class="primary-color font-moul">លេខអាសន្ន</span>
+									</div>
+								</div>
+								<div class="widget-body">
+									<table class="table table-bordered block-30">
+										<tbody>
+											<tr>
+												<th>
+													ប៉ូលីស
+												</th>
+												<th>
+													<a href="tel:117"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>117</span>
+												</th>
+											</tr>
+											<tr>
+												<th>
+													សង្គ្រោះបន្ទាន់
+												</th>
+												<th>
+													<a href="tel:119"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>119</span>
+												</th>
+											</tr>
+											<tr>
+												<th>
+													អគ្គីភ័យ
+												</th>
+												<th>
+													<a href="tel:666"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>666</span>
+												</th>
+											</tr>
+											<tr>
+												<th rowspan="2">
+													H1N1 Hotline
+												</th>
+												<th>
+													<a href="tel:012488981"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span> 012 488 981</span>
+												</th>
+											</tr>
+											<tr>
+												<th>
+													<a href="tel:012836868"><img width="18" src="asset/fontawesome/svgs/brands/phone-square-solid.svg" /></a> <span>012 836 868</span>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+							<section class="widget">
+								<div class="widget-title">
+									<div class="block-title primary-color">
+										<span class="primary-color font-moul">អត្រាប្តូរប្រាក់</span>
+									</div>
+								</div>
+								<div class="widget-body">
+									<table class="table table-bordered">
+										<tbody>
+											<tr>
+												<th>
+													ដុល្លារអាមេរិច
+												</th>
+												<th>
+													<span>១ USD = ៤០៥៥ KHR</span>
+												</th>
+											</tr>
+											<tr>
+												<th>
+													អ៊ឺរ៉ូ
+												</th>
+												<th>
+													<span>១ EUR = ៤៦៨៤ KHR</span>
+												</th>
+											</tr>
+											<tr>
+												<th>
+													ផោនអង់គ្លេស
+												</th>
+												<th>
+													<span>១ GBP = ៥៣៦៩ KHR</span>
+												</th>
+											</tr>
+											<tr>
+												<th>
+													ដុល្លារហុងកុង
+												</th>
+												<th>
+													<span>១ HKD = ៥២៣ KHR</span>
+												</th>
+											</tr>
+											<tr>
+												<th>
+													បាតថៃ
+												</th>
+												<th>
+													<span>១ THB = ១២៤ KHR</span>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+									<caption class="text-right">ប្រភពពី <a href="https://www.nbc.org.kh/english/index.php">nbc.org.kh</a></caption>
+									<div class="block-30"></div>
+								</div>
+							</section>
+							<section class="widget">
+								<div class="widget-title">
+									<div class="block-title primary-color">
+										<span class="primary-color font-moul">តារាងទីផ្សារ</span>
+									</div>
+								</div>
+								<div class="widget-body">
+									<table class="table table-bordered block-30">
+										<tbody>
+											<tr>
+												<th>ប្រេងសាំង (រៀល/លីត្រ)</th>
+												<th>= ៤,១០០៛</th>
+											</tr>
+											<tr>
+												<th>ប្រេងរំអិលម៉ាស៊ូត (៥ល/ធុង)</th>
+												<th>= ១១២,០០០៛</th>
+											</tr>
+											<tr>
+												<th>អង្ករម្លិះ (គីឡូក្រាម)</th>
+												<th>= ៣.៥៤០៛</th>
+											</tr>
+											<tr>
+												<th>ម្សៅមី (គីឡូក្រាម)</th>
+												<th>= ៤.៧៥០៛</th>
+											</tr>
+											<tr>
+												<th>ស្រូវចំរុះ (គីឡូក្រាម)</th>
+												<th>= ១.៦០០៛</th>
+											</tr>
+											<tr>
+												<th>ពោតក្រហម គ្រាប់ (គីឡូក្រាម)</th>
+												<th>= ២.៥២៥៛</th>
+											</tr>
+											<tr>
+												<th>ពោតស គ្រាប់ (គីឡូក្រាម)</th>
+												<th>= ៣.៨៣៣៛</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+							<section class="widget">
+								<div class="widget-title">
+									<div class="block-title primary-color">
+										<span class="primary-color font-moul">អាកាសធាតុ</span>
+									</div>
+								</div>
+								<div class="widget-body">
+									<a class="weatherwidget-io" href="https://forecast7.com/en/11d54104d89/phnom-penh/" data-label_1="PHNOM PENH" data-label_2="WEATHER" data-theme="original" >PHNOM PENH WEATHER</a>
+									<script>
+									!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+									</script>
+									<div class="block-30"></div>
+								</div>
+							</section>
 						</div>
 					</div>
 				</div>
@@ -499,29 +525,27 @@
 				var key = 'display_mode';
 				var current = localStorage.getItem(key);
 				if(current == 'responsive'){
+					jQuery('#viewport').attr('content','width=device-width, initial-scale=1, shrink-to-fit=yes');
 					jQuery('html').removeClass('non-responsive');
 					jQuery('html').addClass('responsive');
 					jQuery('#desktop-mode').removeClass('active');
 					jQuery('#mobile-mode').addClass('active');
 				}
 				if(current == 'non-responsive'){
+					jQuery('#viewport').attr('content','width=device-width, initial-scale=0, shrink-to-fit=yes');
 					jQuery('html').removeClass('responsive');
 					jQuery('html').addClass('non-responsive');
 					jQuery('#mobile-mode').removeClass('active');
 					jQuery('#desktop-mode').addClass('active');
 				}
 				var current_mode = localStorage.getItem(key);
-				
 				jQuery('#mobile-mode').on('click', function(){
-					jQuery('html').removeClass('non-responsive');
-					jQuery('html').addClass('responsive');
 					localStorage.setItem(key, 'responsive');
+					location.reload();
 				});
-				
 				jQuery('#desktop-mode').on('click', function(){
-					jQuery('html').removeClass('responsive');
-					jQuery('html').addClass('non-responsive');
 					localStorage.setItem(key, 'non-responsive');
+					location.reload();
 				});
 				
 				// action on responsive and mobile mode
@@ -546,13 +570,57 @@
 				
 				// slick slideshow
 				jQuery(".slick-slideshow").slick({
-					//dots: true,
 					speed: 500,
-					autoplay: false,
+					autoplay: true,
 					adaptiveHeight: true,
 					mobileFirst: true,
 					nextArrow: '<div class="slick-arrow slick-next"><span class="oi oi-chevron-right"></span></div>',
 					prevArrow: '<div class="slick-arrow slick-prev"><span class="oi oi-chevron-left"></span></div>'
+				});
+				jQuery('.non-responsive .slick-slideshow-responsive').slick({
+					dots: true,
+					arrows: false,
+					autoplay: true,
+					infinite: true,
+					adaptiveHeight: true,
+					speed: 300,
+					slidesToShow: 4,
+					slidesToScroll: 4
+				});
+				jQuery('.responsive .slick-slideshow-responsive').slick({
+					dots: true,
+					arrows: false,
+					autoplay: true,
+					infinite: true,
+					adaptiveHeight: true,
+					speed: 300,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					responsive: [
+						{
+							breakpoint: 1200,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 3,
+								infinite: true,
+								dots: true
+							}
+						},
+						{
+							breakpoint: 768,
+							settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+							}
+						},
+						{
+							breakpoint: 576,
+							settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+							}
+						}
+					]
 				});
 				
 				// tab collapse

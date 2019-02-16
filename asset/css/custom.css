@@ -22,7 +22,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 
 .block-title { border-bottom-width: 2px; border-bottom-style: solid; margin-bottom: 30px; }
-.block-title a, .block-title span { display: inline-block; font-size: 20px; line-height: 34px; text-decoration: none; background-color: #eee; padding: 8px 20px; }
+.block-title a, .block-title span { display: inline-block; font-size: 20px; line-height: 34px; text-decoration: none; background-color: #eee; padding: 5px 20px; }
 .block-title a:hover, .block-title span:hover {  }
 
 
@@ -52,7 +52,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 /* block 3 */
 .b-3 {  }
-.b-3 .b-item-wrap { border-bottom: 1px solid #ccc; margin-bottom: 30px; padding-bottom: 30px; }
+.b-3 .b-item-wrap { border-bottom: 1px solid #ccc; margin-bottom: 30px; padding-bottom: 30px; min-height: 120px; }
 .b-3 .b-item {  }
 .b-3 .b-date-wrap { float: left; margin-right: 15px; margin-bottom: 10px; }
 .b-3 .b-date { color: #fff; text-align: center; width: 75px; height: 90px; font-weight: bold; padding: 10px; }
@@ -132,15 +132,16 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 /*lg header & navigation menu*/
 .lg-header { margin-bottom: 30px; }
 .non-responsive .lg-header .row { }
-.lg-header .logo-wrap { padding-top: 20px; padding-bottom: 20px; }
+.lg-header .logo-wrap { padding-top: 60px; padding-bottom: 20px; }
+.lg-header .cam-logo-wrap { padding-top: 25px; padding-bottom: 25px; }
 .lg-logo { }
-.lg-logo img { width: auto; height: 130px; }
+.lg-logo img { width: auto; height: 110px; }
 .lg-title { padding-left: 15px; }
 .lg-title h1{ font-size: 30px; }
 .lg-title span{ font-size: 20px; }
 
-.lg-header .khmer-title { font-size: 15px; line-height: 30px; text-align: center; vertical-align: middle; padding-right: 15px; margin: 0px; }
-.lg-header .khmer-logo { display: inline-block; height: 70px; vertical-align: middle; margin-bottom: 5px; }
+.lg-header .khmer-title { font-size: 18px; line-height: 30px; text-align: center; vertical-align: middle; padding-right: 15px; margin-bottom: 10px; }
+.lg-header .khmer-logo { display: inline-block; height: 80px; vertical-align: middle; margin-bottom: 10px; }
 .lg-header .input-group { width: 250px; }
 .lg-header .input-group span { color: #fff; border-radius: 0px; border: none; }
 .lg-header .form-control { border-radius: 0px; line-height: 30px; }
@@ -148,7 +149,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .lg-header .short-link ul li {  display: inline-block; }
 .lg-header .short-link ul li a {  display: block; font-size: 14px; text-decoration: none; line-height: 16px; border-right: 1px solid; padding-right: 5px; }
 
-.lg-header .languages ul { padding: 0px; margin: 0px; }
+.lg-header .languages ul { padding: 0px; margin-bottom: 10px; }
 .lg-header .languages ul li { list-style: none; display: inline-block; background-color: #eee; }
 .lg-header .languages ul li:hover a { background-color: rgba(0, 0, 0, 0.1); }
 .lg-header .languages ul li.active a { color: #fff; }
@@ -165,7 +166,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .lg-main-nav ul ul > li.menu-item-has-children > a::after { content: " "; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; position: absolute; right: 10px; top: calc(50% - 5px); }
 .lg-main-nav > ul > li.menu-item-has-children > a::after { display: inline-block; content: " "; width: 0; height: 0; border: 5px solid transparent; border-top: 5px solid #ccc; border-bottom: 2.5px solid transparent; margin-left: 10px; }
 .lg-main-nav > ul > li { display: inline-block; }
-.lg-main-nav > ul > li > a { font-weight: bold; padding: 17px; line-height: 26px; }
+.lg-main-nav > ul > li > a { font-weight: bold; padding: 15px; line-height: 25px; }
 .lg-main-nav > ul > li ul { position: absolute; left: 100%; top: 0px; z-index: 1; min-width: 220px; border-bottom: 4px solid rgba(0,0,0,0.3); }
 .lg-main-nav > ul > li > ul { left: initial; top: initial; }
 .lg-main-nav .menu-item-has-children > ul { display: none; }
@@ -186,7 +187,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .social { margin-bottom: 30px; }
 .social.sidebar ul { display: flex; padding: 0px; margin: 0px; }
 .social.sidebar ul li { flex: 1; list-style: none; }
-.social.sidebar ul li a { background: #eee; padding: 20px; margin-right: 2px; display: block; text-align: center; }
+.social.sidebar ul li a { border: 1px solid; padding: 20px; margin-right: 2px; display: block; text-align: center; }
 .social.sidebar ul li:last-child a { margin: 0px; }
 .social.sidebar a svg { height: 30px; }
 
@@ -223,17 +224,22 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .tab-collapse li.three ul { margin-left: -200%; }
 .tab-collapse li.four ul { margin-left: -300%; }
 .tab-collapse > li { flex: 1; }
-.tab-collapse > li.active > a { color: #fff; }
-.tab-collapse > li.active > a::before { display: block; content: ''; left: calc( 50% - 10px ); position: absolute; z-index: 1; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid; bottom: -10px; }
-.tab-collapse > li.active ul { display: flex; z-index: 2; }
-.tab-collapse > li > a { text-decoration: none; font-weight: bold; background: #eee; display: block; padding: 10px; text-align: center; position: relative; font-size: 16px; line-height: 27px; }
+.tab-collapse > li.active > a { border-bottom: 1px solid; }
+.tab-collapse > li.active > a::before { display: block; content: ''; left: calc( 50% - 10px ); position: absolute; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid; bottom: -10px; }
+.tab-collapse > li.active ul { display: flex; }
+.tab-collapse > li.active ul li { display: block; }
+.tab-collapse > li > a { text-decoration: none; font-weight: bold; background: #eee; display: block; padding: 10px; text-align: center; position: relative; font-size: 16px; line-height: 27px; border-bottom: 1px solid #eee; }
+.tab-collapse > li > ul > li { display: none; }
 
 .tab-collapse > li > ul { margin: 0px; padding: 0px; background-color: #fff; border: 1px solid; z-index: 1; }
 .tab-collapse > li > ul.wrap { padding: 30px; }
-.tab-collapse > li > ul > li { list-style: none; border-bottom: 1px solid #eee; background-color: #fff; position: relative; padding: 0px; }
-.tab-collapse > li > ul > li > a { color: #333; font-size: 16px; padding: 15px 15px 15px 0px; word-wrap: break-word; line-height: 32px; display: inline-block; }
-.tab-collapse > li > ul li span.count { color: #333; font-size: 14px; display: inline-block; }
-.tab-collapse > li > ul li a img { width: 32px; display: inline-block; margin-right: 10px; }
+.tab-collapse > li > ul.tab-s-1 > li { list-style: none; border-bottom: 1px solid #eee; background-color: #fff; position: relative; padding: 0px; }
+.tab-collapse > li > ul.tab-s-1 > li > a { color: #333; font-size: 16px; padding: 15px 15px 15px 0px; word-wrap: break-word; line-height: 32px; display: inline-block; }
+.tab-collapse > li > ul.tab-s-1 li span.count { color: #333; font-size: 14px; display: inline-block; }
+.tab-collapse > li > ul.tab-s-1 li a img { width: 32px; display: inline-block; margin-right: 10px; }
+
+.tab-collapse > li > ul.tab-s-2 > li { padding: 1px; }
+.tab-collapse > li > ul.tab-s-2 > li > a { margin-bottom: 15px; line-height: 28px; font-size: 16px; }
 
 /* switch option responsive mode */
 .switch {}
@@ -247,6 +253,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .pagination a, .pagination span { font-size: 16px; display: block; padding: 10px; line-height: 16px; background-color: #eee; text-decoration: none; }
 .pagination ul li.active span { color: #fff; }
 .pagination ul li a span { padding: 0px; line-height: 15px; }
+.pagination ul li:hover a { background-color: rgba(0,0,0,0.1); }
 
 /* detail */
 .detail-wrap {}
@@ -265,7 +272,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .detail-wrap .head .view,
 .detail-wrap .head .share { display: inline-block; margin-right: 15px; line-height: 25px; }
 .detail-wrap .head .thumb {  }
-.detail-wrap .head .thumb img { width: 100%; margin-bottom: 30px; }
+.detail-wrap .head .thumb img { width: 100%; height: auto; margin-bottom: 30px; }
 .detail-wrap .content {}
 .detail-wrap .content p { margin-bottom: 15px; font-size: 16px; color: #333; line-height: 30px; }
 .detail-wrap .content img { margin-bottom: 15px; width: 100%; }
@@ -365,9 +372,9 @@ html.non-responsive { overflow-x: auto; }
 /* navbar tab and collapse */
 .responsive .tab-collapse { display: block; }
 .responsive .tab-collapse > li > a { border-bottom: 1px solid #fff; }
-.responsive .tab-collapse > li.active > a { border: none; }
+.responsive .tab-collapse > li.active > a { border-bottom: 1px solid; }
 .responsive .tab-collapse li ul, .responsive .tab-collapse li.one ul, .responsive .tab-collapse li.two ul , .responsive .tab-collapse li.three ul { width: 100%; margin: 0px; }
-.responsive .tab-collapse > li > ul.wrap { max-height: 400px; overflow: auto; }
+.responsive .tab-collapse > li > ul.wrap { max-height: 400px; overflow: auto; padding: 15px; }
 
 /* block 2 */
 .responsive .b-2 .b-title { margin-bottom: 15px; }
@@ -387,7 +394,7 @@ html.non-responsive { overflow-x: auto; }
 /* navbar tab and collapse */
 .responsive .tab-collapse { display: block; }
 .responsive .tab-collapse > li > a { border-bottom: 1px solid #fff; }
-.responsive .tab-collapse > li.active > a { border: none; }
+.responsive .tab-collapse > li.active > a { border-bottom: 1px solid; }
 .responsive .tab-collapse li ul, .responsive .tab-collapse li.one ul, .responsive .tab-collapse li.two ul , .responsive .tab-collapse li.three ul { width: 100%; margin: 0px; }
 .responsive .tab-collapse > li > ul.wrap { max-height: 400px; overflow: auto; }
 
@@ -408,7 +415,7 @@ html.non-responsive { overflow-x: auto; }
 /* navbar tab and collapse */
 .responsive .tab-collapse { display: block; }
 .responsive .tab-collapse > li > a { border-bottom: 1px solid #fff; }
-.responsive .tab-collapse > li.active > a { border: none; }
+.responsive .tab-collapse > li.active > a { border-bottom: 1px solid; }
 .responsive .tab-collapse li ul, .responsive .tab-collapse li.one ul, .responsive .tab-collapse li.two ul , .responsive .tab-collapse li.three ul { width: 100%; margin: 0px; }
 .responsive .tab-collapse > li > ul.wrap { max-height: 400px; overflow: auto; }
 
