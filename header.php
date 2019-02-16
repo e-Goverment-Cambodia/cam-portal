@@ -19,11 +19,13 @@
 	<link rel="icon" type="image/png" href="asset/img/logo-16x16.png" sizes="16x16" />
 	<link rel="icon" type="image/png" href="asset/img/logo-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="asset/img/logo-96x96.png" sizes="96x96" />
-	<?php wp_head(); ?>
+	<?php wp_head(); 
+	$theme_color = get_theme_mod('theme_color_setting');
+	?>
 	<style>
-			a, a:hover, .primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: <?php echo get_theme_mod( 'theme_color_setting' ); ?>; }
-			.primary-background-color, .lg-main-nav ul ul, .tab-collapse > li.active > a, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: <?php echo get_theme_mod( 'theme_color_setting' ); ?>; }
-			.fill { fill: <?php echo get_theme_mod( 'theme_color_setting' ); ?>; }
+			a, a:hover, .primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: <?php echo $theme_color; ?>; }
+			.primary-background-color, .lg-main-nav ul ul, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.active { background-color: <?php echo $theme_color; ?>; }
+			.fill { fill: <?php echo $theme_color; ?>; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 	</style>
 </head>
@@ -95,10 +97,10 @@
 					
 					<!-- contain Cambodia sign and logo site title -->
 					<div class="container">
-						<div class="row">
+						<div class="d-flex justify-content-between">
 							
 							<!-- logo and site title -->
-							<div class="col-6 logo-wrap">
+							<div class="logo-wrap">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="lg-logo inline-block vertical-align-middle">
 									<img src="<?php echo $image[0]; ?>" />
 								</a>
@@ -112,7 +114,7 @@
 							</div>
 							
 							<!-- Cambodia sign -->
-							<div class="col-6 logo-wrap text-right">
+							<div class="cam-logo-wrap text-right">
 								
 								<!-- logo and title -->
 								<h1 class="font-moul khmer-title primary-color inline-block">
