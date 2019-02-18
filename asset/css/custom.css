@@ -25,6 +25,10 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .block-title a, .block-title span { display: inline-block; font-size: 20px; line-height: 34px; text-decoration: none; background-color: #eee; padding: 5px 20px; }
 .block-title a:hover, .block-title span:hover {  }
 
+.block-title-2 { border-bottom: 1px solid #ccc; margin-bottom: 15px; }
+.block-title-2 span { display: inline-block; font-size: 20px; line-height: 34px; padding: 5px 10px 5px 0px; margin: 0px!important; }
+.block-title-2 .text { padding-right: 0px; }
+.block-title-2 a:hover, .block-title-2 span:hover {  }
 
 /* block 1 */
 .b-1 { margin-bottom: 30px; }
@@ -266,7 +270,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 
 .detail-wrap .head {}
-.detail-wrap .head .title h4 { font-size: 22px; font-weight: bold; line-height: 34px; margin-bottom: 15px; word-wrap: break-word; }
+.detail-wrap .head .title h4 { font-size: 22px; line-height: 34px; margin-bottom: 15px; word-wrap: break-word; word-break: break-all; }
 .detail-wrap .head .meta { margin-bottom: 30px; font-size: 14px; color: #777; }
 .detail-wrap .head .date,
 .detail-wrap .head .view,
@@ -275,7 +279,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .detail-wrap .head .thumb img { width: 100%; height: auto; margin-bottom: 30px; }
 .detail-wrap .content {}
 .detail-wrap .content p { margin-bottom: 15px; font-size: 16px; color: #333; line-height: 30px; }
-.detail-wrap .content img { margin-bottom: 15px; width: 100%; }
+.detail-wrap .content img { margin-bottom: 15px; width: 100%; height: auto; }
 .detail-wrap .content p > img { margin: 0px; }
 
 
@@ -298,7 +302,26 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .footer .footer-social{ margin-bottom: 30px; }
 .footer .copy-right { display: block; text-align: center; font-size: 14px; color: #fff; padding: 15px; background-color: rgba( 0, 0, 0, 0.1 ); margin-top: 30px; }
 
+.section { margin-bottom: 30px; }
+.section span { margin-right: 10px; }
 
+/* collapsible */
+.collapsible { color: #555; }
+.collapsible .collapsible-action { cursor: pointer; }
+.collapsible .map iframe { width: 100%; height: 300px; }
+.collapsible span { font-size: 16px; line-height: 25px; margin-right: 10px; }
+.collapsible span.oi { font-size: 14px; line-height: 25px; color: #797979; }
+.collapsible span:last-child { margin-right: 0px; }
+.collapsible ul { margin: 0px; padding: 0px; }
+.collapsible ul li { list-style: none; }
+.collapsible > ul > li > ul { background-color: #fbfbfb; padding: 15px; display: none; }
+.collapsible > ul > li:first-child > ul { display: block; }
+.collapsible .collapse-title { border-bottom: 1px solid #eee; padding: 10px 0px; }
+.collapsible .item-wrap { margin-bottom: 30px; }
+.collapsible .item-wrap:last-child { margin-bottom: 0px; }
+.collapsible .item { border-bottom: 1px solid #eee; margin-bottom: 15px; padding-bottom: 15px; }
+.collapsible .item:last-child { border: none; margin-bottom: 0px; }
+.collapsible .item-title { margin-bottom: 15px; font-weight: bold; display: block; }
 
 /*the shortcut css class*/
 .font-moul { font-family: Moul,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; }
