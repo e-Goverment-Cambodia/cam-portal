@@ -28,3 +28,14 @@ function cam_portal_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'cam_portal_scripts' );
+
+// function load_custom_wp_admin_style($hook) {
+// 	// Load only on ?page=mypluginname
+// 	if($hook != 'toplevel_page_cam_mi') {
+// 			return;
+// 	}
+// 	wp_enqueue_style( 'admin-cam-portal-bootstrap', get_template_directory_uri() . '/asset/bootstrap/css/bootstrap.min.css', array(), '4.3.1' );
+// 	wp_enqueue_script( 'admin-cam-portal-poperjs', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', array(), '20151215', true );
+// 	wp_enqueue_script( 'admin-cam-portal-bootstrap', get_template_directory_uri() . '/asset/bootstrap/js/bootstrap.min.js', array(), '20151215', true );
+// }
+// add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );

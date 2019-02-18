@@ -35,3 +35,4 @@ function cam_portal_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'cam_portal_pingback_header' );
+
