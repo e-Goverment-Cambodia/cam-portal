@@ -2,7 +2,7 @@
 // For those who are object orientated. Add a class 
 // function as the menu callback and setup the 
 // menus automatically. 
- 
+
 // Exit if accessed directly
 /**
  * Register a custom menu page.
