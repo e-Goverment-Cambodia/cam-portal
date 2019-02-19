@@ -22,6 +22,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 
 .block-title { border-bottom-width: 2px; border-bottom-style: solid; margin-bottom: 30px; }
+.block-title .date { float: right; font-size: 14px; line-height: 44px; background: none; padding: 0px; }
 .block-title a, .block-title span { display: inline-block; font-size: 20px; line-height: 34px; text-decoration: none; background-color: #eee; padding: 5px 20px; }
 .block-title a:hover, .block-title span:hover {  }
 
@@ -66,6 +67,12 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .b-3 .b-title-wrap {  }
 .b-3 .b-title { }
 .b-3 .b-title a { display: block; font-size: 16px; color: #353535; line-height: 25px; word-wrap: break-word; }
+
+/* widget area */
+.widget { margin-bottom: 30px; }
+.widget .widget-title {}
+.widget .widget-body th { font-weight: normal; }
+.widget .widget-footer { font-size: 14px; }
 
 /* customization of all small screen header navigation*/
 .wrapper { display: block; position: relative; }

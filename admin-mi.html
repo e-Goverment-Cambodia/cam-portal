@@ -32,7 +32,6 @@
 				<div class="loop"></div>
 				<form class="json-form" method="get" action="admin-mi.html" >
 					<input name="mi-data" class="mi-data" type="hidden" value='[{ "title":"Rice", "price":"3,000 R/Kg", "front":true },{ "title":"Apple", "price":"6,000 R/Kg", "front":false },{ "title":"Corn", "price":"850 R/Kg", "front":false },{ "title":"Bean", "price":"1,500 R/Kg", "front":true }]' />
-					<button onclick="getObj();" type="button" class="btn btn-outline-success">Save</button>
 				</form>
 				
 				
@@ -49,7 +48,14 @@
 			$(document).ready(function() {
 			
 				var dataObj = new Array();
-				dataObj = JSON.parse($('.mi-data').val());
+				var dataString = $('.mi-data').val();
+				if(dataString) {
+					try {
+						dataObj = JSON.parse(dataString);
+					} catch(e) {
+						console.log(e); // error in the above string (in this case, yes)!
+					}
+				}
 				for(var i = 0; i < dataObj.length; i++ ){
 					
 					var array = {
@@ -95,7 +101,7 @@
 
 				});
 				$('.mi-data').val(JSON.stringify(data));
-				console.log('count');
+				
 				setTimeout(function(){ 
 					getObj();
 				}, 1000);
