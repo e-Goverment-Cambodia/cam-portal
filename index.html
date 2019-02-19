@@ -674,6 +674,7 @@
 		<script type="text/javascript" src="asset/slick/slick.min.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
+			
 				// switching display mode responsive and non-responsive
 				var key = 'display_mode';
 				var current = localStorage.getItem(key);
@@ -794,6 +795,12 @@
 					jQuery(this).parent("li").addClass("active");
 					jQuery(this).parent("li").children("ul").slideToggle("slow");
 					return false;
+				});
+				
+				// collapsible action
+				jQuery('.collapsible-action').on('click', function() {
+					jQuery(this).children('.oi').toggleClass("oi-minus oi-plus");
+					jQuery(this).closest('li').children('ul').slideToggle();
 				});
 			});
 		</script>

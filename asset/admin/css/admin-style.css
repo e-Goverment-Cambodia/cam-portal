@@ -1,0 +1,7 @@
+.mi-main { padding: 15px; }
+.block-title { padding: 15px 0px; border-bottom: 1px solid #ccc; margin-bottom: 30px; }
+.block-title span {  }
+
+.btn-action { line-height: 16px; font-weight: bold; width: 30px; height: 30px; padding: 0px; }
+.json-form-wrap .checkbox { height: 15px; vertical-align: middle; width: 15px; }
+.json-form-wrap .item { margin-bottom: 15px; }
