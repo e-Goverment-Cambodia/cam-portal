@@ -349,7 +349,37 @@
 		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="asset/slick/slick.min.js"></script>
 		<script type="text/javascript">
+			function addRow( data = '' ){
+				
+				var html =	'<tr>';
+					html +=	'	<th>'+data.title+'</th>';
+					html +=	'	<th>'+data.price+'</th>';
+					html +=	'</tr>';
+					
+				return html;
+			}
 			jQuery(document).ready(function() {
+				
+				// widget mi area
+				var dataObj = new Array();
+				var dataString = $('#mi-data').val();
+				if(dataString) {
+					try {
+						dataObj = JSON.parse(dataString);
+					} catch(e) {
+						console.log(e); // error in the above string (in this case, yes)!
+					}
+				}
+				for( var i = 0; i < dataObj.length; i++ ){
+					if( dataObj[i].front ){
+						var array = {
+							'title' : dataObj[i].title,
+							'price' : dataObj[i].price
+						};
+						$('.mi-loop').append( addRow( array ) );
+					}
+				}
+				
 			
 				// switching display mode responsive and non-responsive
 				var key = 'display_mode';

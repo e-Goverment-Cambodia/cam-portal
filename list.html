@@ -292,22 +292,8 @@
 							
 						</div>
 						
-						<div class="col-lg-4 widget-area">
-							<section class="widget">
-								<div class="widget-title">
-									<div class="block-title primary-color">
-										<span class="primary-color font-moul">បណ្តាញសង្គម</span>
-									</div>
-								</div>
-								<div class="widget-body">
-									<div class="social sidebar">
-										<ul>
-											<li><a href="#"><img src="asset/img/facebook-icon.jpg" /></a></li>
-											<li><a href="#"><img src="asset/img/youtube-icon.jpg" /></a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
+						<div class="d-none d-lg-block col-lg-4 widget-area">
+							
 							<section class="widget">
 								<div class="widget-title">
 									<div class="block-title primary-color">
@@ -315,7 +301,7 @@
 									</div>
 								</div>
 								<div class="widget-body">
-									<table class="table table-bordered block-30">
+									<table class="table table-bordered" valign="middle">
 										<tbody>
 											<tr>
 												<th>
@@ -342,7 +328,7 @@
 												</th>
 											</tr>
 											<tr>
-												<th rowspan="2">
+												<th class="align-middle" rowspan="2">
 													H1N1 Hotline
 												</th>
 												<th>
@@ -409,49 +395,27 @@
 											</tr>
 										</tbody>
 									</table>
-									<caption class="text-right">ប្រភពពី <a href="https://www.nbc.org.kh/english/index.php">nbc.org.kh</a></caption>
-									<div class="block-30"></div>
+								</div>
+								<div class="widget-footer d-flex justify-content-between">
+									<span>ប្រភពពី</span><span>:</span><a target="_blank" href="www.nbc.org.kh">www.nbc.org.kh</a>
 								</div>
 							</section>
 							<section class="widget">
 								<div class="widget-title">
 									<div class="block-title primary-color">
-										<span class="primary-color font-moul">តារាងទីផ្សារ</span>
+										<a href="#" class="primary-color font-moul">តារាងទីផ្សារ</a>
 									</div>
 								</div>
 								<div class="widget-body">
-									<table class="table table-bordered block-30">
-										<tbody>
-											<tr>
-												<th>ប្រេងសាំង (រៀល/លីត្រ)</th>
-												<th>= ៤,១០០៛</th>
-											</tr>
-											<tr>
-												<th>ប្រេងរំអិលម៉ាស៊ូត (៥ល/ធុង)</th>
-												<th>= ១១២,០០០៛</th>
-											</tr>
-											<tr>
-												<th>អង្ករម្លិះ (គីឡូក្រាម)</th>
-												<th>= ៣.៥៤០៛</th>
-											</tr>
-											<tr>
-												<th>ម្សៅមី (គីឡូក្រាម)</th>
-												<th>= ៤.៧៥០៛</th>
-											</tr>
-											<tr>
-												<th>ស្រូវចំរុះ (គីឡូក្រាម)</th>
-												<th>= ១.៦០០៛</th>
-											</tr>
-											<tr>
-												<th>ពោតក្រហម គ្រាប់ (គីឡូក្រាម)</th>
-												<th>= ២.៥២៥៛</th>
-											</tr>
-											<tr>
-												<th>ពោតស គ្រាប់ (គីឡូក្រាម)</th>
-												<th>= ៣.៨៣៣៛</th>
-											</tr>
+									<input type="hidden" name="mi-data" id="mi-data" value='[{ "title":"Rice", "price":"3,000 R/Kg", "front":true },{ "title":"Apple", "price":"6,000 R/Kg", "front":false },{ "title":"Corn", "price":"850 R/Kg", "front":false },{ "title":"Bean", "price":"1,500 R/Kg", "front":true }]' />
+									<table class="table table-bordered">
+										<tbody class="mi-loop">
+											
 										</tbody>
 									</table>
+								</div>
+								<div class="widget-footer d-flex justify-content-between">
+									<span>កែប្រែចុងក្រោយ</span><span>:</span><span class="primary-color">ថ្ងៃ ព្រហស្បតិ៍, 26 មករា, 2019</span>
 								</div>
 							</section>
 							<section class="widget">
@@ -465,7 +429,7 @@
 									<script>
 									!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 									</script>
-									<div class="block-30"></div>
+									
 								</div>
 							</section>
 						</div>
@@ -520,7 +484,37 @@
 		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="asset/slick/slick.min.js"></script>
 		<script type="text/javascript">
+			function addRow( data = '' ){
+				
+				var html =	'<tr>';
+					html +=	'	<th>'+data.title+'</th>';
+					html +=	'	<th>'+data.price+'</th>';
+					html +=	'</tr>';
+					
+				return html;
+			}
 			jQuery(document).ready(function() {
+				
+				// widget mi area
+				var dataObj = new Array();
+				var dataString = $('#mi-data').val();
+				if(dataString) {
+					try {
+						dataObj = JSON.parse(dataString);
+					} catch(e) {
+						console.log(e); // error in the above string (in this case, yes)!
+					}
+				}
+				for( var i = 0; i < dataObj.length; i++ ){
+					if( dataObj[i].front ){
+						var array = {
+							'title' : dataObj[i].title,
+							'price' : dataObj[i].price
+						};
+						$('.mi-loop').append( addRow( array ) );
+					}
+				}
+				
 			
 				// switching display mode responsive and non-responsive
 				var key = 'display_mode';
