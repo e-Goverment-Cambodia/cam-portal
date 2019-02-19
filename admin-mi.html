@@ -76,11 +76,11 @@
 					$(this).closest('.item').remove();
 				
 				});
+			getObj();
 			});
-			
 			function getObj(){
 				var data = new Array();
-				$('.json-form .item').each(function(id){
+				$('.json-form-wrap .item').each(function(id){
 				
 					var title = $(this).find('.title').val();
 					var price = $(this).find('.price').val();
@@ -95,8 +95,10 @@
 
 				});
 				$('.mi-data').val(JSON.stringify(data));
-				$('.json-form').submit();
-				
+				console.log('count');
+				setTimeout(function(){ 
+					getObj();
+				}, 1000);
 			}
 			
 			function addRow( data = '' ){
