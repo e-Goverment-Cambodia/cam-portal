@@ -65,3 +65,50 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 	return ob_get_clean();
 }
 add_shortcode( 'sidebar-post', 'sidebar_post_shortcode' );
+
+
+// Slider Shortcode Generator
+
+function main_slider_shortcode( $atts , $content = null ) {
+	ob_start();
+	// Attributes
+	$atts = shortcode_atts(
+		array(
+			'cat' => 'Featured',
+			'number'		=> '4',
+		),
+		$atts,
+		'slider'
+	);
+
+	// WP_Query arguments
+	$args = array(
+		'post_type'              => array( 'post' ),
+		'post_status'            => array( 'publish' ),
+		'posts_per_page'         => $atts['number'],
+		'tax_query'              => array(
+			array(
+				'taxonomy'         => 'category',
+				'terms'            => $atts['cat'],
+				'field'            => 'name',
+			),
+		),
+	);
+	
+	// The Query
+	$slider_query = new WP_Query( $args );
+	// The Loop
+	if ( $slider_query->have_posts() ) {
+		while ( $slider_query->have_posts() ) :
+            $slider_query->the_post();
+            the_title();
+            the_post_thumbnail();
+            echo '<br>';
+		endwhile;
+	}
+	// Restore original Post Data
+	wp_reset_postdata();
+	// Return code
+	return ob_get_clean();
+}
+add_shortcode( 'slider', 'main_slider_shortcode' );
