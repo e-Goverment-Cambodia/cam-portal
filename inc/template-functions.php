@@ -47,3 +47,24 @@ function b3m_wrap_widget_titles( array $params ) {
         return $params;
         
 }
+
+// if ( function_exists( 'add_theme_support' ) ) { 
+//     add_theme_support( 'post-thumbnails' );
+//     set_post_thumbnail_size( 300, 200, true ); // default Post Thumbnail dimensions (cropped)
+
+//     // additional image sizes
+//     // delete the next line if you do not need additional image sizes
+//     // add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
+// }
+
+function block_title( $arr ){
+
+    $link = $arr['link'] ? '<a class="primary-color font-moul" href="'.$arr['link'].'">'.$arr['title'].'</a>' : '<span class="primary-color font-moul" >'.$arr['title'].'</span>';
+   
+
+    $html =     '<div class="block-title primary-color">';
+    $html .=    $link;
+    $html .=    '</div>';
+
+    return $html;
+}

@@ -10,7 +10,7 @@
  */
 
 ?>
-
+		</div>
 		<footer class="footer primary-background-color">
 			<div class="container">
 				<div class="row">
