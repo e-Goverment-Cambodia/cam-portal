@@ -71,7 +71,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .widget { margin-bottom: 30px; }
 .widget .widget-title {}
 .widget .widget-body th { font-weight: normal; }
-.widget .widget-footer { font-size: 14px; }
+.widget-footer { font-size: 14px; margin-bottom: 30px; }
 
 /* customization of all small screen header navigation*/
 .wrapper { display: block; position: relative; }
