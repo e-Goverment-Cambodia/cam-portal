@@ -10,7 +10,7 @@
  */
 
 ?>
-		</div>
+		
 		<footer class="footer primary-background-color">
 			<div class="container">
 				<div class="row">
@@ -36,19 +36,20 @@
 			</div>
 			<div class="copy-right">© 2018 រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ៖ រដ្ឋបាលខេត្តកំពត</div>
 		</footer>
+		<!-- responsive switcher -->
 		<div class="container text-center switch">
 			<div class="btn-group btn-group-toggle" data-toggle="buttons">
 				<!-- if set default mode from option to mobile -->
-				<label class="btn btn-secondary active" id="mobile-mode">
-					<input type="radio" name="options" autocomplete="off"><span class="oi oi-phone"></span> Mobile Mode
+				<label class="btn btn-secondary btn-sm active" id="mobile-mode">
+					<input type="radio" name="options" autocomplete="off"><span class="oi oi-phone"></span> <?php echo __( 'ទម្រង់ទូរស័ព្ទ', 'cam-portal' ); ?>
 				</label>
-				<label class="btn btn-secondary" id="desktop-mode">
-					<input type="radio" name="options" autocomplete="off"><span class="oi oi-monitor"></span> Desktop Mode
+				<label class="btn btn-secondary btn-sm" id="desktop-mode">
+					<input type="radio" name="options" autocomplete="off"><span class="oi oi-monitor"></span> <?php echo __( 'ទម្រង់កុំព្យូទ័រ', 'cam-portal' ); ?>
 				</label>
 			</div>
 		</div>
-	</div>
-</div>
+	</div><!-- close content -->
+</div><!-- close wrap -->
 
 <?php wp_footer(); ?>
 

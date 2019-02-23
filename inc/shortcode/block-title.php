@@ -1,22 +1,27 @@
 <?php
 function block_title_shortcode( $atts , $content = null ) {
-
+	
+	ob_start();
+	
 	// Attributes
-	extract (shortcode_atts(
+	$atts = shortcode_atts(
 		array(
-			'link' => '',
+			'link_cat_id' => '',
+			'title' => ''
 		),
 		$atts
-	) );
-    $output = '<div class="block-title primary-color">';
-    if ($link != ''){
-        $output .= '<a class="primary-color font-moul" href="' .$link. '">' . $content .'</a></div>';
-    }else{
-        $output .= '<span class="primary-color font-moul" >' . $content .'</span></div>';
-    }
-    // Return image HTML code
-    return $output;
-
+	);
+	
+	// To display the block title use the_block_title() function in 'inc\template-functions.php'
+	if( $atts['title'] != '' ){
+		$arr = [
+			'cat_id'	=> $atts['link_cat_id'], 
+			'title'	=> $atts['title'],
+		];
+		the_block_title( $arr );
+	}
+	
+	return ob_get_clean();
 }
-add_shortcode( 'block_title', 'block_title_shortcode' );
+add_shortcode( 'block-title', 'block_title_shortcode' );
 

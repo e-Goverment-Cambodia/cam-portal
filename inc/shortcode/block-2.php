@@ -6,25 +6,22 @@ function main_block_2_shortcode( $atts , $content = null ) {
 	// Attributes
 	$atts = shortcode_atts(
 		array(
-			'cat' => '',
-			'number'		=> '',
+			'cat_id' 		=> '', // category name ( multi category seperate by coma ',')
+			'posts_per_page'=> '', // number of posts per page
+			'offset'		=> 0, 
+			'title'			=> '', // title of block title
+			'link_cat_id'	=> ''  // the block title's link to a category list
 		),
 		$atts,
 		'block-2'
 	);
-
 	// WP_Query arguments
 	$args = array(
-		'post_type'              => array( 'post' ),
-		'post_status'            => array( 'publish' ),
-		'posts_per_page'         => $atts['number'],
-		'tax_query'              => array(
-			array(
-				'taxonomy'         => 'category',
-				'terms'            => $atts['cat'],
-				'field'            => 'name',
-			),
-		),
+		'post_type'             => array( 'post' ),
+		'post_status'           => array( 'publish' ),
+		'posts_per_page'        => $atts['posts_per_page'],
+		'offset'        		=> $atts['offset'],
+		'cat'					=> $atts['cat_id']
 	);
 	
 	// The Query
@@ -33,12 +30,14 @@ function main_block_2_shortcode( $atts , $content = null ) {
 	if ( $block_2_query->have_posts() ) { ?>
 	<div class="container">
 		<?php 
-		$arr = [
-			'link'=>'google.com', 
-			'title'=> '',
-		];
-		echo block_title($arr); 
-		
+		// To display the block title use the_block_title() function in 'inc\template-functions.php'
+		if( $atts['title'] != '' ){
+			$arr = [
+				'cat_id'	=> $atts['link_cat_id'], 
+				'title'	=> $atts['title'],
+			];
+			the_block_title( $arr );
+		}		
 		?>
 		<div class="b-1 row slick-slideshow-responsive">
 	<?php
