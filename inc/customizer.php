@@ -40,7 +40,6 @@ function cam_portal_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'theme_color_setting', array(
 		'type' => 'theme_mod', // or 'option'
-		'capability' => 'theme_options',
 		'default' => '#4bc598',
 		'transport' => 'refresh', // or postMessage
 		'sanitize_callback' => 'sanitize_hex_color',
