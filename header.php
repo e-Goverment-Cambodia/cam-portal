@@ -23,7 +23,7 @@
 	<link rel="icon" type="image/png" href="asset/img/logo-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="asset/img/logo-96x96.png" sizes="96x96" />
 	<?php wp_head(); 
-	$theme_color = get_theme_mod('theme_color_setting');
+	$theme_color = get_theme_mod('theme_color_setting', '#4bc598');
 	?>
 	<style>
 			a, a:hover, .primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: <?php echo $theme_color; ?>; }
@@ -59,8 +59,13 @@
 					</form>	
 					<div class="languages d-block text-center">
 						<ul>
-							<li class="active"><a href="#">ខ្មែរ</a></li>
-							<li><a href="#">Eng</a></li>
+							<?php if (function_exists('pll_the_languages')){
+									pll_the_languages();
+								}else{
+									
+									echo '<li class="active"><a href="#">ភាសាខ្មែរ</a></li>';
+								}
+							?>
 						</ul>
 					</div>
 					<!-- mobile top menu bar -->
