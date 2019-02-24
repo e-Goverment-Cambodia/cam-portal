@@ -53,7 +53,7 @@ function main_block_3_shortcode( $atts , $content = null ) {
 								</div>
 							</div>
 						</div>';
-			printf( $html, get_the_post_thumbnail_url(), get_the_permalink(), mb_strimwidth( get_the_title(), 0, 75, '...' ), get_the_date() );
+			printf( $html, cam_portal_get_the_post_thumbnail(), get_the_permalink(), mb_strimwidth( get_the_title(), 0, 75, '...' ), get_the_date() );
 
 		endwhile;
 		?>

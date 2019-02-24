@@ -5,4 +5,5 @@
 	require_once get_template_directory() . '/inc/shortcode/sidebar.php';
 	require_once get_template_directory() . '/inc/shortcode/block-2.php';
 	require_once get_template_directory() . '/inc/shortcode/block-3.php';
-	require_once get_template_directory() . '/inc/shortcode/block-4.php';
+	require_once get_template_directory() . '/inc/shortcode/block-5.php';
+	require_once get_template_directory() . '/inc/shortcode/footer-info.php';

@@ -34,7 +34,7 @@ function main_slider_shortcode( $atts , $content = null ) {
 			<div class="slick-item">
 				<div class="slick-photo">
 					<div class="aspect-ratio">
-						<div class="img" style="background-image: url(<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'large' ); } ?>);" ></div>
+						<div class="img" style="background-image: url(<?php echo cam_portal_get_the_post_thumbnail('large'); ?>);" ></div>
 					</div>
 				</div>
 				<div class="primary-background-color">

@@ -47,16 +47,6 @@ function b3m_wrap_widget_titles( array $params ) {
         return $params;
         
 }
-
-// if ( function_exists( 'add_theme_support' ) ) { 
-//     add_theme_support( 'post-thumbnails' );
-//     set_post_thumbnail_size( 300, 200, true ); // default Post Thumbnail dimensions (cropped)
-
-//     // additional image sizes
-//     // delete the next line if you do not need additional image sizes
-//     // add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
-// }
-
 function the_block_title( $arr ){
 	
 	$link = '<span class="primary-color font-moul" >'.$arr['title'].'</span>';
@@ -79,3 +69,31 @@ function the_block_title( $arr ){
     $html =     '<div class="block-title primary-color">%s</div>';
     printf( $html, $link );
 }
+
+if( !function_exists( 'cam_portal_the_post_thumbnail' ) ) {
+	
+	function cam_portal_the_post_thumbnail( $size = 'post-thumbnail' ) {
+		
+		if( has_post_thumbnail() ) {
+			the_post_thumbnail( $size );
+		}else{
+			echo '<img src="'.get_template_directory_uri().'/asset/img/'.$size.'.png"/>';
+		}
+		
+	}
+}
+
+if( !function_exists( 'cam_portal_get_the_post_thumbnail' ) ) {
+	
+	function cam_portal_get_the_post_thumbnail( $size = 'post-thumbnail' ) {
+		
+		if( has_post_thumbnail() ) {
+			$url = get_the_post_thumbnail_url( '', $size );
+		}else{
+			$url = get_template_directory_uri().'/asset/img/'.$size.'.png';
+		}
+		
+		return $url;
+	}
+}
+

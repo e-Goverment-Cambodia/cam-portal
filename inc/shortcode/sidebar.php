@@ -5,7 +5,7 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 	// Attributes
 	$atts = shortcode_atts(
 		array(
-			'type_name' => '',
+			'type_slug' => '',
 			'title' => '',
 			'date'		=> false,
 			'link'		=> '',
@@ -22,8 +22,8 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 		'tax_query'              => array(
 			array(
 				'taxonomy'         => 'types',
-				'terms'            => $atts['type_name'],
-				'field'            => 'name',
+				'terms'            => $atts['type_slug'],
+				'field'            => 'slug',
 			),
 		),
 	);
@@ -38,7 +38,7 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 			// To display the block title use the_block_title() function in 'inc\template-functions.php'
 			if( $atts['title'] != '' ){
 				$arr = [
-					'type_slug'	=> $atts['type_name'], 
+					'type_slug'	=> $atts['type_slug'], 
 					'taxonomy'	=> 'types', 
 					'title'	=> $atts['title'],
 				];
