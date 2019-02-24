@@ -107,9 +107,25 @@ function cam_portal_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'cam-portal' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title"><div class="block-title primary-color"><span class="primary-color font-moul">',
+		'after_title'   => '</span></div></div>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer', 'cam-portal' ),
+		'id'            => 'footer',
+		'description'   => esc_html__( 'Add footer widgets here.', 'cam-portal' ),
+		'before_widget' => '<div class="col-sm-6">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="font-moul footer-brand">',
+		'after_title'   => '</h4>',
+	) );
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Footer Two', 'cam-portal' ),
+	// 	'id'            => 'footer-2',
+	// 	'description'   => esc_html__( 'Add footer widgets here.', 'cam-portal' ),
+	// 	'before_title'  => '<h4 class="font-moul footer-brand">',
+	// 	'after_title'   => '</h4>',
+	// ) );
 }
 add_action( 'widgets_init', 'cam_portal_widgets_init' );
 

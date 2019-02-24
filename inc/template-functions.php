@@ -36,27 +36,6 @@ function cam_portal_pingback_header() {
 }
 add_action( 'wp_head', 'cam_portal_pingback_header' );
 
-add_filter( 'dynamic_sidebar_params', 'b3m_wrap_widget_titles', 20 );
-function b3m_wrap_widget_titles( array $params ) {
-        
-        // $params will ordinarily be an array of 2 elements, we're only interested in the first element
-        $widget =& $params[0];
-        $widget['before_title'] = '<div class="widget-title"><div class="block-title primary-color"><span class="primary-color font-moul">';
-        $widget['after_title'] = '</span></div></div>';
-        
-        return $params;
-        
-}
-
-// if ( function_exists( 'add_theme_support' ) ) { 
-//     add_theme_support( 'post-thumbnails' );
-//     set_post_thumbnail_size( 300, 200, true ); // default Post Thumbnail dimensions (cropped)
-
-//     // additional image sizes
-//     // delete the next line if you do not need additional image sizes
-//     // add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
-// }
-
 function the_block_title( $arr ){
 	
 	$link = '<span class="primary-color font-moul" >'.$arr['title'].'</span>';
@@ -72,7 +51,7 @@ function the_block_title( $arr ){
 	}
 	
 	if ( isset( $arr['taxonomy'] ) && $arr['taxonomy'] != '' ) {
-		$link = '<a class="primary-color font-moul" href="'. esc_url( get_term_link( $arr['type_slug'], $arr['taxonomy'] ) ) .'">'.$arr['title'].'</a>';
+		$link = '<a class="primary-color font-moul" href="'. esc_url( get_term_link( $arr['type_slug'], $arr['taxonomy'] ) ) .'">'.esc_html( $arr['title'] ).'</a>';
 	}
 	
 	

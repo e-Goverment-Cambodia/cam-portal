@@ -5,8 +5,8 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 	// Attributes
 	$atts = shortcode_atts(
 		array(
-			'type_name' => '',
-			'title' => '',
+			'type_slug' => '',
+			'title' 	=> '',
 			'date'		=> false,
 			'link'		=> '',
 		),
@@ -22,8 +22,8 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 		'tax_query'              => array(
 			array(
 				'taxonomy'         => 'types',
-				'terms'            => $atts['type_name'],
-				'field'            => 'name',
+				'terms'            => $atts['type_slug'],
+				'field'            => 'slug',
 			),
 		),
 	);
@@ -38,7 +38,7 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 			// To display the block title use the_block_title() function in 'inc\template-functions.php'
 			if( $atts['title'] != '' ){
 				$arr = [
-					'type_slug'	=> $atts['type_name'], 
+					'type_slug'	=> $atts['type_slug'], 
 					'taxonomy'	=> 'types', 
 					'title'	=> $atts['title'],
 				];
@@ -48,6 +48,7 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 		
 			$section_query -> the_post();
 			$items = get_post_meta( get_the_ID(), 'cam_group_items', true );
+			if( is_array( $items ) ) : 
 			echo '<div class="widget-body-inner"><table class="table table-bordered">';
 				foreach ( $items as $item ) {
 					$item_name = $item['title'];
@@ -58,6 +59,7 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 					echo '</tr>';
 				}
 			echo '</table></div>';
+			endif;
 			if($atts['date']){ ?>
 			<div class="widget-footer d-flex justify-content-between">
 				<span><?php echo __('កែប្រែចុងក្រោយ', 'cam-portal'); ?></span><span>:</span><span class="primary-color"><?php the_modified_date(); ?> </span>

@@ -141,8 +141,7 @@
 										pll_the_languages();
 									}else{
 										
-										echo '<li class="active"><a href="#">ខ្មែរ</a></li>
-										<li><a href="#">Eng</a></li>';
+										echo '<li class="active"><a href="#">ភាសាខ្មែរ</a></li>';
 									}
 									?>
 									</ul>
