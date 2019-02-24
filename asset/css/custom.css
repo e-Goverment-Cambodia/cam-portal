@@ -12,7 +12,6 @@
 	font-weight: bold;
 }
 
-@import url("nav-sidebar.css");
 
 /* Overall default font */
 body { font-family: Battambang,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; }
@@ -36,7 +35,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .b-1 .b-item-wrap {  }
 .b-1 .b-item { margin-bottom: 30px; }
 .b-1 .b-thumnail { margin-bottom: 15px; }
-.b-1 .b-thumnail img { width: 100%; }
+.b-1 .b-thumnail img { width: 100%; height: auto; }
 .b-1 .b-title { margin-bottom: 15px; }
 .b-1 .b-title a { display: block; font-size: 16px; color: #353535; line-height: 28px; word-wrap: break-word; }
 .b-1 .b-date { font-size: 13px; color: #828282; border-top: 1px solid #ccc; padding-top: 15px; }
@@ -46,7 +45,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .b-2 .b-item-wrap { border-bottom: 1px solid #ccc; margin-bottom: 30px; }
 .b-2 .b-item {  }
 .b-2 .b-thumnail { margin-bottom: 30px; }
-.b-2 .b-thumnail img { width: 100%; }
+.b-2 .b-thumnail img { width: 100%; height: auto; }
 .b-2 .b-title { margin-bottom: 15px; }
 .b-2 .b-title a { display: block; font-size: 16px; color: #353535; line-height: 28px; word-wrap: break-word; }
 .b-2 .b-date { font-size: 13px; color: #828282; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 30px; }
@@ -72,7 +71,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .widget { margin-bottom: 30px; }
 .widget .widget-title {}
 .widget .widget-body th { font-weight: normal; }
-.widget .widget-footer { font-size: 14px; }
+.widget-footer { font-size: 14px; margin-bottom: 30px; }
 
 /* customization of all small screen header navigation*/
 .wrapper { display: block; position: relative; }
@@ -83,7 +82,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .nav-sidebar .nav-sidebar-header{ background-color: #eee; }
 .nav-sidebar .khmer-title { font-size: 16px; line-height: 30px; text-align: center; }
 .nav-sidebar .khmer-logo { display: block; margin: 0px auto; height: 85px; }
-.nav-sidebar .input-group { width: 100%; padding: 0px 20px; }
+.nav-sidebar .input-group { width: 100%; padding: 0px 20px; height: auto; }
 .nav-sidebar .input-group span { color: #fff; border-radius: 0px; border: none; }
 .nav-sidebar .form-control { border-radius: 0px; line-height: 30px; border: none; }
 .nav-sidebar .short-link ul { margin: 0px; padding: 0px; text-align: center; padding: 20px; }
@@ -218,7 +217,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .slick-slideshow .slick-item a { display: block; color: #fff; font-size: 16px; line-height: 27px; padding: 10px 20px; margin: 0px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 
 .slick-slideshow-responsive { margin-bottom: 60px; }
-.slick-slideshow-responsive ul.slick-dots { margin: 0px; padding: 0px; list-style: none; text-align: center; position: absolute; width: 100%; }
+.slick-slideshow-responsive ul.slick-dots { margin: 0px; padding: 0px; list-style: none; text-align: center; position: absolute; width: 100%; height: auto; }
 .slick-slideshow-responsive ul.slick-dots li { display: inline-block; vertical-align: middle; padding: 13px 2px; cursor: pointer; }
 .slick-slideshow-responsive ul.slick-dots li button {display: block; background-color: #eee; border: none; cursor: pointer; font-size: 0; padding: 2px 10px; }
 .slick-slideshow-responsive ul.slick-dots li.slick-active button { background-color: #c3c3c3; }
@@ -250,7 +249,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .tab-collapse > li > ul.tab-s-1 li a img { width: 32px; display: inline-block; margin-right: 10px; }
 
 .tab-collapse > li > ul.tab-s-2 > li { padding: 1px; }
-.tab-collapse > li > ul.tab-s-2 > li > a { margin-bottom: 15px; line-height: 28px; font-size: 16px; }
+.tab-collapse > li > ul.tab-s-2 > li > a { line-height: 28px; font-size: 16px; }
 
 /* switch option responsive mode */
 .switch {}
@@ -331,7 +330,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .collapsible .item-title { margin-bottom: 15px; font-weight: bold; display: block; }
 
 /*the shortcut css class*/
-.font-moul { font-family: Moul,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; }
+.font-moul { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Moul,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; }
 .block { display: block; }
 .inline-block { display: inline-block; }
 .vertical-align-middle { vertical-align: middle; }

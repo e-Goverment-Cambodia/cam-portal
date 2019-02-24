@@ -57,14 +57,25 @@ function b3m_wrap_widget_titles( array $params ) {
 //     // add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
 // }
 
-function block_title( $arr ){
-
-    $link = $arr['link'] ? '<a class="primary-color font-moul" href="'.$arr['link'].'">'.$arr['title'].'</a>' : '<span class="primary-color font-moul" >'.$arr['title'].'</span>';
-   
-
-    $html =     '<div class="block-title primary-color">';
-    $html .=    $link;
-    $html .=    '</div>';
-
-    return $html;
+function the_block_title( $arr ){
+	
+	$link = '<span class="primary-color font-moul" >'.$arr['title'].'</span>';
+	
+	if ( isset( $arr['cat_id'] ) && $arr['cat_id'] != '' ) {
+		
+		// Get the URL of this category
+		$category_link = get_category_link( $arr['cat_id'] );
+	}
+		
+	if ( isset( $category_link ) && $category_link != '' ) {
+		$link = '<a class="primary-color font-moul" href="'. esc_url( $category_link ) .'">'.$arr['title'].'</a>';
+	}
+	
+	if ( isset( $arr['taxonomy'] ) && $arr['taxonomy'] != '' ) {
+		$link = '<a class="primary-color font-moul" href="'. esc_url( get_term_link( $arr['type_slug'], $arr['taxonomy'] ) ) .'">'.$arr['title'].'</a>';
+	}
+	
+	
+    $html =     '<div class="block-title primary-color">%s</div>';
+    printf( $html, $link );
 }

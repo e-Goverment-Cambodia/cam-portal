@@ -6,8 +6,8 @@ function main_slider_shortcode( $atts , $content = null ) {
 	// Attributes
 	$atts = shortcode_atts(
 		array(
-			'cat' => 'Featured',
-			'number'		=> '4',
+			'cat_id'			=> '',
+			'posts_per_page'	=> 4
 		),
 		$atts,
 		'slider'
@@ -15,16 +15,10 @@ function main_slider_shortcode( $atts , $content = null ) {
 
 	// WP_Query arguments
 	$args = array(
-		'post_type'              => array( 'post' ),
-		'post_status'            => array( 'publish' ),
-		'posts_per_page'         => $atts['number'],
-		'tax_query'              => array(
-			array(
-				'taxonomy'         => 'category',
-				'terms'            => $atts['cat'],
-				'field'            => 'name',
-			),
-		),
+		'post_type'			=> array( 'post' ),
+		'post_status'		=> array( 'publish' ),
+		'posts_per_page'	=> $atts['posts_per_page'],
+		'cat'				=> $atts['cat_id']
 	);
 	
 	// The Query

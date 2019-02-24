@@ -1,7 +1,7 @@
 <?php
 // Block-2 Shortcode Generator
 
-function main_block_2_shortcode( $atts , $content = null ) {
+function main_block_4_shortcode( $atts , $content = null ) {
 	ob_start();
 	// Attributes
 	$atts = shortcode_atts(
@@ -25,10 +25,9 @@ function main_block_2_shortcode( $atts , $content = null ) {
 	);
 	
 	// The Query
-	$block_2_query = new WP_Query( $args );
+	$block_5_query = new WP_Query( $args );
 	// The Loop
-	if ( $block_2_query->have_posts() ) { ?>
-	<div class="container">
+	if ( $block_5_query->have_posts() ) { ?>
 		<?php 
 		// To display the block title use the_block_title() function in 'inc\template-functions.php'
 		if( $atts['title'] != '' ){
@@ -38,21 +37,29 @@ function main_block_2_shortcode( $atts , $content = null ) {
 			];
 			the_block_title( $arr );
 		}		
-		?>
-		<div class="b-1 row slick-slideshow-responsive">
+	?>
+	<div class="b-3">
 	<?php
-		while ( $block_2_query->have_posts() ) :
-			$block_2_query->the_post(); ?>
-			<div class="b-item-wrap col-lg-4">
-				<div class="b-item">
-					<div class="b-thumnail"><?php the_post_thumbnail( 'post-thumbnail' ); ?></div>
-					<div class="b-title"><a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth( get_the_title(), 0, 75, '...' ); ?></a></div>
-					<div class="b-date"><?php cam_portal_posted_on(); ?></div>
-				</div>
-			</div>
-		<?php
-		endwhile; ?>
-		</div>
+		while ( $block_5_query->have_posts() ) :
+			$block_5_query->the_post(); 
+			$html = 	'<div class="b-item-wrap">
+							<div class="b-item">
+								<div class="b-date-wrap">
+									<div class="b-date primary-background-color">
+										<div class="day">%s</div>
+										<div class="month">%s</div>
+										<div class="year">%s</div>
+									</div>
+								</div>
+								<div class="b-title-wrap">
+									<div class="b-title"><a href="%s">%s</a></div>
+								</div>
+							</div>
+						</div>';
+			printf( $html, '24', 'មករា', '2019', get_the_permalink(), mb_strimwidth( get_the_title(), 0, 80, '...' ) );
+
+		endwhile;
+		?>
 	</div>
 	<?php
 	}
@@ -61,4 +68,4 @@ function main_block_2_shortcode( $atts , $content = null ) {
 	// Return code
 	return ob_get_clean();
 }
-add_shortcode( 'block-2', 'main_block_2_shortcode' );
+add_shortcode( 'block-5', 'main_block_4_shortcode' );
