@@ -35,7 +35,7 @@ function main_block_2_shortcode( $atts , $content = null ) {
 		<?php 
 		$arr = [
 			'link'=>'google.com', 
-			'title'=> '',
+			'title'=> 'Hello',
 		];
 		echo block_title($arr); 
 		
