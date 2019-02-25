@@ -15,9 +15,19 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+	<!-- breadcrum -->
+	<div class="container">
+		<div class="breadcrum">
+			<ul>
+				<li><a href="#">ទំព័រដើម</a></li>
+				<li><a href="#">ព័ត៌មានថ្មីៗ</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-lg-8">
+				<div class="head" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -31,10 +41,12 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			</div>
+			<?php
+			get_sidebar();
+			?>
+		</div><!-- #row -->
+	</div><!-- #Container -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -9,10 +9,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<div class="title primary-color">
+		<?php the_title( '<h4>', '</h4></div>' ); ?>
+	</div><!-- .entry-header -->
 
 	<?php cam_portal_post_thumbnail(); ?>
 
@@ -49,4 +48,3 @@
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
