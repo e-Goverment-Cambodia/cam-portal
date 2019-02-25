@@ -257,13 +257,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 /* pagination */
 .pagination { margin-bottom: 30px; display: block; }
-.pagination ul { margin: 0px; padding: 0px; display: block; text-align: left; }
-.pagination.text-center ul { text-align: center; }
-.pagination ul li { list-style: none; display: inline-block; vertical-align: middle; }
-.pagination a, .pagination span { font-size: 16px; display: block; padding: 10px; line-height: 16px; background-color: #eee; text-decoration: none; }
-.pagination ul li.active span { color: #fff; }
-.pagination ul li a span { padding: 0px; line-height: 15px; }
-.pagination ul li:hover a { background-color: rgba(0,0,0,0.1); }
+.pagination a { display: inline-block; font-size: 16px; padding: 5px; }
 
 /* detail */
 .detail-wrap {}
