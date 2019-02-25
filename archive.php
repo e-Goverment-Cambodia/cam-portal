@@ -41,8 +41,15 @@ the_cam_portal_breadcrumbs()
 				 */
 
 			endwhile;
-
-			the_posts_navigation();
+			
+			$args = array(
+						'prev_text'          => __('« ក្រោយ'),
+						'next_text'          => __('បន្ទាប់ »'),
+					);
+			$pg = 	'<div class="pagination text-center">
+						%s
+					</div>';
+			printf( $pg, paginate_links( $args ) );
 
 		else :
 
