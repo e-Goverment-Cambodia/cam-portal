@@ -56,7 +56,7 @@ function main_block_5_shortcode( $atts , $content = null ) {
 								</div>
 							</div>
 						</div>';
-			printf( $html, '24', 'មករា', '2019', get_the_permalink(), mb_strimwidth( get_the_title(), 0, 80, '...' ) );
+			printf( $html, get_the_time( 'j' ),get_the_time( 'F' ), get_the_time( 'Y' ), get_the_permalink(), mb_strimwidth( get_the_title(), 0, 80, '...' ) );
 
 		endwhile;
 		?>

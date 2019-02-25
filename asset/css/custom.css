@@ -93,7 +93,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .nav-sidebar .languages ul { padding: 0px; margin: 0px; }
 .nav-sidebar .languages ul li { list-style: none; display: inline-block; background-color: #e2e2e2; }
 .nav-sidebar .languages ul li:hover a { background-color: rgba(0, 0, 0, 0.1); }
-.nav-sidebar .languages ul li.active a { color: #fff; }
+.nav-sidebar .languages ul li.current-lang a { color: #fff; }
 .nav-sidebar .languages ul li a { display: block; font-size: 14px; color: #333; line-height: 15px; padding: 8px; text-decoration: none; }
 
 .nav-sidebar-2 { margin-bottom: 30px; }
@@ -162,7 +162,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .lg-header .languages ul { padding: 0px; margin-bottom: 10px; }
 .lg-header .languages ul li { list-style: none; display: inline-block; background-color: #eee; }
 .lg-header .languages ul li:hover a { background-color: rgba(0, 0, 0, 0.1); }
-.lg-header .languages ul li.active a { color: #fff; }
+.lg-header .languages ul li.current-lang a { color: #fff; }
 .lg-header .languages ul li a { display: block; font-size: 14px; color: #333; line-height: 15px; padding: 8px; text-decoration: none; }
 
 
