@@ -119,13 +119,6 @@ function cam_portal_widgets_init() {
 		'before_title'  => '<h4 class="font-moul footer-brand">',
 		'after_title'   => '</h4>',
 	) );
-	// register_sidebar( array(
-	// 	'name'          => esc_html__( 'Footer Two', 'cam-portal' ),
-	// 	'id'            => 'footer-2',
-	// 	'description'   => esc_html__( 'Add footer widgets here.', 'cam-portal' ),
-	// 	'before_title'  => '<h4 class="font-moul footer-brand">',
-	// 	'after_title'   => '</h4>',
-	// ) );
 }
 add_action( 'widgets_init', 'cam_portal_widgets_init' );
 
