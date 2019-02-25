@@ -33,7 +33,7 @@
 	</style>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 	<div id="page" class="site wrapper">
 		<?php
 			$custom_logo_id = get_theme_mod( 'custom_logo' );

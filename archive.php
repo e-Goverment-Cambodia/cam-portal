@@ -8,16 +8,8 @@
  */
 
 get_header();
+the_cam_portal_breadcrumbs()
 ?>
-	<div class="container">
-		<div class="breadcrum">
-			<ul>
-			<?php
-				the_archive_title('<li><a href="#">','</a></li>');
-			?>
-			</ul>
-		</div>
-	</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">

@@ -144,3 +144,14 @@ if ( ! function_exists( 'cam_portal_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+if ( ! function_exists( 'the_cam_portal_breadcrumbs' ) ) :
+	function the_cam_portal_breadcrumbs(){
+		echo '<div class="container">
+				<div class="breadcrum">
+					<ul>';
+					if(function_exists('cam_portal_breadcrumbs')): 
+						echo cam_portal_breadcrumbs();
+					endif;
+		echo '</ul></div></div>';
+	}
+endif;

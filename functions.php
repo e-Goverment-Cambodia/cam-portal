@@ -154,6 +154,8 @@ require_once get_template_directory() . '/inc/custom-post.php';
 require_once get_template_directory() . '/inc/cmb2.php';
 
 require_once get_template_directory() . '/inc/shortcode.php';
+
+require_once get_template_directory() . '/inc/breadcrumbs.php';
 /**
  * Customizer additions.
  */

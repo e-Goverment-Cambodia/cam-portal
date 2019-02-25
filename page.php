@@ -13,17 +13,9 @@
  */
 
 get_header();
+the_cam_portal_breadcrumbs();
 ?>
 
-	<!-- breadcrum -->
-	<div class="container">
-		<div class="breadcrum">
-			<ul>
-				<li><a href="#">ទំព័រដើម</a></li>
-				<li><a href="#">ព័ត៌មានថ្មីៗ</a></li>
-			</ul>
-		</div>
-	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-lg-8">
