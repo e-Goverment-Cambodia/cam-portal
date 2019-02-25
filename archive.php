@@ -41,9 +41,7 @@ the_cam_portal_breadcrumbs()
 				 */
 
 			endwhile;
-
-			the_posts_navigation();
-
+			cam_portal_paginations();
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

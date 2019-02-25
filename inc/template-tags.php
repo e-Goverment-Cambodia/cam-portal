@@ -144,6 +144,8 @@ if ( ! function_exists( 'cam_portal_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+
 if ( ! function_exists( 'the_cam_portal_breadcrumbs' ) ) :
 	function the_cam_portal_breadcrumbs(){
 		echo '<div class="container">
@@ -153,5 +155,21 @@ if ( ! function_exists( 'the_cam_portal_breadcrumbs' ) ) :
 						echo cam_portal_breadcrumbs();
 					endif;
 		echo '</ul></div></div>';
+	}
+endif;
+if ( ! function_exists( 'cam_portal_paginations' ) ) :
+	/**
+	 * Displays an optional post paginations.
+	 *
+	 * Wraps the post paginations in an anchor element on index views, or a div
+	 */
+
+	function cam_portal_paginations(){
+		the_posts_pagination( array( 
+			'prev_text'	=> '<span class="oi oi-media-skip-backward"></span>',
+			'next_text'	=>	'<span class="oi oi-media-skip-forward"></span>',
+			'mid_size' 	=> 2,
+			'type'	  	=> 'list'
+			) );
 	}
 endif;

@@ -40,3 +40,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+
+
+
+
+/*------------------Paginations------------------------*/
+nav.pagination {
+	text-align: center;
+}
+nav.pagination span.current {
+	color: #ffffff;
+}
+nav.pagination > div > ul{
+	text-align: center;
+}

@@ -27,7 +27,7 @@
 	?>
 	<style>
 			a, a:hover, .primary-color, .short-link li a, .tab-collapse > li.active > a::before, .pagination a, .breadcrum a, .category a { color: <?php echo $theme_color; ?>; }
-			.primary-background-color, .lg-main-nav ul ul, .pagination ul li.active span, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.current-lang { background-color: <?php echo $theme_color; ?>; }
+			.primary-background-color, .lg-main-nav ul ul, .pagination ul li span.current, .nav-sidebar-2 ul li.active, .nav-sidebar-3 ul li.active, .languages ul li.current-lang { background-color: <?php echo $theme_color; ?>; }
 			.fill { fill: <?php echo $theme_color; ?>; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 	</style>
