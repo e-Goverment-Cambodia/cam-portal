@@ -10,7 +10,8 @@ function main_block_3_shortcode( $atts , $content = null ) {
 			'posts_per_page'=> '', // number of posts per page
 			'offset'		=> 0, 
 			'title'			=> '', // title of block title
-			'link_cat_id'	=> ''  // the block title's link to a category list
+			'link_cat_id'	=> '',  // the block title's link to a category list
+			'char'			=> 75
 		),
 		$atts,
 		'block-2'
@@ -53,7 +54,7 @@ function main_block_3_shortcode( $atts , $content = null ) {
 								</div>
 							</div>
 						</div>';
-			printf( $html, cam_portal_get_the_post_thumbnail(), get_the_permalink(), mb_strimwidth( get_the_title(), 0, 75, '...' ), get_the_date() );
+			printf( $html, cam_portal_get_the_post_thumbnail(), get_the_permalink(), mb_strimwidth( get_the_title(), 0, $atts['char'], '...' ), get_the_date() );
 
 		endwhile;
 		?>

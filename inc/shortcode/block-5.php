@@ -10,7 +10,8 @@ function main_block_5_shortcode( $atts , $content = null ) {
 			'posts_per_page'=> '', // number of posts per page
 			'offset'		=> 0, 
 			'title'			=> '', // title of block title
-			'link_cat_id'	=> ''  // the block title's link to a category list
+			'link_cat_id'	=> '',  // the block title's link to a category list
+			'char'			=> 80
 		),
 		$atts,
 		'block-2'
@@ -56,7 +57,7 @@ function main_block_5_shortcode( $atts , $content = null ) {
 								</div>
 							</div>
 						</div>';
-			printf( $html, get_the_time( 'j' ),get_the_time( 'F' ), get_the_time( 'Y' ), get_the_permalink(), mb_strimwidth( get_the_title(), 0, 80, '...' ) );
+			printf( $html, get_the_time( 'j' ),get_the_time( 'F' ), get_the_time( 'Y' ), get_the_permalink(), mb_strimwidth( get_the_title(), 0, $atts['char'], '...' ) );
 
 		endwhile;
 		?>

@@ -59,18 +59,6 @@ function the_block_title( $arr ){
     printf( $html, $link );
 }
 
-if( !function_exists( 'cam_portal_the_post_thumbnail' ) ) {
-	
-	function cam_portal_the_post_thumbnail( $size = 'post-thumbnail' ) {
-		
-		if( has_post_thumbnail() ) {
-			the_post_thumbnail( $size );
-		}else{
-			echo '<img src="'.get_template_directory_uri().'/asset/img/'.$size.'.png"/>';
-		}
-		
-	}
-}
 
 if( !function_exists( 'cam_portal_get_the_post_thumbnail' ) ) {
 	
@@ -85,4 +73,6 @@ if( !function_exists( 'cam_portal_get_the_post_thumbnail' ) ) {
 		return $url;
 	}
 }
+
+
 

@@ -17,7 +17,7 @@
 					<?php dynamic_sidebar( 'footer' ); ?>
 				</div>
 			</div>
-			<div class="copy-right">© 2018 រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ៖ រដ្ឋបាលខេត្តកំពត</div>
+			<div class="copy-right"><span class="d-inline-block">© <?php echo date('Y');?></span> <?php dynamic_sidebar( 'copyright' ); ?> <div><span><?php echo __( 'កែប្រែចុងក្រោយ : ' , 'cam-portal' ); cam_portal_last_modified_date(); ?></span></div></div>
 		</footer>
 		<!-- responsive switcher -->
 		<div class="container text-center switch">

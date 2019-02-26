@@ -24,8 +24,7 @@ if ( ! function_exists( 'cam_portal_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'cam-portal' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			esc_html_x( '%s', 'post date', 'cam-portal' ), $time_string 
 		);
 
 		echo '<div class="date"><span>' . $posted_on . '</span></div>'; // WPCS: XSS OK.
@@ -155,3 +154,27 @@ if ( ! function_exists( 'the_cam_portal_breadcrumbs' ) ) :
 		echo '</ul></div></div>';
 	}
 endif;
+
+if( !function_exists( 'cam_portal_the_post_thumbnail' ) ) {
+	
+	function cam_portal_the_post_thumbnail( $size = 'post-thumbnail' ) {
+		echo '<img src="'.cam_portal_get_the_post_thumbnail( $size ).'">';
+	}
+}
+
+if ( !function_exists( 'cam_portal_the_last_modified_date' ) ) {
+	
+	function cam_portal_last_modified_date(){
+		$args = array(
+					'numberposts' => 1,
+					'orderby' => 'modified',
+					'order' => 'DESC',
+					'post_type' => array( 'post', 'page', 'section_data' ),
+					'post_status' => 'publish'
+				);
+		$arrs = wp_get_recent_posts( $args );
+		foreach ( $arrs as $arr ){
+			printf( __( '%sមុន ', 'cam-portal' ), human_time_diff( strtotime( $arr['post_modified'] ), current_time('timestamp') ) );
+		}
+	}
+}
