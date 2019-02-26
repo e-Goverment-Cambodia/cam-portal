@@ -183,7 +183,7 @@ if ( ! function_exists ('cam_portal_breadcrumbs')) :
         // Handle paged pages
         if ( is_paged() ) {
             $current_page = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : get_query_var( 'page' );
-            $page_addon   = sprintf( __( ' ( Page %s )' ), number_format_i18n( $current_page ) );
+            $page_addon   = sprintf( __( ' ( ទំព័រទី %s )' ), number_format_i18n( $current_page ) );
         }
 
         $breadcrumb_output_link  = '';
@@ -204,9 +204,9 @@ if ( ! function_exists ('cam_portal_breadcrumbs')) :
             $breadcrumb_output_link .= '<li>';
             $breadcrumb_output_link .= $breadcrumb_trail;
             $breadcrumb_output_link .= '</li>';
-            $breadcrumb_output_link .= '<li>';
-            $breadcrumb_output_link .= $page_addon;
-            $breadcrumb_output_link .= '</li>';
+            // $breadcrumb_output_link .= '<li>';
+            // $breadcrumb_output_link .= $page_addon;
+            // $breadcrumb_output_link .= '</li>';
         }
         return $breadcrumb_output_link;
     }

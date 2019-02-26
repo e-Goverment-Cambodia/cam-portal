@@ -73,6 +73,16 @@ if( !function_exists( 'cam_portal_get_the_post_thumbnail' ) ) {
 		return $url;
 	}
 }
+# ---------------------------------------------------
+# REMOVE SCREEN READER TEXT FROM POST PAGINATION
+# ---------------------------------------------------
 
 
 
+function sanitize_pagination($content) {
+    // Remove h2 tag
+    $content = preg_replace('#<h2.*?>(.*?)<\/h2>#si', '', $content);
+    return $content;
+}
+ 
+add_action('navigation_markup_template', 'sanitize_pagination');
