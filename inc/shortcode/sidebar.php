@@ -9,6 +9,7 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 			'title' 	=> '',
 			'date'		=> false,
 			'link'		=> '',
+			'max'		=> 10
 		),
 		$atts,
 		'sidebar-post'
@@ -51,12 +52,13 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 			if( is_array( $items ) ) : 
 			echo '<div class="widget-body-inner"><table class="table table-bordered">';
 				foreach ( $items as $item ) {
-					$item_name = $item['title'];
-					$item_val = $item['value'];	
-					echo '<tr>';			
-					echo '<td>' . $item_name . '</td>';
-					echo '<td>' . $item_val . '</td>';
-					echo '</tr>';
+					if( $atts['max'] > 0 ) {
+						echo '<tr>';			
+						echo '<td>' . $item['title'] . '</td>';
+						echo '<td>' . $item['value']. '</td>';
+						echo '</tr>';
+					}
+					$atts['max'] --;
 				}
 			echo '</table></div>';
 			endif;

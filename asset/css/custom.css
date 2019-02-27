@@ -66,6 +66,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .b-3 .b-title-wrap {  }
 .b-3 .b-title { }
 .b-3 .b-title a { display: block; font-size: 16px; color: #353535; line-height: 25px; word-wrap: break-word; }
+.b-3 .b-meta { font-size: 14px; color: #989898; }
 
 /* widget area */
 .widget { margin-bottom: 30px; }

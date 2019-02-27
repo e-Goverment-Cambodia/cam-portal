@@ -71,6 +71,41 @@ function cam_register_repeatable_group_field_metabox() {
 		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 	) );
 
+
+
+	/**
+	 * Custom PDF field meta box
+	 * Repeatable Field Groups
+	 */
+	$cmb_pdf_field_grp = new_cmb2_box( array(
+		'id'           => $prefix . 'pdf_metabox',
+		'title'        => esc_html__( 'Select FDF file below :', 'cam-portal' ),
+		'object_types' => array( 'post' ),
+	) );
+
+	$group_pdf_field_id = $cmb_pdf_field_grp->add_field( array(
+		'id'          => $prefix . 'pdf_items',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'    => esc_html__( 'PDF File {#}', 'cam-portal' ), // {#} gets replaced by row number
+			'add_button'     => esc_html__( 'Add More PDF', 'cam-portal' ),
+			'remove_button'  => esc_html__( 'Remove This PDF', 'cam-portal' ),
+			'sortable'       => true,
+			'closed'      => false, // true to have the groups closed by default
+		),
+	) );
+
+	$cmb_pdf_field_grp->add_group_field( $group_pdf_field_id, array(
+		'name'       => esc_html__( 'Choose PDF File :', 'cam-portal' ),
+		'id'         => 'pdf_url',
+		'type'       => 'file',
+		'query_args' => array( 'type' => 'application/pdf'),
+		'options' => array(
+			'url' => false, // Hide the text input for the url
+		),
+		'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
 }
 /**
  * Callback to define the optionss-saved message.
@@ -106,3 +141,4 @@ function cam_options_page_message_callback( $cmb, $args ) {
 		add_settings_error( $args['setting'], $args['code'], $args['message'], $args['type'] );
 	}
 }
+

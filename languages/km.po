@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: Cambodia Portal\n"
 "POT-Creation-Date: 2019-02-26 15:52+0700\n"
-"PO-Revision-Date: 2019-02-26 16:16+0700\n"
+"PO-Revision-Date: 2019-02-26 16:31+0700\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,25 +17,23 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Last-Translator: \n"
-"Language: en_US\n"
+"Language: km\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! That page can&rsquo;t be found."
+msgstr "ពុំមានទិន្នន័យ"
 
 #: 404.php:22
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgstr "រកពុំឃើញ សូមព្យាយាមម្តងទៀត"
 
 #: 404.php:31
 msgid "Most Used Categories"
-msgstr "Most Used Categories"
+msgstr "ប្រភេទដែលប្រើញឹកញាប់"
 
 #. translators: %1$s: smiley
 #: 404.php:47
@@ -56,7 +54,6 @@ msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s thought on &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
 
 #: comments.php:66
 msgid "Comments are closed."
@@ -64,15 +61,15 @@ msgstr "Comments are closed."
 
 #: footer.php:20
 msgid "កែប្រែចុងក្រោយ : "
-msgstr "Last update : "
+msgstr "កែប្រែចុងក្រោយ : "
 
 #: footer.php:27
 msgid "ទម្រង់ទូរស័ព្ទ"
-msgstr "Mobile Mode"
+msgstr "ទម្រង់ទូរស័ព្ទ"
 
 #: footer.php:30
 msgid "ទម្រង់កុំព្យូទ័រ"
-msgstr "Computer Mode"
+msgstr "ទម្រង់កុំព្យូទ័រ"
 
 #: functions.php:49
 msgid "Primary"
@@ -108,20 +105,20 @@ msgstr "Add copyright text here."
 
 #: inc/breadcrumbs.php:6
 msgid "ទំព័រដើម"
-msgstr "Home"
+msgstr "ទំព័រដើម"
 
 #: inc/breadcrumbs.php:175
 msgid "Search query for: "
-msgstr "Search query for: "
+msgstr "ស្វែងរក : "
 
 #: inc/breadcrumbs.php:180
 msgid "Error 404"
-msgstr "Error 404"
+msgstr "ពុំមានទិន្នន័យ"
 
 #: inc/breadcrumbs.php:186
 #, php-format
 msgid " ( ទំព័រទី %s )"
-msgstr " ( page number %s )"
+msgstr " ( ទំព័រទី %s )"
 
 #: inc/cmb2.php:36
 msgid "Data Field Group"
@@ -141,11 +138,11 @@ msgstr "Remove Item"
 
 #: inc/cmb2.php:62
 msgid "Title"
-msgstr "Title"
+msgstr "ចំណងជើង"
 
 #: inc/cmb2.php:68
 msgid "Value"
-msgstr "Value"
+msgstr "តម្លៃ"
 
 #: inc/cmb2.php:103 inc/cmb2/example-functions.php:753
 #, php-format
@@ -613,15 +610,15 @@ msgstr "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
 
 #: inc/cmb2/includes/CMB2_JS.php:206
 msgid "Next"
-msgstr "Next"
+msgstr "បន្ទាប់"
 
 #: inc/cmb2/includes/CMB2_JS.php:207
 msgid "Prev"
-msgstr "Prev"
+msgstr "ក្រោយ"
 
 #: inc/cmb2/includes/CMB2_JS.php:208
 msgid "Today"
-msgstr "Today"
+msgstr "ថ្ងៃនេះ"
 
 #: inc/cmb2/includes/CMB2_JS.php:209 inc/cmb2/includes/CMB2_JS.php:219
 msgid "Done"
@@ -933,19 +930,19 @@ msgstr "Theme Color"
 
 #: inc/shortcode/footer-info.php:38
 msgid "អ៊ីមែល"
-msgstr "Email"
+msgstr "អ៊ីមែល"
 
 #: inc/shortcode/footer-info.php:38
 msgid "លេខទូរស័ព្ទ"
-msgstr "Phone Number"
+msgstr "លេខទូរស័ព្ទ"
 
 #: inc/shortcode/sidebar.php:65
 msgid "កែប្រែចុងក្រោយ"
-msgstr "Last update"
+msgstr "កែប្រែចុងក្រោយ"
 
 #: inc/shortcode/sidebar.php:71
 msgid "ប្រភពមកពី"
-msgstr "Source from"
+msgstr "ប្រភពមកពី"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:27
@@ -959,7 +956,7 @@ msgstr "%s"
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr "by %s"
+msgstr "ដោយ%s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:59
@@ -999,7 +996,7 @@ msgstr "Edit <span class=\"screen-reader-text\">%s</span>"
 #: inc/template-tags.php:179
 #, php-format
 msgid "%sមុន "
-msgstr "%s ago"
+msgstr "%sមុន "
 
 #. translators: %s: search query.
 #: search.php:22

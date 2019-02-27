@@ -18,26 +18,15 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation( array(
-				'prev_text'                  => __( 'prev chapter: %title' ),
-				'next_text'                  => __( 'next chapter: %title' ),
-				'in_same_term'               => true,
-				'taxonomy'                   => __( 'category' ),
-				'screen_reader_text' => __( 'Continue Reading' ),
-			) );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			// if ( comments_open() || get_comments_number() ) :
-			// 	comments_template();
-			// endif;
-
 		endwhile; // End of the loop.
 		?>
 			</div>
 			<?php
 				get_sidebar();
 			?>
-		</div>
+			
+		</div><!-- end row-->
+		<?php if( 'section_data' != get_post_type() ) cam_portal_the_related_post(); ?>
 	</div><!-- #primary -->
 
 <?php
