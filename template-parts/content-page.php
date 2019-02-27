@@ -9,11 +9,20 @@
 
 ?>
 
-	<div class="title primary-color">
-		<?php the_title( '<h4>', '</h4></div>' ); ?>
-	</div><!-- .entry-header -->
+	<div class="head">
+		<?php the_title( '<div class="title primary-color"><h4>', '</h4></div>' ); 
 
-	<?php cam_portal_post_thumbnail(); ?>
+		if ( 'page' === get_post_type() ) :
+				?>
+				<div class="meta">
+					<?php
+					cam_portal_posted_on();
+					cam_portal_posted_by();
+					cam_portal_the_posted_view_count();
+					?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
+	</div><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php

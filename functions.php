@@ -165,6 +165,7 @@ require_once get_template_directory() . '/inc/services/function-post-type.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+
 /**
  * Load Jetpack compatibility file.
  */

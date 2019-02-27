@@ -43,8 +43,17 @@ if ( ! function_exists( 'cam_portal_posted_by' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="date"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
+	}
+endif;
+
+if ( ! function_exists( 'cam_portal_the_posted_view_count' ) ) :
+
+	function cam_portal_the_posted_view_count() {
+		echo '<span class="date">';
+		echo __( 'ចំនួនទស្សនា', 'cam-portal' ) .' ('. cam_portal_get_the_posted_view_count().')';
+		echo '</span>';
 	}
 endif;
 
@@ -196,3 +205,41 @@ if ( ! function_exists( 'cam_portal_paginations' ) ) :
 			) );
 	}
 endif;
+
+
+if( !function_exists( 'cam_portal_the_related_post' ) ) {
+	function cam_portal_the_related_post() {
+		?>
+		<div class="block-30"></div>
+		<div class="block-title primary-color">
+			<span class="primary-color font-moul"><?php echo __( 'ព័ត៌មានជាប់ទាក់ទង', 'cam-portal' ); ?></span>
+		</div>
+		<div class="b-1 row slick-slideshow-responsive">	
+		<?php
+		
+		$html = '<div class="b-item-wrap col-lg-4">
+					<div class="b-item">
+						<div class="b-thumnail"><img src="%s" /></div>
+						<div class="b-title"><a href="%s">%s</a></div>
+						<div class="b-date">%s</div>
+					</div>
+				</div>';
+		foreach( cam_portal_get_the_related_post() as $arr ){
+			printf( $html, $arr['post_thumbnail'], $arr['permalink'],  mb_strimwidth( $arr['title'], 0, 85, '...' ),  $arr['date'] );
+		}
+
+		?>
+		</div><!-- close b-1 -->
+		<?php
+	}
+}
+
+if( !function_exists( 'cam_portal_the_pdf_items' ) ) {
+	function cam_portal_the_pdf_items() {
+		$items = get_post_meta( get_the_ID(), 'cam_group_pdf_items', true );
+		if( is_array( $items ) )
+		foreach( $items as $item ){
+			echo '<iframe src="http://docs.google.com/gview?url='.$item['pdf_url'].'" style="width:100%; height:1000px;" frameborder="0"></iframe>';
+		}
+	}
+}

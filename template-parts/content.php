@@ -23,36 +23,22 @@
 				<?php
 				cam_portal_posted_on();
 				cam_portal_posted_by();
+				cam_portal_the_posted_view_count();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		</div><!-- .entry-header -->
 
-	<?php cam_portal_post_thumbnail(); ?>
-
+	
 	<div class="content">
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'cam-portal' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+		
+		cam_portal_the_pdf_items();
+		the_content();
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cam-portal' ),
-			'after'  => '</div>',
-		) );
+		
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php cam_portal_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </div>
+
+

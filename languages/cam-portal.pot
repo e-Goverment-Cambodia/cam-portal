@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Cambodia Portal\n"
-"POT-Creation-Date: 2019-01-25 16:54+0700\n"
-"PO-Revision-Date: 2019-01-25 16:53+0700\n"
+"POT-Creation-Date: 2019-02-26 15:52+0700\n"
+"PO-Revision-Date: 2019-02-26 15:52+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -60,99 +60,937 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18
-msgid "https://wordpress.org/"
+#: footer.php:20
+msgid "កែប្រែចុងក្រោយ : "
 msgstr ""
 
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:21
-#, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#. translators: 1: Theme name, 2: Theme author.
 #: footer.php:27
-#, php-format
-msgid "Theme: %1$s by %2$s."
+msgid "ទម្រង់ទូរស័ព្ទ"
 msgstr ""
 
-#: functions.php:47
+#: footer.php:30
+msgid "ទម្រង់កុំព្យូទ័រ"
+msgstr ""
+
+#: functions.php:49
 msgid "Primary"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:50
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:105
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:107
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:25
-msgid "Skip to content"
+#: functions.php:114
+msgid "Footer"
 msgstr ""
 
-#: header.php:48
-msgid "Primary Menu"
+#: functions.php:116
+msgid "Add footer widgets here."
+msgstr ""
+
+#: functions.php:123
+msgid "Copyright"
+msgstr ""
+
+#: functions.php:125
+msgid "Add copyright text here."
+msgstr ""
+
+#: inc/breadcrumbs.php:6
+msgid "ទំព័រដើម"
+msgstr ""
+
+#: inc/breadcrumbs.php:175
+msgid "Search query for: "
+msgstr ""
+
+#: inc/breadcrumbs.php:180
+msgid "Error 404"
+msgstr ""
+
+#: inc/breadcrumbs.php:186
+#, php-format
+msgid " ( ទំព័រទី %s )"
+msgstr ""
+
+#: inc/cmb2.php:36
+msgid "Data Field Group"
+msgstr ""
+
+#: inc/cmb2.php:46
+msgid "Item {#}"
+msgstr ""
+
+#: inc/cmb2.php:47
+msgid "Add Another Item"
+msgstr ""
+
+#: inc/cmb2.php:48
+msgid "Remove Item"
+msgstr ""
+
+#: inc/cmb2.php:62
+msgid "Title"
+msgstr ""
+
+#: inc/cmb2.php:68
+msgid "Value"
+msgstr ""
+
+#: inc/cmb2.php:103 inc/cmb2/example-functions.php:753
+#, php-format
+msgid "%s &mdash; Updated!"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:117
+msgid "Test Metabox"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:150 inc/cmb2/example-functions.php:490
+msgid "Test Text"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:151 inc/cmb2/example-functions.php:164
+#: inc/cmb2/example-functions.php:177 inc/cmb2/example-functions.php:184
+#: inc/cmb2/example-functions.php:197 inc/cmb2/example-functions.php:205
+#: inc/cmb2/example-functions.php:214 inc/cmb2/example-functions.php:222
+#: inc/cmb2/example-functions.php:237 inc/cmb2/example-functions.php:245
+#: inc/cmb2/example-functions.php:253 inc/cmb2/example-functions.php:270
+#: inc/cmb2/example-functions.php:279 inc/cmb2/example-functions.php:295
+#: inc/cmb2/example-functions.php:302 inc/cmb2/example-functions.php:309
+#: inc/cmb2/example-functions.php:334 inc/cmb2/example-functions.php:347
+#: inc/cmb2/example-functions.php:360 inc/cmb2/example-functions.php:372
+#: inc/cmb2/example-functions.php:381 inc/cmb2/example-functions.php:389
+#: inc/cmb2/example-functions.php:398 inc/cmb2/example-functions.php:405
+#: inc/cmb2/example-functions.php:419 inc/cmb2/example-functions.php:491
+#: inc/cmb2/example-functions.php:583 inc/cmb2/example-functions.php:591
+#: inc/cmb2/example-functions.php:598 inc/cmb2/example-functions.php:605
+#: inc/cmb2/example-functions.php:612 inc/cmb2/example-functions.php:619
+#: inc/cmb2/example-functions.php:626 inc/cmb2/example-functions.php:653
+#: inc/cmb2/example-functions.php:661 inc/cmb2/example-functions.php:668
+#: inc/cmb2/example-functions.php:717
+msgid "field description (optional)"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:163
+msgid "Test Text Small"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:176
+msgid "Test Text Medium"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:183
+msgid "Read-only Disabled Field"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:187
+msgid "Hey there, I'm a read-only field"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:196
+msgid "Custom Rendered Field"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:204
+msgid "Website URL"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:213
+msgid "Test Text Email"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:221
+msgid "Test Time"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:229 inc/cmb2/example-functions.php:230
+msgid "Time zone"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:236
+msgid "Test Date Picker"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:244
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:252
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:269
+msgid "Test Money"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:278
+msgid "Test Color Picker"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:294
+msgid "Test Text Area"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:301
+msgid "Test Text Area Small"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:308
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:326
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:327
+msgid "This is a title description"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:333
+msgid "Test Select"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:339 inc/cmb2/example-functions.php:352
+#: inc/cmb2/example-functions.php:364
+msgid "Option One"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:340 inc/cmb2/example-functions.php:353
+#: inc/cmb2/example-functions.php:365
+msgid "Option Two"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:341 inc/cmb2/example-functions.php:354
+#: inc/cmb2/example-functions.php:366
+msgid "Option Three"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:346
+msgid "Test Radio inline"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:359
+msgid "Test Radio"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:371
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:380
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:388
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:397
+msgid "Test Checkbox"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:404
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:410
+msgid "Check One"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:411
+msgid "Check Two"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:412
+msgid "Check Three"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:418
+msgid "Test wysiwyg"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:428
+msgid "Test Image"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:429
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: inc/cmb2/example-functions.php:435
+msgid "Multiple Files"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:436
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: inc/cmb2/example-functions.php:443
+msgid "oEmbed"
+msgstr ""
+
+#. translators: %s: link to codex.wordpress.org/Embeds
+#: inc/cmb2/example-functions.php:446
+#, php-format
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at %s."
+msgstr ""
+
+#: inc/cmb2/example-functions.php:479
+msgid "About Page Metabox"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:510
+msgid "Repeating Field Group"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:518
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:520
+msgid "Entry {#}"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:521
+msgid "Add Another Entry"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:522
+msgid "Remove Entry"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:536
+msgid "Entry Title"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:543
+msgid "Description"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:544
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:550
+msgid "Entry Image"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:556
+msgid "Image Caption"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:575
+msgid "User Profile Metabox"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:582 inc/cmb2/example-functions.php:652
+msgid "Extra Info"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:590
+msgid "Avatar"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:597
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:604
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:611
+msgid "Google+ URL"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:618
+msgid "Linkedin URL"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:625
+msgid "User Field"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:645
+msgid "Category Metabox"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:660
+msgid "Term Image"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:667
+msgid "Arbitrary Term Field"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:686 inc/customizer.php:38
+msgid "Theme Options"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:716
+msgid "Site Background Color"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:787
+msgid "REST Test Box"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:796
+msgid "REST Test Text"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:797
+msgid "Will show in the REST API for this box and for pages."
+msgstr ""
+
+#: inc/cmb2/example-functions.php:803
+msgid "REST Editable Test Text"
+msgstr ""
+
+#: inc/cmb2/example-functions.php:804
+msgid "Will show in REST API \"editable\" contexts only (`POST` requests)."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2.php:199
+msgid "Metabox configuration is required to have an ID parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2.php:603
+msgid "Click to toggle"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Ajax.php:75
+msgid "Please Try Again"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Ajax.php:181
+msgid "Remove Embed"
+msgstr ""
+
+#. translators: 1: results for. 2: link to codex.wordpress.org/Embeds
+#: inc/cmb2/includes/CMB2_Ajax.php:189
+#: inc/cmb2/includes/helper-functions.php:107
+#, php-format
+msgid "No oEmbed Results Found for %1$s. View more info at %2$s."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:422
+#, php-format
+msgid ""
+"The \"%1$s\" field parameter has been deprecated in favor of the \"%2$s\" "
+"parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:426
+#, php-format
+msgid ""
+"Using the \"%1$s\" field parameter as a callback has been deprecated in "
+"favor of the \"%2$s\" parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:456
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s! %3$s"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:458
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s with no alternative available."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:491
+#: inc/cmb2/includes/CMB2_Hookup_Base.php:102
+#: inc/cmb2/includes/CMB2_Options.php:247
+#: inc/cmb2/includes/CMB2_Options_Hookup.php:357
+#: inc/cmb2/includes/types/CMB2_Type_Base.php:173
+#, php-format
+msgid "Invalid %1$s property: %2$s"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:509
+#: inc/cmb2/includes/types/CMB2_Type_Base.php:157
+#, php-format
+msgid "Invalid %1$s method: %2$s"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1415
+msgid "Add Group"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1416
+msgid "Remove Group"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1448 inc/cmb2/includes/CMB2_Field.php:1452
+msgid "None"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1563
+msgid "Sorry, this field does not have a cmb_id specified."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field_Display.php:432
+#: inc/cmb2/includes/CMB2_JS.php:230
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:79
+msgid "File:"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Hookup_Base.php:44
+#, php-format
+msgid "%1$s should be implemented by the extended class."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:165 inc/cmb2/includes/CMB2_JS.php:210
+msgid "Clear"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:166
+msgid "Default"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:167
+msgid "Select Color"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:168
+msgid "Current Color"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:200
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:201
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:202
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:203
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:204
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:205
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:206
+msgid "Next"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:207
+msgid "Prev"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:208
+msgid "Today"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:209 inc/cmb2/includes/CMB2_JS.php:219
+msgid "Done"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:213
+msgid "Choose Time"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:214
+msgid "Time"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:215
+msgid "Hour"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:216
+msgid "Minute"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:217
+msgid "Second"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:218
+msgid "Now"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:220
+msgctxt ""
+"Valid formatting string, as per http://trentrichardson.com/examples/"
+"timepicker/"
+msgid "hh:mm TT"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:226
+msgid "Use this file"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:227
+msgid "Use these files"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:228
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:64
+msgid "Remove Image"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:229 inc/cmb2/includes/CMB2_Types.php:406
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:84
+msgid "Remove"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:231
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:82
+msgid "Download"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:232
+msgid "Select / Deselect All"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Options_Hookup.php:139
+msgid "Nothing to update."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Options_Hookup.php:143
+msgid "Settings updated."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Types.php:226
+msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Types.php:344
+msgid "Add Row"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Types.php:406
+msgid "Remove Row"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_hookup.php:182
+msgid ""
+"Term Metadata is a WordPress 4.4+ feature. Please upgrade your WordPress "
+"install."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_hookup.php:186
+msgid "Term metaboxes configuration requires a \"taxonomies\" parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_hookup.php:466
+#, php-format
+msgid "Toggle panel: %s"
+msgstr ""
+
+#: inc/cmb2/includes/helper-functions.php:307
+msgid "Save"
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:257
+msgid "This box does not have read permissions."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:277
+msgid "This box does not have write permissions."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:300
+msgid ""
+"No box found by that id. A box needs to be registered with the \"show_in_rest"
+"\" parameter configured."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:378
+msgid "A human-readable description of the object."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:385
+msgid "The id for the object."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:392
+msgid "The title for the object."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:51
+msgid "Includes the registered fields for the box in the response."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:72
+msgid ""
+"Includes the fully rendered attributes, 'form_open', 'form_close', as well "
+"as the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
+"stylesheet handles."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:122
+msgid "No boxes found."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:27
+msgid ""
+"Includes the box object which the fields are registered to in the response."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:30
+msgid ""
+"When the '_rendered' argument is passed, the renderable field attributes "
+"will be returned fully rendered. By default, the names of the callback "
+"handers for the renderable attributes will be returned."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:33
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:36
+msgid ""
+"To view or modify the field's value, the 'object_id' and 'object_type' "
+"arguments are required."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:236
+msgid ""
+"CMB2 Field value cannot be updated without the value parameter specified."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:297
+msgid ""
+"CMB2 Field value cannot be modified without the object_id and object_type "
+"parameters specified."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:312
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:341
+msgid "No field found by that id."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:415
+#, php-format
+msgid "Value Error for %s"
+msgstr ""
+
+#. translators: %s: register_routes()
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:25
+#, php-format
+msgid "Method '%s' must be overridden."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:35
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:47
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:59
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:71
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:83
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:95
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:107
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:119
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:131
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:143
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:155
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:168
+#, php-format
+msgid "Method '%s' not implemented. Must be overridden in subclass."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:273
+msgid "Current page of the collection."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:281
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:290
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:308
+msgid ""
+"Scope under which the request is made; determines fields present in response."
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_File.php:76
+msgid "Add or Upload File"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_File_List.php:41
+msgid "Add or Upload Files"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_Taxonomy_Base.php:115
+msgid "No terms"
+msgstr ""
+
+#: inc/custom-post.php:14
+msgid "Sections"
+msgstr ""
+
+#: inc/custom-post.php:15
+msgid "Section"
+msgstr ""
+
+#: inc/custom-post.php:28
+msgctxt "taxonomy general name"
+msgid "Types"
+msgstr ""
+
+#: inc/custom-post.php:29
+msgctxt "taxonomy singular name"
+msgid "Type"
+msgstr ""
+
+#: inc/custom-post.php:30
+msgid "Search Types"
+msgstr ""
+
+#: inc/custom-post.php:31
+msgid "All Types"
+msgstr ""
+
+#: inc/custom-post.php:32
+msgid "Parent Type"
+msgstr ""
+
+#: inc/custom-post.php:33
+msgid "Parent Type:"
+msgstr ""
+
+#: inc/custom-post.php:34
+msgid "Edit Type"
+msgstr ""
+
+#: inc/custom-post.php:35
+msgid "Update Type"
+msgstr ""
+
+#: inc/custom-post.php:36
+msgid "Add New Type"
+msgstr ""
+
+#: inc/custom-post.php:37
+msgid "New Type Name"
+msgstr ""
+
+#: inc/custom-post.php:38
+msgid "Type"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Theme Color"
+msgstr ""
+
+#: inc/shortcode/footer-info.php:38
+msgid "អ៊ីមែល"
+msgstr ""
+
+#: inc/shortcode/footer-info.php:38
+msgid "លេខទូរស័ព្ទ"
+msgstr ""
+
+#: inc/shortcode/sidebar.php:65
+msgid "កែប្រែចុងក្រោយ"
+msgstr ""
+
+#: inc/shortcode/sidebar.php:71
+msgid "ប្រភពមកពី"
 msgstr ""
 
 #. translators: %s: post date.
-#: inc/template-tags.php:29
+#: inc/template-tags.php:27
 #, php-format
 msgctxt "post date"
-msgid "Posted on %s"
+msgid "%s"
 msgstr ""
 
 #. translators: %s: post author.
-#: inc/template-tags.php:45
+#: inc/template-tags.php:42
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:62
+#: inc/template-tags.php:59
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of categories.
-#: inc/template-tags.php:65
+#: inc/template-tags.php:62
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:69
+#: inc/template-tags.php:66
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:72
+#: inc/template-tags.php:69
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:82
+#: inc/template-tags.php:79
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:99 template-parts/content-page.php:37
+#: inc/template-tags.php:96 template-parts/content-page.php:36
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: index.php:22
-msgid "សាកល្បង"
+#: inc/template-tags.php:179
+#, php-format
+msgid "%sមុន "
 msgstr ""
 
 #. translators: %s: search query.
 #: search.php:22
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:22
+msgid "prev chapter: %title"
+msgstr ""
+
+#: single.php:23
+msgid "next chapter: %title"
+msgstr ""
+
+#: single.php:25
+msgid "category"
+msgstr ""
+
+#: single.php:26
+msgid "Continue Reading"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -178,14 +1016,22 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:24 template-parts/content.php:50
+#: template-parts/content-page.php:23 template-parts/content.php:49
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:39
+#: template-parts/content.php:38
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/header/header-text.php:11
+msgid "ព្រះរាជាណាចក្រកម្ពុជា"
+msgstr ""
+
+#: template-parts/header/header-text.php:13
+msgid "ជាតិ សាសនា ព្រះមហាក្សត្រ"
 msgstr ""
 
 #. Theme Name of the plugin/theme

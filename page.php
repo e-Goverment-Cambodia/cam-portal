@@ -19,7 +19,7 @@ the_cam_portal_breadcrumbs();
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-lg-8">
-				<div class="head" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="detail-wrap">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -32,11 +32,10 @@ the_cam_portal_breadcrumbs();
 			endif;
 
 		endwhile; // End of the loop.
-		?>
-			</div>
-			<?php
-			get_sidebar();
-			?>
+		?>	
+			</div><!-- #detail-wrap-->
+			</div><!-- #col-sm-12 col-lg-8-->
+			<?php get_sidebar(); ?>
 		</div><!-- #row -->
 	</div><!-- #Container -->
 

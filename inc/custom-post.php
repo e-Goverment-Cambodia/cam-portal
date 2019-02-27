@@ -15,13 +15,15 @@ function cam_portal_create_post_type() {
                 'singular_name' => __( 'Section', 'cam-portal' )
             ),
             'public'      => true,
+            'publicly_queryable' => true,
+            'rewrite' => array( 'slug' => 'sections' , 'with_front' => false ),
             'has_archive' => true,
             'menu_icon'   => 'dashicons-welcome-write-blog',
-            'supports'    => array('title'),
+            'supports'    => array('title', 'thumbnail')
         )
     );
 }
-add_action( 'init', 'cam_portal_create_post_type', 0 );
+add_action( 'init', 'cam_portal_create_post_type' );
 
 function cam_portal_create_post_tax(){
     $labels = array(
@@ -44,7 +46,7 @@ function cam_portal_create_post_tax(){
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'types' ),
+        'rewrite'           => array( 'slug' => 'types' , 'with_front' => false ),
 	);
     register_taxonomy( 'types', array( 'section_data' ), $args );
 }
@@ -86,4 +88,28 @@ function term_radio_checklist( $args ) {
     }
 
     return $args;
+}
+
+// Prevent WordPress from sending a 404 for our new perma structure.
+// add_rewrite_rule(
+//     '^sections/(\d+)/[^/]+/?$',
+//     'index.php?post_type=section_data&p=$matches[1]',
+//     'top'
+// );
+
+//add_filter( 'post_type_link', 'fix_permalink', 1, 2 );
+function fix_permalink( $post_link, $id = 0 ) {
+		
+    $post = get_post( $id );
+    
+    if ( is_wp_error( $post ) || $post->post_type != 'section_data' ){
+        
+        return $post_link;
+    }
+    // preview
+    empty ( $post->slug )
+        and $post->slug = sanitize_title_with_dashes( $post->post_title );
+    return home_url(
+        user_trailingslashit( "sections/$post->ID" )
+    );
 }
