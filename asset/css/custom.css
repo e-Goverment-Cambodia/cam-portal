@@ -411,6 +411,8 @@ html.non-responsive { overflow-x: auto; }
 .mlr-rs-n15 { margin-left: -15px; margin-right: -15px; }
 .responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 60%; }
 .responsive .plr-rs-0 { padding-left: 0px; padding-right: 0px; }
+.responsive .mb-30 { margin-bottom: 30px; }
+.responsive .mb-15 { margin-bottom: 15px; }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
@@ -431,6 +433,8 @@ html.non-responsive { overflow-x: auto; }
 .responsive .mlr-xs-rs-n15 { margin-left: -15px; margin-right: -15px; }
 .responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 60%; }
 .responsive .plr-xs-rs-0 { padding-left: 0px; padding-right: 0px; }
+.responsive .mb-xs-30 { margin-bottom: 30px; }
+.responsive .mb-xs-15 { margin-bottom: 15px; }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -452,6 +456,8 @@ html.non-responsive { overflow-x: auto; }
 .plr-sm-30 { padding-left: 30px; padding-right: 30px; }
 .responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 56%; }
 .responsive .plr-sm-rs-0 { padding-left: 0px; padding-right: 0px; }
+.responsive .mb-sm-30 { margin-bottom: 30px; }
+.responsive .mb-sm-15 { margin-bottom: 15px; }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -461,6 +467,8 @@ html.non-responsive { overflow-x: auto; }
 .responsive .mlr-md-rs-n15 { margin-left: -15px; margin-right: -15px; }
 .responsive .slick-slideshow .slick-item .slick-photo .aspect-ratio::before { padding-top: 45%; }
 .responsive .plr-md-rs-0 { padding-left: 0px; padding-right: 0px; }
+.responsive .mb-md-30 { margin-bottom: 30px; }
+.responsive .mb-md-15 { margin-bottom: 15px; }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -469,4 +477,6 @@ html.non-responsive { overflow-x: auto; }
 .responsive .plr-lg-rs-0 { padding-left: 0px; padding-right: 0px; }
 .plr-lg-0 { padding-left: 0px; padding-right: 0px; }
 .plr-lg-30 { padding-left: 30px; padding-right: 30px; }
+.responsive .mb-lg-30 { margin-bottom: 30px; }
+.responsive .mb-lg-15 { margin-bottom: 15px; }
 }
