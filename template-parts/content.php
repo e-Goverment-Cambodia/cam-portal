@@ -30,7 +30,7 @@
 		</div><!-- .entry-header -->
 
 	
-	<div class="content">
+	<div class="">
 		<?php
 		
 		cam_portal_the_pdf_items();
