@@ -52,6 +52,7 @@ function cam_register_repeatable_group_field_metabox() {
 		),
 	) );
 
+
 	/**
 	 * Group fields works the same, except ids only need
 	 * to be unique to the group. Prefix is not needed.

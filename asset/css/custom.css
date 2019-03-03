@@ -177,7 +177,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .lg-main-nav ul ul > li.menu-item-has-children > a::after { content: " "; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; position: absolute; right: 10px; top: calc(50% - 5px); }
 .lg-main-nav > ul > li.menu-item-has-children > a::after { display: inline-block; content: " "; width: 0; height: 0; border: 5px solid transparent; border-top: 5px solid #ccc; border-bottom: 2.5px solid transparent; margin-left: 10px; }
 .lg-main-nav > ul > li { display: inline-block; }
-.lg-main-nav > ul > li > a { font-weight: bold; padding: 15px; line-height: 25px; }
+.lg-main-nav > ul > li > a { font-weight: bold; padding: 15px 10px; line-height: 25px; }
 .lg-main-nav > ul > li ul { position: absolute; left: 100%; top: 0px; z-index: 1; min-width: 220px; border-bottom: 4px solid rgba(0,0,0,0.3); }
 .lg-main-nav > ul > li > ul { left: initial; top: initial; }
 .lg-main-nav .menu-item-has-children > ul { display: none; }

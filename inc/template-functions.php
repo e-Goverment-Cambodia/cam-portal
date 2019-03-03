@@ -249,28 +249,32 @@ if( !function_exists('cam_portal_kilo_mega_giga') ) {
 	}
 }
 
-/* Faux Google Maps oEmbed
- * Embed google maps in a nicer iframe without using their provided embed code
- * @usage Paste a Google Maps link in your post and it will be replaced with an iframe when published
- * @link http://bigsaturday.net/oembed-google-maps-wordpress/
- */
-wp_embed_register_handler( 'google_map', '#https://www\.google\.com/maps(.*)#i', 'embed_google_map' );
-function embed_google_map( $matches ) {
-	// $matches = [];
-	preg_match("/@(.*?),(.*?),/",$str,$matches);
 
-	$place = $matches[1];
+function cam_portal_fb_opengraph() {
 
-	preg_match("/@(.*?),(.*?),/",$str,$matches);
-
-	$lat = $matches[1];
-	$long = $matches[2];
-	$embed = $lat;
-
-	// $embed = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6695694696214!2d104.91503756526328!3d11.575528841782338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd4e32a5eccddfb7!2sMinistry+of+Posts+and+Telecommunications!5e0!3m2!1sen!2skh!4v1551349417155" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>';
+	if( is_single() ) {
+		$attachments = get_attached_media( 'image' );
+		foreach( $attachments as $attachment ) {
+				echo '<meta property="og:image" content="'.$attachment->guid.'"/>';
+		}
+	?>
+	<!--  Essential META Tags -->
 	
-	return apply_filters( 'embed_g_map', $matches[0] );
+	<meta property="og:title" content="<?php the_title(); ?>"/>
+	<meta property="og:description" content="<?php the_excerpt(); ?>"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="<?php the_permalink(); ?>"/>
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:alt" content="<?php the_title(); ?>" />
+	
+	<!--  Non-Essential, But Recommended -->
+	
+	<meta property="og:site_name" content="<?php bloginfo('description'); echo '-'; bloginfo('name') ?>"/>
+	<meta name="twitter:image:alt" content="<?php bloginfo('description'); echo '-'; bloginfo('name') ?>">
+	
+
+	<?php
 }
 
-
-	// echo '<iframe src="https://www.google.com/maps/embed/v1/place?q='.$place.'&center='.$lat.','.$long.'&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU&zoom=8" frameborder="0"></iframe>';
+}
+add_action('wp_head', 'cam_portal_fb_opengraph', 5);
