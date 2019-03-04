@@ -24,7 +24,7 @@
 			<?php endif; ?>
 	</div><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="detail-content">
 		<?php
 		the_content();
 
@@ -33,7 +33,7 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

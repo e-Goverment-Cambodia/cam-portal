@@ -12,6 +12,7 @@ if ( ! function_exists( 'cam_portal_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function cam_portal_posted_on() {
+
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -27,33 +28,25 @@ if ( ! function_exists( 'cam_portal_posted_on' ) ) :
 			esc_html_x( '%s', 'post date', 'cam-portal' ), $time_string 
 		);
 
-		echo '<div class="date"><span>' . $posted_on . '</span></div>'; // WPCS: XSS OK.
+		echo '<span class="mr-2">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
 
 if ( ! function_exists( 'cam_portal_posted_by' ) ) :
-	/**
-	 * Prints HTML with meta information for the current author.
-	 */
+	
 	function cam_portal_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s ', 'post author', 'cam-portal' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
 
-		echo '<span class="date"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		$html = '<span class="mr-2">%s <a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		printf( $html, __( 'ដោយ', 'cam-portal' ) );
 
 	}
 endif;
 
 if ( ! function_exists( 'cam_portal_the_posted_view_count' ) ) :
-
 	function cam_portal_the_posted_view_count() {
-		echo '<span class="date">';
-		echo __( 'ចំនួនទស្សនា', 'cam-portal' ) .' ('. cam_portal_get_the_posted_view_count().')';
-		echo '</span>';
+		$html = '<span class="mr-2">%s ('. cam_portal_get_the_posted_view_count().')</span>';
+		printf( $html, __( 'ចំនួនទស្សនា', 'cam-portal' ) );
 	}
 endif;
 
@@ -246,7 +239,7 @@ if( !function_exists( 'cam_portal_the_pdf_items' ) ) {
 
 if( !function_exists( 'cam_portal_the_facebook_share') ) {
 	function cam_portal_the_facebook_share() {
-		$html = '<div class="share">
+		$html = '<span class="mr-2">
 					<div id="fb-root"></div>
 					<script>
 						(function(d, s, id) {
@@ -258,7 +251,7 @@ if( !function_exists( 'cam_portal_the_facebook_share') ) {
 						}(document, "script", "facebook-jssdk"));
 					</script>
 					<div class="fb-share-button" data-href="'.get_the_permalink().'" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-				</div>';
+				</span>';
 		echo( $html );
 	}
 }

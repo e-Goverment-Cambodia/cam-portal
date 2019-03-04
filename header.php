@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html class="responsive" <?php //language_attributes(); ?>>
 <head>
 	<!-- Required meta tags -->
 	<meta charset="<?php bloginfo( 'charset' ); ?>">

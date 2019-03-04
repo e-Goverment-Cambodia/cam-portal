@@ -31,7 +31,7 @@
 		</div><!-- .entry-header -->
 
 	
-	<div class="">
+	<div class="detail-content">
 		<?php
 		
 		cam_portal_the_pdf_items();
