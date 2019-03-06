@@ -52,6 +52,7 @@ function cam_register_repeatable_group_field_metabox() {
 		),
 	) );
 
+
 	/**
 	 * Group fields works the same, except ids only need
 	 * to be unique to the group. Prefix is not needed.
@@ -104,6 +105,23 @@ function cam_register_repeatable_group_field_metabox() {
 			'url' => false, // Hide the text input for the url
 		),
 		'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
+
+	/**
+	 * Custom Facebook Video field meta box
+	 * Repeatable Field Groups
+	 */
+	$cmb_facebook_video_field_grp = new_cmb2_box( array(
+		'id'           => $prefix . 'facebook_video_metabox',
+		'title'        => 'Facebook Video URL Below :',
+		'object_types' => array( 'post' ),
+	) );
+
+	$cmb_facebook_video_field_grp->add_field( array(
+		'id'         => 'facebook_video_url',
+		'type'       => 'text_url',
+		'repeatable' => true,
 	) );
 
 }

@@ -182,79 +182,59 @@ add_action( 'wp_head', 'camb_portal_track_post_views');
 
 
 if( !function_exists('cam_portal_kilo_mega_giga') ) {
-	function cam_portal_kilo_mega_giga($n) {    
+		function cam_portal_kilo_mega_giga( $number ) {
+			$number_format = number_format_i18n( $number );
+			$exploded = explode( ',', $number_format );
+			$count = count( $exploded );
 
-		if($n >= 1000 && $n < 1000000)
-		{
-			if($n%1000 === 0)
-			{
-				$formatted = ($n/1000);
+			switch ( $count ) {
+				case 2:
+					$value = number_format_i18n( $number/1000, 1 ).'K';
+					break;
+				case 3:
+					$value = number_format_i18n( $number/1000000, 1 ).'M';
+					break;
+				case 4:
+					$value = number_format_i18n( $number/1000000000, 1 ).'G';
+					break;
+				default:
+					$value = $number;
 			}
-			else
-			{
-				$formatted = substr($n, 0, -3).'.'.substr($n, -3, 1);
-				 if(substr($formatted, -1, 1) === '0')
-				 {
-				   $formatted = substr($formatted, 0, -2);
-				 }
-			}
-		
-			$formatted.= 'k';
-		
-		} else 
-		
-		if($n >= 1000000 && $n < 1000000000)
-		{
-			if($n%1000000 === 0)
-			{
-				$formatted = ($n/1000000);
-			}
-			else
-			{
-				$formatted = substr($n, 0, -6).'.'.substr($n, -6, 1);
-				 if(substr($formatted, -1, 1) === '0')
-				 {
-				   $formatted = substr($formatted, 0, -2);
-				 }
-			}
-		
-			$formatted.= 'M';
-		} else 
-		
-		if($n >= 1000000000 && $n < 1000000000000)
-		{
-			if($n%1000000000 === 0)
-			{
-				$formatted = ($n/1000000000);
-			}
-			else
-			{
-				$formatted = substr($n, 0, -9).'.'.substr($n, -9, 1);
-				 if(substr($formatted, -1, 1) === '0')
-				 {
-				   $formatted = substr($formatted, 0, -2);
-				 }
-			}
-		
-			$formatted.= 'G';
-		} else
-		
-		if($n >= 0 && $n < 1000)
-		{ 
-		
-			$formatted= $n;
-		} 
-		
-		return $formatted;
-	}
+			return $value;
+		}
 }
 
-if( !function_exists( 'cam_portal_get_layout' ) ) {
-	function cam_portal_get_layout( $tag_type ) {
-		$layout_opt = get_theme_mod( 'cam_portal_resonsive_option', 0 );
-		if(($layout_opt == 0 ) && ( $tag_type == 'html' )) { $value = 'class="responsive"'; }else{ $value = 'class="non-responsive"'; }
-		if(( $layout_opt == 0 ) && ( $tag_type == 'scale' )) { $value = 'initial-scale=1'; }else { $value = 'initial-scale=0'; }
-		if(( $layout_opt == 0 ) && ( $tag_type == 'footer' )) { $value = 'active'; }else{ $value = '';}
-		return $value;
-	}
+
+function cam_portal_fb_opengraph() {
+
+	if( is_single() ) {
+		
+		//display the first meta org image of the thumbnail
+		echo '<meta property="og:image" content="'.cam_portal_get_the_post_thumbnail( 'full' ).'"/>';
+
+
+		$attachments = get_attached_media( 'image' );
+		foreach( $attachments as $attachment ) {
+				echo '<meta property="og:image" content="'.$attachment->guid.'"/>';
+		}
+	?>
+	<!--  Essential META Tags -->
+	
+	<meta property="og:title" content="<?php the_title(); ?>"/>
+	<meta property="og:description" content="<?php the_excerpt(); ?>"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="<?php the_permalink(); ?>"/>
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:alt" content="<?php the_title(); ?>" />
+	
+	<!--  Non-Essential, But Recommended -->
+	
+	<meta property="og:site_name" content="<?php bloginfo('description'); echo '-'; bloginfo('name') ?>"/>
+	<meta name="twitter:image:alt" content="<?php bloginfo('description'); echo '-'; bloginfo('name') ?>">
+	
+
+	<?php
 }
+
+}
+add_action('wp_head', 'cam_portal_fb_opengraph', 5);

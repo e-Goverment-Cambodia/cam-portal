@@ -21,6 +21,7 @@
 			?>
 			<div class="meta">
 				<?php
+				cam_portal_the_facebook_share();
 				cam_portal_posted_on();
 				cam_portal_posted_by();
 				cam_portal_the_posted_view_count();
@@ -30,12 +31,12 @@
 		</div><!-- .entry-header -->
 
 	
-	<div class="">
+	<div class="detail-content">
 		<?php
 		
 		cam_portal_the_pdf_items();
 		the_content();
-
+		cam_portal_the_facebook_video();
 		
 		?>
 	</div><!-- .entry-content -->

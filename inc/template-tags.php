@@ -12,6 +12,7 @@ if ( ! function_exists( 'cam_portal_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function cam_portal_posted_on() {
+
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -27,33 +28,25 @@ if ( ! function_exists( 'cam_portal_posted_on' ) ) :
 			esc_html_x( '%s', 'post date', 'cam-portal' ), $time_string 
 		);
 
-		echo '<div class="date"><span>' . $posted_on . '</span></div>'; // WPCS: XSS OK.
+		echo '<span class="mr-2">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
 
 if ( ! function_exists( 'cam_portal_posted_by' ) ) :
-	/**
-	 * Prints HTML with meta information for the current author.
-	 */
+	
 	function cam_portal_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'cam-portal' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
 
-		echo '<span class="date"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		$html = '<span class="mr-2">%s <a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		printf( $html, __( 'ដោយ', 'cam-portal' ) );
 
 	}
 endif;
 
 if ( ! function_exists( 'cam_portal_the_posted_view_count' ) ) :
-
 	function cam_portal_the_posted_view_count() {
-		echo '<span class="date">';
-		echo __( 'ចំនួនទស្សនា', 'cam-portal' ) .' ('. cam_portal_get_the_posted_view_count().')';
-		echo '</span>';
+		$html = '<span class="mr-2">%s ('. cam_portal_get_the_posted_view_count().')</span>';
+		printf( $html, __( 'ចំនួនទស្សនា', 'cam-portal' ) );
 	}
 endif;
 
@@ -239,7 +232,39 @@ if( !function_exists( 'cam_portal_the_pdf_items' ) ) {
 		$items = get_post_meta( get_the_ID(), 'cam_group_pdf_items', true );
 		if( is_array( $items ) )
 		foreach( $items as $item ){
-			echo '<iframe src="http://docs.google.com/gview?url='.$item['pdf_url'].'" style="width:100%; height:1000px;" frameborder="0"></iframe>';
+			echo '<iframe src="http://docs.google.com/gview?url='.$item['pdf_url'].'&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>';
 		}
+	}
+}
+
+if( !function_exists( 'cam_portal_the_facebook_video' ) ) {
+	function cam_portal_the_facebook_video() {
+		$items = get_post_meta( get_the_ID(), 'facebook_video_url', true );
+		if( $items ) {
+			$iframe = '<iframe class="w-100"  src="https://www.facebook.com/plugins/video.php?href=%s&show_text=0&width=267" width="600" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>';
+			foreach( $items as $item ) {
+				printf( $iframe, $item );
+			}
+		}
+	}
+	
+}
+
+if( !function_exists( 'cam_portal_the_facebook_share') ) {
+	function cam_portal_the_facebook_share() {
+		$html = '<span class="mr-2">
+					<div id="fb-root"></div>
+					<script>
+						(function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0];
+							if (d.getElementById(id)) return;
+							js = d.createElement(s); js.id = id;
+							js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=381409555706841&autoLogAppEvents=1";
+							fjs.parentNode.insertBefore(js, fjs);
+						}(document, "script", "facebook-jssdk"));
+					</script>
+					<div class="fb-share-button" data-href="'.get_the_permalink().'" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+				</span>';
+		echo( $html );
 	}
 }

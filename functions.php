@@ -183,10 +183,9 @@ function wpdev_filter_login_head() {
         <style type="text/css">
             .login h1 a {
                 background-image: url(<?php echo esc_url( $image[0] ); ?>);
-                -webkit-background-size: <?php echo absint( $image[1] )?>px;
-                background-size: <?php echo absint( $image[1] ) ?>px;
-                height: <?php echo absint( $image[2] ) ?>px;
-                width: <?php echo absint( $image[1] ) ?>px;
+                background-size: contain;
+                height: 200px;
+                width: 200px;
             }
         </style>
         <?php
