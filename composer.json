@@ -1,6 +1,6 @@
 {
     "name": "chann/cam-portal",
-    "description": "Cambodia Portal Theme",
+    "description": "Cambodia Portal Website Project",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {},
-    "autoload":{
+    "autoload": {
         "psr-4": {"Inc\\": "./inc"}
     }
 }
