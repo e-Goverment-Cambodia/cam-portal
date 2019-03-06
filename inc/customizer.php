@@ -55,6 +55,24 @@ function cam_portal_customize_register( $wp_customize ) {
 		) ) 
 	);
 
+/**************************** Layout Controll *****************************/
+$wp_customize->add_setting( 'cam_portal_resonsive_option',
+	array(
+		'type' => 'theme_mod',
+		'default' => 0,
+		'transport' => 'refresh'
+		// 'sanitize_callback' => 'skyrocket_radio_sanitization'
+	)
+);
+	$wp_customize->add_control( 'cam_portal_resonsive_option',
+	array(
+		'label' => 'Non-Resposive',
+		'description' => 'Check the box to enable non-responsive Layout',
+		'section' => 'custom_theme_option',
+		'type' => 'checkbox'
+	)
+	);
+
 }
 add_action( 'customize_register', 'cam_portal_customize_register' );
 

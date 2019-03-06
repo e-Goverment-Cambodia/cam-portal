@@ -1,0 +1,17 @@
+{
+    "name": "chann/cam-portal",
+    "description": "Cambodia Portal Theme",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sovichetra",
+            "email": "chetra-chann@mptc.gov.kh"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}

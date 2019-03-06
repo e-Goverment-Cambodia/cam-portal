@@ -31,6 +31,9 @@
 			.fill { fill: <?php echo $theme_color; ?>; }
 			.non-responsive .container, .non-responsive .wrapper { min-width: 1024px; }
 	</style>
+	<?php
+		echo cam_portal_get_layout('html');
+	?>
 </head>
 
 <body>

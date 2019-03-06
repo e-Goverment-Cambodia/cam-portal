@@ -249,28 +249,12 @@ if( !function_exists('cam_portal_kilo_mega_giga') ) {
 	}
 }
 
-/* Faux Google Maps oEmbed
- * Embed google maps in a nicer iframe without using their provided embed code
- * @usage Paste a Google Maps link in your post and it will be replaced with an iframe when published
- * @link http://bigsaturday.net/oembed-google-maps-wordpress/
- */
-wp_embed_register_handler( 'google_map', '#https://www\.google\.com/maps(.*)#i', 'embed_google_map' );
-function embed_google_map( $matches ) {
-	// $matches = [];
-	preg_match("/@(.*?),(.*?),/",$str,$matches);
-
-	$place = $matches[1];
-
-	preg_match("/@(.*?),(.*?),/",$str,$matches);
-
-	$lat = $matches[1];
-	$long = $matches[2];
-	$embed = $lat;
-
-	// $embed = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6695694696214!2d104.91503756526328!3d11.575528841782338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd4e32a5eccddfb7!2sMinistry+of+Posts+and+Telecommunications!5e0!3m2!1sen!2skh!4v1551349417155" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>';
-	
-	return apply_filters( 'embed_g_map', $matches[0] );
+if( !function_exists( 'cam_portal_get_layout' ) ) {
+	function cam_portal_get_layout( $tag_type ) {
+		$layout_opt = get_theme_mod( 'cam_portal_resonsive_option', 0 );
+		if(($layout_opt == 0 ) && ( $tag_type == 'html' )) { $value = 'class="responsive"'; }else{ $value = 'class="non-responsive"'; }
+		if(( $layout_opt == 0 ) && ( $tag_type == 'scale' )) { $value = 'initial-scale=1'; }else { $value = 'initial-scale=0'; }
+		if(( $layout_opt == 0 ) && ( $tag_type == 'footer' )) { $value = 'active'; }else{ $value = '';}
+		return $value;
+	}
 }
-
-
-	// echo '<iframe src="https://www.google.com/maps/embed/v1/place?q='.$place.'&center='.$lat.','.$long.'&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU&zoom=8" frameborder="0"></iframe>';
