@@ -232,7 +232,7 @@ if( !function_exists( 'cam_portal_the_pdf_items' ) ) {
 		$items = get_post_meta( get_the_ID(), 'cam_group_pdf_items', true );
 		if( is_array( $items ) )
 		foreach( $items as $item ){
-			echo '<iframe src="http://docs.google.com/gview?url='.$item['pdf_url'].'&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>';
+			echo '<iframe src="https://docs.google.com/gview?url='.$item['pdf_url'].'&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>';
 		}
 	}
 }

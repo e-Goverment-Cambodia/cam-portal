@@ -42,17 +42,49 @@ function main_block_2_shortcode( $atts , $content = null ) {
 		?>
 		<div class="b-1 row slick-slideshow-responsive">
 	<?php
-		while ( $block_2_query->have_posts() ) :
-			$block_2_query->the_post(); ?>
-			<div class="b-item-wrap col-lg-4">
-				<div class="b-item">
-					<div class="b-thumnail"><?php cam_portal_the_post_thumbnail(); ?></div>
-					<div class="b-title"><a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth( get_the_title(), 0, $atts['char'], '...' ); ?></a></div>
-					<div class="b-date"><?php cam_portal_posted_on(); ?></div>
-				</div>
-			</div>
-		<?php
-		endwhile; ?>
+
+		$min = 4;
+		$data = array();
+		while( $block_2_query -> have_posts() ) {
+			$block_2_query->the_post();
+			array_push( 
+				$data, 
+				array(
+					'title'		=> get_the_title(),
+					'permalink'	=> get_the_permalink(),
+					'date'		=> get_the_date(),
+					'post_thumbnail'	=> cam_portal_get_the_post_thumbnail()
+				)
+			);
+			$min --;
+		}
+		if( $min > 0 ) {
+			while( $min > 0 ) {
+				array_push( 
+					$data, 
+					array(
+						'title' 	=> '',
+						'permalink'	=> '',
+						'date'		=> '',
+						'post_thumbnail'	=> get_template_directory_uri().'/asset/img/post-thumbnail.png'
+					)
+				);
+				$min --;
+			}
+		}
+		$html = '<div class="b-item-wrap col-lg-4">
+					<div class="b-item">
+						<div class="b-thumnail"><img src="%s" /></div>
+						<div class="b-title"><a href="%s">%s</a></div>
+						<div class="b-date">%s</div>
+					</div>
+				</div>';
+		foreach( $data as $arr ){
+			printf( $html, $arr['post_thumbnail'], $arr['permalink'],  mb_strimwidth( $arr['title'], 0, 85, '...' ),  $arr['date'] );
+		}
+		
+		
+		?>
 		</div>
 	</div>
 	<?php
