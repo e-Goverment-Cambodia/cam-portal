@@ -107,6 +107,23 @@ function cam_register_repeatable_group_field_metabox() {
 		'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 	) );
 
+
+	/**
+	 * Custom Facebook Video field meta box
+	 * Repeatable Field Groups
+	 */
+	$cmb_facebook_video_field_grp = new_cmb2_box( array(
+		'id'           => $prefix . 'facebook_video_metabox',
+		'title'        => 'Facebook Video URL Below :',
+		'object_types' => array( 'post' ),
+	) );
+
+	$cmb_facebook_video_field_grp->add_field( array(
+		'id'         => 'facebook_video_url',
+		'type'       => 'text_url',
+		'repeatable' => true,
+	) );
+
 }
 /**
  * Callback to define the optionss-saved message.

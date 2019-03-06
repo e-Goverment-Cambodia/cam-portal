@@ -237,6 +237,19 @@ if( !function_exists( 'cam_portal_the_pdf_items' ) ) {
 	}
 }
 
+if( !function_exists( 'cam_portal_the_facebook_video' ) ) {
+	function cam_portal_the_facebook_video() {
+		$items = get_post_meta( get_the_ID(), 'facebook_video_url', true );
+		if( $items ) {
+			$iframe = '<iframe class="w-100"  src="https://www.facebook.com/plugins/video.php?href=%s&show_text=0&width=267" width="600" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>';
+			foreach( $items as $item ) {
+				printf( $iframe, $item );
+			}
+		}
+	}
+	
+}
+
 if( !function_exists( 'cam_portal_the_facebook_share') ) {
 	function cam_portal_the_facebook_share() {
 		$html = '<span class="mr-2">

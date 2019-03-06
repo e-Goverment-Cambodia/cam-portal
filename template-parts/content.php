@@ -36,7 +36,7 @@
 		
 		cam_portal_the_pdf_items();
 		the_content();
-
+		cam_portal_the_facebook_video();
 		
 		?>
 	</div><!-- .entry-content -->
