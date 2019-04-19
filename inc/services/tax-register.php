@@ -7,22 +7,22 @@
  * @package Cambodia_Portal
  */
 
-// hook into the init action and call Organization when it fires
-add_action( 'init', 'setup_cam_portal_organizations_tax', 0 );
-function setup_cam_portal_organizations_tax() {
+// hook into the init action and call sector when it fires
+add_action( 'init', 'setup_cam_portal_sectors_tax', 0 );
+function setup_cam_portal_sectors_tax() {
 	// Add new taxonomy, make it hierarchical (like categories)
 	$labels = array(
-		'name'              => _x( 'Organizations', 'taxonomy general name', 'cam-portal' ),
-		'singular_name'     => _x( 'Organization', 'taxonomy singular name', 'cam-portal' ),
-		'search_items'      => __( 'Search Organizations', 'cam-portal' ),
-		'all_items'         => __( 'All Organizations', 'cam-portal' ),
-		'parent_item'       => __( 'Parent Organization', 'cam-portal' ),
-		'parent_item_colon' => __( 'Parent Organization:', 'cam-portal' ),
-		'edit_item'         => __( 'Edit Organization', 'cam-portal' ),
-		'update_item'       => __( 'Update Organization', 'cam-portal' ),
-		'add_new_item'      => __( 'Add New Organization', 'cam-portal' ),
-		'new_item_name'     => __( 'New Organization Name', 'cam-portal' ),
-		'menu_name'         => __( 'Organization', 'cam-portal' ),
+		'name'              => _x( 'Sectors', 'taxonomy general name', 'cam-portal' ),
+		'singular_name'     => _x( 'Sector', 'taxonomy singular name', 'cam-portal' ),
+		'search_items'      => __( 'Search Sectors', 'cam-portal' ),
+		'all_items'         => __( 'All Sectors', 'cam-portal' ),
+		'parent_item'       => __( 'Parent Sector', 'cam-portal' ),
+		'parent_item_colon' => __( 'Parent Sector:', 'cam-portal' ),
+		'edit_item'         => __( 'Edit Sector', 'cam-portal' ),
+		'update_item'       => __( 'Update Sector', 'cam-portal' ),
+		'add_new_item'      => __( 'Add New Sector', 'cam-portal' ),
+		'new_item_name'     => __( 'New Sector Name', 'cam-portal' ),
+		'menu_name'         => __( 'Sector', 'cam-portal' ),
 	);
 
 	$args = array(
@@ -31,10 +31,10 @@ function setup_cam_portal_organizations_tax() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'organization', 'with_front' => false ),
+		'rewrite'           => array( 'slug' => 'sector', 'with_front' => false ),
 	);
 
-    register_taxonomy( 'organization', array( 'cam_portal_brand', 'cam_portal_service' ), $args );
+    register_taxonomy( 'sector', array( 'cam_portal_organization', 'cam_portal_service' ), $args );
     
     $labels = array(
 		'name'                       => _x( 'Service Groups', 'taxonomy general name', 'cam-portal' ),
@@ -66,5 +66,5 @@ function setup_cam_portal_organizations_tax() {
 		'rewrite'               => array( 'slug' => 'sev_group', 'with_front' => false ),
 	);
 
-	register_taxonomy( 'service_group', 'cam_portal_service', $args );
+	// register_taxonomy( 'service_group', 'cam_portal_service', $args );
 }
