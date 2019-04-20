@@ -29,7 +29,8 @@ function cam_portal_setup_service_post(){
         'public'        => true,
         'has_archive'   => true,
         'rewrite'       => array('slug' => 'service', 'with_front' => false),
-        'menu_position' => 4,
+		'menu_position' => 4,
+		'supports'       => array('title'),
         'menu_icon'     => 'dashicons-book'
     );
     register_post_type('service', $args);

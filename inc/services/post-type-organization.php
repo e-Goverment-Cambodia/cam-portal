@@ -30,7 +30,8 @@ function cam_portal_setup_organization_post(){
         'has_archive'   => true,
         'rewrite'       => array('slug' => 'organization', 'with_front' => false),
         'menu_position' => 8,
-        'menu_icon'     => 'dashicons-store'
+        'menu_icon'     => 'dashicons-store',
+        'supports'       => array('title'),
     );
     register_post_type('organization', $args);
 }

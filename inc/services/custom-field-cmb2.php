@@ -51,15 +51,15 @@ function cam_portal_post_type_metaboxes() {
 
 
 	/**
-	 * Add Field for Dept Brand Post Type
+	 * Add Field for Contact Brand Post Type
 	 */
     $cmb_brand = new_cmb2_box( array(
 		'id'            => $prefix . 'brand_item',
-		'title'         => 'Dept Brand Detail',
+		'title'         => 'Ogranization Detail',
 		'object_types'  => array( 'organization', ), // Post type
 	) );
     $cmb_brand->add_field( array(
-		'name'      => 'Dept Address',
+		'name'      => 'Ogranization Address',
 		'id'        => $prefix . 'dept_address',
 		'type'      => 'wysiwyg',
 		'options' => array(
@@ -69,7 +69,7 @@ function cam_portal_post_type_metaboxes() {
 		),
 	) );
 	$cmb_brand->add_field( array(
-		'name' 		=> 'Dept Address Maps',
+		'name' 		=> 'Ogranization Address Maps',
 		'desc' 		=> 'Input maps address iframe',
 		'id' 		=> $prefix . 'dept_address_maps',
 		'type' 		=> 'textarea_code'
@@ -108,5 +108,94 @@ function cam_portal_post_type_metaboxes() {
 		'id'   => 'contact_email',
 		'type' => 'text_email',
 	) );
-	
+	/**
+	 * End Dept Post Type
+	 */
+
+	/**
+	 * Start Add Field for Sevice Post Type
+	 */
+	$cmb_service = new_cmb2_box( array(
+		'id'            => $prefix . 'service_item',
+		'title'         => 'Service Detail',
+		'object_types'  => array( 'service', )
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Purpose',
+		'id'        => $prefix . 'service_purpose',
+		'type'      => 'textarea_small',
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Regulation',
+		'id'        => $prefix . 'service_regulation',
+		'type'      => 'textarea_small'
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Customer',
+		'id'        => $prefix . 'service_customer',
+		'type'      => 'text',
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Standart',
+		'id'        => $prefix . 'service_standart',
+		'type'      => 'wysiwyg',
+		'options' => array(
+			'media_buttons' => false,
+			'textarea_rows' => get_option('default_post_edit_rows', 3),
+			'teeny' => true,
+		),
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Document Needed',
+		'id'        => $prefix . 'service_doc',
+		'type'      => 'wysiwyg',
+		'options' => array(
+			'media_buttons' => false,
+			'textarea_rows' => get_option('default_post_edit_rows', 3),
+			'teeny' => true,
+		),
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Document form',
+		'id'        => $prefix . 'service_form',
+		'type'    => 'file',
+		'options' => array(
+			'url' => false,
+		),
+		'text'    => array(
+			'add_upload_file_text' => 'Add or Upload File'
+		),
+		'query_args' => array(
+			'type' => 'application/pdf'
+		),
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Process',
+		'id'        => $prefix . 'service_process',
+		'type'      => 'wysiwyg',
+		'options' => array(
+			'media_buttons' => false,
+			'textarea_rows' => get_option('default_post_edit_rows', 5),
+			'teeny' => true,
+		),
+	) );
+	$cmb_service->add_field( array(
+		'name'      => 'Service Process Form',
+		'id'        => $prefix . 'service_pro_form',
+		'type'    => 'file',
+		'options' => array(
+			'url' => false,
+		),
+		'text'    => array(
+			'add_upload_file_text' => 'Add or Upload File'
+		),
+		'query_args' => array(
+			'type' => array(
+			'image/gif',
+			'image/jpeg',
+			'image/png',
+			),
+		),
+		'preview_size' => 'small',
+	) );
 }

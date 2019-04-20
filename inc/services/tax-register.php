@@ -37,22 +37,22 @@ function setup_cam_portal_sectors_tax() {
     register_taxonomy( 'sector', array( 'organization', 'service' ), $args );
     
     $labels = array(
-		'name'                       => _x( 'Service Groups', 'taxonomy general name', 'cam-portal' ),
-		'singular_name'              => _x( 'Service Group', 'taxonomy singular name', 'cam-portal' ),
-		'search_items'               => __( 'Search Service Groups', 'cam-portal' ),
-		'popular_items'              => __( 'Popular Service Groups', 'cam-portal' ),
-		'all_items'                  => __( 'All Service Groups', 'cam-portal' ),
-		'parent_item'                => __( 'Parent Service Group', 'cam-portal' ),
-		'parent_item_colon'          => __( 'Parent Service Group:', 'cam-portal' ),
-		'edit_item'                  => __( 'Edit Service Group', 'cam-portal' ),
-		'update_item'                => __( 'Update Service Group', 'cam-portal' ),
-		'add_new_item'               => __( 'Add New Service Group', 'cam-portal' ),
-		'new_item_name'              => __( 'New Service Group Name', 'cam-portal' ),
-		'separate_items_with_commas' => __( 'Separate Service Groups with commas', 'cam-portal' ),
-		'add_or_remove_items'        => __( 'Add or remove Service Groups', 'cam-portal' ),
-		'choose_from_most_used'      => __( 'Choose from the most used Service Groups', 'cam-portal' ),
-		'not_found'                  => __( 'No Service Groups found.', 'cam-portal' ),
-		'menu_name'                  => __( 'Service Groups', 'cam-portal' ),
+		'name'                       => _x( 'Groups', 'taxonomy general name', 'cam-portal' ),
+		'singular_name'              => _x( 'Group', 'taxonomy singular name', 'cam-portal' ),
+		'search_items'               => __( 'Search Groups', 'cam-portal' ),
+		'popular_items'              => __( 'Popular Groups', 'cam-portal' ),
+		'all_items'                  => __( 'All Groups', 'cam-portal' ),
+		'parent_item'                => __( 'Parent Group', 'cam-portal' ),
+		'parent_item_colon'          => __( 'Parent Group:', 'cam-portal' ),
+		'edit_item'                  => __( 'Edit Group', 'cam-portal' ),
+		'update_item'                => __( 'Update Group', 'cam-portal' ),
+		'add_new_item'               => __( 'Add New Group', 'cam-portal' ),
+		'new_item_name'              => __( 'New Group Name', 'cam-portal' ),
+		'separate_items_with_commas' => __( 'Separate Groups with commas', 'cam-portal' ),
+		'add_or_remove_items'        => __( 'Add or remove Groups', 'cam-portal' ),
+		'choose_from_most_used'      => __( 'Choose from the most used Groups', 'cam-portal' ),
+		'not_found'                  => __( 'No Groups found.', 'cam-portal' ),
+		'menu_name'                  => __( 'Groups', 'cam-portal' ),
 	);
 
 	$args = array(
@@ -66,5 +66,5 @@ function setup_cam_portal_sectors_tax() {
 		'rewrite'               => array( 'slug' => 'sev_group', 'with_front' => false ),
 	);
 
-	// register_taxonomy( 'service_group', 'cam_portal_service', $args );
+	register_taxonomy( 'service_group', 'service', $args );
 }
