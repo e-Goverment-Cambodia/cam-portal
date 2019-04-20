@@ -133,7 +133,7 @@ function cam_portal_post_type_metaboxes() {
 	$cmb_service->add_field( array(
 		'name'      => 'Service Customer',
 		'id'        => $prefix . 'service_customer',
-		'type'      => 'text',
+		'type'      => 'textarea_small',
 	) );
 	$cmb_service->add_field( array(
 		'name'      => 'Service Standart',
