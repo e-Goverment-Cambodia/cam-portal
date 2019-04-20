@@ -18,7 +18,7 @@ function cam_portal_setup_service_post(){
 		'new_item'           => __( 'New Service', 'cam-portal' ),
 		'edit_item'          => __( 'Edit Service', 'cam-portal' ),
 		'view_item'          => __( 'View Service', 'cam-portal' ),
-		'all_items'          => __( 'All Administrative Sevices', 'cam-portal' ),
+		'all_items'          => __( 'All Sevices', 'cam-portal' ),
 		'search_items'       => __( 'Search Administrative Sevices', 'cam-portal' ),
 		'parent_item_colon'  => __( 'Parent Administrative Sevices:', 'cam-portal' ),
 		'not_found'          => __( 'No Administrative Sevices found.', 'cam-portal' ),
@@ -29,9 +29,12 @@ function cam_portal_setup_service_post(){
         'public'        => true,
         'has_archive'   => true,
         'rewrite'       => array('slug' => 'service', 'with_front' => false),
-        'menu_position' => 13,
+        'menu_position' => 4,
         'menu_icon'     => 'dashicons-book'
     );
-    register_post_type('cam_portal_service', $args);
+    register_post_type('service', $args);
 }
 add_action ('init', 'cam_portal_setup_service_post');
+
+
+

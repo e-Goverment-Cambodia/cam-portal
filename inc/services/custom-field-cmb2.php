@@ -56,7 +56,7 @@ function cam_portal_post_type_metaboxes() {
     $cmb_brand = new_cmb2_box( array(
 		'id'            => $prefix . 'brand_item',
 		'title'         => 'Dept Brand Detail',
-		'object_types'  => array( 'cam_portal_organization', ), // Post type
+		'object_types'  => array( 'organization', ), // Post type
 	) );
     $cmb_brand->add_field( array(
 		'name'      => 'Dept Address',
