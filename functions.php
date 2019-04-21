@@ -132,6 +132,15 @@ function cam_portal_widgets_init() {
 		'before_title'  => '<h4 class="font-moul footer-brand">',
 		'after_title'   => '</h4>'
 	 ) );
+	 register_sidebar( array(
+		'name'          => esc_html__( 'Service', 'cam-portal' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'cam-portal' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title"><div class="block-title primary-color"><span class="primary-color font-moul">',
+		'after_title'   => '</span></div></div>',
+	) );
 }
 add_action( 'widgets_init', 'cam_portal_widgets_init' );
 
