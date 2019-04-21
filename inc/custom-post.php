@@ -14,6 +14,8 @@ function cam_portal_create_post_type() {
                 'name'          => __( 'Sections', 'cam-portal' ),
                 'singular_name' => __( 'Section', 'cam-portal' )
             ),
+            
+            'menu_position'     => 9,
             'public'      => true,
             'publicly_queryable' => true,
             'rewrite' => array( 'slug' => 'sections' , 'with_front' => false ),
@@ -42,7 +44,7 @@ function cam_portal_create_post_tax(){
 
 	$args = array(
 		'hierarchical'      => true,
-		'labels'            => $labels,
+        'labels'            => $labels,
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
