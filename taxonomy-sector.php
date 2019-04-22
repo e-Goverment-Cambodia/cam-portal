@@ -14,6 +14,7 @@ the_cam_portal_breadcrumbs();
 			/* Start the Loop */
 			while ( have_posts() ) :
                                 the_post();
+                                if ( get_post_type () == 'service' ) :
                         ?>
                                 <div class="b-item-wrap">
                                         <div class="b-item">
@@ -39,7 +40,7 @@ the_cam_portal_breadcrumbs();
                                         </div>
                                 </div>
                         <?php
-
+                                endif;
 			endwhile;
 			cam_portal_paginations();
 
@@ -50,7 +51,7 @@ the_cam_portal_breadcrumbs();
 		</div>
 			
                 <div class="col-lg-4 widget-area">
-                        <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                        <?php dynamic_sidebar( 'sidebar-3' ); ?>
                 </div>
         </div><!-- #main -->
 </div><!-- #primary -->

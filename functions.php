@@ -123,7 +123,7 @@ function cam_portal_widgets_init() {
 		'before_title'  => '<h4 class="font-moul footer-brand">',
 		'after_title'   => '</h4>',
 	) );
-	 register_sidebar( array(
+	register_sidebar( array(
 	 	'name'          => esc_html__( 'Copyright', 'cam-portal' ),
 	 	'id'            => 'copyright',
 	 	'description'   => esc_html__( 'Add copyright text here.', 'cam-portal' ),
@@ -132,9 +132,27 @@ function cam_portal_widgets_init() {
 		'before_title'  => '<h4 class="font-moul footer-brand">',
 		'after_title'   => '</h4>'
 	 ) );
-	 register_sidebar( array(
-		'name'          => esc_html__( 'Service', 'cam-portal' ),
+	register_sidebar( array(
+		'name'          => esc_html__( 'Service & Group', 'cam-portal' ),
 		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'cam-portal' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title"><div class="block-title primary-color"><span class="primary-color font-moul">',
+		'after_title'   => '</span></div></div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Service', 'cam-portal' ),
+		'id'            => 'sidebar-3',
+		'description'   => esc_html__( 'Add widgets here.', 'cam-portal' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title"><div class="block-title primary-color"><span class="primary-color font-moul">',
+		'after_title'   => '</span></div></div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Group', 'cam-portal' ),
+		'id'            => 'sidebar-4',
 		'description'   => esc_html__( 'Add widgets here.', 'cam-portal' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',

@@ -30,6 +30,7 @@ function setup_cam_portal_sectors_tax() {
 		'labels'            => $labels,
 		'show_ui'           => true,
 		'show_admin_column' => true,
+		'update_count_callback' => '_update_post_term_count',
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'sector', 'with_front' => false ),
 	);
@@ -59,7 +60,7 @@ function setup_cam_portal_sectors_tax() {
 		'hierarchical'          => true,
 		'labels'                => $labels,
 		'show_ui'               => true,
-		'show_in_menu'          => true,
+		// 'show_in_menu'          => false,
 		'show_admin_column'     => true,
 		'update_count_callback' => '_update_post_term_count',
 		'query_var'             => true,
