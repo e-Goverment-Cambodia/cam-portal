@@ -19,7 +19,7 @@ the_cam_portal_breadcrumbs();
                                 <div class="b-item-wrap">
                                         <div class="b-item">
                                                 <div class="b-title-wrap">
-                                                        <div class="b-title margin-bottom-15"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                                        <div class="b-title margin-bottom-15"><a href="<?php echo get_the_permalink().'?widget=sector'; ?>"><?php the_title(); ?></a></div>
                                                         <div class="b-cat">
                                                         <?php 
                                                         if ( get_the_terms ( $post->ID, 'sector' ) ) {
