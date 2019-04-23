@@ -117,7 +117,8 @@ get_header();
 								?>
 								<div class="collapsible">
 									<ul>
-								<?php
+									<?php
+									$i = 0;
 									foreach ( $organization_query as $org ) {
 										// echo $org->post_title;
 										// echo get_post_meta( $org->ID, 'cam_portal_dept_address', true );
@@ -127,12 +128,63 @@ get_header();
 										<li>
 											<div class="collapse-title d-flex justify-content-between">
 												<div><span class="oi oi-chevron-right"></span><span><?php echo $org->post_title; ?></span></div>
-												<div class="collapsible-action"><span><?php echo __( 'បង្ហាញ/លាក់' ); ?></span><span class="oi oi-minus"></span></div>
+												<div class="collapsible-action"><span><?php echo __( 'បង្ហាញ/លាក់' ); ?></span><span class="oi <?php echo $i > 0 ? 'oi-plus' : 'oi-minus'; ?>"></span></div>
 											</div>
-										</li>
+										
+											<ul>
+											<?php
+											if ( get_post_meta ( $org->ID, 'cam_portal_dept_address', true ) ) {
+											?>
+												<li class="item-wrap"><span class="item-title primary-color"><?php echo __( 'អាសយដ្ឋាន ៖ ' ); ?></span>
+													<ul>
+														<li><?php echo get_post_meta ( $org->ID, 'cam_portal_dept_address', true ); ?></li>
+													</ul>
+												</li>
+											<?php
+											}
+
+											if ( get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ) ) {
+											?>
+												<li class="item-wrap"><span class="item-title primary-color"><?php echo __( 'ទីតាំងនៅលើផែនទី ៖ ' ); ?></span>
+													<div class="map"><?php echo get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ); ?></div>
+												</li>
+											<?php
+											}
+
+											if ( count ( get_post_meta( $org->ID, 'cam_portal_dept_contact_group', true ) ) ) {
+											?>
+												<li class="item-wrap"><span class="item-title primary-color"><?php echo __( 'ទំនាក់ទំនង ៖ '); ?></span>
+													<ul>
+													<?php
+													foreach ( get_post_meta( $org->ID, 'cam_portal_dept_contact_group', true ) as $contact ) {
+													?>
+														<li class="item">
+															<div class="row">
+																<div class="col-sm-12 col-md-6">
+																	<div><span><?php echo $contact['contact_position']; ?></span></div>
+																	<div><span class="oi oi-person"></span><span><?php echo $contact['contact_name']; ?></span></div>
+																</div>
+																<div class="col-sm-12 col-md-6">
+																	<div><span class="oi oi-phone"></span><span><?php echo $contact['contact_number']; ?></span></div>
+																	<div><span class="oi oi-envelope-closed"></span><span><?php echo $contact['contact_email']; ?></span></div>
+																</div>
+															</div>
+														</li>
+													<?php
+													}
+													?>
+														
+													</ul>
+												</li>
+											<?php
+											}
+											?>
+											</li>
+										</ul>
 										<?php
+										$i ++;
 									}
-								?>
+									?>
 									</ul>
 								</div>
 								<?php
@@ -154,161 +206,7 @@ get_header();
 
 
 
-				<section class="section">
-					<div class="block-title-2 primary-color">
-						<span class="oi oi-map-marker"></span><span class="text"><b><?php echo __( 'ការិយាល័យច្រកចេញចូលតែមួយ' ); ?></b></span>
-					</div>
-					<div class="collapsible">
-						<ul>
-							<li>
-								<div class="collapse-title d-flex justify-content-between">
-									<div><span class="oi oi-chevron-right"></span><span>ខណ្ឌពោធិ៍សែនជ័យ ៖</span></div>
-									<div class="collapsible-action"><span>បង្ហាញ/លាក់</span><span class="oi oi-minus"></span></div>
-								</div>
-								<ul>
-									<li class="item-wrap"><span class="item-title primary-color">អាសយដ្ឋាន ៖ </span>
-										<ul>
-											<li><span>លេខ៧៣៥ ភូមិ១ ឧសភា សង្កាត់កំពង់កណ្តាល ក្រុងកំពត ខេត្តកំពត</span></li>
-											<li><span>Tel : info@kampot.gov.kh</span></li>
-										</ul>
-									</li>
-									<li class="item-wrap"><span class="item-title primary-color">ទីតាំងនៅលើផែនទី ៖ </span>
-										<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.84901396814!2d104.91688145244333!3d11.575323625672073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd4e32a5eccddfb7!2sMinistry+of+Posts+and+Telecommunications!5e0!3m2!1sen!2skh!4v1550458133680" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-									</li>
-									<li class="item-wrap"><span class="item-title primary-color">សមាជិកក្រុមប្រឹក្សាភិបាល ៖ </span>
-										<ul>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</li>
-									<li class="item-wrap"><span class="item-title primary-color">មន្រ្តីក្រុមប្រឹក្សាធម្មនុញ្ញជាន់ខ្ពស់និងជំនួយការផ្ទាល់ ៖ </span>
-										<ul>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<div class="collapse-title d-flex justify-content-between">
-									<div><span class="oi oi-chevron-right"></span><span>ខណ្ឌចំការមន ៖</span></div>
-									<div class="collapsible-action"><span>បង្ហាញ/លាក់</span><span class="oi oi-plus"></span></div>
-								</div>
-								<ul>
-									<li class="item-wrap"><span class="item-title primary-color">អាសយដ្ឋាន ៖ </span>
-										<ul>
-											<li><span>លេខ៧៣៥ ភូមិ១ ឧសភា សង្កាត់កំពង់កណ្តាល ក្រុងកំពត ខេត្តកំពត</span></li>
-											<li><span>Tel : info@kampot.gov.kh</span></li>
-										</ul>
-									</li>
-									<li class="item-wrap"><span class="item-title primary-color">ទីតាំងនៅលើផែនទី ៖ </span>
-										<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.84901396814!2d104.91688145244333!3d11.575323625672073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd4e32a5eccddfb7!2sMinistry+of+Posts+and+Telecommunications!5e0!3m2!1sen!2skh!4v1550458133680" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-									</li>
-									<li class="item-wrap"><span class="item-title primary-color">សមាជិកក្រុមប្រឹក្សាភិបាល ៖ </span>
-										<ul>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</li>
-									<li class="item-wrap"><span class="item-title primary-color">មន្រ្តីក្រុមប្រឹក្សាធម្មនុញ្ញជាន់ខ្ពស់និងជំនួយការផ្ទាល់ ៖ </span>
-										<ul>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-											<li class="item">
-												<div class="row">
-													<div class="col-sm-12 col-md-6">
-														<div><span>អភិបាលខណ្ឌ</span></div>
-														<div><span class="oi oi-person"></span><span>លោក ហែម ដារិទ្ធិ</span></div>
-													</div>
-													<div class="col-sm-12 col-md-6">
-														<div><span class="oi oi-phone"></span><span>077 927 777</span></div>
-														<div><span class="oi oi-envelope-closed"></span><span>info@kampot.gov.kh</span></div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
+				
 
 			<?php
 			endwhile; // End of the loop.

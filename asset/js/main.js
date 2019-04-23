@@ -120,4 +120,11 @@ jQuery(document).ready(function() {
         jQuery(this).parent("li").children("ul").slideToggle("slow");
         return false;
     });
+
+
+    // collapsible action
+    jQuery('.collapsible-action').on('click', function() {
+        jQuery(this).children('.oi').toggleClass("oi-minus oi-plus");
+        jQuery(this).closest('li').children('ul').slideToggle();
+    });
 });
