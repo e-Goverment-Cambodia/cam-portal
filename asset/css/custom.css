@@ -173,7 +173,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .lg-main-nav li { list-style: none; position: relative; }
 .lg-main-nav a { color: #fff; padding: 10px 20px; display: block; font-size: 16px; line-height: 25px; text-decoration: none; }
 .lg-main-nav a:hover { color: #fff; }
-.lg-main-nav .current-menu-ancestor > a, .lg-main-nav .current-menu-item > a, .lg-main-nav a:hover { background-color: rgba(0, 0, 0, 0.1); }
+.lg-main-nav .current-menu-ancestor > a, .lg-main-nav .current-post-ancestor > a, .lg-main-nav .current-menu-item > a, .lg-main-nav a:hover { background-color: rgba(0, 0, 0, 0.1); }
 .lg-main-nav ul ul > li.menu-item-has-children > a::after { content: " "; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; position: absolute; right: 10px; top: calc(50% - 5px); }
 .lg-main-nav > ul > li.menu-item-has-children > a::after { display: inline-block; content: " "; width: 0; height: 0; border: 5px solid transparent; border-top: 5px solid #ccc; border-bottom: 2.5px solid transparent; margin-left: 10px; }
 .lg-main-nav > ul > li { display: inline-block; }
@@ -337,6 +337,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .widget_nav_menu .menu { margin: 0px; padding: 0px; }
 .widget_nav_menu .menu .menu-item { list-style: none; }
 .widget_nav_menu .menu .menu-item a { padding: 15px; display: block; border-bottom: 1px solid #e2e2e2; color: #353535; }
+.widget_nav_menu .menu .menu-item:first-child a { padding-top: 0px; }
 .widget_nav_menu .menu .menu-item a::before { display: inline-block; content: " "; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; margin-right: 10px; }
 
 

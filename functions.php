@@ -7,10 +7,6 @@
  * @package Cambodia_Portal
  */
 
-if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')){
-	// require_once dirname(__FILE__) . '/vendor/autoload.php';
-}
-
 if ( ! function_exists( 'cam_portal_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
