@@ -8,7 +8,7 @@
  */
 
 if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')){
-	require_once dirname(__FILE__) . '/vendor/autoload.php';
+	// require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
 if ( ! function_exists( 'cam_portal_setup' ) ) :
@@ -196,6 +196,7 @@ require_once get_template_directory() . '/inc/services/function-post-type.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
 
 
 /**
