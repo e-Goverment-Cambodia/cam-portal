@@ -233,17 +233,20 @@ function wpse165333_the_title( $title, $post_ID = null ) {
 			$category = get_term( get_post_meta( $post_ID, '_menu_item_object_id', true ) );
 			$title .= sprintf( ' (%d)', $category->count );
 		}
-		if ( 'sector' == get_post_meta( $post_ID, '_menu_item_object', true ) ) {
-			$category = get_term( get_post_meta( $post_ID, '_menu_item_object_id', true ) );
-			$title .= sprintf( ' (%d)', $category->count );
-			
-		
-			echo '<pre>';
-
-			// print_r( get_terms( array( 'sector' ), array( 'hide_empty' => false ) ) );
-			print_r( get_term( get_post_meta( $post_ID, '_menu_item_object_id', true ) )->count );
-
-			echo '</pre>';
+		if ( 'sector' == get_post_meta( $post_ID, '_menu_item_object', true ) ) {  
+			$args = array(
+				'post_type' => 'service',
+				'post_status'=>'publish',
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'sector',
+						'field'    => 'slug',
+						'terms'    => array( get_term( get_post_meta( $post_ID, '_menu_item_object_id', true ) )->slug ),
+					)
+				),
+			);
+			$query = new WP_Query( $args );
+			$title .= sprintf( ' (%d)', $query->post_count );
 		}
 		
         }
