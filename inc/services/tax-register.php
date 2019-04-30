@@ -10,32 +10,7 @@
 // hook into the init action and call sector when it fires
 add_action( 'init', 'setup_cam_portal_sectors_tax', 0 );
 function setup_cam_portal_sectors_tax() {
-	// Add new taxonomy, make it hierarchical (like categories)
-	$labels = array(
-		'name'              => _x( 'Sectors', 'taxonomy general name', 'cam-portal' ),
-		'singular_name'     => _x( 'Sector', 'taxonomy singular name', 'cam-portal' ),
-		'search_items'      => __( 'Search Sectors', 'cam-portal' ),
-		'all_items'         => __( 'All Sectors', 'cam-portal' ),
-		'parent_item'       => __( 'Parent Sector', 'cam-portal' ),
-		'parent_item_colon' => __( 'Parent Sector:', 'cam-portal' ),
-		'edit_item'         => __( 'Edit Sector', 'cam-portal' ),
-		'update_item'       => __( 'Update Sector', 'cam-portal' ),
-		'add_new_item'      => __( 'Add New Sector', 'cam-portal' ),
-		'new_item_name'     => __( 'New Sector Name', 'cam-portal' ),
-		'menu_name'         => __( 'Sector', 'cam-portal' ),
-	);
-
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'update_count_callback' => '_update_post_term_count',
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'sector', 'with_front' => false ),
-	);
-
-    register_taxonomy( 'sector', array( 'organization', 'service' ), $args );
+	
     
     $labels = array(
 		'name'                       => _x( 'Groups', 'taxonomy general name', 'cam-portal' ),
@@ -64,8 +39,35 @@ function setup_cam_portal_sectors_tax() {
 		'show_admin_column'     => true,
 		'update_count_callback' => '_update_post_term_count',
 		'query_var'             => true,
-		'rewrite'               => array( 'slug' => 'sev_group', 'with_front' => false ),
+		'rewrite'               => array( 'slug' => 'service_group', 'with_front' => false ),
 	);
 
 	register_taxonomy( 'service_group', 'service', $args );
+
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Sectors', 'taxonomy general name', 'cam-portal' ),
+		'singular_name'     => _x( 'Sector', 'taxonomy singular name', 'cam-portal' ),
+		'search_items'      => __( 'Search Sectors', 'cam-portal' ),
+		'all_items'         => __( 'All Sectors', 'cam-portal' ),
+		'parent_item'       => __( 'Parent Sector', 'cam-portal' ),
+		'parent_item_colon' => __( 'Parent Sector:', 'cam-portal' ),
+		'edit_item'         => __( 'Edit Sector', 'cam-portal' ),
+		'update_item'       => __( 'Update Sector', 'cam-portal' ),
+		'add_new_item'      => __( 'Add New Sector', 'cam-portal' ),
+		'new_item_name'     => __( 'New Sector Name', 'cam-portal' ),
+		'menu_name'         => __( 'Sector', 'cam-portal' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'update_count_callback' => '_update_post_term_count',
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'sector', 'with_front' => false ),
+	);
+
+    register_taxonomy( 'sector', array( 'service', 'organization' ), $args );
 }
