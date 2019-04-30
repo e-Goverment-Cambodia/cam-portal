@@ -246,7 +246,8 @@ function wpse165333_the_title( $title, $post_ID = null ) {
 				),
 			);
 			$query = new WP_Query( $args );
-			$title .= sprintf( ' (%d)', $query->post_count );
+			$img_icon = get_term_meta ( get_term( get_post_meta( $post_ID, '_menu_item_object_id', true ) )->term_id, 'cam_portal_sector_logo', true );
+			$title = sprintf( '<img height="30" src="%s"> <span> '. $title .'</span> <span>(%d)</span>', $img_icon, $query->post_count );
 		}
 		
         }
