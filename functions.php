@@ -223,3 +223,16 @@ function wpdev_filter_login_head() {
  
 add_action( 'login_head', 'wpdev_filter_login_head', 100 );
 
+add_filter('the_title', 'wpse165333_the_title', 10, 2);
+function wpse165333_the_title($title, $post_ID = null)
+{
+    if( 'nav_menu_item' == get_post_type($post_ID) )
+    {
+        if( 'taxonomy' == get_post_meta($post_ID, '_menu_item_type', true) && 'service_group' == get_post_meta($post_ID, '_menu_item_object', true) )
+        {
+			$category = get_term( get_post_meta($post_ID, '_menu_item_object_id', true) );
+			$title .= sprintf(' (%d)', $category->count);
+        }
+    }
+    return $title;
+}
