@@ -193,24 +193,12 @@ get_header();
 							</section>
 							<?php
 						}
-						
 					}
-
-
-					
 				}
-				
 				?>
-				
-
-
-
-
-				
-
-			<?php
-			endwhile; // End of the loop.
-			?>
+				<?php
+				endwhile; // End of the loop.
+				?>
 			</div>
 		</div>
 		<div class="col-lg-4 widget-area">
