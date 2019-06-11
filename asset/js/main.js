@@ -124,7 +124,7 @@ jQuery(document).ready(function() {
 
     // collapsible action
     jQuery('.collapsible-action').on('click', function() {
-        jQuery(this).children('.oi').toggleClass("oi-minus oi-plus");
         jQuery(this).closest('li').children('ul').slideToggle();
+        jQuery(this).children('.oi').toggleClass("oi-chevron-bottom oi-chevron-right");
     });
 });

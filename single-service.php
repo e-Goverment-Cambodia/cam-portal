@@ -13,7 +13,7 @@ get_header();
 <div class="mb-15 mb-xs-15 mb-sm-15"></div>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-8">
+		<div class="col-lg-12">
 			<div class="detail-wrap">
 			<?php
 			while ( have_posts() ) :
@@ -29,6 +29,8 @@ get_header();
 					?>
 					</div>
 				</div>
+
+				
 
 				<section class="section">
 					<div class="block-title-2 primary-color">
@@ -127,8 +129,7 @@ get_header();
 										?>
 										<li>
 											<div class="collapse-title d-flex justify-content-between">
-												<div><span class="oi oi-chevron-right"></span><span><?php echo $org->post_title; ?></span></div>
-												<div class="collapsible-action"><span><?php echo __( 'បង្ហាញ/លាក់' ); ?></span><span class="oi <?php echo $i > 0 ? 'oi-plus' : 'oi-minus'; ?>"></span></div>
+												<div class="collapsible-action"><span class="oi <?php echo $i > 0 ? 'oi-chevron-right' : 'oi-chevron-bottom'; ?>"></span><span><?php echo $org->post_title; ?></span></div>
 											</div>
 										
 											<ul>
@@ -203,7 +204,7 @@ get_header();
 		</div>
 		<div class="col-lg-4 widget-area">
 		<?php
-			if ( isset( $_GET['widget'] ) ) {
+			/*if ( isset( $_GET['widget'] ) ) {
 				switch ( $_GET['widget'] ) {
 					case 'sector':
 						dynamic_sidebar( 'sidebar-3' );
@@ -216,7 +217,7 @@ get_header();
 				}
 			}else{
 				dynamic_sidebar( 'sidebar-2' );
-			}
+			}*/
 		?>
 		</div>
 	</div><!-- end row-->

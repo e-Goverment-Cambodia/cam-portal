@@ -341,6 +341,11 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .widget_nav_menu .menu .menu-item a::before { display: inline-block; content: " "; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; margin-right: 10px; }
 
 
+
+.service-filter { margin-bottom: 30px; background: #f5f5f5; padding: 30px; border-bottom: 2px solid #efefef; }
+.service-filter select { padding: 0px 15px; }
+
+
 /* overide all responsivable */
 .non-responsive .col-xs-1 { -ms-flex: 0 0 8.333333%; flex: 0 0 8.333333%; max-width: 8.333333%; }
 .non-responsive .col-xs-2 { -ms-flex: 0 0 16.666667%; flex: 0 0 16.666667%; max-width: 16.666667%; }

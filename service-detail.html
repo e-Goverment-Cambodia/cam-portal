@@ -265,8 +265,7 @@
 										<ul>
 											<li>
 												<div class="collapse-title d-flex justify-content-between">
-													<div><span class="oi oi-chevron-right"></span><span>ខណ្ឌពោធិ៍សែនជ័យ ៖</span></div>
-													<div class="collapsible-action"><span>បង្ហាញ/លាក់</span><span class="oi oi-minus"></span></div>
+													<div class="collapsible-action"><span class="oi oi-chevron-bottom"></span><span>ខណ្ឌពោធិ៍សែនជ័យ ៖</span></div>
 												</div>
 												<ul>
 													<li class="item-wrap"><span class="item-title primary-color">អាសយដ្ឋាន ៖ </span>
@@ -338,8 +337,7 @@
 											</li>
 											<li>
 												<div class="collapse-title d-flex justify-content-between">
-													<div><span class="oi oi-chevron-right"></span><span>ខណ្ឌចំការមន ៖</span></div>
-													<div class="collapsible-action"><span>បង្ហាញ/លាក់</span><span class="oi oi-plus"></span></div>
+													<div class="collapsible-action"><span class="oi oi-chevron-right"></span><span>ខណ្ឌចំការមន ៖</span></div>
 												</div>
 												<ul>
 													<li class="item-wrap"><span class="item-title primary-color">អាសយដ្ឋាន ៖ </span>
@@ -610,8 +608,8 @@
 				
 				// collapsible action
 				jQuery('.collapsible-action').on('click', function() {
-					jQuery(this).children('.oi').toggleClass("oi-minus oi-plus");
 					jQuery(this).closest('li').children('ul').slideToggle();
+					jQuery(this).children('.oi').toggleClass("oi-chevron-bottom oi-chevron-right");
 				});
 			});
 		</script>
