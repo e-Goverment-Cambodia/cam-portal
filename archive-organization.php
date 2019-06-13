@@ -16,11 +16,11 @@ the_cam_portal_breadcrumbs();
                     while ( have_posts() ) : $postCount++;
                         the_post();
                         
-                        if ( get_the_terms ( $post->ID, 'sector' ) ) {
-                            $term_obj_list = get_the_terms ( $post->ID, 'sector' );
-                            $terms_string = join ( ', ', wp_list_pluck ( $term_obj_list, 'name' ) );
-                            //printf( '<span class="oi oi-paperclip"></span><span>%s</span>', $terms_string );
-                        }
+                        // if ( get_the_terms ( $post->ID, 'sector' ) ) {
+                        //     $term_obj_list = get_the_terms ( $post->ID, 'sector' );
+                        //     $terms_string = join ( ', ', wp_list_pluck ( $term_obj_list, 'name' ) );
+                        //     printf( '<span class="oi oi-paperclip"></span><span>%s</span>', $terms_string );
+                        // }
                                     
                         ?>
                         
