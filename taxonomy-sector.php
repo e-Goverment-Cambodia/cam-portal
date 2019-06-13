@@ -11,9 +11,9 @@ the_cam_portal_breadcrumbs();
 
                                 <div class="col-md-6">
                                         <div class="form-group">
-                                                <label for="exampleFormControlSelect1">ស្វែងរកសេវាតាមវិស័យ</label>
+                                                <label for="exampleFormControlSelect1"><?php echo __( 'Search by sector' , 'camp-portal' )?></label>
                                                 <select class="form-control" id="exampleFormControlSelect1" onchange="location = this.value;">
-                                                        <option value="#">សូមជ្រើសរើស</option>
+                                                        <option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
                                                 
                                                 <?php 
                                                 $terms = get_terms( array(
@@ -38,8 +38,13 @@ the_cam_portal_breadcrumbs();
                                                                 ),
                                                         );
                                                         $query = new WP_Query( $args );
-
-                                                        $home_url = esc_url( home_url( 'sector/'.$term->slug ) );
+                                                        
+                                                        if ( function_exists( 'pll_home_url' ) ) {
+                                                                $home_url = pll_home_url().'sector/'.$term->slug;
+                                                        }else{
+                                                                $home_url = esc_url( home_url( 'sector/'.$term->slug ) );
+                                                        }
+                                                        
                                                         $active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
 
                                                         echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
@@ -56,9 +61,9 @@ the_cam_portal_breadcrumbs();
                                 </div>
                                 <div class="col-md-6">
                                         <div class="form-group">
-                                                <label for="exampleFormControlSelect2">ស្វែងរកសេវាតាមក្រុម</label>
+                                                <label for="exampleFormControlSelect2"><?php echo __( 'Search by group' , 'camp-portal' )?></label>
                                                 <select class="form-control" id="exampleFormControlSelect2" onchange="location = this.value;">
-                                                        <option value="#">សូមជ្រើសរើស</option>
+                                                        <option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
                                                 <?php 
                                                 $terms = get_terms( array(
                                                         'taxonomy' => 'service_group',
@@ -81,7 +86,13 @@ the_cam_portal_breadcrumbs();
                                                         );
                                                         
                                                         $query = new WP_Query( $args );
-                                                        $home_url = esc_url( home_url( 'service_group/'.$term->slug ) ); 
+                                                        
+                                                        if ( function_exists( 'pll_home_url' ) ) {
+                                                                $home_url = pll_home_url().'service_group/'.$term->slug;
+                                                        }else{
+                                                                $home_url = esc_url( home_url( 'service_group/'.$term->slug ) );
+                                                        }
+
                                                         $active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
 
                                                         echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
@@ -93,6 +104,7 @@ the_cam_portal_breadcrumbs();
                                         </div>
                                 </div>
                         </div>
+                        
                         <div class="b-2">
 
 		        <?php if ( have_posts() ) : ?>

@@ -14,6 +14,103 @@ get_header();
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
+			<div class="form-row service-filter">
+
+				<div class="col-md-6">
+					<div class="form-group">
+							<label for="exampleFormControlSelect1"><?php echo __( 'Search by sector' , 'camp-portal' )?></label>
+							<select class="form-control" id="exampleFormControlSelect1" onchange="location = this.value;">
+									<option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
+							
+							<?php 
+							$terms = get_terms( array(
+									'taxonomy' => 'sector',
+									'hide_empty' => false,
+							) );
+							
+							$queried_object = get_queried_object();
+							
+							
+							foreach ( $terms as $term ) {
+
+									$args = array(
+											'post_type' => 'service',
+											'post_status'=>'publish',
+											'tax_query' => array(
+													array(
+															'taxonomy' => 'sector',
+															'field'    => 'slug',
+															'terms'    => array( $term->slug ),
+													)
+											),
+									);
+									$query = new WP_Query( $args );
+									
+									if ( function_exists( 'pll_home_url' ) ) {
+											$home_url = pll_home_url().'sector/'.$term->slug;
+									}else{
+											$home_url = esc_url( home_url( 'sector/'.$term->slug ) );
+									}
+									
+									$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
+
+									echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+							}
+							
+							
+							?>
+							
+							
+							
+									
+							</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+							<label for="exampleFormControlSelect2"><?php echo __( 'Search by group' , 'camp-portal' )?></label>
+							<select class="form-control" id="exampleFormControlSelect2" onchange="location = this.value;">
+									<option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
+							<?php 
+							$terms = get_terms( array(
+									'taxonomy' => 'service_group',
+									'hide_empty' => false,
+							) );
+
+							foreach ( $terms as $term ) {
+
+
+									$args = array(
+											'post_type' => 'service',
+											'post_status'=>'publish',
+											'tax_query' => array(
+													array(
+															'taxonomy' => 'service_group',
+															'field'    => 'slug',
+															'terms'    => array( $term->slug ),
+													)
+											),
+									);
+									
+									$query = new WP_Query( $args );
+									
+									if ( function_exists( 'pll_home_url' ) ) {
+											$home_url = pll_home_url().'service_group/'.$term->slug;
+									}else{
+											$home_url = esc_url( home_url( 'service_group/'.$term->slug ) );
+									}
+
+									$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
+
+									echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+							}
+							
+							
+							?>
+							</select>
+					</div>
+				</div>
+			</div>
 			<div class="detail-wrap">
 			<?php
 			while ( have_posts() ) :
