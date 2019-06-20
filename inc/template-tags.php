@@ -268,3 +268,29 @@ if( !function_exists( 'cam_portal_the_facebook_share') ) {
 		echo( $html );
 	}
 }
+
+if ( !function_exists( 'cam_portal_the_typeahead' ) ) {
+	function cam_portal_the_typeahead () {
+		if ( is_post_type_archive( 'service' ) || is_tax( array('sector', 'service_group' ) ) || is_singular( 'service' ) ) {
+
+			$data = get_transient( 'all_services_'.get_locale() ) ;
+
+			if ( $data === false ) {
+				$data = json_encode( get_ajax_posts('service') );
+				set_transient( 'all_services_'.get_locale(), $data, '360' );
+			}
+			$script = '
+						<script type="text/javascript">
+						jQuery(".typeahead").typeahead({
+							source: '.$data.',
+							autoSelect: false,
+							afterSelect: function(item){location = item.link;}
+						});
+						
+						</script>
+			';
+
+			echo $script;
+		}
+	}
+}

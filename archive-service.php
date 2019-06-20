@@ -8,11 +8,11 @@ the_cam_portal_breadcrumbs();
                 <div class="col-lg-12">
                         <div class="form-row service-filter">
 
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                         <div class="form-group">
-                                                <label for="exampleFormControlSelect1"><?php echo __( 'Search by sector' , 'camp-portal' )?></label>
+                                                <label for="exampleFormControlSelect1"><?php echo __( 'ស្វែងរកតាមវិស័យ' , 'cam-portal' )?></label>
                                                 <select class="form-control" id="exampleFormControlSelect1" onchange="location = this.value;">
-                                                        <option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
+                                                        <option value="#"><?php echo __( 'សូមជ្រើសរើស' , 'cam-portal' )?></option>
                                                 
                                                 <?php 
                                                 $terms = get_terms( array(
@@ -58,11 +58,11 @@ the_cam_portal_breadcrumbs();
                                                 </select>
                                         </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                         <div class="form-group">
-                                                <label for="exampleFormControlSelect2"><?php echo __( 'Search by group' , 'camp-portal' )?></label>
+                                                <label for="exampleFormControlSelect2"><?php echo __( 'ស្វែងរកតាមក្រុម' , 'cam-portal' )?></label>
                                                 <select class="form-control" id="exampleFormControlSelect2" onchange="location = this.value;">
-                                                        <option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
+                                                        <option value="#"><?php echo __( 'សូមជ្រើសរើស' , 'cam-portal' )?></option>
                                                 <?php 
                                                 $terms = get_terms( array(
                                                         'taxonomy' => 'service_group',
@@ -102,8 +102,15 @@ the_cam_portal_breadcrumbs();
                                                 </select>
                                         </div>
                                 </div>
+                                <div class="col-md-4">
+                                        <div style="position:relative;" class="form-group">
+                                                <label for="exampleFormControlSelect3"><?php echo __( 'ស្វែងរកតាមពាក្យ' , 'cam-portal' )?></label>
+                                                <input placeholder="<?php echo __( 'សូមវាយឈ្មោះសេវាដែលអ្នកត្រូវការស្វែងរក', 'cam-portal' ); ?>" type="text" class="typeahead form-control" id="exampleFormControlSelect3" data-provide="typeahead" autocomplete="off" />
+                                        </div>
+                                </div>
                         </div>
-
+                        
+                        
 
 
                         <div class="b-2">

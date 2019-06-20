@@ -239,3 +239,28 @@ function cam_portal_fb_opengraph() {
 }
 add_action('wp_head', 'cam_portal_fb_opengraph', 5);
 
+
+
+function get_ajax_posts( $post_type ) {
+    // Query Arguments
+    $args = array(
+        'post_type' => $post_type,
+        'post_status' => array('publish'),
+        'posts_per_page' => -1,
+        'nopaging' => true,
+        'order' => 'DESC',
+        'orderby' => 'date'
+    );
+
+	$arr = get_posts( $args );
+
+	$new_arr = [];
+	foreach( $arr as $item ) {
+		$new_arr[] = [
+			'id'	=> $item->ID,
+			'link' 	=> htmlspecialchars_decode($item->guid, ENT_QUOTES),
+			'name' 	=> $item->post_title
+		];
+	}
+	return $new_arr;
+}

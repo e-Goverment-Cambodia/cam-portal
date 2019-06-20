@@ -16,99 +16,105 @@ get_header();
 		<div class="col-lg-12">
 			<div class="form-row service-filter">
 
-				<div class="col-md-6">
-					<div class="form-group">
-							<label for="exampleFormControlSelect1"><?php echo __( 'Search by sector' , 'camp-portal' )?></label>
-							<select class="form-control" id="exampleFormControlSelect1" onchange="location = this.value;">
-									<option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
-							
-							<?php 
-							$terms = get_terms( array(
-									'taxonomy' => 'sector',
-									'hide_empty' => false,
-							) );
-							
-							$queried_object = get_queried_object();
-							
-							
-							foreach ( $terms as $term ) {
+				<div class="col-md-4">
+						<div class="form-group">
+								<label for="exampleFormControlSelect1"><?php echo __( 'ស្វែងរកតាមវិស័យ' , 'cam-portal' )?></label>
+								<select class="form-control" id="exampleFormControlSelect1" onchange="location = this.value;">
+										<option value="#"><?php echo __( 'សូមជ្រើសរើស' , 'cam-portal' )?></option>
+								
+								<?php 
+								$terms = get_terms( array(
+										'taxonomy' => 'sector',
+										'hide_empty' => false,
+								) );
+								
+								$queried_object = get_queried_object();
+								
+								
+								foreach ( $terms as $term ) {
 
-									$args = array(
-											'post_type' => 'service',
-											'post_status'=>'publish',
-											'tax_query' => array(
-													array(
-															'taxonomy' => 'sector',
-															'field'    => 'slug',
-															'terms'    => array( $term->slug ),
-													)
-											),
-									);
-									$query = new WP_Query( $args );
-									
-									if ( function_exists( 'pll_home_url' ) ) {
-											$home_url = pll_home_url().'sector/'.$term->slug;
-									}else{
-											$home_url = esc_url( home_url( 'sector/'.$term->slug ) );
-									}
-									
-									$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
+										$args = array(
+												'post_type' => 'service',
+												'post_status'=>'publish',
+												'tax_query' => array(
+														array(
+																'taxonomy' => 'sector',
+																'field'    => 'slug',
+																'terms'    => array( $term->slug ),
+														)
+												),
+										);
+										$query = new WP_Query( $args );
+										
+										if ( function_exists( 'pll_home_url' ) ) {
+												$home_url = pll_home_url().'sector/'.$term->slug;
+										}else{
+												$home_url = esc_url( home_url( 'sector/'.$term->slug ) );
+										}
+										
+										$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
 
-									echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
-							}
-							
-							
-							?>
-							
-							
-							
-									
-							</select>
-					</div>
+										echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+								}
+								
+								
+								?>
+								
+								
+								
+										
+								</select>
+						</div>
 				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-							<label for="exampleFormControlSelect2"><?php echo __( 'Search by group' , 'camp-portal' )?></label>
-							<select class="form-control" id="exampleFormControlSelect2" onchange="location = this.value;">
-									<option value="#"><?php echo __( 'Please select' , 'camp-portal' )?></option>
-							<?php 
-							$terms = get_terms( array(
-									'taxonomy' => 'service_group',
-									'hide_empty' => false,
-							) );
+				<div class="col-md-4">
+						<div class="form-group">
+								<label for="exampleFormControlSelect2"><?php echo __( 'ស្វែងរកតាមក្រុម' , 'cam-portal' )?></label>
+								<select class="form-control" id="exampleFormControlSelect2" onchange="location = this.value;">
+										<option value="#"><?php echo __( 'សូមជ្រើសរើស' , 'cam-portal' )?></option>
+								<?php 
+								$terms = get_terms( array(
+										'taxonomy' => 'service_group',
+										'hide_empty' => false,
+								) );
 
-							foreach ( $terms as $term ) {
+								foreach ( $terms as $term ) {
 
 
-									$args = array(
-											'post_type' => 'service',
-											'post_status'=>'publish',
-											'tax_query' => array(
-													array(
-															'taxonomy' => 'service_group',
-															'field'    => 'slug',
-															'terms'    => array( $term->slug ),
-													)
-											),
-									);
-									
-									$query = new WP_Query( $args );
-									
-									if ( function_exists( 'pll_home_url' ) ) {
-											$home_url = pll_home_url().'service_group/'.$term->slug;
-									}else{
-											$home_url = esc_url( home_url( 'service_group/'.$term->slug ) );
-									}
+										$args = array(
+												'post_type' => 'service',
+												'post_status'=>'publish',
+												'tax_query' => array(
+														array(
+																'taxonomy' => 'service_group',
+																'field'    => 'slug',
+																'terms'    => array( $term->slug ),
+														)
+												),
+										);
+										
+										$query = new WP_Query( $args );
+										
+										if ( function_exists( 'pll_home_url' ) ) {
+												$home_url = pll_home_url().'service_group/'.$term->slug;
+										}else{
+												$home_url = esc_url( home_url( 'service_group/'.$term->slug ) );
+										}
 
-									$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
+										$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
 
-									echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
-							}
-							
-							
-							?>
-							</select>
-					</div>
+										echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+								}
+								
+								
+								?>
+								</select>
+						</div>
+				</div>
+				<div class="col-md-4">
+						<div style="position:relative;" class="form-group">
+								<label for="exampleFormControlSelect3"><?php echo __( 'ស្វែងរកតាមពាក្យ' , 'cam-portal' )?></label>
+								<input placeholder="<?php echo __( 'សូមវាយឈ្មោះសេវាដែលអ្នកត្រូវការស្វែងរក', 'cam-portal' ); ?>" type="text" class="typeahead form-control" id="exampleFormControlSelect3" data-provide="typeahead" autocomplete="off" />
+						</div>
 				</div>
 			</div>
 			<div class="detail-wrap">
