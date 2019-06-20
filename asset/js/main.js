@@ -128,5 +128,15 @@ jQuery(document).ready(function() {
         jQuery(this).children('.oi').toggleClass("oi-chevron-bottom oi-chevron-right");
     });
 
+    //custom select service options
+    jQuery( '.selection-option' ).change( function ( value ) {
+        var get_select = jQuery(this).find(":selected").val();
+        if ( get_select == 0 ) {
+            
+        }
 
+        jQuery('.selection-option-item').hide();
+        jQuery( '.option-'+get_select).show('slow');
+        
+    } );
 });
