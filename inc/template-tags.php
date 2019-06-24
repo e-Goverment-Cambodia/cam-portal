@@ -292,5 +292,34 @@ if ( !function_exists( 'cam_portal_the_typeahead' ) ) {
 
 			echo $script;
 		}
+
+		if ( is_category() ) {
+
+			$queried_object = get_queried_object();
+			$display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_blog', true );
+
+			if( $display_blog == 'document' ) {
+				$data = get_transient( 'cat_'.$queried_object->term_id.'_'.get_locale() ) ;
+
+				if ( $data === false ) {
+					$data = json_encode( get_ajax_posts('post', $queried_object->term_id ) );
+					set_transient( 'cat_'.$queried_object->term_id.'_'.get_locale(), $data, '0' );
+				}
+				$script = '
+							<script type="text/javascript">
+							jQuery(".typeahead").typeahead({
+								source: '.$data.',
+								autoSelect: false,
+								afterSelect: function(item){location = item.link;}
+							});
+							
+							</script>
+				';
+
+				echo $script;
+			}
+		}
 	}
+
+	
 }
