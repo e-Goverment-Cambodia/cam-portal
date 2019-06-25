@@ -25,7 +25,9 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 				<div class="form-group row mb-0">
 					<label class="col-sm-3 col-form-label" for="inputTypehead"><?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?> :</label>
 					<div class="col-sm-9">
-						<input type="text" id="inputTypehead" class="form-control typeahead" data-provide="typeahead" autocomplete="off" />
+						<div style="position:relative;">
+							<input type="text" id="inputTypehead" class="form-control typeahead" data-provide="typeahead" autocomplete="off" />
+						</div>
 					</div>
 				</div>
 			</div>

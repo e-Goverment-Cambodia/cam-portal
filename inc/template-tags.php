@@ -303,7 +303,7 @@ if ( !function_exists( 'cam_portal_the_typeahead' ) ) {
 
 				if ( $data === false ) {
 					$data = json_encode( get_ajax_posts('post', $queried_object->term_id ) );
-					set_transient( 'cat_'.$queried_object->term_id.'_'.get_locale(), $data, '0' );
+					set_transient( 'cat_'.$queried_object->term_id.'_'.get_locale(), $data, '360' );
 				}
 				$script = '
 							<script type="text/javascript">
