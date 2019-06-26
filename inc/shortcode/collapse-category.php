@@ -14,19 +14,28 @@ function collapse_catagory_shortcode_function( $atts , $content = null ) {
 		),
 		$atts
     );
+    // To display the block title use the_block_title() function in 'inc\template-functions.php'
+    if( $a['title'] != '' ){
+        $arr = [
+            'cat_id'	=> $a['link_cat_id'], 
+            'title'	=> $a['title'],
+        ];
+        the_block_title( $arr );
+    }	
+        
     if ( $a['cat_id'] ) {
     ?>
 
-    <ul>
+    <ul class="collapse-category">
 
     <?php
         $cat_arr = explode( ',', $a['cat_id'] );
         for ( $i=0; $i < count( $cat_arr ); $i++ ) {
             $term_obj = get_term( $cat_arr[$i] );
-            echo '<li><pre>';
-            print_r( $term_obj );
-            echo '</pre></li>';
-            echo( '<li><span class="oi oi-chevron-right"></span><span>' . $term_obj->name . '<span class="badge badge-info">' . $term_obj->count . '</span></span>' );
+            // echo '<li><pre>';
+            // print_r( $term_obj );
+            // echo '</pre></li>';
+            echo( '<li class="action"><div class="action-group"><span class="oi oi-plus"></span><span class="title">' . $term_obj->name . '</span><span class="right badge badge-info">' . $term_obj->count . '</span></div>' );
             $args = array(
                 'posts_per_page'    => 5,
                 'offset'            => 0,
@@ -50,12 +59,13 @@ function collapse_catagory_shortcode_function( $atts , $content = null ) {
             $posts_array = get_posts( $args );
             echo '<ul>';
             foreach( $posts_array as $post ) {
-                echo '<li><a href="' . $post->guid . '">'.mb_strimwidth( $post->post_title, 0, $a['char'], '...' ).'</a></li>';
+                echo '<li><span class="oi oi-chevron-right"></span><a href="' . $post->guid . '">'.mb_strimwidth( $post->post_title, 0, $a['char'], '...' ).'</a></li>';
             }
-            echo '<li><a href="'.get_term_link( $term_obj->term_id ).'">មានបន្ត<span class="oi oi-external-link"></span></a></li>';
-            echo '</ul>';
-            echo '</li>';
-
+            ?>
+            <li><a href="<?php echo get_term_link( $term_obj->term_id ); ?>"><strong><?php echo __( 'មានបន្ត', 'cam-portal' ); ?></strong></a> <span class="oi oi-external-link"></span></li>
+            </ul>
+            </li>
+            <?php
             // echo '<li><pre>';
             // print_r( $posts_array );
             // echo '</pre></li>';

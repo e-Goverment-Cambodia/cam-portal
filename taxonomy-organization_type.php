@@ -44,7 +44,9 @@ the_cam_portal_breadcrumbs();
                                 if ( get_post_meta ( $post->ID, 'cam_portal_dept_address_maps', true ) ) {
                                 ?>
                                 <li class="item-wrap"><span class="item-title primary-color"><?php echo __( 'ទីតាំងនៅលើផែនទី ៖ ' ); ?></span>
-                                    <div class="map"><?php echo get_post_meta ( $post->ID, 'cam_portal_dept_address_maps', true ); ?></div>
+                                    <div class="map">
+                                        <div class="google-map-api" data-latlng="<?php echo get_post_meta ( $post->ID, 'cam_portal_dept_address_maps', true ); ?>" style="height:300px;"></div>
+                                    </div>
                                 </li>
                                 <?php
                                 }
@@ -92,6 +94,5 @@ the_cam_portal_breadcrumbs();
 		</div>
     </div><!-- #main -->
 </div><!-- #primary -->
-
 <?php
 get_footer();

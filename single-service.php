@@ -250,7 +250,9 @@ get_header();
 											if ( get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ) ) {
 											?>
 												<li class="item-wrap"><span class="item-title primary-color"><?php echo __( 'ទីតាំងនៅលើផែនទី ៖ ' ); ?></span>
-													<div class="map"><?php echo get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ); ?></div>
+													<div class="map">
+														<div class="google-map-api" data-latlng="<?php echo get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ); ?>" style="height:300px;"></div>
+													</div>
 												</li>
 											<?php
 											}
