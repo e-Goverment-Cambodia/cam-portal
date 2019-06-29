@@ -17,7 +17,7 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8">
-			
+		<?php get_search_form(); ?>
 			<!-- if display blog is Document -->
 			<?php if( $display_blog == 'document' ) : ?>
 

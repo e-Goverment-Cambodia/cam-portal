@@ -156,7 +156,7 @@ the_cam_portal_breadcrumbs();
 		</div>
 			
                 <div class="col-lg-4 widget-area">
-                        <?php// dynamic_sidebar( 'sidebar-3' ); ?>
+                        <?php // dynamic_sidebar( 'sidebar-3' ); ?>
                 </div>
         </div><!-- #main -->
 </div><!-- #primary -->

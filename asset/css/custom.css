@@ -366,6 +366,13 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .collapse-category > li > ul > li .oi { color: #7b7b7b; font-size: 12px; margin-right: 10px; }
 .collapse-category > li > ul > li a { color: #7b7b7b; }
 
+.sidebar-block { padding: 0; margin-bottom: 30px; }
+.sidebar-block li { list-style: none; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+.sidebar-block li a { color: #333; }
+.sidebar-block li img { float: left; width: 60px; height: auto; margin-right: 15px; margin-bottom: 15px; }
+.sidebar-block li .side-text {  }
+.sidebar-block li .meta { font-size: 12px; color: #999; margin-top: 10px; }
+
 /* overide all responsivable */
 .non-responsive .col-xs-1 { -ms-flex: 0 0 8.333333%; flex: 0 0 8.333333%; max-width: 8.333333%; }
 .non-responsive .col-xs-2 { -ms-flex: 0 0 16.666667%; flex: 0 0 16.666667%; max-width: 16.666667%; }

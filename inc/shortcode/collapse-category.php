@@ -37,8 +37,8 @@ function collapse_catagory_shortcode_function( $atts , $content = null ) {
             // echo '</pre></li>';
             echo( '<li class="action"><div class="action-group"><span class="oi oi-plus"></span><span class="title">' . $term_obj->name . '</span><span class="right badge badge-info">' . $term_obj->count . '</span></div>' );
             $args = array(
-                'posts_per_page'    => 5,
-                'offset'            => 0,
+                'posts_per_page'    => $a['posts_per_page'],
+                'offset'            => $a['offset'],
                 'cat'               => $cat_arr[$i],
                 'category_name'     => '',
                 'orderby'           => 'date',
