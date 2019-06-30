@@ -17,20 +17,42 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8">
-		<?php get_search_form(); ?>
 			<!-- if display blog is Document -->
 			<?php if( $display_blog == 'document' ) : ?>
 
-			<div class="service-filter">
+			<?php
+			$term_id = $queried_object->term_id;
+			$taxonomy_name = 'category';
+			$term_children = get_term_children( $term_id, $taxonomy_name );
+			?>
+
+			<form class="service-filter" method="GET" action="<?php echo home_url('/'); ?>">
 				<div class="form-group row mb-0">
-					<label class="col-sm-3 col-form-label" for="inputTypehead"><?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?> :</label>
-					<div class="col-sm-9">
-						<div style="position:relative;">
-							<input type="text" id="inputTypehead" class="form-control typeahead" data-provide="typeahead" autocomplete="off" />
+				<?php if ( $term_children ) : ?>
+					<div class="col-sm-3 pr-sm-0">
+						
+						<select class="custom-select option-typeahead" id="">
+							<option value="<?php echo $term_id; ?>" selected>ទាំងអស់</option>
+							<?php 
+							foreach ( $term_children as $child ) {
+								$term = get_term_by( 'id', $child, $taxonomy_name );
+								echo '<option value="' . $child . '">' . $term->name . '</option>';
+							}
+							?>
+						</select>
+					</div>
+				
+					<div class="col-sm-9 pl-sm-0">
+				<?php else : ?>
+					<div class="col-sm-12">
+				<?php endif; ?>
+						<div class="relative">
+							<input name="s" placeholder="<?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?>" type="text" id="inputTypehead" class="typeahead form-control" data-provide="typeahead" autocomplete="off" />
+							<button class="btn btn-secondary" type="submit"><?php echo __( 'ស្វែងរក', 'cam-portal' ); ?></button>
 						</div>
 					</div>
 				</div>
-			</div>
+			</form>
 
 			<div class="b-2">
 
@@ -40,29 +62,9 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
-				?>
-				<div class="b-item-wrap">
-					<div class="b-item">
-						<div class="b-title-wrap">
-							<div class="b-title margin-bottom-15"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-							<div class="b-cat">
-								<span class="oi oi-calendar"></span>
-								<?php  cam_portal_posted_on(); ?>
 
-								<?php 
-								$pdf_arr = get_post_meta( get_the_ID(), 'cam_group_pdf_items', true ); 
-								if ( is_array( $pdf_arr ) && count( $pdf_arr ) ) {
-								?>
-								<a href="<?php echo $pdf_arr[0]['pdf_url'];?>"><span class="oi oi-cloud-download"></span><?php echo __( 'ទាញយកឯកសារ', 'cam-portal' ); ?></a>
-								<?php }?>
+					get_template_part( 'template-parts/content', 'document' );
 
-								<a href="<?php the_permalink(); ?>"><span class="oi oi-eye"></span><?php echo __( 'ចូលមើល', 'cam-portal' ); ?></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<?php
 				endwhile;
 				cam_portal_paginations();
 			else :
@@ -84,22 +86,7 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
-				?>
-
-				<div class="b-item-wrap">
-					<div class="b-item row">
-						<div class="b-thumnail-wrap col-5">
-							<div class="b-thumnail"><?php cam_portal_the_post_thumbnail(); ?></div>
-						</div>
-						<div class="b-title-wrap col-7">
-							<div class="b-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-							<div class="b-date"><?php  cam_portal_posted_on(); ?></div>
-						</div>
-					</div>
-				</div>
-				<!-- End b-item-wrap -->
-
-			<?php
+					get_template_part( 'template-parts/content', 'archive' );
 				endwhile;
 				cam_portal_paginations();
 			else :

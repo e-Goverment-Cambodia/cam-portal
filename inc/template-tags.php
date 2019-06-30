@@ -269,6 +269,7 @@ if( !function_exists( 'cam_portal_the_facebook_share') ) {
 	}
 }
 
+//this function triger in footer
 if ( !function_exists( 'cam_portal_the_typeahead' ) ) {
 	function cam_portal_the_typeahead () {
 		if ( is_post_type_archive( 'service' ) || is_tax( array('sector', 'service_group' ) ) || is_singular( 'service' ) ) {
@@ -294,21 +295,30 @@ if ( !function_exists( 'cam_portal_the_typeahead' ) ) {
 		}
 
 		if ( is_category() ) {
-
+			
 			$queried_object = get_queried_object();
 			$display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_blog', true );
 
+			
 			if( $display_blog == 'document' ) {
-				$data = get_transient( 'cat_'.$queried_object->term_id.'_'.get_locale() ) ;
+				$data = get_transient( 'cat_'.$queried_object->term_id.'_'.get_locale() );
 
 				if ( $data === false ) {
-					$data = json_encode( get_ajax_posts('post', $queried_object->term_id ) );
-					set_transient( 'cat_'.$queried_object->term_id.'_'.get_locale(), $data, '360' );
+					$data = json_encode( get_all_posts( $queried_object->term_id ) );
+					set_transient( 'cat_'.$queried_object->term_id.'_'.get_locale(), $data, 60 );
 				}
 				$script = '
 							<script type="text/javascript">
+							var data_typeahead = '.$data.';
+
+							var option = jQuery(".option-typeahead").val();
+							jQuery(".option-typeahead").on("change", function(){
+								var val = jQuery(this).val();
+								jQuery(".typeahead").data("typeahead").source = data_typeahead[val];
+							});
+							
 							jQuery(".typeahead").typeahead({
-								source: '.$data.',
+								source: data_typeahead[option],
 								autoSelect: false,
 								afterSelect: function(item){location = item.link;}
 							});

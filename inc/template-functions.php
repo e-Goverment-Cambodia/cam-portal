@@ -241,10 +241,11 @@ add_action('wp_head', 'cam_portal_fb_opengraph', 5);
 
 
 
-function get_ajax_posts( $post_type ) {
+function get_ajax_posts( $post_type = 'post', $term_id = '' ) {
     // Query Arguments
     $args = array(
-        'post_type' => $post_type,
+		'post_type' => $post_type,
+		'cat'		=> $term_id,
         'post_status' => array('publish'),
         'posts_per_page' => -1,
         'nopaging' => true,
@@ -265,14 +266,59 @@ function get_ajax_posts( $post_type ) {
 	return $new_arr;
 }
 
+// get all posts group by term id
+function get_all_posts( $term_id, $tax = 'category' ) {
 
-// function template_chooser($template) {    
-//   global $wp_query;   
-//   $post_type = get_query_var('post_type');   
-//   if( $wp_query->is_search && $post_type == 'products' )   
-//   {
-//     return locate_template('archive-search.php');  //  redirect to archive-search.php
-//   }   
-//   return $template;   
-// }
-// add_filter('template_include', 'template_chooser'); 
+	$term_id_arr[] = $term_id;
+	$term_children = get_term_children( $term_id, $tax );
+	foreach( $term_children as $child ) {
+		$term_id_arr[] = $child;
+	}
+
+	$data = [];
+	foreach ( $term_id_arr as $id ) {
+		$args = array(
+			'posts_per_page'    => -1,
+			'offset'            => 0,
+			'cat'               => $id,
+			'category_name'     => '',
+			'orderby'           => 'date',
+			'order'             => 'DESC',
+			'include'           => '',
+			'exclude'           => '',
+			'meta_key'          => '',
+			'meta_value'        => '',
+			'post_type'         => 'post',
+			'post_mime_type'    => '',
+			'post_parent'       => '',
+			'author'	        => '',
+			'author_name'	    => '',
+			'post_status'       => 'publish',
+			'suppress_filters'  => true,
+			'fields'            => '',
+		);
+		$posts_array = get_posts( $args );
+		foreach( $posts_array as $item ) {
+			$data[$id][] = [
+				'id'	=> $item->ID,
+				'link' 	=> htmlspecialchars_decode($item->guid, ENT_QUOTES),
+				'name' 	=> $item->post_title
+			];
+		}
+
+	}
+	// echo '<pre>';
+	// print_r($data);
+	// echo '</pre>';
+	return $data;
+}
+
+function template_chooser( $template ) {   
+	global $wp_query; 
+
+  if( $wp_query->is_search && $_GET['post_type'] ) {
+    	return locate_template('archive.php');
+  }   
+  return $template;   
+}
+add_filter('template_include', 'template_chooser'); 

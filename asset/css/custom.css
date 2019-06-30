@@ -342,10 +342,10 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 
 
-.service-filter { margin-bottom: 30px; background: #f5f5f5; padding: 30px; border-bottom: 2px solid #efefef; }
-.service-filter select { padding: 0px 15px; }
-.service-filter .show { display: block; }
-.service-filter .hide { display: none; }
+.service-filter { margin-bottom: 30px; background: #f5f5f5; border-bottom: 2px solid #efefef; }
+.service-filter .form-group .form-control, .service-filter .form-group .custom-select { border-radius: 0px; }
+.service-filter .btn { border-radius: 0px; position: absolute; right: 0px; top: 0px; }
+.service-filter .relative { position: relative; }
 
 .typeahead.dropdown-menu { right: 0px; padding: 0px; }
 .typeahead.dropdown-menu li { border-bottom: 1px solid #ccc; }
