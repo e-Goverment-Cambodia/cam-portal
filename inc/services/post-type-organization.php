@@ -32,6 +32,10 @@ function cam_portal_setup_organization_post(){
         'menu_position' => 8,
         'menu_icon'     => 'dashicons-store',
         'supports'       => array('title'),
+        'exclude_from_search' => false,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'show_in_nav_menus' => true,
     );
     register_post_type('organization', $args);
 }

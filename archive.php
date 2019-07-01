@@ -22,7 +22,7 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 
 			<?php
 			$term_id = $queried_object->term_id;
-			$taxonomy_name = 'category';
+			$taxonomy_name = $queried_object->taxonomy;
 			$term_children = get_term_children( $term_id, $taxonomy_name );
 			?>
 
@@ -32,7 +32,7 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 					<div class="col-sm-3 pr-sm-0">
 						
 						<select class="custom-select option-typeahead" id="">
-							<option value="<?php echo $term_id; ?>" selected>ទាំងអស់</option>
+							<option value="<?php echo $term_id; ?>" selected><?php echo __( 'ទាំងអស់', 'camportal' ); ?></option>
 							<?php 
 							foreach ( $term_children as $child ) {
 								$term = get_term_by( 'id', $child, $taxonomy_name );
@@ -45,8 +45,11 @@ $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_bl
 					<div class="col-sm-9 pl-sm-0">
 				<?php else : ?>
 					<div class="col-sm-12">
+					<input type="hidden" class="option-typeahead" value="<?php echo $term_id; ?>" />
 				<?php endif; ?>
 						<div class="relative">
+							<input type="hidden" name="cat" value="<?php echo $term_id; ?>" />
+							<input type="hidden" name="type" value="<?php echo $taxonomy_name; ?>" />
 							<input name="s" placeholder="<?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?>" type="text" id="inputTypehead" class="typeahead form-control" data-provide="typeahead" autocomplete="off" />
 							<button class="btn btn-secondary" type="submit"><?php echo __( 'ស្វែងរក', 'cam-portal' ); ?></button>
 						</div>

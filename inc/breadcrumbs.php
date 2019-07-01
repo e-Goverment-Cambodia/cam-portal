@@ -172,7 +172,7 @@ if ( ! function_exists ('cam_portal_breadcrumbs')) :
 
         // Handle the search page
         if ( is_search() ) {
-            $breadcrumb_trail = __( 'Search query for: ' ) . get_search_query();
+            $breadcrumb_trail = __( 'ស្វែងរកតាមពាក្យ : ', 'cam-portal' ) . get_search_query();
         }
 
         // Handle 404's

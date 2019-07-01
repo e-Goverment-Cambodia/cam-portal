@@ -310,7 +310,6 @@ if ( !function_exists( 'cam_portal_the_typeahead' ) ) {
 				$script = '
 							<script type="text/javascript">
 							var data_typeahead = '.$data.';
-
 							var option = jQuery(".option-typeahead").val();
 							jQuery(".option-typeahead").on("change", function(){
 								var val = jQuery(this).val();

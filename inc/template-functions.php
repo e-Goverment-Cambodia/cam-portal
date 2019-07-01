@@ -315,10 +315,13 @@ function get_all_posts( $term_id, $tax = 'category' ) {
 
 function template_chooser( $template ) {   
 	global $wp_query; 
-
-  if( $wp_query->is_search && $_GET['post_type'] ) {
+	
+  	if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'category' ) {
     	return locate_template('archive.php');
-  }   
-  return $template;   
+	}   
+	  if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'organization_type' ) {
+    	return locate_template('taxonomy-organization_type.php');
+  	}
+  	return $template;   
 }
 add_filter('template_include', 'template_chooser'); 

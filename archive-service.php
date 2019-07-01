@@ -45,7 +45,7 @@ the_cam_portal_breadcrumbs();
                                         
                                         $active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
 
-                                        echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+                                        echo '<option ' . $active . ' value=" ' . get_term_link( $term->term_id, $term->taxonomy ) . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
                                     }
                                     
                                     ?>                
@@ -88,7 +88,7 @@ the_cam_portal_breadcrumbs();
 
                                         $active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
 
-                                        echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+                                        echo '<option ' . $active . ' value=" ' . get_term_link( $term->term_id, $term->taxonomy ) . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
                                     }
                                     
                                     
