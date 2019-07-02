@@ -13,7 +13,110 @@ get_header();
 <div class="mb-15 mb-xs-15 mb-sm-15"></div>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-8">
+		<div class="col-lg-12">
+			<div class="form-row service-filter">
+
+				<div class="col-md-4">
+						<div class="form-group">
+								<label for="exampleFormControlSelect1"><?php echo __( 'ស្វែងរកតាមវិស័យ' , 'cam-portal' )?></label>
+								<select class="form-control" id="exampleFormControlSelect1" onchange="location = this.value;">
+										<option value="#"><?php echo __( 'សូមជ្រើសរើស' , 'cam-portal' )?></option>
+								
+								<?php 
+								$terms = get_terms( array(
+										'taxonomy' => 'sector',
+										'hide_empty' => false,
+								) );
+								
+								$queried_object = get_queried_object();
+								
+								
+								foreach ( $terms as $term ) {
+
+										$args = array(
+												'post_type' => 'service',
+												'post_status'=>'publish',
+												'tax_query' => array(
+														array(
+																'taxonomy' => 'sector',
+																'field'    => 'slug',
+																'terms'    => array( $term->slug ),
+														)
+												),
+										);
+										$query = new WP_Query( $args );
+										
+										if ( function_exists( 'pll_home_url' ) ) {
+												$home_url = pll_home_url().'sector/'.$term->slug;
+										}else{
+												$home_url = esc_url( home_url( 'sector/'.$term->slug ) );
+										}
+										
+										$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
+
+										echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+								}
+								
+								
+								?>
+								
+								
+								
+										
+								</select>
+						</div>
+				</div>
+				<div class="col-md-4">
+						<div class="form-group">
+								<label for="exampleFormControlSelect2"><?php echo __( 'ស្វែងរកតាមក្រុម' , 'cam-portal' )?></label>
+								<select class="form-control" id="exampleFormControlSelect2" onchange="location = this.value;">
+										<option value="#"><?php echo __( 'សូមជ្រើសរើស' , 'cam-portal' )?></option>
+								<?php 
+								$terms = get_terms( array(
+										'taxonomy' => 'service_group',
+										'hide_empty' => false,
+								) );
+
+								foreach ( $terms as $term ) {
+
+
+										$args = array(
+												'post_type' => 'service',
+												'post_status'=>'publish',
+												'tax_query' => array(
+														array(
+																'taxonomy' => 'service_group',
+																'field'    => 'slug',
+																'terms'    => array( $term->slug ),
+														)
+												),
+										);
+										
+										$query = new WP_Query( $args );
+										
+										if ( function_exists( 'pll_home_url' ) ) {
+												$home_url = pll_home_url().'service_group/'.$term->slug;
+										}else{
+												$home_url = esc_url( home_url( 'service_group/'.$term->slug ) );
+										}
+
+										$active = ( $queried_object->slug == $term->slug ) ? "selected" : "";
+
+										echo '<option ' . $active . ' value=" ' . $home_url . ' ">' . $term->name . ' ('. $query->post_count .')</option>';
+								}
+								
+								
+								?>
+								</select>
+						</div>
+				</div>
+				<div class="col-md-4">
+						<div style="position:relative;" class="form-group">
+								<label for="exampleFormControlSelect3"><?php echo __( 'ស្វែងរកតាមពាក្យ' , 'cam-portal' )?></label>
+								<input placeholder="<?php echo __( 'សូមវាយឈ្មោះសេវាដែលអ្នកត្រូវការស្វែងរក', 'cam-portal' ); ?>" type="text" class="typeahead form-control" id="exampleFormControlSelect3" data-provide="typeahead" autocomplete="off" />
+						</div>
+				</div>
+			</div>
 			<div class="detail-wrap">
 			<?php
 			while ( have_posts() ) :
@@ -29,6 +132,8 @@ get_header();
 					?>
 					</div>
 				</div>
+
+				
 
 				<section class="section">
 					<div class="block-title-2 primary-color">
@@ -127,8 +232,7 @@ get_header();
 										?>
 										<li>
 											<div class="collapse-title d-flex justify-content-between">
-												<div><span class="oi oi-chevron-right"></span><span><?php echo $org->post_title; ?></span></div>
-												<div class="collapsible-action"><span><?php echo __( 'បង្ហាញ/លាក់' ); ?></span><span class="oi <?php echo $i > 0 ? 'oi-plus' : 'oi-minus'; ?>"></span></div>
+												<div class="collapsible-action"><span class="oi <?php echo $i > 0 ? 'oi-chevron-right' : 'oi-chevron-bottom'; ?>"></span><span><?php echo $org->post_title; ?></span></div>
 											</div>
 										
 											<ul>
@@ -146,7 +250,9 @@ get_header();
 											if ( get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ) ) {
 											?>
 												<li class="item-wrap"><span class="item-title primary-color"><?php echo __( 'ទីតាំងនៅលើផែនទី ៖ ' ); ?></span>
-													<div class="map"><?php echo get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ); ?></div>
+													<div class="map">
+														<div class="google-map-api" data-latlng="<?php echo get_post_meta ( $org->ID, 'cam_portal_dept_address_maps', true ); ?>" style="height:300px;"></div>
+													</div>
 												</li>
 											<?php
 											}
@@ -203,7 +309,7 @@ get_header();
 		</div>
 		<div class="col-lg-4 widget-area">
 		<?php
-			if ( isset( $_GET['widget'] ) ) {
+			/*if ( isset( $_GET['widget'] ) ) {
 				switch ( $_GET['widget'] ) {
 					case 'sector':
 						dynamic_sidebar( 'sidebar-3' );
@@ -216,7 +322,7 @@ get_header();
 				}
 			}else{
 				dynamic_sidebar( 'sidebar-2' );
-			}
+			}*/
 		?>
 		</div>
 	</div><!-- end row-->

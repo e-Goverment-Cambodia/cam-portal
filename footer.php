@@ -34,7 +34,9 @@
 	</div><!-- close content -->
 </div><!-- close wrap -->
 
-<?php wp_footer(); ?>
-
+<?php 
+wp_footer(); 
+cam_portal_the_typeahead();
+?>
 </body>
 </html>

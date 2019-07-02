@@ -124,7 +124,38 @@ jQuery(document).ready(function() {
 
     // collapsible action
     jQuery('.collapsible-action').on('click', function() {
-        jQuery(this).children('.oi').toggleClass("oi-minus oi-plus");
         jQuery(this).closest('li').children('ul').slideToggle();
+        jQuery(this).children('.oi').toggleClass("oi-chevron-bottom oi-chevron-right");
     });
+
+    jQuery( '.google-map-api' ).each( function( index, Element ) {
+        var latlng = jQuery( this ).attr( 'data-latlng' );
+        latlng = latlng.replace(/\s/g, '');
+
+        latlng = latlng.split(',');
+        //console.log(parseFloat(latlng[1]));
+        // The map, centered at latlng
+        var map = new google.maps.Map(
+            Element, { 
+                zoom: 14, 
+                center: {
+                    lat: parseFloat(latlng[0]),
+                    lng: parseFloat(latlng[1])
+                }
+            }
+        );
+        //The marker, positioned at latlng
+        var marker = new google.maps.Marker( {
+            position: {
+                lat: parseFloat(latlng[0]),
+                lng: parseFloat(latlng[1])
+            }
+            , map: map 
+        } );
+    } );
+
+    jQuery( '.collapse-category .action-group' ).on( 'click', function() {
+        jQuery(this).closest('li').children('ul').slideToggle();
+        jQuery(this).children('.oi').toggleClass("oi-plus oi-minus");
+    } );
 });

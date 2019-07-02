@@ -7,4 +7,4 @@
  * @package Cambodia_Portal
  */
 
-echo "<h1>Hello</h1>";
+echo "<h1>Taxonomy</h1>";

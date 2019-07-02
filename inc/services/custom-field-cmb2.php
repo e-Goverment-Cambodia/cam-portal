@@ -22,6 +22,30 @@ function cam_portal_post_type_metaboxes() {
     /**
 	 * Initiate the metabox
 	 */
+
+	// custom feild category
+	$cmb_cat = new_cmb2_box( array(
+		'id'            => $prefix . 'category',
+		'title'         => 'Category',
+		'object_types'  => array( 'term', ),
+        'taxonomies'    => array( 'category' ), 
+	) );
+    $cmb_cat->add_field( array(
+		'name'      => 'Display blog',
+		'desc'      => 'Choose blog to display',
+		'id'        => $prefix . 'category_blog',
+		'type'      => 'radio_inline',
+		'options'	=> array(
+			'default'	=> __( 'Default', 'cam-portal' ), 
+			'document'	=> __( 'Document', 'cam-portal' ), 
+		),
+		'default'	=> 'default'
+        
+	) );
+
+
+
+	
     $cmb_term = new_cmb2_box( array(
 		'id'            => $prefix . 'sector_tax',
 		'title'         => 'Customize Term',

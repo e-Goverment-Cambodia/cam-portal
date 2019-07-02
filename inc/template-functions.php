@@ -240,113 +240,88 @@ function cam_portal_fb_opengraph() {
 add_action('wp_head', 'cam_portal_fb_opengraph', 5);
 
 
-function my_register_menu_metabox() {
-	$custom_param = array( 0 => 'This param will be passed to my_render_menu_metabox' );
-	
-	add_meta_box( 'my-menu-test-metabox', 'Test Menu Metabox', 'my_render_menu_metabox', 'nav-menus', 'side', 'default', $custom_param );
-}
-add_action( 'admin_head-nav-menus.php', 'my_register_menu_metabox' );
-/**
- * Displays a menu metabox 
- *
- * @param string $object Not used.
- * @param array $args Parameters and arguments. If you passed custom params to add_meta_box(), 
- * they will be in $args['args']
- */
-function my_render_menu_metabox( $object, $args ) {
-	global $nav_menu_selected_id;
-	// Create an array of objects that imitate Post objects
-	$my_items = array(
-		(object) array(
-			'ID' => 1,
-			'db_id' => 0,
-			'menu_item_parent' => 0,
-			'object_id' => 1,
-			'post_parent' => 0,
-			'type' => 'my-custom-type',
-			'object' => 'my-object-slug',
-			'type_label' => 'My Cool Plugin',
-			'title' => 'Custom Link 1',
-			'url' => home_url( '/custom-link-1/' ),
-			'target' => '',
-			'attr_title' => '',
-			'description' => '',
-			'classes' => array(),
-			'xfn' => '',
-		),
-		(object) array(
-			'ID' => 2,
-			'db_id' => 0,
-			'menu_item_parent' => 0,
-			'object_id' => 2,
-			'post_parent' => 0,
-			'type' => 'my-custom-type',
-			'object' => 'my-object-slug',
-			'type_label' => 'My Cool Plugin',
-			'title' => 'Custom Link 2',
-			'url' => home_url( '/custom-link-2/' ),
-			'target' => '',
-			'attr_title' => '',
-			'description' => '',
-			'classes' => array(),
-			'xfn' => '',
-		),
-		(object) array(
-			'ID' => 3,
-			'db_id' => 0,
-			'menu_item_parent' => 0,
-			'object_id' => 3,
-			'post_parent' => 0,
-			'type' => 'my-custom-type',
-			'object' => 'my-object-slug',
-			'type_label' => 'My Cool Plugin',
-			'title' => 'Custom Link 3',
-			'url' => home_url( '/custom-link-3/' ),
-			'target' => '',
-			'attr_title' => '',
-			'description' => '',
-			'classes' => array(),
-			'xfn' => '',
-		),
-	);
-	$db_fields = false;
-	// If your links will be hieararchical, adjust the $db_fields array bellow
-	if ( false ) {
-		$db_fields = array( 'parent' => 'parent', 'id' => 'post_parent' );
+
+function get_ajax_posts( $post_type = 'post', $term_id = '' ) {
+    // Query Arguments
+    $args = array(
+		'post_type' => $post_type,
+		'cat'		=> $term_id,
+        'post_status' => array('publish'),
+        'posts_per_page' => -1,
+        'nopaging' => true,
+        'order' => 'DESC',
+        'orderby' => 'date'
+    );
+
+	$arr = get_posts( $args );
+
+	$new_arr = [];
+	foreach( $arr as $item ) {
+		$new_arr[] = [
+			'id'	=> $item->ID,
+			'link' 	=> htmlspecialchars_decode($item->guid, ENT_QUOTES),
+			'name' 	=> $item->post_title
+		];
 	}
-	$walker = new Walker_Nav_Menu_Checklist( $db_fields );
-	$removed_args = array(
-		'action',
-		'customlink-tab',
-		'edit-menu-item',
-		'menu-item',
-		'page-tab',
-		'_wpnonce',
-	); ?>
-	<div id="my-plugin-div">
-		<div id="tabs-panel-my-plugin-all" class="tabs-panel tabs-panel-active">
-		<ul id="my-plugin-checklist-pop" class="categorychecklist form-no-clear" >
-			<?php echo walk_nav_menu_tree( array_map( 'wp_setup_nav_menu_item', $my_items ), 0, (object) array( 'walker' => $walker ) ); ?>
-		</ul>
-
-		<p class="button-controls">
-			<span class="list-controls">
-				<a href="<?php
-					echo esc_url(add_query_arg(
-						array(
-							'my-plugin-all' => 'all',
-							'selectall' => 1,
-						),
-						remove_query_arg( $removed_args )
-					));
-				?>#my-menu-test-metabox" class="select-all"><?php _e( 'Select All' ); ?></a>
-			</span>
-
-			<span class="add-to-menu">
-				<input type="submit"<?php wp_nav_menu_disabled_check( $nav_menu_selected_id ); ?> class="button-secondary submit-add-to-menu right" value="<?php esc_attr_e( 'Add to Menu' ); ?>" name="add-my-plugin-menu-item" id="submit-my-plugin-div" />
-				<span class="spinner"></span>
-			</span>
-		</p>
-	</div>
-	<?php
+	return $new_arr;
 }
+
+// get all posts group by term id
+function get_all_posts( $term_id, $tax = 'category' ) {
+
+	$term_id_arr[] = $term_id;
+	$term_children = get_term_children( $term_id, $tax );
+	foreach( $term_children as $child ) {
+		$term_id_arr[] = $child;
+	}
+
+	$data = [];
+	foreach ( $term_id_arr as $id ) {
+		$args = array(
+			'posts_per_page'    => -1,
+			'offset'            => 0,
+			'cat'               => $id,
+			'category_name'     => '',
+			'orderby'           => 'date',
+			'order'             => 'DESC',
+			'include'           => '',
+			'exclude'           => '',
+			'meta_key'          => '',
+			'meta_value'        => '',
+			'post_type'         => 'post',
+			'post_mime_type'    => '',
+			'post_parent'       => '',
+			'author'	        => '',
+			'author_name'	    => '',
+			'post_status'       => 'publish',
+			'suppress_filters'  => true,
+			'fields'            => '',
+		);
+		$posts_array = get_posts( $args );
+		foreach( $posts_array as $item ) {
+			$data[$id][] = [
+				'id'	=> $item->ID,
+				'link' 	=> htmlspecialchars_decode($item->guid, ENT_QUOTES),
+				'name' 	=> $item->post_title
+			];
+		}
+
+	}
+	// echo '<pre>';
+	// print_r($data);
+	// echo '</pre>';
+	return $data;
+}
+
+function template_chooser( $template ) {   
+	global $wp_query; 
+	
+  	if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'category' ) {
+    	return locate_template('archive.php');
+	}   
+	  if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'organization_type' ) {
+    	return locate_template('taxonomy-organization_type.php');
+  	}
+  	return $template;   
+}
+add_filter('template_include', 'template_chooser'); 

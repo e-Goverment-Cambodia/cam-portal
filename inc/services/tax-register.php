@@ -69,5 +69,33 @@ function setup_cam_portal_sectors_tax() {
 		'rewrite'           => array( 'slug' => 'sector', 'with_front' => false ),
 	);
 
-    register_taxonomy( 'sector', array( 'service', 'organization' ), $args );
+	register_taxonomy( 'sector', array( 'service', 'organization' ), $args );
+	
+
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Organization Type', 'taxonomy general name', 'cam-portal' ),
+		'singular_name'     => _x( 'Organization Type', 'taxonomy singular name', 'cam-portal' ),
+		'search_items'      => __( 'Search Organization Type', 'cam-portal' ),
+		'all_items'         => __( 'All Organization Types', 'cam-portal' ),
+		'parent_item'       => __( 'Parent Organization Type', 'cam-portal' ),
+		'parent_item_colon' => __( 'Parent Organization Type:', 'cam-portal' ),
+		'edit_item'         => __( 'Edit Organization Type', 'cam-portal' ),
+		'update_item'       => __( 'Update Organization Type', 'cam-portal' ),
+		'add_new_item'      => __( 'Add New Organization Type', 'cam-portal' ),
+		'new_item_name'     => __( 'New Organization Type Name', 'cam-portal' ),
+		'menu_name'         => __( 'Organization Type', 'cam-portal' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'update_count_callback' => '_update_post_term_count',
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'organization-type', 'with_front' => false ),
+	);
+
+    register_taxonomy( 'organization_type', array( 'organization' ), $args );
 }

@@ -341,6 +341,38 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .widget_nav_menu .menu .menu-item a::before { display: inline-block; content: " "; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 0 5px 5px; border-left-color: #ccc; margin-right: 10px; }
 
 
+
+.service-filter { margin-bottom: 30px; background: #f5f5f5; border-bottom: 2px solid #efefef; }
+.service-filter .form-group .form-control, .service-filter .form-group .custom-select { border-radius: 0px; }
+.service-filter .btn { border-radius: 0px; position: absolute; right: 0px; top: 0px; }
+.service-filter .relative { position: relative; }
+
+.typeahead.dropdown-menu { right: 0px; padding: 0px; }
+.typeahead.dropdown-menu li { border-bottom: 1px solid #ccc; }
+.typeahead.dropdown-menu li:last-child { border-bottom: none; }
+.typeahead.dropdown-menu a.dropdown-item { white-space: initial; padding: 10px 15px; }
+
+
+.collapse-category, .collapse-category li, .collapse-category ul { list-style: none; }
+.collapse-category { margin-bottom: 30px; padding: 0px; }
+.collapse-category > li { border-bottom: 1px solid #ddd; }
+.collapse-category > li > .action-group .oi { margin-right: 10px; }
+.collapse-category > li > .action-group { position: relative; padding: 10px 15px; background: #eee; cursor: pointer; line-height: 30px; }
+.collapse-category > li > .action-group > .right { background: #ccc; position: absolute; right: 15px; }
+.collapse-category > li > span {  }
+.collapse-category > li > ul { padding: 0px; display: none; }
+.collapse-category > li > ul > li { padding-bottom: 15px; }
+.collapse-category > li > ul > li:first-child { padding-top: 15px; }
+.collapse-category > li > ul > li .oi { color: #7b7b7b; font-size: 12px; margin-right: 10px; }
+.collapse-category > li > ul > li a { color: #7b7b7b; }
+
+.sidebar-block { padding: 0; margin-bottom: 30px; }
+.sidebar-block li { list-style: none; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+.sidebar-block li a { color: #333; }
+.sidebar-block li img { float: left; width: 60px; height: auto; margin-right: 15px; margin-bottom: 15px; }
+.sidebar-block li .side-text {  }
+.sidebar-block li .meta { font-size: 12px; color: #999; margin-top: 10px; }
+
 /* overide all responsivable */
 .non-responsive .col-xs-1 { -ms-flex: 0 0 8.333333%; flex: 0 0 8.333333%; max-width: 8.333333%; }
 .non-responsive .col-xs-2 { -ms-flex: 0 0 16.666667%; flex: 0 0 16.666667%; max-width: 16.666667%; }
