@@ -43,9 +43,8 @@
 		<div class="nav-sidebar d-md-block d-lg-none primary-background-color">
 				<div class="nav-sidebar-header">
 					
-					<!-- Cambodia sign -->
-					<object class="khmer-logo" class="d-inline-block" type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/asset/img/Royal_Cambodia.svg'; ?>" width="" height=""></object>
-					<h1 class="font-moul khmer-title primary-color">
+					
+					<h1 class="font-moul khmer-title primary-color" style="font-size:20px; padding:15px 0px;">
 					<?php get_template_part('template-parts/header/header', 'text'); ?>
 					</h1>
 					<!-- search form -->
@@ -125,11 +124,9 @@
 							<div class="cam-logo-wrap text-right">
 								
 								<!-- logo and title -->
-								<h1 class="font-moul khmer-title primary-color inline-block">
+								<h1 class="font-moul khmer-title primary-color">
 								<?php get_template_part('template-parts/header/header', 'text'); ?>
 								</h1>
-								<object class="khmer-logo" class="d-inline-block" type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/asset/img/Royal_Cambodia.svg'; ?>" width="" height=""></object>
-								<br/>
 								
 								<!-- search form -->
 								<form class="form-inline inline-block">

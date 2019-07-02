@@ -76,7 +76,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 /* customization of all small screen header navigation*/
 .wrapper { display: block; position: relative; }
-.content { background-color: #fff; transform: translate3d(0,0,0); transition: transform 1s; flex: auto; }
+.content { background-color: #fff; transform: translate3d(0,0,0); transition: transform 0.5s; flex: auto; }
 .content.isOpen { transform: translate3d(300px,0,0); }
 
 .nav-sidebar { position: absolute; top: 0px; bottom: 0px; width: 300px; z-index: 0; }
@@ -134,7 +134,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .sm-navbar a:hover { background-color: rgba(0, 0, 0, .1); color: #fff; }
 .sm-navbar .current-menu-item > a { border-left: 5px solid #fff; }
 .sm-navbar ul > li > ul a { font-weight: normal; }
-.sm-navbar ul > li > ul { background-color: #444444; }
+.sm-navbar ul > li > ul { background-color: rgba(0, 0, 0, .1); }
 .sm-navbar ul > li > ul > li ul,
 .sm-navbar ul > li > ul > li span { display: none!important; }
 .sm-navbar .menu-item-has-children { position: relative; }
