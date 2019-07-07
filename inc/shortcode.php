@@ -11,3 +11,4 @@
 	require_once get_template_directory() . '/inc/shortcode/collapse-category.php';
 	require_once get_template_directory() . '/inc/shortcode/popular-post.php';
 	require_once get_template_directory() . '/inc/shortcode/latest-post.php';
+	require_once get_template_directory() . '/inc/shortcode/blog.php';

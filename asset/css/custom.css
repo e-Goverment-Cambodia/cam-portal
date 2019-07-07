@@ -39,6 +39,8 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .b-1 .b-title { margin-bottom: 15px; }
 .b-1 .b-title a { display: block; font-size: 16px; color: #353535; line-height: 28px; word-wrap: break-word; }
 .b-1 .b-date { font-size: 13px; color: #828282; border-top: 1px solid #ccc; padding-top: 15px; }
+.b-1 .b-meta { font-size: 13px; color: #828282; border-top: 1px solid #ccc; padding-top: 15px; }
+.b-1 .b-excerpt { font-size: 13px; color: #828282; margin-bottom: 15px; }
 
 /* block 2 */
 .b-2 {  }
@@ -53,6 +55,8 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .b-2 .b-cat { margin-bottom: 30px; }
 .b-2 .b-cat span, .b-2 .b-cat a { font-size: 12px; color: #828282; display: inline-block; margin-right: 15px; }
 .b-2 .b-cat span.oi { margin-right: 5px; }
+.b-2 .b-meta { font-size: 13px; color: #828282; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 30px; }
+.b-2 .b-excerpt { font-size: 13px; color: #828282; margin-bottom: 15px; }
 
 /* block 3 */
 .b-3 {  }
