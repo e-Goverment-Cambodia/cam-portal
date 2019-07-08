@@ -59,6 +59,16 @@ function the_block_title( $arr ){
     printf( $html, $link );
 }
 
+if( ! function_exists( 'the_blog_title' ) ) {
+	function the_blog_title( $arr ) {
+		$title = '<span class="primary-color font-moul" >'.$arr['title'].'</span>';
+		$link = get_term_link( $arr['terms'], $arr['taxonomy'] );
+		if( ! is_wp_error( $link ) ) 
+		$title = '<a class="primary-color font-moul" href="'. esc_url( $link ) .'">'.esc_html( $arr['title'] ).'</a>';
+		$html =     '<div class="block-title primary-color">%s</div>';
+		printf( $html, $title );
+	}
+}
 
 if( !function_exists( 'cam_portal_get_the_post_thumbnail' ) ) {
 	
