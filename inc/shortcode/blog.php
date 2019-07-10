@@ -33,9 +33,9 @@ function blog_function_shortcode( $atts , $content = null ) {
 			'taxonomy'	=> $a['blog_title_taxonomy'],
 			'title'		=> $a['blog_title']
 		];
-		echo '<div class="container">';
+		
 		the_blog_title( $arr );
-		echo '</div>';
+		
 	}	
 
 	// WP_Query arguments
@@ -59,9 +59,7 @@ function blog_function_shortcode( $atts , $content = null ) {
 	// The Loop
 	if ( $query->have_posts() ) :
 		set_query_var( 'a', $a );
-	?>
-	<div class="container">
-		<?php if( $a['template'] == 'grid' ) : ?>
+		if( $a['template'] == 'grid' ) : ?>
 		<div class="row b-1">
 			<?php 
 			while ( $query->have_posts() ) :
@@ -72,9 +70,9 @@ function blog_function_shortcode( $atts , $content = null ) {
 			endwhile;
 			?>
 		</div>
-		<?php endif; ?>
-
-		<?php if( $a['template'] == 'list' ) : ?>
+		<?php 
+		endif; 
+		if( $a['template'] == 'list' ) : ?>
 		<div class="b-2">
 			<?php 
 			while ( $query->have_posts() ) :
@@ -85,11 +83,9 @@ function blog_function_shortcode( $atts , $content = null ) {
 			endwhile;
 			?>
 		</div>
-		<?php endif; ?>
-
-	</div>
-	<?php
-    endif;
+		<?php 
+		endif; 
+	endif;
     
 
 

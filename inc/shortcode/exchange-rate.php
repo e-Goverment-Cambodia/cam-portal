@@ -17,7 +17,7 @@ function cam_portal_exchange_rate_shortcode( $atts , $content = null ) {
 
 	 // To display the block title use the_block_title() function in 'inc\template-functions.php'
     if( $atts['title'] != '' ){
-        $arr = array( 'title'	=> $atts['title'] );
+        $arr = array( 'title'	=> $atts['title'], 'link' => $atts['link'] );
         the_block_title( $arr );
     }	
     $data = get_transient( 'exchangerate'.$atts['lang'] ) ;

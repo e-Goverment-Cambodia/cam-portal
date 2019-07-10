@@ -54,6 +54,10 @@ function the_block_title( $arr ){
 		$link = '<a class="primary-color font-moul" href="'. esc_url( get_term_link( $arr['type_slug'], $arr['taxonomy'] ) ) .'">'.esc_html( $arr['title'] ).'</a>';
 	}
 	
+	if( isset( $arr['link'] ) ) {
+		$link = '<a class="primary-color font-moul" href="'. $arr['link'] .'">'.$arr['title'].'</a>';
+	}
+	
 	
     $html =     '<div class="block-title primary-color">%s</div>';
     printf( $html, $link );
