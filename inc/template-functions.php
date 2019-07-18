@@ -332,10 +332,24 @@ function template_chooser( $template ) {
 	
   	if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'category' ) {
     	return locate_template('archive.php');
-	}   
-	  if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'organization_type' ) {
+	}
+	if( $wp_query->is_search && isset( $_GET['post_type'] ) && $_GET['post_type'] == 'service' ) {
+    	return locate_template('archive-service.php');
+	}
+	if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'organization_type' ) {
     	return locate_template('taxonomy-organization_type.php');
   	}
   	return $template;   
 }
 add_filter('template_include', 'template_chooser'); 
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 150;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

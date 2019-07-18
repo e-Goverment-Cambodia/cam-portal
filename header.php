@@ -18,10 +18,7 @@
 	<!-- initial-scale=1 : responsive default -->
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<!-- icon -->
-	<link rel="icon" type="image/png" href="asset/img/logo-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="asset/img/logo-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="asset/img/logo-96x96.png" sizes="96x96" />
+	
 	<?php wp_head(); 
 	$theme_color = get_theme_mod('theme_color_setting', '#4bc598');
 	?>

@@ -6,7 +6,7 @@ function collapse_catagory_shortcode_function( $atts , $content = null ) {
 	$a = shortcode_atts(
 		array(
 			'cat_id' 		=> '', // category name ( multi category seperate by coma ',')
-			'posts_per_page'=> '', // number of posts per page
+			'posts_per_page'=> 4, // number of posts per page
 			'offset'		=> 0, 
 			'title'			=> '', // title of block title
 			'link_cat_id'	=> '',  // the block title's link to a category list
@@ -32,12 +32,8 @@ function collapse_catagory_shortcode_function( $atts , $content = null ) {
         $cat_arr = explode( ',', $a['cat_id'] );
         for ( $i=0; $i < count( $cat_arr ); $i++ ) {
             $term_obj = get_term( $cat_arr[$i] );
-            // echo '<li><pre>';
-            // print_r( $term_obj );
-            // echo '</pre></li>';
-            echo( '<li class="action"><div class="action-group"><span class="oi oi-plus"></span><span class="title">' . $term_obj->name . '</span><span class="right badge badge-info">' . $term_obj->count . '</span></div>' );
             $args = array(
-                'posts_per_page'    => $a['posts_per_page'],
+                'posts_per_page'    => -1,
                 'offset'            => $a['offset'],
                 'cat'               => $cat_arr[$i],
                 'category_name'     => '',
@@ -57,9 +53,11 @@ function collapse_catagory_shortcode_function( $atts , $content = null ) {
                 'fields'            => '',
             );
             $posts_array = get_posts( $args );
+			
+            echo( '<li class="action"><div class="action-group"><span class="oi oi-plus"></span><span class="title">' . $term_obj->name . '</span><span class="right badge badge-info">' . count( $posts_array ) . '</span></div>' );
             echo '<ul>';
-            foreach( $posts_array as $post ) {
-                echo '<li><span class="oi oi-chevron-right"></span><a href="' . $post->guid . '">'.mb_strimwidth( $post->post_title, 0, $a['char'], '...' ).'</a></li>';
+            for( $j = 0; $j < $a['posts_per_page']; $j++ ) {
+                echo '<li><span class="oi oi-chevron-right"></span><a href="' . $posts_array[$j]->guid . '">'.mb_strimwidth( $posts_array[$j]->post_title, 0, $a['char'], '...' ).'</a></li>';
             }
             ?>
             <li><a href="<?php echo get_term_link( $term_obj->term_id ); ?>"><strong><?php echo __( 'មានបន្ត', 'cam-portal' ); ?></strong></a> <span class="oi oi-external-link"></span></li>

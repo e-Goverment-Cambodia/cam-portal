@@ -130,6 +130,7 @@ jQuery(document).ready(function() {
 
     jQuery( '.google-map-api' ).each( function( index, Element ) {
         var latlng = jQuery( this ).attr( 'data-latlng' );
+        var title = jQuery( this ).attr( 'data-title' );
         latlng = latlng.replace(/\s/g, '');
 
         latlng = latlng.split(',');
@@ -144,14 +145,22 @@ jQuery(document).ready(function() {
                 }
             }
         );
+		var infowindow = new google.maps.InfoWindow({
+			content: '<div style="padding:0px 10px;text-align:center;"><h6 class="font-moul">'+title+'</h6><a target="_blank" href="https://maps.google.com/maps?ll='+parseFloat(latlng[0])+','+parseFloat(latlng[1])+'&cid=6475309677667705757">View larger map</a></div>'
+        });
         //The marker, positioned at latlng
         var marker = new google.maps.Marker( {
             position: {
                 lat: parseFloat(latlng[0]),
                 lng: parseFloat(latlng[1])
-            }
-            , map: map 
+            },
+			map: map
         } );
+		
+		marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+		infowindow.open(map, marker);
     } );
 
     jQuery( '.collapse-category .action-group' ).on( 'click', function() {

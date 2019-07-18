@@ -4,7 +4,7 @@
         <div class="b-thumnail"><?php the_post_thumbnail(); ?></div>
         <div class="b-title"><a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth( get_the_title(), 0, $a['title_length'], '...' ); ?></a></div>
         <?php if( filter_var( $a['excerpt'], FILTER_VALIDATE_BOOLEAN ) ) : ?>
-        <div class="b-excerpt"><?php echo mb_strimwidth( get_the_excerpt(), 0, $a['excerpt_length'], ' <i> [..]</i>' ); ?></div>
+        <div class="b-excerpt"><?php echo mb_strimwidth( get_the_excerpt(), 0, $a['excerpt_length'], '...' ); ?></div>
         <?php endif; ?>
 
         <?php

@@ -315,12 +315,14 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .collapsible .collapsible-action { cursor: pointer; position: relative; }
 .collapsible .map iframe { width: 100%; height: 300px; }
 .collapsible span { font-size: 16px; line-height: 25px; margin-right: 10px; }
-.collapsible span.oi { font-size: 14px; line-height: 25px; color: #797979; position: absolute; }
-.collapsible span:last-child { margin-right: 0px; padding-left: 18px; display: inline-block; }
+.collapsible span.oi { font-size: 14px; line-height: 25px; color: #797979; }
+.collapsible span:last-child { margin-right: 0px; display: inline-block; }
 .collapsible ul { margin: 0px; padding: 0px; }
 .collapsible ul li { list-style: none; }
 .collapsible > ul > li > ul { background-color: #fbfbfb; padding: 15px; display: none; }
 .collapsible .collapse-title { border-bottom: 1px solid #eee; padding: 10px 0px; }
+.collapsible .collapse-title span.oi{ position: absolute; }
+.collapsible .collapse-title span:last-child { padding-left: 20px; }
 .collapsible .item-wrap { margin-bottom: 30px; }
 .collapsible .item-wrap:last-child { margin-bottom: 0px; }
 .collapsible .item { border-bottom: 1px solid #eee; margin-bottom: 15px; padding-bottom: 15px; }
@@ -328,7 +330,7 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .collapsible .item-title { margin-bottom: 15px; font-weight: bold; display: block; }
 
 /*the shortcut css class*/
-.font-moul { font-family: "Roboto","Moul",sans-serif; }
+.font-moul { font-family: "Roboto","Moul",sans-serif; line-height: 150%; }
 .block { display: block; }
 .inline-block { display: inline-block; }
 .vertical-align-middle { vertical-align: middle; }
@@ -345,7 +347,8 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 
 
 
-.service-filter { margin-bottom: 30px; background: #f5f5f5; border-bottom: 2px solid #efefef; }
+.service-filter { margin-bottom: 30px; }
+.service-filter label{ color: #868686; }
 .service-filter .form-group .form-control, .service-filter .form-group .custom-select { border-radius: 0px; }
 .service-filter .btn { border-radius: 0px; position: absolute; right: 0px; top: 0px; }
 .service-filter .relative { position: relative; }
@@ -361,13 +364,13 @@ html.responsive body, html.responsive { overflow-x: hidden; }
 .collapse-category > li { border-bottom: 1px solid #ddd; }
 .collapse-category > li > .action-group .oi { margin-right: 10px; }
 .collapse-category > li > .action-group { position: relative; padding: 10px 15px; background: #eee; cursor: pointer; line-height: 30px; }
-.collapse-category > li > .action-group > .right { background: #ccc; position: absolute; right: 15px; }
+.collapse-category > li > .action-group > .right { background: #ccc; position: absolute; right: 15px; top: 16px; }
 .collapse-category > li > span {  }
-.collapse-category > li > ul { padding: 0px; display: none; }
-.collapse-category > li > ul > li { padding-bottom: 15px; }
-.collapse-category > li > ul > li:first-child { padding-top: 15px; }
-.collapse-category > li > ul > li .oi { color: #7b7b7b; font-size: 12px; margin-right: 10px; }
-.collapse-category > li > ul > li a { color: #7b7b7b; }
+.collapse-category > li > ul { padding-left: 0px; padding-top: 15px; display: none; }
+.collapse-category > li > ul > li { padding-bottom: 15px; position: relative; }
+.collapse-category > li > ul > li:first-child { }
+.collapse-category > li > ul > li .oi { color: #7b7b7b; font-size: 12px; position: absolute; left: 0; top: 6px; }
+.collapse-category > li > ul > li a { color: #7b7b7b; padding-left: 16px; display: block; }
 
 .sidebar-block { padding: 0; margin-bottom: 30px; }
 .sidebar-block li { list-style: none; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
