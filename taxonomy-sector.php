@@ -20,7 +20,8 @@ the_cam_portal_breadcrumbs();
 							'field' => 'slug',
 							'terms' => get_query_var('term')
 						)
-					)
+					),
+					'paged'		=> get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1
 				);
 				$query = new WP_Query( $args );
 				if ( $query -> have_posts() ) : 

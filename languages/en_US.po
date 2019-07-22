@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Cambodia Portal\n"
-"POT-Creation-Date: 2019-02-26 15:52+0700\n"
-"PO-Revision-Date: 2019-02-26 16:16+0700\n"
+"POT-Creation-Date: 2019-07-22 15:25+0700\n"
+"PO-Revision-Date: 2019-07-22 15:26+0700\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -16,8 +18,6 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: en_US\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -82,37 +82,20 @@ msgstr "Primary"
 msgid "Top Menu"
 msgstr "Top Menu"
 
-#: functions.php:105
-msgid "Sidebar"
-msgstr "Sidebar"
-
-#: functions.php:107
-msgid "Add widgets here."
-msgstr "Add widgets here."
-
-#: functions.php:114
-msgid "Footer"
-msgstr "Footer"
-
-#: functions.php:116
-msgid "Add footer widgets here."
-msgstr "Add footer widgets here."
-
-#: functions.php:123
-msgid "Copyright"
-msgstr "Copyright"
-
-#: functions.php:125
-msgid "Add copyright text here."
-msgstr "Add copyright text here."
+#: header.php:53 header.php:134 search.php:23
+#: template-parts/content-archive-doc-filter.php:35
+#: template-parts/content-organization-filter.php:135
+#: template-parts/content-service-filter.php:64
+msgid "ស្វែងរក"
+msgstr "Search"
 
 #: inc/breadcrumbs.php:6
 msgid "ទំព័រដើម"
 msgstr "Home"
 
 #: inc/breadcrumbs.php:175
-msgid "Search query for: "
-msgstr "Search query for: "
+msgid "ស្វែងរកតាមពាក្យ : "
+msgstr "Search by word : "
 
 #: inc/breadcrumbs.php:180
 msgid "Error 404"
@@ -139,15 +122,35 @@ msgstr "Add Another Item"
 msgid "Remove Item"
 msgstr "Remove Item"
 
-#: inc/cmb2.php:62
+#: inc/cmb2.php:63
 msgid "Title"
 msgstr "Title"
 
-#: inc/cmb2.php:68
+#: inc/cmb2.php:69
 msgid "Value"
 msgstr "Value"
 
-#: inc/cmb2.php:103 inc/cmb2/example-functions.php:753
+#: inc/cmb2.php:83
+msgid "Select FDF file below :"
+msgstr ""
+
+#: inc/cmb2.php:91
+msgid "PDF File {#}"
+msgstr ""
+
+#: inc/cmb2.php:92
+msgid "Add More PDF"
+msgstr ""
+
+#: inc/cmb2.php:93
+msgid "Remove This PDF"
+msgstr ""
+
+#: inc/cmb2.php:100
+msgid "Choose PDF File :"
+msgstr "Choose PDF File :"
+
+#: inc/cmb2.php:156 inc/cmb2/example-functions.php:753
 #, php-format
 msgid "%s &mdash; Updated!"
 msgstr "%s &mdash; Updated!"
@@ -570,7 +573,7 @@ msgstr "%1$s should be implemented by the extended class."
 msgid "Clear"
 msgstr "Clear"
 
-#: inc/cmb2/includes/CMB2_JS.php:166
+#: inc/cmb2/includes/CMB2_JS.php:166 inc/services/custom-field-cmb2.php:39
 msgid "Default"
 msgstr "Default"
 
@@ -881,55 +884,427 @@ msgstr "Sections"
 msgid "Section"
 msgstr "Section"
 
-#: inc/custom-post.php:28
+#: inc/custom-post.php:32
 msgctxt "taxonomy general name"
 msgid "Types"
 msgstr "Types"
 
-#: inc/custom-post.php:29
+#: inc/custom-post.php:33
 msgctxt "taxonomy singular name"
 msgid "Type"
 msgstr "Type"
 
-#: inc/custom-post.php:30
+#: inc/custom-post.php:34
 msgid "Search Types"
 msgstr "Search Types"
 
-#: inc/custom-post.php:31
+#: inc/custom-post.php:35
 msgid "All Types"
 msgstr "All Types"
 
-#: inc/custom-post.php:32
+#: inc/custom-post.php:36
 msgid "Parent Type"
 msgstr "Parent Type"
 
-#: inc/custom-post.php:33
+#: inc/custom-post.php:37
 msgid "Parent Type:"
 msgstr "Parent Type:"
 
-#: inc/custom-post.php:34
+#: inc/custom-post.php:38
 msgid "Edit Type"
 msgstr "Edit Type"
 
-#: inc/custom-post.php:35
+#: inc/custom-post.php:39
 msgid "Update Type"
 msgstr "Update Type"
 
-#: inc/custom-post.php:36
+#: inc/custom-post.php:40
 msgid "Add New Type"
 msgstr "Add New Type"
 
-#: inc/custom-post.php:37
+#: inc/custom-post.php:41
 msgid "New Type Name"
 msgstr "New Type Name"
 
-#: inc/custom-post.php:38
+#: inc/custom-post.php:42
 msgid "Type"
 msgstr "Type"
 
 #: inc/customizer.php:52
 msgid "Theme Color"
 msgstr "Theme Color"
+
+#: inc/services/custom-field-cmb2.php:40
+msgid "Document"
+msgstr ""
+
+#: inc/services/post-type-organization.php:12
+msgctxt "post type general name"
+msgid "Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:13
+msgctxt "post type singular name"
+msgid "Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:14
+msgctxt "admin menu"
+msgid "Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:15
+msgctxt "add new on admin bar"
+msgid "Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:16
+#, fuzzy
+#| msgid "Add New Type"
+msgctxt "Organization"
+msgid "Add New"
+msgstr "Add New Type"
+
+#: inc/services/post-type-organization.php:17
+msgid "Add New Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:18
+msgid "New Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:19
+msgid "Edit Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:20
+msgid "View Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:21
+msgid "All Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:22
+msgid "Search Organization"
+msgstr ""
+
+#: inc/services/post-type-organization.php:23
+msgid "Parent Organization:"
+msgstr ""
+
+#: inc/services/post-type-organization.php:24
+msgid "No Organization found."
+msgstr ""
+
+#: inc/services/post-type-organization.php:25
+msgid "No Organization found in Trash."
+msgstr ""
+
+#: inc/services/post-type-service.php:12
+msgctxt "post type general name"
+msgid "Administrative Sevices"
+msgstr ""
+
+#: inc/services/post-type-service.php:13
+msgctxt "post type singular name"
+msgid "Service"
+msgstr ""
+
+#: inc/services/post-type-service.php:14
+msgctxt "admin menu"
+msgid "Administrative Sevices"
+msgstr ""
+
+#: inc/services/post-type-service.php:15
+msgctxt "add new on admin bar"
+msgid "Service"
+msgstr ""
+
+#: inc/services/post-type-service.php:16
+#, fuzzy
+#| msgid "Add New Type"
+msgctxt "Service"
+msgid "Add New"
+msgstr "Add New Type"
+
+#: inc/services/post-type-service.php:17
+#, fuzzy
+#| msgid "Add New Type"
+msgid "Add New Service"
+msgstr "Add New Type"
+
+#: inc/services/post-type-service.php:18
+msgid "New Service"
+msgstr ""
+
+#: inc/services/post-type-service.php:19
+msgid "Edit Service"
+msgstr ""
+
+#: inc/services/post-type-service.php:20
+msgid "View Service"
+msgstr ""
+
+#: inc/services/post-type-service.php:21
+#, fuzzy
+#| msgid "All Types"
+msgid "All Sevices"
+msgstr "All Types"
+
+#: inc/services/post-type-service.php:22
+msgid "Search Administrative Sevices"
+msgstr ""
+
+#: inc/services/post-type-service.php:23
+msgid "Parent Administrative Sevices:"
+msgstr ""
+
+#: inc/services/post-type-service.php:24
+msgid "No Administrative Sevices found."
+msgstr ""
+
+#: inc/services/post-type-service.php:25
+msgid "No Administrative Sevices found in Trash."
+msgstr ""
+
+#: inc/services/tax-register.php:16
+#, fuzzy
+#| msgid "Add Group"
+msgctxt "taxonomy general name"
+msgid "Groups"
+msgstr "Add Group"
+
+#: inc/services/tax-register.php:17
+#, fuzzy
+#| msgid "Add Group"
+msgctxt "taxonomy singular name"
+msgid "Group"
+msgstr "Add Group"
+
+#: inc/services/tax-register.php:18
+#, fuzzy
+#| msgid "Search Types"
+msgid "Search Groups"
+msgstr "Search Types"
+
+#: inc/services/tax-register.php:19
+msgid "Popular Groups"
+msgstr ""
+
+#: inc/services/tax-register.php:20
+#, fuzzy
+#| msgid "Add Group"
+msgid "All Groups"
+msgstr "Add Group"
+
+#: inc/services/tax-register.php:21
+#, fuzzy
+#| msgid "Parent Type"
+msgid "Parent Group"
+msgstr "Parent Type"
+
+#: inc/services/tax-register.php:22
+#, fuzzy
+#| msgid "Parent Type:"
+msgid "Parent Group:"
+msgstr "Parent Type:"
+
+#: inc/services/tax-register.php:23
+#, fuzzy
+#| msgid "Add Group"
+msgid "Edit Group"
+msgstr "Add Group"
+
+#: inc/services/tax-register.php:24
+#, fuzzy
+#| msgid "Update Type"
+msgid "Update Group"
+msgstr "Update Type"
+
+#: inc/services/tax-register.php:25
+#, fuzzy
+#| msgid "Add Group"
+msgid "Add New Group"
+msgstr "Add Group"
+
+#: inc/services/tax-register.php:26
+#, fuzzy
+#| msgid "New Type Name"
+msgid "New Group Name"
+msgstr "New Type Name"
+
+#: inc/services/tax-register.php:27
+msgid "Separate Groups with commas"
+msgstr ""
+
+#: inc/services/tax-register.php:28
+#, fuzzy
+#| msgid "Remove Group"
+msgid "Add or remove Groups"
+msgstr "Remove Group"
+
+#: inc/services/tax-register.php:29
+msgid "Choose from the most used Groups"
+msgstr ""
+
+#: inc/services/tax-register.php:30
+#, fuzzy
+#| msgid "No boxes found."
+msgid "No Groups found."
+msgstr "No boxes found."
+
+#: inc/services/tax-register.php:31
+#, fuzzy
+#| msgid "Add Group"
+msgid "Groups"
+msgstr "Add Group"
+
+#: inc/services/tax-register.php:49
+#, fuzzy
+#| msgid "Sections"
+msgctxt "taxonomy general name"
+msgid "Sectors"
+msgstr "Sections"
+
+#: inc/services/tax-register.php:50
+#, fuzzy
+#| msgid "Section"
+msgctxt "taxonomy singular name"
+msgid "Sector"
+msgstr "Section"
+
+#: inc/services/tax-register.php:51
+#, fuzzy
+#| msgid "Search Types"
+msgid "Search Sectors"
+msgstr "Search Types"
+
+#: inc/services/tax-register.php:52
+#, fuzzy
+#| msgid "Sections"
+msgid "All Sectors"
+msgstr "Sections"
+
+#: inc/services/tax-register.php:53
+#, fuzzy
+#| msgid "Parent Type"
+msgid "Parent Sector"
+msgstr "Parent Type"
+
+#: inc/services/tax-register.php:54
+#, fuzzy
+#| msgid "Parent Type:"
+msgid "Parent Sector:"
+msgstr "Parent Type:"
+
+#: inc/services/tax-register.php:55
+#, fuzzy
+#| msgid "Edit Type"
+msgid "Edit Sector"
+msgstr "Edit Type"
+
+#: inc/services/tax-register.php:56
+#, fuzzy
+#| msgid "Update Type"
+msgid "Update Sector"
+msgstr "Update Type"
+
+#: inc/services/tax-register.php:57
+#, fuzzy
+#| msgid "Add New Type"
+msgid "Add New Sector"
+msgstr "Add New Type"
+
+#: inc/services/tax-register.php:58
+#, fuzzy
+#| msgid "New Type Name"
+msgid "New Sector Name"
+msgstr "New Type Name"
+
+#: inc/services/tax-register.php:59
+#, fuzzy
+#| msgid "Section"
+msgid "Sector"
+msgstr "Section"
+
+#: inc/services/tax-register.php:77
+msgctxt "taxonomy general name"
+msgid "Organization Type"
+msgstr ""
+
+#: inc/services/tax-register.php:78
+msgctxt "taxonomy singular name"
+msgid "Organization Type"
+msgstr ""
+
+#: inc/services/tax-register.php:79
+#, fuzzy
+#| msgid "Search Types"
+msgid "Search Organization Type"
+msgstr "Search Types"
+
+#: inc/services/tax-register.php:80
+msgid "All Organization Types"
+msgstr ""
+
+#: inc/services/tax-register.php:81
+#, fuzzy
+#| msgid "Parent Type"
+msgid "Parent Organization Type"
+msgstr "Parent Type"
+
+#: inc/services/tax-register.php:82
+#, fuzzy
+#| msgid "Parent Type:"
+msgid "Parent Organization Type:"
+msgstr "Parent Type:"
+
+#: inc/services/tax-register.php:83
+msgid "Edit Organization Type"
+msgstr ""
+
+#: inc/services/tax-register.php:84
+#, fuzzy
+#| msgid "Update Type"
+msgid "Update Organization Type"
+msgstr "Update Type"
+
+#: inc/services/tax-register.php:85
+#, fuzzy
+#| msgid "Add New Type"
+msgid "Add New Organization Type"
+msgstr "Add New Type"
+
+#: inc/services/tax-register.php:86
+#, fuzzy
+#| msgid "New Type Name"
+msgid "New Organization Type Name"
+msgstr "New Type Name"
+
+#: inc/services/tax-register.php:87
+msgid "Organization Type"
+msgstr ""
+
+#: inc/shortcode/collapse-category.php:66
+msgid "មានបន្ត"
+msgstr "Read More"
+
+#: inc/shortcode/exchange-rate.php:38
+msgid "រូបិយប័ណ្ណ"
+msgstr "Currency"
+
+#: inc/shortcode/exchange-rate.php:38
+msgid "ឯកតា"
+msgstr "Unit"
+
+#: inc/shortcode/exchange-rate.php:38
+msgid "ទិញ"
+msgstr "Buy"
+
+#: inc/shortcode/exchange-rate.php:57 inc/shortcode/sidebar.php:73
+msgid "ប្រភពមកពី"
+msgstr "Source from"
 
 #: inc/shortcode/footer-info.php:38
 msgid "អ៊ីមែល"
@@ -939,135 +1314,186 @@ msgstr "Email"
 msgid "លេខទូរស័ព្ទ"
 msgstr "Phone Number"
 
-#: inc/shortcode/sidebar.php:65
+#: inc/shortcode/sidebar.php:67
 msgid "កែប្រែចុងក្រោយ"
 msgstr "Last update"
 
-#: inc/shortcode/sidebar.php:71
-msgid "ប្រភពមកពី"
-msgstr "Source from"
-
 #. translators: %s: post date.
-#: inc/template-tags.php:27
+#: inc/template-tags.php:28
 #, php-format
 msgctxt "post date"
 msgid "%s"
 msgstr "%s"
 
-#. translators: %s: post author.
-#: inc/template-tags.php:42
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "by %s"
+#: inc/template-tags.php:41
+msgid "ដោយ"
+msgstr "By"
+
+#: inc/template-tags.php:49 taxonomy-types.php:38
+msgid "ចំនួនទស្សនា"
+msgstr "View"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:59
+#: inc/template-tags.php:61
 msgid ", "
 msgstr ", "
 
 #. translators: 1: list of categories.
-#: inc/template-tags.php:62
+#: inc/template-tags.php:64
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Posted in %1$s"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:66
+#: inc/template-tags.php:68
 msgctxt "list item separator"
 msgid ", "
 msgstr ", "
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:69
+#: inc/template-tags.php:71
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Tagged %1$s"
 
 #. translators: %s: post title
-#: inc/template-tags.php:79
+#: inc/template-tags.php:81
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:96 template-parts/content-page.php:36
+#: inc/template-tags.php:98 template-parts/content-page.php:45
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Edit <span class=\"screen-reader-text\">%s</span>"
 
-#: inc/template-tags.php:179
+#: inc/template-tags.php:181
 #, php-format
 msgid "%sមុន "
-msgstr "%s ago"
+msgstr "%s ago "
 
-#. translators: %s: search query.
-#: search.php:22
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Search Results for: %s"
+#: inc/template-tags.php:208
+msgid "ព័ត៌មានជាប់ទាក់ទង"
+msgstr "Related News"
 
-#: single.php:22
-msgid "prev chapter: %title"
-msgstr "prev chapter: %title"
+#: search.php:22 template-parts/content-archive-doc-filter.php:34
+#: template-parts/content-organization-filter.php:134
+#: template-parts/content-service-filter.php:60
+msgid "ស្វែងរកតាមពាក្យ"
+msgstr "Search by word"
 
-#: single.php:23
-msgid "next chapter: %title"
-msgstr "next chapter: %title"
+#: single-service.php:38
+msgid "គោលបំណង៖"
+msgstr "Purpose ៖"
 
-#: single.php:25
-msgid "category"
-msgstr "category"
+#: single-service.php:46
+msgid "មូលដ្ឋានគតិយុត្ត៖"
+msgstr "Legal basis ៖"
 
-#: single.php:26
-msgid "Continue Reading"
-msgstr "Continue Reading"
+#: single-service.php:54
+msgid "អតិថិជនដែលមានសិទ្ធទទួលសេវា៖"
+msgstr "Customers who have access to services ៖"
 
-#: template-parts/content-none.php:14
-msgid "Nothing Found"
-msgstr "Nothing Found"
+#: single-service.php:62
+msgid "ស្តង់ដារសេវា៖"
+msgstr "Standard service ៖"
 
-#. translators: 1: link to WP admin new post page.
-#: template-parts/content-none.php:24
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: single-service.php:70
+msgid "តម្រូវការឯកសារ ដើម្បីទទួលបានសេវា៖"
+msgstr "Required documents to obtain the service ៖"
 
-#: template-parts/content-none.php:37
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+#: single-service.php:75
+msgid "ទាញយកទម្រង់បែបបទស្នើសុំ"
+msgstr "Download Form"
 
-#: template-parts/content-none.php:44
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+#: single-service.php:81
+msgid "នីតិវិធីនៃការផ្ដល់សេវា៖"
+msgstr "Service Delivery Procedures ៖"
 
-#: template-parts/content-page.php:23 template-parts/content.php:49
+#: single-service.php:86
+msgid "បង្ហាញនីតិវិធី"
+msgstr "Show the procedure"
+
+#: single-service.php:123
+msgid "កន្លែងផ្តល់សេវា"
+msgstr "Service provider address"
+
+#: taxonomy-types.php:38
+#, fuzzy
+#| msgid "កែប្រែចុងក្រោយ"
+msgid "កែរប្រែចុងក្រោយ"
+msgstr "Last update"
+
+#: template-parts/content-archive-doc-filter.php:19
+msgid "ទាំងអស់"
+msgstr "All"
+
+#: template-parts/content-document.php:24
+msgid "ទាញយកឯកសារ"
+msgstr "Download"
+
+#: template-parts/content-document.php:27
+msgid "ចូលមើល"
+msgstr "Read More"
+
+#: template-parts/content-none.php:4
+msgid "ពុំមានទិន្នន័យ"
+msgstr "No data"
+
+#: template-parts/content-none.php:7
+msgid "សូមអភ័យទោស ពុំមានទិន្នន័យស្រដៀងនឹងខ្លឹមសារដែលអ្នកកំពុងស្វែងរកទេ"
+msgstr "Sorry, 404 no data"
+
+#: template-parts/content-organization-filter.php:102
+#: template-parts/content-service-filter.php:8
+#: template-parts/content-service-filter.php:43
+msgid "សូមជ្រើសរើស"
+msgstr "Please select"
+
+#: template-parts/content-organization.php:10
+msgid "អាសយដ្ឋាន ៖ "
+msgstr "Address ៖ "
+
+#: template-parts/content-organization.php:20
+msgid "ទីតាំងនៅលើផែនទី ៖ "
+msgstr "Map View ៖ "
+
+#: template-parts/content-organization.php:30
+msgid "ទំនាក់ទំនង ៖ "
+msgstr "Contact ៖ "
+
+#: template-parts/content-page.php:32
 msgid "Pages:"
 msgstr "Pages:"
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:38
-#, php-format
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: template-parts/content-service-filter.php:6
+msgid "ស្វែងរកតាមវិស័យ"
+msgstr "Browse by Sector"
+
+#: template-parts/content-service-filter.php:41
+msgid "ស្វែងរកតាមក្រុម"
+msgstr "Browse by Group"
+
+#: template-parts/content-service-filter.php:63
+msgid "សូមវាយឈ្មោះសេវា"
+msgstr "Type the service name"
+
+#: template-parts/content-service.php:19
+msgid "ទម្រង់បែបបទ"
+msgstr "Forms"
+
+#: template-parts/content-service.php:22
+msgid "និតិវិធី"
+msgstr "Procedures"
 
 #: template-parts/header/header-text.php:11
 msgid "ព្រះរាជាណាចក្រកម្ពុជា"
-msgstr "ព្រះរាជាណាចក្រកម្ពុជា"
+msgstr "Kingdom of Cambodia"
 
 #: template-parts/header/header-text.php:13
 msgid "ជាតិ សាសនា ព្រះមហាក្សត្រ"
-msgstr "ជាតិ សាសនា ព្រះមហាក្សត្រ"
+msgstr "Nation Religion King"
 
 #. Theme Name of the plugin/theme
 msgid "Cambodia Portal"
@@ -1088,3 +1514,68 @@ msgstr "Chann Chetra"
 #. Author URI of the plugin/theme
 msgid "http://www.mptc.gov.kh"
 msgstr "http://www.mptc.gov.kh"
+
+#~ msgid "Sidebar"
+#~ msgstr "Sidebar"
+
+#~ msgid "Add widgets here."
+#~ msgstr "Add widgets here."
+
+#~ msgid "Footer"
+#~ msgstr "Footer"
+
+#~ msgid "Add footer widgets here."
+#~ msgstr "Add footer widgets here."
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid "Add copyright text here."
+#~ msgstr "Add copyright text here."
+
+#~ msgid "Search query for: "
+#~ msgstr "Search query for: "
+
+#~ msgctxt "post author"
+#~ msgid "by %s"
+#~ msgstr "by %s"
+
+#~ msgid "Search Results for: %s"
+#~ msgstr "Search Results for: %s"
+
+#~ msgid "prev chapter: %title"
+#~ msgstr "prev chapter: %title"
+
+#~ msgid "next chapter: %title"
+#~ msgstr "next chapter: %title"
+
+#~ msgid "category"
+#~ msgstr "category"
+
+#~ msgid "Continue Reading"
+#~ msgstr "Continue Reading"
+
+#~ msgid "Nothing Found"
+#~ msgstr "Nothing Found"
+
+#~ msgid ""
+#~ "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#~ msgstr ""
+#~ "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#~ msgid ""
+#~ "Sorry, but nothing matched your search terms. Please try again with some "
+#~ "different keywords."
+#~ msgstr ""
+#~ "Sorry, but nothing matched your search terms. Please try again with some "
+#~ "different keywords."
+
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching can help."
+#~ msgstr ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching can help."
+
+#~ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#~ msgstr "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"

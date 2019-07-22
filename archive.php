@@ -11,6 +11,7 @@ get_header();
 the_cam_portal_breadcrumbs();
 
 $queried_object = get_queried_object();
+$display_blog = '';
 $display_blog = get_term_meta( $queried_object->term_id, 'cam_portal_category_blog', true );
 ?>
 <div class="container">

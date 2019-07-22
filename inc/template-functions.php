@@ -51,7 +51,9 @@ function the_block_title( $arr ){
 	}
 	
 	if ( isset( $arr['taxonomy'] ) && $arr['taxonomy'] != '' ) {
-		$link = '<a class="primary-color font-moul" href="'. esc_url( get_term_link( $arr['type_slug'], $arr['taxonomy'] ) ) .'">'.esc_html( $arr['title'] ).'</a>';
+		$href = get_term_link( $arr['type_slug'], $arr['taxonomy'] );
+		if ( !is_wp_error( $href ) )
+		$link = '<a class="primary-color font-moul" href="'. esc_url( $href ) .'">'.esc_html( $arr['title'] ).'</a>';
 	}
 	
 	if( isset( $arr['link'] ) ) {

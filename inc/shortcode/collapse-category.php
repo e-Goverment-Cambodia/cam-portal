@@ -53,15 +53,19 @@ function collapse_catagory_shortcode_function( $atts , $content = null ) {
                 'fields'            => '',
             );
             $posts_array = get_posts( $args );
+			$count = count( $posts_array );
 			
-            echo( '<li class="action"><div class="action-group"><span class="oi oi-plus"></span><span class="title">' . $term_obj->name . '</span><span class="right badge badge-info">' . count( $posts_array ) . '</span></div>' );
+            echo( '<li class="action"><div class="action-group"><span class="oi oi-plus"></span><span class="title">' . $term_obj->name . '</span><span class="right badge badge-info">' . $count . '</span></div>' );
+			$count = ( $count < $a['posts_per_page'] ) ? $count : $a['posts_per_page'];
             echo '<ul>';
-            for( $j = 0; $j < $a['posts_per_page']; $j++ ) {
+            for( $j = 0; $j < $count; $j++ ) {
                 echo '<li><span class="oi oi-chevron-right"></span><a href="' . $posts_array[$j]->guid . '">'.mb_strimwidth( $posts_array[$j]->post_title, 0, $a['char'], '...' ).'</a></li>';
             }
+			if( count( $posts_array ) > $a['posts_per_page'] ) {
             ?>
             <li><a href="<?php echo get_term_link( $term_obj->term_id ); ?>"><strong><?php echo __( 'មានបន្ត', 'cam-portal' ); ?></strong></a> <span class="oi oi-external-link"></span></li>
-            </ul>
+            <?php } ?>
+			</ul>
             </li>
             <?php
             // echo '<li><pre>';

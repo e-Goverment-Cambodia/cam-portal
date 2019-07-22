@@ -15,8 +15,14 @@
             <div class="b-thumnail"><?php cam_portal_the_post_thumbnail(); ?></div>
         </div>
         <div class="b-title-wrap col-7">
-            <div class="b-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-            <div class="b-date"><?php  cam_portal_posted_on(); ?></div>
+            <div class="b-title"><a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth( get_the_title(), 0, 110, '...' ); ?></a></div>
+			<div class="b-excerpt"><?php echo mb_strimwidth( get_the_excerpt(), 0, 180, '...' ); ?></div>
+            <div class="b-meta">
+                <?php
+                cam_portal_posted_on();
+                cam_portal_the_posted_view_count();
+                ?>
+            </div>
         </div>
     </div>
 </div>

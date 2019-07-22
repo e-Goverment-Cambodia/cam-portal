@@ -19,7 +19,7 @@ the_cam_portal_breadcrumbs();
 				<div class="form-group row mb-0">
 					<div class="col-sm-12">
 						<div class="relative">
-							<input name="s" placeholder="<?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?>" type="text" id="inputTypehead" class="typeahead form-control" data-provide="typeahead" autocomplete="off" />
+							<input name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?>" type="text" id="inputTypehead" class="typeahead form-control" data-provide="typeahead" autocomplete="off" />
 							<button class="btn btn-secondary" type="submit"><?php echo __( 'ស្វែងរក', 'cam-portal' ); ?></button>
 						</div>
 					</div>

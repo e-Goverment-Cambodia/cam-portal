@@ -50,7 +50,7 @@
 							<div class="input-group-prepend primary-background-color">
 								<button class="btn btn-outline" type="submit" id="button-addon1"><span class="oi oi-magnifying-glass"></span></button>
 							</div>
-							<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
+							<input type="text" class="form-control" placeholder="<?php echo __('ស្វែងរក', 'cam-portal'); ?>" aria-label="Example text with button addon" aria-describedby="button-addon1">
 						</div>
 					</form>	
 					<div class="languages d-block text-center">
@@ -126,12 +126,12 @@
 								</h1>
 								
 								<!-- search form -->
-								<form class="form-inline inline-block">
+								<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="form-inline inline-block">
 									<div class="input-group input-group-sm mb-2">
 										<div class="input-group-prepend primary-background-color">
 											<button class="btn btn-outline" type="submit" id="button-addon1"><span class="oi oi-magnifying-glass"></span></button>
 										</div>
-										<input type="text" class="form-control" placeholder="ស្វែងរក" aria-label="Example text with button addon" aria-describedby="button-addon1">
+										<input type="text" name="s" class="form-control" placeholder="<?php echo __('ស្វែងរក', 'cam-portal'); ?>" aria-label="Example text with button addon" aria-describedby="button-addon1">
 									</div>
 								</form>
 								<div class="languages d-inline-block">

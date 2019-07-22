@@ -1,7 +1,12 @@
 <div class="b-item-wrap">
 	<div class="b-item">
 		<div class="b-title-wrap">
-			<div class="b-title margin-bottom-15"><a href="<?php the_permalink(); ?>"><span style="color: #ccc;font-size: 14px;" class="oi oi-chevron-right"></span> <?php the_title(); ?></a></div>
+			<div class="b-title margin-bottom-15">
+				<a style="display:block;position:relative;" href="<?php the_permalink(); ?>">
+					<span style="position:absolute;color: #ccc;font-size: 14px;line-height:24px;" class="oi oi-chevron-right"></span>
+					<span style="padding-left:20px;display:block;"><?php the_title(); ?></span>
+				</a>
+			</div>
 			<div class="b-cat">
 			<?php 
 			if ( get_the_terms ( $post->ID, 'sector' ) ) {

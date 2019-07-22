@@ -17,6 +17,7 @@
 						// get specific term by post type
 						$args = array(
 							'post_type'		=> 'service',
+							'posts_per_page'=> -1,
 							'post_status'	=> 'publish',
 							'tax_query'		=> array(
 								array(

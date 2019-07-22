@@ -131,7 +131,7 @@ $column = 12;
 			<input type="hidden" name="post_type" value="organization" />
 			
 			<div class="relative">
-				<input name="s" placeholder="<?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?>" type="text" class="form-control" autocomplete="off" />
+				<input name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php echo __( 'ស្វែងរកតាមពាក្យ', 'cam-portal' ); ?>" type="text" class="form-control" autocomplete="off" />
 				<button class="btn btn-secondary" type="submit"><?php echo __( 'ស្វែងរក', 'cam-portal' ); ?></button>
 			</div>
 		</div>

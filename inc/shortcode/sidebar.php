@@ -50,15 +50,15 @@ function sidebar_post_shortcode( $atts , $content = null ) {
 			$section_query -> the_post();
 			$items = get_post_meta( get_the_ID(), 'cam_group_items', true );
 			if( is_array( $items ) ) : 
-			echo '<div class="widget-body-inner"><table class="table table-bordered">';
-				foreach ( $items as $item ) {
-					if( $atts['max'] > 0 ) {
-						echo '<tr>';			
-						echo '<td>' . $item['title'] . '</td>';
-						echo '<td>' . $item['value']. '</td>';
-						echo '</tr>';
-					}
-					$atts['max'] --;
+				$count = count( $items );
+				$count = ( $count < $atts['max'] ) ? $count : $atts['max'];
+				echo '<div class="widget-body-inner"><table class="table table-bordered">';
+				for( $i = 0; $i < $count; $i++ ) {
+					echo '<tr>';			
+					echo '<td>'. $items[$i]['title'] .'</td>';
+					echo '<td>'. $items[$i]['value'] .'</td>';
+					echo '</tr>';
+					
 				}
 			echo '</table></div>';
 			endif;
