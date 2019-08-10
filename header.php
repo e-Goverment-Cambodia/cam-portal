@@ -30,7 +30,7 @@
 	</style>
 </head>
 
-<body>
+<body class="<?php echo get_locale(); ?>">
 	<div id="page" class="site wrapper">
 		<?php
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -59,7 +59,7 @@
 									pll_the_languages();
 								}else{
 									
-									echo '<li class="active"><a href="#">ភាសាខ្មែរ</a></li>';
+									echo '<li class="active"><a href="#">ខ្មែរ</a></li>';
 								}
 							?>
 						</ul>
@@ -88,7 +88,7 @@
 						<img src="<?php echo $image[0]; ?>" />
 					</a>
 					<div class="sm-title text-center inline-block vertical-align-middle primary-color">
-						<h1 class="font-moul"><?php bloginfo( 'name' ); ?></h1>
+						<h1 class="font-moul-overal"><?php bloginfo( 'name' ); ?></h1>
 						<?php $cam_portal_description = get_bloginfo( 'description', 'display' );
 						if ( $cam_portal_description || is_customize_preview() ) : ?>
 							<span><?php echo $cam_portal_description; /* WPCS: xss ok. */ ?></span>
@@ -109,7 +109,7 @@
 									<img src="<?php echo $image[0]; ?>" />
 								</a>
 								<div class="lg-title text-center inline-block vertical-align-middle primary-color">
-									<h1 class="font-moul"><?php bloginfo( 'name' ); ?></h1>
+									<h1 class="font-moul-overal"><?php bloginfo( 'name' ); ?></h1>
 									<?php $cam_portal_description = get_bloginfo( 'description', 'display' );
 									if ( $cam_portal_description || is_customize_preview() ) : ?>
 										<span><?php echo $cam_portal_description; /* WPCS: xss ok. */ ?></span>
@@ -140,7 +140,7 @@
 										pll_the_languages();
 									}else{
 										
-										echo '<li class="active"><a href="#">ភាសាខ្មែរ</a></li>';
+										echo '<li class="active"><a href="#">ខ្មែរ</a></li>';
 									}
 									?>
 									</ul>

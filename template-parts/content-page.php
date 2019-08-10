@@ -16,7 +16,7 @@
 				?>
 				<div class="meta">
 					<?php
-					cam_portal_posted_on();
+					//cam_portal_posted_on();
 					cam_portal_posted_by();
 					cam_portal_the_posted_view_count();
 					?>

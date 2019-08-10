@@ -20,6 +20,7 @@ function cam_portal_exchange_rate_shortcode( $atts , $content = null ) {
         $arr = array( 'title'	=> $atts['title'], 'link' => $atts['link'] );
         the_block_title( $arr );
     }	
+	//delete_transient( 'exchangerate'.$atts['lang'] ) ;
     $data = get_transient( 'exchangerate'.$atts['lang'] ) ;
     
     if ( $data === false ) {
@@ -29,7 +30,7 @@ function cam_portal_exchange_rate_shortcode( $atts , $content = null ) {
         $json_data = json_decode( $json, true );
         $data = json_encode( $json_data['data'], true );
 
-        set_transient( 'exchangerate'.$atts['lang'], $data, '3600' );
+        set_transient( 'exchangerate'.$atts['lang'], $data, HOUR_IN_SECONDS );
    }
 
     $html = '<div class="widget-body-inner">
@@ -39,7 +40,7 @@ function cam_portal_exchange_rate_shortcode( $atts , $content = null ) {
    
 
     $value = json_decode( $data );
-    
+    if(is_array($value))
     for( $i = 0; $i < count( $value ); $i ++ ) {
         
         if ( $i < ( $atts['max'] ) ) { 

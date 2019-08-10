@@ -128,7 +128,7 @@ function cam_portal_widgets_init() {
 		'before_title'  => '<h4 class="font-moul footer-brand">',
 		'after_title'   => '</h4>'
 	 ) );
-	register_sidebar( array(
+	/*register_sidebar( array(
 		'name'          => 'Sector & Group',
 		'id'            => 'sidebar-2',
 		'description'   => 'Add widgets here.',
@@ -154,7 +154,7 @@ function cam_portal_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<div class="widget-title"><div class="block-title primary-color"><span class="primary-color font-moul">',
 		'after_title'   => '</span></div></div>',
-	) );
+	) );*/
 }
 add_action( 'widgets_init', 'cam_portal_widgets_init' );
 
@@ -223,6 +223,17 @@ function wpdev_filter_login_head() {
  
 add_action( 'login_head', 'wpdev_filter_login_head', 100 );
 
+function custom_register_with_email($result) {
+
+   if ( $result['user_name'] != '' && is_email( $result['user_name'] ) ) {
+
+      $result['errors']->remove('user_name');
+
+   }
+
+   return $result;
+}
+add_filter('wpmu_validate_user_signup','custom_register_with_email');
 
 //temp disable this feature
 //add_filter( 'the_title', 'wpse165333_the_title', 10, 2 );
@@ -254,3 +265,52 @@ function wpse165333_the_title( $title, $post_ID = null ) {
     }
     return $title;
 }
+
+// Add role to admin can use unfiltered html attr
+function km_add_unfiltered_html_capability_to_admin( $caps, $cap, $user_id ) {
+	if ( 'unfiltered_html' === $cap && user_can( $user_id, 'administrator' ) ) {
+		$caps = array( 'unfiltered_html' );
+	}
+	return $caps;
+}
+add_filter( 'map_meta_cap', 'km_add_unfiltered_html_capability_to_admin', 1, 3 );
+
+// Could not connect to the SMTP host fixed
+add_filter('wp_mail_smtp_custom_options', function( $phpmailer ) {
+    return $phpmailer->SMTPAutoTLS = false;
+} );
+
+
+// fixes "Lost Password?" URLs on login page
+add_filter("lostpassword_url", function ($url, $redirect) {
+
+    $args = array( 'action' => 'lostpassword' );
+
+    if ( !empty($redirect) )
+        $args['redirect_to'] = $redirect;
+    return add_query_arg( $args, site_url('wp-login.php') );
+}, 10, 2);
+
+// fixes other password reset related urls
+add_filter( 'network_site_url', function($url, $path, $scheme) {
+
+    if (stripos($url, "action=lostpassword") !== false)
+        return site_url('wp-login.php?action=lostpassword', $scheme);
+
+    if (stripos($url, "action=resetpass") !== false)
+        return site_url('wp-login.php?action=resetpass', $scheme);
+
+    return $url;
+}, 10, 3 );
+
+// fixes URLs in email that goes out.
+add_filter("retrieve_password_message", function ($message, $key) {
+	return str_replace(get_site_url(1), get_site_url(), $message);
+}, 10, 2);
+
+// fixes email title
+add_filter("retrieve_password_title", function($title) {
+    return "[" . wp_specialchars_decode(get_option('blogname'), ENT_QUOTES) . "] កំណត់​ពាក្យ​សម្ងាត់​ឡើង​វិញ";
+});
+
+

@@ -9,6 +9,7 @@ function blog_function_shortcode( $atts , $content = null ) {
             'post_type'         => 'post',
             'taxonomy'          => 'category',
             'terms'             => '', // default all 
+			'offset'			=> 0,
             'field'             => 'slug',
             'posts_per_page'	=> '4',
             'post_view_count'   => true,
@@ -44,6 +45,7 @@ function blog_function_shortcode( $atts , $content = null ) {
 		'post_status'			=> array( 'publish' ),
 		'posts_per_page'		=> $a['posts_per_page'],
 		'orderby'				=> $a['orderby'],
+		'offset'				=> $a['offset'],
 		'order'					=> $a['order'],
 		'tax_query'             => array(
 			array(

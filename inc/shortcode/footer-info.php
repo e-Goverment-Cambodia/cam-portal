@@ -28,7 +28,7 @@ if( !function_exists( 'cam_portal_footer_info_shortcode' ) ) {
 					</a>';
 		}
 					
-		$html = '<h4 class="font-moul footer-brand">%s</h4>
+		$html = '<h4 class="font-moul-overal footer-brand">%s</h4>
 				<p>%s</p>
 				<p>%s</p>
 				<p>%s</p>
